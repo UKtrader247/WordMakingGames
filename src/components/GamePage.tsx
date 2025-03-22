@@ -87,7 +87,7 @@ function GamePage() {
   const initializeGame = () => {
     const newWordData = getRandomWord();
     if (!newWordData) return;
-    
+
     setCurrentWordData(newWordData);
     setShowError(false);
     setSuccess(false);
@@ -102,7 +102,7 @@ function GamePage() {
 
     // Combine target word and extra letters
     const allLetters = (newWordData.word + newWordData.extraLetters).split('');
-    
+
     // Create scattered letters with better distribution
     const shuffledLetters = allLetters
       .sort(() => Math.random() - 0.5)
@@ -110,10 +110,10 @@ function GamePage() {
         const gridSize = Math.ceil(Math.sqrt(allLetters.length));
         const row = Math.floor(index / gridSize);
         const col = index % gridSize;
-        
+
         const xBase = (col / gridSize) * 80 + 10; // Add padding of 10% on each side
         const yBase = (row / gridSize) * 80 + 10;
-        
+
         return {
           id: `letter-${index}`,
           char,
@@ -169,7 +169,7 @@ function GamePage() {
     e.preventDefault();
     const letterId = e.dataTransfer.getData('text/plain');
     const letter = letters.find(l => l.id === letterId);
-    
+
     if (!letter) return;
 
     const dropZoneIndex = dropZones.findIndex(zone => zone.id === dropZoneId);
@@ -193,17 +193,17 @@ function GamePage() {
 
   const handleSolveClick = () => {
     if (!currentWordData) return;
-    
+
     // Create drop zones with the correct word letters
     const solvedDropZones = currentWordData.word.split('').map((letter, index) => ({
       id: `dropzone-${index}`,
       letter
     }));
-    
+
     setDropZones(solvedDropZones);
     setLetters([]); // Remove all draggable letters
     setUsedSolve(true);
-    
+
     // Show success animation after a short delay
     setTimeout(() => {
       setSuccess(true);
@@ -258,7 +258,7 @@ function GamePage() {
               <RotateCcw className="w-4 h-4" />
               Next Word
             </button>
-            
+
             <button
               onClick={handleSolveClick}
               className="flex items-center gap-2 px-4 py-2 bg-amber-500 text-white rounded-lg 
@@ -284,9 +284,8 @@ function GamePage() {
               key={zone.id}
               onDrop={(e) => handleDrop(e, zone.id)}
               onDragOver={handleDragOver}
-              className={`drop-zone w-16 h-16 border-2 ${
-                zone.letter ? 'border-green-500 bg-green-50' : 'border-dashed border-gray-400'
-              } rounded-lg flex items-center justify-center transition-all`}
+              className={`drop-zone w-16 h-16 border-2 ${zone.letter ? 'border-green-500 bg-green-50' : 'border-dashed border-gray-400'
+                } rounded-lg flex items-center justify-center transition-all`}
             >
               {zone.letter && (
                 <span className="text-2xl font-bold text-green-700">

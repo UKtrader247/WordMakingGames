@@ -6,10 +6,10 @@ const VisitCounter: React.FC = () => {
 
   useEffect(() => {
     if (hasIncremented.current) return;
-    
+
     // Get the stored count from localStorage
     const storedCount = localStorage.getItem('visitCount');
-    
+
     // If it exists, parse and increment
     if (storedCount) {
       const newCount = parseInt(storedCount, 10) + 1;
@@ -20,7 +20,7 @@ const VisitCounter: React.FC = () => {
       setCount(1);
       localStorage.setItem('visitCount', '1');
     }
-    
+
     hasIncremented.current = true;
   }, []);
 

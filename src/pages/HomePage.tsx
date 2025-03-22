@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { topics } from '../data/topics';
 import { Gamepad2 } from 'lucide-react';
+import VisitCounter from '../components/VisitCounter';
 
 function HomePage() {
   const navigate = useNavigate();
@@ -41,6 +42,7 @@ function HomePage() {
           ))}
         </div>
       </div>
+      <VisitCounter />
     </div>
   );
 }

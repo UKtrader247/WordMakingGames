@@ -3,6 +3,7 @@ import { Sparkles, RotateCcw, AlertCircle, Home } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useParams, useNavigate } from 'react-router-dom';
 import { topics } from '../data/topics';
+import VisitCounter from './VisitCounter';
 
 interface Letter {
   id: string;
@@ -316,6 +317,7 @@ function GamePage() {
           </div>
         )}
       </div>
+      <VisitCounter />
     </div>
   );
 }

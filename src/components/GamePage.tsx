@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Sparkles, RotateCcw, AlertCircle, Home, Lightbulb } from 'lucide-react';
+import { Sparkles, RotateCcw, AlertCircle, Home, Lightbulb, RefreshCw } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useParams, useNavigate } from 'react-router-dom';
 import { topics } from '../data/topics';
@@ -216,6 +216,47 @@ function GamePage() {
     }, 500);
   };
 
+  const resetCurrentWord = () => {
+    if (!currentWordData) return;
+    
+    // Reset success and error states
+    setShowError(false);
+    setSuccess(false);
+    setUsedSolve(false);
+    
+    // Reset drop zones to empty
+    const initialDropZones = currentWordData.word.split('').map((_, index) => ({
+      id: `dropzone-${index}`,
+      letter: null
+    }));
+    setDropZones(initialDropZones);
+    
+    // Recreate all letters (both from word and extra letters)
+    const allLetters = (currentWordData.word + currentWordData.extraLetters).split('');
+    
+    // Create scattered letters with distribution
+    const shuffledLetters = allLetters
+      .sort(() => Math.random() - 0.5)
+      .map((char, index) => {
+        const gridSize = Math.ceil(Math.sqrt(allLetters.length));
+        const row = Math.floor(index / gridSize);
+        const col = index % gridSize;
+        
+        const xBase = (col / gridSize) * 80 + 10;
+        const yBase = (row / gridSize) * 80 + 10;
+        
+        return {
+          id: `letter-${index}`,
+          char,
+          position: {
+            x: xBase + (Math.random() * 10 - 5),
+            y: yBase + (Math.random() * 10 - 5)
+          }
+        };
+      });
+    setLetters(shuffledLetters);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-8 pt-16">
       <div className="max-w-4xl mx-auto">
@@ -257,6 +298,16 @@ function GamePage() {
             >
               <RotateCcw className="w-4 h-4" />
               Next Word
+            </button>
+
+            <button
+              onClick={resetCurrentWord}
+              className="flex items-center gap-2 px-4 py-2 bg-gray-600 text-white rounded-lg 
+                hover:bg-gray-700 transition-colors duration-200"
+              disabled={success}
+            >
+              <RefreshCw className="w-4 h-4" />
+              Try Again
             </button>
 
             <button
@@ -312,7 +363,8 @@ function GamePage() {
               }}
               className={`w-12 h-12 bg-white shadow-lg rounded-lg flex items-center justify-center
                 ${isDragging ? 'opacity-50' : 'opacity-100'}
-                hover:scale-110 transition-all duration-200`}
+                hover:scale-125 hover:shadow-xl hover:z-10 hover:bg-blue-50 hover:rotate-0
+                transition-all duration-300 ease-in-out`}
             >
               <span className="text-xl font-bold text-blue-700">{letter.char}</span>
             </div>

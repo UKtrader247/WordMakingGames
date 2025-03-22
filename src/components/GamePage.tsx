@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Sparkles, RotateCcw, AlertCircle, Home } from 'lucide-react';
+import { Sparkles, RotateCcw, AlertCircle, Home, Lightbulb } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useParams, useNavigate } from 'react-router-dom';
 import { topics } from '../data/topics';
@@ -30,6 +30,7 @@ function GamePage() {
   const [score, setScore] = useState(0);
   const [showScoreAnimation, setShowScoreAnimation] = useState(false);
   const [completedWords, setCompletedWords] = useState<Set<string>>(new Set());
+  const [usedSolve, setUsedSolve] = useState(false);
 
   const getRandomWord = () => {
     if (!topic) return null;
@@ -90,6 +91,7 @@ function GamePage() {
     setCurrentWordData(newWordData);
     setShowError(false);
     setSuccess(false);
+    setUsedSolve(false);
 
     // Initialize drop zones
     const initialDropZones = newWordData.word.split('').map((_, index) => ({
@@ -189,6 +191,31 @@ function GamePage() {
     initializeGame();
   };
 
+  const handleSolveClick = () => {
+    if (!currentWordData) return;
+    
+    // Create drop zones with the correct word letters
+    const solvedDropZones = currentWordData.word.split('').map((letter, index) => ({
+      id: `dropzone-${index}`,
+      letter
+    }));
+    
+    setDropZones(solvedDropZones);
+    setLetters([]); // Remove all draggable letters
+    setUsedSolve(true);
+    
+    // Show success animation after a short delay
+    setTimeout(() => {
+      setSuccess(true);
+      setShowError(false);
+      setCompletedWords(prev => new Set([...prev, currentWordData.word]));
+      triggerConfetti();
+      setScore(prevScore => prevScore + 5); // Award half points for using solve
+      setShowScoreAnimation(true);
+      setTimeout(() => setShowScoreAnimation(false), 1500);
+    }, 500);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-8 pt-16">
       <div className="max-w-4xl mx-auto">
@@ -222,14 +249,26 @@ function GamePage() {
               Current Word Length: {currentWordData?.word.length || 0}
             </span>
           </div>
-          <button
-            onClick={resetGame}
-            className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg 
-              hover:bg-blue-700 transition-colors duration-200 mx-auto"
-          >
-            <RotateCcw className="w-4 h-4" />
-            Next Word
-          </button>
+          <div className="flex items-center justify-center gap-4">
+            <button
+              onClick={resetGame}
+              className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg 
+                hover:bg-blue-700 transition-colors duration-200"
+            >
+              <RotateCcw className="w-4 h-4" />
+              Next Word
+            </button>
+            
+            <button
+              onClick={handleSolveClick}
+              className="flex items-center gap-2 px-4 py-2 bg-amber-500 text-white rounded-lg 
+                hover:bg-amber-600 transition-colors duration-200"
+              disabled={success || usedSolve}
+            >
+              <Lightbulb className="w-4 h-4" />
+              Solve
+            </button>
+          </div>
         </div>
 
         {showError && (

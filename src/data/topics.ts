@@ -117,5 +117,89 @@ export const topics: Topic[] = [
       { word: "BEAR", hint: "Large forest mammal", extraLetters: "PQWXYZ" },
       { word: "WOLF", hint: "Wild canine", extraLetters: "PQWXYZ" }
     ]
+  },
+  {
+    id: 'geography',
+    name: 'Geography',
+    description: 'Explore lands, features, and countries',
+    icon: '🌎',
+    words: [
+      { word: "RIVER", hint: "Flowing body of water", extraLetters: "PQZXST" },
+      { word: "OCEAN", hint: "Vast body of saltwater", extraLetters: "PQWXYZ" },
+      { word: "CANYON", hint: "Deep valley with steep sides", extraLetters: "PQZXST" },
+      { word: "ISLAND", hint: "Land surrounded by water", extraLetters: "PQZXMT" }
+    ]
+  },
+  {
+    id: 'movies',
+    name: 'Movies',
+    description: 'Film industry terms and classics',
+    icon: '🎬',
+    words: [
+      { word: "ACTOR", hint: "Performer in films", extraLetters: "PQWXYZ" },
+      { word: "SCENE", hint: "Section of film", extraLetters: "PQWXTZ" },
+      { word: "OSCAR", hint: "Famous film award", extraLetters: "PQLXYZ" },
+      { word: "PLOT", hint: "Story of a film", extraLetters: "CQWXYZ" }
+    ]
+  },
+  {
+    id: 'history',
+    name: 'History',
+    description: 'Notable events and historical figures',
+    icon: '📜',
+    words: [
+      { word: "KING", hint: "Male monarch", extraLetters: "PQWXYZ" },
+      { word: "WAR", hint: "Armed conflict", extraLetters: "PQWXYZ" },
+      { word: "ROME", hint: "Ancient Italian empire", extraLetters: "PQWXZF" },
+      { word: "EMPIRE", hint: "Group of territories under single ruler", extraLetters: "CQWXAD" }
+    ]
+  },
+  {
+    id: 'technology',
+    name: 'Technology',
+    description: 'Modern tech gadgets and terms',
+    icon: '📱',
+    words: [
+      { word: "PHONE", hint: "Communication device", extraLetters: "TQWXYZ" },
+      { word: "WIFI", hint: "Wireless network", extraLetters: "PQAXYZ" },
+      { word: "CLOUD", hint: "Online storage system", extraLetters: "PQWXVZ" },
+      { word: "ROBOT", hint: "Mechanical automaton", extraLetters: "PQWXDC" }
+    ]
+  },
+  {
+    id: 'art',
+    name: 'Art',
+    description: 'Art forms and famous works',
+    icon: '🎨',
+    words: [
+      { word: "PAINT", hint: "Colored liquid for artwork", extraLetters: "SQWXYZ" },
+      { word: "BRUSH", hint: "Tool for painting", extraLetters: "PQWXLZ" },
+      { word: "CANVAS", hint: "Surface for painting", extraLetters: "PQWMRZ" },
+      { word: "DRAW", hint: "Create pictures with pen or pencil", extraLetters: "PQVXYZ" }
+    ]
+  },
+  {
+    id: 'literature',
+    name: 'Literature',
+    description: 'Books, authors and literary terms',
+    icon: '📚',
+    words: [
+      { word: "POEM", hint: "Rhythmic literary composition", extraLetters: "TQWXYZ" },
+      { word: "NOVEL", hint: "Long fictional narrative", extraLetters: "PQWXCZ" },
+      { word: "AUTHOR", hint: "Writer of books", extraLetters: "PSWXYZ" },
+      { word: "STORY", hint: "Narrative of events", extraLetters: "PQWXLZ" }
+    ]
+  },
+  {
+    id: 'health',
+    name: 'Health',
+    description: 'Medical terms and wellness concepts',
+    icon: '❤️',
+    words: [
+      { word: "HEART", hint: "Blood-pumping organ", extraLetters: "PQWXSZ" },
+      { word: "BRAIN", hint: "Control center of the body", extraLetters: "PQWXMZ" },
+      { word: "SLEEP", hint: "Rest period for the body", extraLetters: "PQWXYT" },
+      { word: "WATER", hint: "Essential liquid for life", extraLetters: "PQCXYZ" }
+    ]
   }
 ];

@@ -1,11 +1,42 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { topics } from '../data/topics';
-import { Gamepad2 } from 'lucide-react';
+import { Gamepad2, Search } from 'lucide-react';
 import VisitCounter from '../components/VisitCounter';
 
 function HomePage() {
   const navigate = useNavigate();
+  const [searchTerm, setSearchTerm] = useState('');
+
+  // Filter and sort topics based on search term
+  const filteredTopics = useMemo(() => {
+    if (!searchTerm.trim()) return topics;
+
+    const lowerSearchTerm = searchTerm.toLowerCase();
+    
+    return topics
+      .filter(topic => 
+        topic.name.toLowerCase().includes(lowerSearchTerm) || 
+        topic.description.toLowerCase().includes(lowerSearchTerm)
+      )
+      .sort((a, b) => {
+        // Prioritize topics where the search term is in the name
+        const aNameMatch = a.name.toLowerCase().includes(lowerSearchTerm);
+        const bNameMatch = b.name.toLowerCase().includes(lowerSearchTerm);
+        
+        if (aNameMatch && !bNameMatch) return -1;
+        if (!aNameMatch && bNameMatch) return 1;
+        
+        // Then sort by how close to the beginning the match is
+        const aNameIndex = a.name.toLowerCase().indexOf(lowerSearchTerm);
+        const bNameIndex = b.name.toLowerCase().indexOf(lowerSearchTerm);
+        
+        if (aNameIndex !== -1 && bNameIndex !== -1) return aNameIndex - bNameIndex;
+        
+        // By default, sort alphabetically
+        return a.name.localeCompare(b.name);
+      });
+  }, [searchTerm]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-8 pt-16">
@@ -20,35 +51,58 @@ function HomePage() {
 
         <main>
           <section aria-labelledby="topic-section">
-            <h2 className="sr-only" id="topic-section">Game Topics</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {topics.map((topic) => (
-                <article 
-                  key={topic.id}
-                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transform hover:-translate-y-1 
-                    transition-all duration-200"
-                >
-                  <button
-                    onClick={() => navigate(`/play/${topic.id}`)}
-                    className="w-full h-full text-left group"
-                    aria-label={`Play ${topic.name} word games`}
-                  >
-                    <div className="flex items-start justify-between mb-4">
-                      <span className="text-4xl" role="img" aria-label={topic.name + " icon"}>{topic.icon}</span>
-                      <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-sm font-medium">
-                        {topic.words.length} words
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600">
-                      {topic.name}
-                    </h3>
-                    <p className="text-gray-600 text-sm">
-                      {topic.description}
-                    </p>
-                  </button>
-                </article>
-              ))}
+            <div className="relative mb-8 max-w-md mx-auto">
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <Search className="h-5 w-5 text-gray-400" aria-hidden="true" />
+              </div>
+              <input
+                type="text"
+                className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white 
+                  placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 
+                  focus:border-blue-500 sm:text-sm"
+                placeholder="Search topics..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                aria-label="Search topics"
+              />
             </div>
+
+            <h2 className="sr-only" id="topic-section">Game Topics</h2>
+            
+            {filteredTopics.length === 0 ? (
+              <p className="text-center text-gray-500 my-16">
+                No topics found matching "{searchTerm}". Try a different search term.
+              </p>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {filteredTopics.map((topic) => (
+                  <article 
+                    key={topic.id}
+                    className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transform hover:-translate-y-1 
+                      transition-all duration-200"
+                  >
+                    <button
+                      onClick={() => navigate(`/play/${topic.id}`)}
+                      className="w-full h-full text-left group"
+                      aria-label={`Play ${topic.name} word games`}
+                    >
+                      <div className="flex items-start justify-between mb-4">
+                        <span className="text-4xl" role="img" aria-label={topic.name + " icon"}>{topic.icon}</span>
+                        <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-sm font-medium">
+                          {topic.words.length} words
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600">
+                        {topic.name}
+                      </h3>
+                      <p className="text-gray-600 text-sm">
+                        {topic.description}
+                      </p>
+                    </button>
+                  </article>
+                ))}
+              </div>
+            )}
           </section>
         </main>
 

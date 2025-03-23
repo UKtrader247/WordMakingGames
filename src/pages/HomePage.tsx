@@ -7,6 +7,7 @@ import AboutModal from "../components/AboutModal";
 import PrivacyModal from "../components/PrivacyModal";
 import ContactModal from "../components/ContactModal";
 import StatsCard from '../components/StatsCard';
+import SocialLinks from '../components/SocialLinks';
 
 function HomePage() {
   const navigate = useNavigate();
@@ -186,6 +187,9 @@ function HomePage() {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 p-4 md:p-8 pt-12 md:pt-16">
+        {/* Social Links */}
+        <SocialLinks />
+        
         <div className="max-w-6xl mx-auto">
           <header className="text-center mb-10">
             <h1 className="text-4xl md:text-5xl font-bold text-blue-600 flex items-center justify-center gap-3" 

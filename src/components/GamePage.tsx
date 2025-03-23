@@ -10,6 +10,7 @@ import AboutModal from './AboutModal';
 import PrivacyModal from './PrivacyModal';
 import ContactModal from './ContactModal';
 import StatsCard from './StatsCard';
+import SocialLinks from './SocialLinks';
 
 interface Letter {
   id: string;
@@ -618,6 +619,9 @@ function GamePage() {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-8 pt-16">
+        {/* Social Links */}
+        <SocialLinks />
+        
         <div className="max-w-4xl mx-auto">
           <header className="text-center mb-12 relative">
             <button

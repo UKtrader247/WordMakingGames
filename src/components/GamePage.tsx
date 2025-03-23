@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Sparkles, RotateCcw, AlertCircle, Home, Lightbulb, RefreshCw } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useParams, useNavigate } from 'react-router-dom';
@@ -31,6 +31,10 @@ function GamePage() {
   const [showScoreAnimation, setShowScoreAnimation] = useState(false);
   const [completedWords, setCompletedWords] = useState<Set<string>>(new Set());
   const [usedSolve, setUsedSolve] = useState(false);
+
+  // Add new state for touch handling
+  const [touchedLetter, setTouchedLetter] = useState<Letter | null>(null);
+  const gameAreaRef = useRef<HTMLDivElement>(null);
 
   const getRandomWord = () => {
     if (!topic) return null;
@@ -257,20 +261,96 @@ function GamePage() {
     setLetters(shuffledLetters);
   };
 
+  // Add new functions for touch handling
+  const handleTouchStart = (e: React.TouchEvent, letter: Letter) => {
+    e.preventDefault();
+    setTouchedLetter(letter);
+    setIsDragging(true);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!touchedLetter || !gameAreaRef.current) return;
+    
+    // Prevent scrolling while dragging
+    e.preventDefault();
+    
+    // Get the touch position relative to the game area
+    const touch = e.touches[0];
+    const gameArea = gameAreaRef.current.getBoundingClientRect();
+    
+    // Create a "ghost" element showing the letter being dragged
+    const ghostElement = document.getElementById('touch-ghost');
+    if (ghostElement) {
+      ghostElement.style.left = `${touch.clientX - gameArea.left - 25}px`;
+      ghostElement.style.top = `${touch.clientY - gameArea.top - 25}px`;
+    }
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (!touchedLetter || !gameAreaRef.current) {
+      setIsDragging(false);
+      setTouchedLetter(null);
+      return;
+    }
+    
+    // Find which dropzone is under the touch point
+    const touch = e.changedTouches[0];
+    const dropzoneElements = document.querySelectorAll('.drop-zone');
+    const gameArea = gameAreaRef.current.getBoundingClientRect();
+    
+    let targetDropzone: Element | null = null;
+    
+    dropzoneElements.forEach((element) => {
+      const rect = element.getBoundingClientRect();
+      if (
+        touch.clientX >= rect.left &&
+        touch.clientX <= rect.right &&
+        touch.clientY >= rect.top &&
+        touch.clientY <= rect.bottom
+      ) {
+        targetDropzone = element;
+      }
+    });
+    
+    if (targetDropzone) {
+      const dropZoneId = targetDropzone.getAttribute('data-id');
+      if (dropZoneId) {
+        // Find the dropzone index
+        const dropZoneIndex = dropZones.findIndex(zone => zone.id === dropZoneId);
+        if (dropZoneIndex !== -1) {
+          // Update dropzones with the letter
+          const updatedDropZones = [...dropZones];
+          updatedDropZones[dropZoneIndex] = { ...updatedDropZones[dropZoneIndex], letter: touchedLetter.char };
+          setDropZones(updatedDropZones);
+          
+          // Remove the letter from available letters
+          setLetters(letters.filter(l => l.id !== touchedLetter.id));
+          
+          // Check if the word is complete
+          checkWord(updatedDropZones);
+        }
+      }
+    }
+    
+    setIsDragging(false);
+    setTouchedLetter(null);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-8 pt-16">
       <div className="max-w-4xl mx-auto">
         <header className="text-center mb-12 relative">
           <button
             onClick={() => navigate('/')}
-            className="absolute left-0 top-0 flex items-center gap-2 px-4 py-2 bg-white/80 text-blue-600 
-              rounded-lg hover:bg-white transition-colors duration-200 shadow-sm"
+            className="absolute left-0 top-0 flex items-center gap-2 px-3 py-1 sm:px-4 sm:py-2 bg-white/80 text-blue-600 
+              rounded-lg hover:bg-white transition-colors duration-200 shadow-sm text-sm sm:text-base"
             aria-label="Return to home page"
           >
             <Home className="w-4 h-4" aria-hidden="true" />
-            Back to Home
+            <span className="hidden sm:inline">Back to Home</span>
+            <span className="sm:hidden">Home</span>
           </button>
-          <h1 className="text-4xl font-bold text-blue-800 mb-4">
+          <h1 className="text-3xl sm:text-4xl font-bold text-blue-800 mb-4">
             {topic?.name || 'Word Making Game'}
           </h1>
           <div className="flex items-center justify-center gap-8 mb-4">
@@ -293,11 +373,11 @@ function GamePage() {
               Current Word Length: {currentWordData?.word.length || 0}
             </span>
           </div>
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
             <button
               onClick={resetGame}
               className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg 
-                hover:bg-blue-700 transition-colors duration-200"
+                hover:bg-blue-700 transition-colors duration-200 w-full sm:w-auto text-sm sm:text-base mb-2 sm:mb-0"
               aria-label="Get next word"
             >
               <RotateCcw className="w-4 h-4" aria-hidden="true" />
@@ -307,7 +387,7 @@ function GamePage() {
             <button
               onClick={resetCurrentWord}
               className="flex items-center gap-2 px-4 py-2 bg-gray-600 text-white rounded-lg 
-                hover:bg-gray-700 transition-colors duration-200"
+                hover:bg-gray-700 transition-colors duration-200 w-full sm:w-auto text-sm sm:text-base mb-2 sm:mb-0"
               disabled={success}
               aria-label="Try again with the same word"
             >
@@ -318,7 +398,7 @@ function GamePage() {
             <button
               onClick={handleSolveClick}
               className="flex items-center gap-2 px-4 py-2 bg-amber-500 text-white rounded-lg 
-                hover:bg-amber-600 transition-colors duration-200"
+                hover:bg-amber-600 transition-colors duration-200 w-full sm:w-auto text-sm sm:text-base"
               disabled={success || usedSolve}
               aria-label="Solve the current word automatically"
             >
@@ -337,50 +417,68 @@ function GamePage() {
             </div>
           )}
 
-          <section aria-label="Word puzzle game area">
-            <div className="flex justify-center gap-4 mb-16" aria-label="Drop zones for letters">
+          <section aria-label="Word puzzle game area" ref={gameAreaRef}>
+            <div className="flex flex-wrap justify-center gap-3 mb-8 sm:mb-16" aria-label="Drop zones for letters">
               {dropZones.map((zone) => (
                 <div
                   key={zone.id}
+                  data-id={zone.id}
                   onDrop={(e) => handleDrop(e, zone.id)}
                   onDragOver={handleDragOver}
-                  className={`drop-zone w-16 h-16 border-2 ${zone.letter ? 'border-green-500 bg-green-50' : 'border-dashed border-gray-400'
-                    } rounded-lg flex items-center justify-center transition-all`}
+                  className={`drop-zone w-12 h-12 sm:w-16 sm:h-16 border-2 ${
+                    zone.letter ? 'border-green-500 bg-green-50' : 'border-dashed border-gray-400'
+                  } rounded-lg flex items-center justify-center transition-all`}
                 >
                   {zone.letter && (
-                    <span className="text-2xl font-bold text-green-700">
-                      {zone.letter}
-                    </span>
+                    <span className="text-xl sm:text-2xl font-bold text-green-700">{zone.letter}</span>
                   )}
                 </div>
               ))}
             </div>
-          </section>
-        </main>
 
-        <div className="relative w-full h-[300px] bg-white/50 rounded-xl p-4">
-          {letters.map((letter) => (
-            <div
-              key={letter.id}
-              draggable
-              onDragStart={(e) => handleDragStart(e, letter.id)}
-              onDragEnd={handleDragEnd}
-              style={{
-                position: 'absolute',
-                left: `${letter.position.x}%`,
-                top: `${letter.position.y}%`,
-                transform: `rotate(${Math.random() * 20 - 10}deg)`,
-                cursor: 'grab'
-              }}
-              className={`w-12 h-12 bg-white shadow-lg rounded-lg flex items-center justify-center
-                ${isDragging ? 'opacity-50' : 'opacity-100'}
-                hover:scale-125 hover:shadow-xl hover:z-10 hover:bg-blue-50 hover:rotate-0
-                transition-all duration-300 ease-in-out`}
-            >
-              <span className="text-xl font-bold text-blue-700">{letter.char}</span>
+            {/* Touch dragging ghost element */}
+            {isDragging && touchedLetter && (
+              <div
+                id="touch-ghost"
+                className="fixed w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-lg flex items-center justify-center shadow-lg z-50 pointer-events-none"
+                style={{ left: '0', top: '0' }}
+              >
+                <span className="text-lg sm:text-xl font-bold text-blue-700">{touchedLetter.char}</span>
+              </div>
+            )}
+
+            <div className="relative w-full h-[250px] sm:h-[300px] bg-white/50 rounded-xl p-4">
+              {letters.map((letter) => (
+                <div
+                  key={letter.id}
+                  draggable
+                  onDragStart={(e) => handleDragStart(e, letter.id)}
+                  onDragEnd={handleDragEnd}
+                  onTouchStart={(e) => handleTouchStart(e, letter)}
+                  onTouchMove={handleTouchMove}
+                  onTouchEnd={handleTouchEnd}
+                  style={{
+                    position: 'absolute',
+                    left: `${letter.position.x}%`,
+                    top: `${letter.position.y}%`,
+                    transform: `rotate(${Math.random() * 20 - 10}deg)`,
+                    cursor: 'grab'
+                  }}
+                  className={`w-10 h-10 sm:w-12 sm:h-12 bg-white shadow-lg rounded-lg flex items-center justify-center
+                    ${isDragging ? 'opacity-50' : 'opacity-100'}
+                    active:scale-125 hover:scale-125 hover:shadow-xl hover:z-10 hover:bg-blue-50 hover:rotate-0
+                    transition-all duration-300 ease-in-out touch-manipulation`}
+                >
+                  <span className="text-lg sm:text-xl font-bold text-blue-700">{letter.char}</span>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </section>
+          
+          <div className="fixed bottom-0 left-0 right-0 z-10 bg-white/90 p-2 text-center text-xs text-gray-500 md:hidden">
+            Tap and drag letters to the boxes above
+          </div>
+        </main>
 
         <div className="text-center mt-6 mb-8 p-4 bg-white/80 rounded-lg shadow-sm">
           <p className="text-gray-600">

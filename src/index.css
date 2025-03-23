@@ -11,3 +11,32 @@
 .shake {
   animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
 }
+
+/* Mobile touch improvements */
+@media (max-width: 768px) {
+  html, body {
+    overscroll-behavior: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .drop-zone {
+    touch-action: none;
+  }
+  
+  /* Increase tap target size */
+  button {
+    min-height: 44px;
+  }
+}
+
+/* Make draggable elements feel more interactive */
+[draggable=true] {
+  cursor: grab;
+  user-select: none;
+}
+
+[draggable=true]:active {
+  cursor: grabbing;
+}

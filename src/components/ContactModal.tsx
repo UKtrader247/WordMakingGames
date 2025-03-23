@@ -35,7 +35,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
             
             <div className="prose dark:prose-invert mx-auto">
               <p className="text-gray-600 dark:text-gray-300 mb-6 text-center">
-                Have questions, feedback, or suggestions about Word Making Games? We'd love to hear from you!
+                Have questions, suggestions, or just want to say hello? We'd love to hear from you!
               </p>
               
               <div className="space-y-5">
@@ -44,32 +44,13 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                   <div>
                     <h3 className="text-lg font-semibold text-emerald-700 dark:text-emerald-300 mb-2">Email Us</h3>
                     <p className="text-gray-700 dark:text-gray-300 mb-3">
-                      For any inquiries related to our word games or website:
+                      You can reach us anytime at:
                     </p>
                     <a 
                       href="mailto:contact@uniqevo.co.uk" 
                       className="flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
                     >
-                      contact@uniqevo.co.uk
-                      <ExternalLink className="h-4 w-4 ml-1" />
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="bg-gradient-to-r from-cyan-50 to-sky-50 dark:from-cyan-900/20 dark:to-sky-900/20 p-5 rounded-lg flex items-start gap-4">
-                  <Globe className="h-6 w-6 text-cyan-600 dark:text-cyan-400 flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-lg font-semibold text-cyan-700 dark:text-cyan-300 mb-2">Visit Our Website</h3>
-                    <p className="text-gray-700 dark:text-gray-300 mb-3">
-                      Learn more about our projects and other educational tools:
-                    </p>
-                    <a 
-                      href="https://www.uniqevo.co.uk" 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
-                    >
-                      www.uniqevo.co.uk
+                      📧 contact@uniqevo.co.uk
                       <ExternalLink className="h-4 w-4 ml-1" />
                     </a>
                   </div>
@@ -77,8 +58,11 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
               </div>
               
               <div className="mt-8 text-center">
-                <p className="text-gray-500 dark:text-gray-400 text-sm">
-                  We typically respond to inquiries within 1-2 business days.
+                <p className="text-gray-700 dark:text-gray-300">
+                  Whether it's feedback, game ideas, or any general inquiries, feel free to drop us an email. We'll get back to you as soon as we can.
+                </p>
+                <p className="mt-4 text-gray-700 dark:text-gray-300 font-medium">
+                  Thanks for visiting WordMakingGames.com — where learning meets fun!
                 </p>
               </div>
             </div>

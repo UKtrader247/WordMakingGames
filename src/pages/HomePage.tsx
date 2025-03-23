@@ -334,33 +334,6 @@ function HomePage() {
                 >
                   Reset Progress
                 </button>
-                {searchTerm && (
-                  <button 
-                    onClick={() => {
-                      if (filteredTopics.length > 0) {
-                        markTopicAsCompleted(filteredTopics[0].id);
-                      } else {
-                        showToast('No topics found to mark as completed', 'error');
-                      }
-                    }}
-                    className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 text-sm"
-                  >
-                    Mark First Result as Completed
-                  </button>
-                )}
-                <button
-                  onClick={() => {
-                    const colorsTopic = topics.find(t => t.id === "colors");
-                    if (colorsTopic) {
-                      markTopicAsCompleted(colorsTopic.id);
-                    } else {
-                      showToast('Colors topic not found', 'error');
-                    }
-                  }}
-                  className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm"
-                >
-                  Mark Colors as Completed
-                </button>
                 <button
                   onClick={() => {
                     // Show toast first, then refresh after a small delay

@@ -28,6 +28,15 @@ import { technologyTopic } from "./topics/technology";
 import { artTopic } from "./topics/art";
 import { literatureTopic } from "./topics/literature";
 import { healthTopic } from "./topics/health";
+import { fashionTopic } from "./topics/fashion";
+import { mythologyTopic } from "./topics/mythology";
+import { travelTopic } from "./topics/travel";
+import { astronomyTopic } from "./topics/astronomy";
+import { cookingTopic } from "./topics/cooking";
+import { oceanTopic } from "./topics/ocean";
+import { gamingTopic } from "./topics/gaming";
+import { architectureTopic } from "./topics/architecture";
+import { carsTopic } from "./topics/cars";
 
 // Combine all topics into a single array
 export const topics: Topic[] = [
@@ -46,4 +55,13 @@ export const topics: Topic[] = [
   artTopic,
   literatureTopic,
   healthTopic,
+  fashionTopic,
+  mythologyTopic,
+  travelTopic,
+  astronomyTopic,
+  cookingTopic,
+  oceanTopic,
+  gamingTopic,
+  architectureTopic,
+  carsTopic,
 ];

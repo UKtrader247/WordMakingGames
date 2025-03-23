@@ -39,6 +39,8 @@ import { architectureTopic } from "./topics/architecture";
 import { carsTopic } from "./topics/cars";
 import { colorsTopic } from "./topics/colors";
 import { flowersTopic } from "./topics/flowers";
+import { electronicsTopic } from "./topics/electronics";
+import { sportscarsTopic } from "./topics/sportscars";
 
 // Combine all topics into a single array
 export const topics: Topic[] = [
@@ -68,4 +70,6 @@ export const topics: Topic[] = [
   architectureTopic,
   carsTopic,
   flowersTopic,
+  electronicsTopic,
+  sportscarsTopic,
 ];

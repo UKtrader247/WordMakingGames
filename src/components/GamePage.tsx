@@ -14,6 +14,7 @@ interface Letter {
 interface DropZone {
   id: string;
   letter: string | null;
+  isPrefilled?: boolean;
 }
 
 function GamePage() {
@@ -98,14 +99,48 @@ function GamePage() {
     setUsedSolve(false);
 
     // Initialize drop zones
-    const initialDropZones = newWordData.word.split('').map((_, index) => ({
-      id: `dropzone-${index}`,
-      letter: null
-    }));
+    const wordLength = newWordData.word.length;
+    
+    // Determine how many letters to pre-fill - never more than 3
+    let numToFill = 0;
+    if (wordLength >= 5) {
+      // For 5 letters fill 2, for 6+ letters fill exactly 3
+      numToFill = Math.min(wordLength === 5 ? 2 : 3, 3);
+    }
+    
+    // Generate random positions to fill
+    const fillPositions: number[] = [];
+    while (fillPositions.length < numToFill) {
+      const randomPos = Math.floor(Math.random() * wordLength);
+      if (!fillPositions.includes(randomPos)) {
+        fillPositions.push(randomPos);
+      }
+    }
+    
+    // Set up dropzones with the pre-filled letters
+    const initialDropZones = newWordData.word.split('').map((letter, index) => {
+      const shouldPreFill = fillPositions.includes(index);
+      return {
+        id: `dropzone-${index}`,
+        letter: shouldPreFill ? letter : null,
+        isPrefilled: shouldPreFill
+      };
+    });
+    
     setDropZones(initialDropZones);
 
-    // Combine target word and extra letters
-    const allLetters = (newWordData.word + newWordData.extraLetters).split('');
+    // Combine target word and extra letters, but only include letters that aren't pre-filled
+    const preFilledLetters = initialDropZones
+      .filter(zone => zone.letter !== null)
+      .map(zone => zone.letter as string);
+    
+    const remainingWordLetters = newWordData.word
+      .split('')
+      .filter(letter => !preFilledLetters.includes(letter) || 
+                        // If letter appears multiple times, only exclude it once
+                        preFilledLetters.indexOf(letter) !== preFilledLetters.lastIndexOf(letter));
+    
+    const allLetters = (remainingWordLetters.join('') + newWordData.extraLetters).split('');
 
     // Create scattered letters with better distribution
     const shuffledLetters = allLetters
@@ -178,6 +213,9 @@ function GamePage() {
 
     const dropZoneIndex = dropZones.findIndex(zone => zone.id === dropZoneId);
     if (dropZoneIndex === -1) return;
+    
+    // Don't allow dropping on pre-filled letters
+    if (dropZones[dropZoneIndex].isPrefilled) return;
 
     const updatedDropZones = [...dropZones];
     updatedDropZones[dropZoneIndex] = { ...updatedDropZones[dropZoneIndex], letter: letter.char };
@@ -228,15 +266,49 @@ function GamePage() {
     setSuccess(false);
     setUsedSolve(false);
 
-    // Reset drop zones to empty
-    const initialDropZones = currentWordData.word.split('').map((_, index) => ({
-      id: `dropzone-${index}`,
-      letter: null
-    }));
+    // Reset drop zones to empty or pre-filled based on word length
+    const wordLength = currentWordData.word.length;
+    
+    // Determine how many letters to pre-fill - never more than 3
+    let numToFill = 0;
+    if (wordLength >= 5) {
+      // For 5 letters fill 2, for 6+ letters fill exactly 3
+      numToFill = Math.min(wordLength === 5 ? 2 : 3, 3);
+    }
+    
+    // Generate random positions to fill
+    const fillPositions: number[] = [];
+    while (fillPositions.length < numToFill) {
+      const randomPos = Math.floor(Math.random() * wordLength);
+      if (!fillPositions.includes(randomPos)) {
+        fillPositions.push(randomPos);
+      }
+    }
+    
+    // Set up dropzones with the pre-filled letters
+    const initialDropZones = currentWordData.word.split('').map((letter, index) => {
+      const shouldPreFill = fillPositions.includes(index);
+      return {
+        id: `dropzone-${index}`,
+        letter: shouldPreFill ? letter : null,
+        isPrefilled: shouldPreFill
+      };
+    });
+    
     setDropZones(initialDropZones);
 
-    // Recreate all letters (both from word and extra letters)
-    const allLetters = (currentWordData.word + currentWordData.extraLetters).split('');
+    // Recreate remaining letters (both from word and extra letters)
+    const preFilledLetters = initialDropZones
+      .filter(zone => zone.letter !== null)
+      .map(zone => zone.letter as string);
+    
+    const remainingWordLetters = currentWordData.word
+      .split('')
+      .filter(letter => !preFilledLetters.includes(letter) || 
+                        // If letter appears multiple times, only exclude it once
+                        preFilledLetters.indexOf(letter) !== preFilledLetters.lastIndexOf(letter));
+    
+    const allLetters = (remainingWordLetters.join('') + currentWordData.extraLetters).split('');
 
     // Create scattered letters with distribution
     const shuffledLetters = allLetters
@@ -318,6 +390,13 @@ function GamePage() {
         // Find the dropzone index
         const dropZoneIndex = dropZones.findIndex(zone => zone.id === dropZoneId);
         if (dropZoneIndex !== -1) {
+          // Don't allow placing letters on pre-filled positions
+          if (dropZones[dropZoneIndex].isPrefilled) {
+            setIsDragging(false);
+            setTouchedLetter(null);
+            return;
+          }
+
           // Update dropzones with the letter
           const updatedDropZones = [...dropZones];
           updatedDropZones[dropZoneIndex] = { ...updatedDropZones[dropZoneIndex], letter: touchedLetter.char };
@@ -373,6 +452,13 @@ function GamePage() {
               Current Word Length: {currentWordData?.word.length || 0}
             </span>
           </div>
+          {currentWordData && currentWordData.word.length >= 5 && (
+            <div className="text-sm text-gray-500 mb-4">
+              <span className="px-2 py-1 bg-blue-50 rounded border border-blue-200">
+                <span className="text-blue-700 font-semibold">Hint:</span> Some letters have been pre-filled to help you
+              </span>
+            </div>
+          )}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
             <button
               onClick={resetGame}
@@ -425,11 +511,18 @@ function GamePage() {
                   data-id={zone.id}
                   onDrop={(e) => handleDrop(e, zone.id)}
                   onDragOver={handleDragOver}
-                  className={`drop-zone w-12 h-12 sm:w-16 sm:h-16 border-2 ${zone.letter ? 'border-green-500 bg-green-50' : 'border-dashed border-gray-400'
+                  className={`drop-zone w-12 h-12 sm:w-16 sm:h-16 border-2 
+                    ${zone.letter 
+                      ? zone.isPrefilled 
+                        ? 'border-blue-500 bg-blue-50' 
+                        : 'border-green-500 bg-green-50' 
+                      : 'border-dashed border-gray-400'
                     } rounded-lg flex items-center justify-center transition-all`}
                 >
                   {zone.letter && (
-                    <span className="text-xl sm:text-2xl font-bold text-green-700">{zone.letter}</span>
+                    <span className={`text-xl sm:text-2xl font-bold ${zone.isPrefilled ? 'text-blue-700' : 'text-green-700'}`}>
+                      {zone.letter}
+                    </span>
                   )}
                 </div>
               ))}

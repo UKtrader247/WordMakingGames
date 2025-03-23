@@ -3,28 +3,40 @@
 @tailwind utilities;
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  75% { transform: translateX(5px); }
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  75% {
+    transform: translateX(5px);
+  }
 }
 
 .shake {
-  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+  animation: shake 0.5s cubic-bezier(.36, .07, .19, .97) both;
 }
 
 /* Mobile touch improvements */
 @media (max-width: 768px) {
-  html, body {
+
+  html,
+  body {
     overscroll-behavior: none;
     touch-action: manipulation;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
   }
-  
+
   .drop-zone {
     touch-action: none;
   }
-  
+
   /* Increase tap target size */
   button {
     min-height: 44px;

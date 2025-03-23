@@ -222,22 +222,22 @@ function GamePage() {
 
   const resetCurrentWord = () => {
     if (!currentWordData) return;
-    
+
     // Reset success and error states
     setShowError(false);
     setSuccess(false);
     setUsedSolve(false);
-    
+
     // Reset drop zones to empty
     const initialDropZones = currentWordData.word.split('').map((_, index) => ({
       id: `dropzone-${index}`,
       letter: null
     }));
     setDropZones(initialDropZones);
-    
+
     // Recreate all letters (both from word and extra letters)
     const allLetters = (currentWordData.word + currentWordData.extraLetters).split('');
-    
+
     // Create scattered letters with distribution
     const shuffledLetters = allLetters
       .sort(() => Math.random() - 0.5)
@@ -245,10 +245,10 @@ function GamePage() {
         const gridSize = Math.ceil(Math.sqrt(allLetters.length));
         const row = Math.floor(index / gridSize);
         const col = index % gridSize;
-        
+
         const xBase = (col / gridSize) * 80 + 10;
         const yBase = (row / gridSize) * 80 + 10;
-        
+
         return {
           id: `letter-${index}`,
           char,
@@ -270,14 +270,14 @@ function GamePage() {
 
   const handleTouchMove = (e: React.TouchEvent) => {
     if (!touchedLetter || !gameAreaRef.current) return;
-    
+
     // Prevent scrolling while dragging
     e.preventDefault();
-    
+
     // Get the touch position relative to the game area
     const touch = e.touches[0];
     const gameArea = gameAreaRef.current.getBoundingClientRect();
-    
+
     // Create a "ghost" element showing the letter being dragged
     const ghostElement = document.getElementById('touch-ghost');
     if (ghostElement) {
@@ -292,14 +292,14 @@ function GamePage() {
       setTouchedLetter(null);
       return;
     }
-    
+
     // Find which dropzone is under the touch point
     const touch = e.changedTouches[0];
     const dropzoneElements = document.querySelectorAll('.drop-zone');
     const gameArea = gameAreaRef.current.getBoundingClientRect();
-    
+
     let targetDropzone: Element | null = null;
-    
+
     dropzoneElements.forEach((element) => {
       const rect = element.getBoundingClientRect();
       if (
@@ -311,7 +311,7 @@ function GamePage() {
         targetDropzone = element;
       }
     });
-    
+
     if (targetDropzone) {
       const dropZoneId = targetDropzone.getAttribute('data-id');
       if (dropZoneId) {
@@ -322,16 +322,16 @@ function GamePage() {
           const updatedDropZones = [...dropZones];
           updatedDropZones[dropZoneIndex] = { ...updatedDropZones[dropZoneIndex], letter: touchedLetter.char };
           setDropZones(updatedDropZones);
-          
+
           // Remove the letter from available letters
           setLetters(letters.filter(l => l.id !== touchedLetter.id));
-          
+
           // Check if the word is complete
           checkWord(updatedDropZones);
         }
       }
     }
-    
+
     setIsDragging(false);
     setTouchedLetter(null);
   };
@@ -410,8 +410,8 @@ function GamePage() {
 
         <main>
           {showError && (
-            <div className="flex items-center justify-center gap-2 text-red-600 mb-6 animate-bounce" 
-                 aria-live="assertive" role="alert">
+            <div className="flex items-center justify-center gap-2 text-red-600 mb-6 animate-bounce"
+              aria-live="assertive" role="alert">
               <AlertCircle className="w-5 h-5" aria-hidden="true" />
               <p>Incorrect word! Try again.</p>
             </div>
@@ -425,9 +425,8 @@ function GamePage() {
                   data-id={zone.id}
                   onDrop={(e) => handleDrop(e, zone.id)}
                   onDragOver={handleDragOver}
-                  className={`drop-zone w-12 h-12 sm:w-16 sm:h-16 border-2 ${
-                    zone.letter ? 'border-green-500 bg-green-50' : 'border-dashed border-gray-400'
-                  } rounded-lg flex items-center justify-center transition-all`}
+                  className={`drop-zone w-12 h-12 sm:w-16 sm:h-16 border-2 ${zone.letter ? 'border-green-500 bg-green-50' : 'border-dashed border-gray-400'
+                    } rounded-lg flex items-center justify-center transition-all`}
                 >
                   {zone.letter && (
                     <span className="text-xl sm:text-2xl font-bold text-green-700">{zone.letter}</span>
@@ -474,7 +473,7 @@ function GamePage() {
               ))}
             </div>
           </section>
-          
+
           <div className="fixed bottom-0 left-0 right-0 z-10 bg-white/90 p-2 text-center text-xs text-gray-500 md:hidden">
             Tap and drag letters to the boxes above
           </div>

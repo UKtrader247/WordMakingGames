@@ -1,9 +1,15 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { Sparkles, RotateCcw, AlertCircle, Home, Lightbulb, RefreshCw, CheckCircle, X } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useParams, useNavigate } from 'react-router-dom';
 import { topics } from '../data/topics';
 import VisitCounter from './VisitCounter';
+import { DndContext, DragEndEvent, MouseSensor, TouchSensor, useSensor, useSensors } from "@dnd-kit/core";
+import { AnimatePresence, motion } from "framer-motion";
+import AboutModal from './AboutModal';
+import PrivacyModal from './PrivacyModal';
+import ContactModal from './ContactModal';
+import StatsCard from './StatsCard';
 
 interface Letter {
   id: string;
@@ -40,6 +46,11 @@ function GamePage() {
 
   // Add this new state
   const [showCelebration, setShowCelebration] = useState(false);
+
+  // Modals
+  const [showAboutModal, setShowAboutModal] = useState(false);
+  const [showPrivacyModal, setShowPrivacyModal] = useState(false);
+  const [showContactModal, setShowContactModal] = useState(false);
 
   // Toast message display function
   const showToast = (message: string, type: 'success' | 'error' | 'info' = 'info') => {
@@ -581,245 +592,297 @@ function GamePage() {
     }
   };
 
+  useEffect(() => {
+    // Save completed words to localStorage
+    localStorage.setItem("completedWords", JSON.stringify(Array.from(completedWords)));
+    
+    // Dispatch custom event for StatsCard component
+    const event = new CustomEvent('gameStateChanged');
+    window.dispatchEvent(event);
+  }, [completedWords]);
+
+  useEffect(() => {
+    if (currentWordData) {
+      // Save current word to sessionStorage for StatsCard component
+      sessionStorage.setItem('currentGame', JSON.stringify({
+        topic: topic,
+        currentWord: currentWordData.word
+      }));
+      
+      // Dispatch custom event for StatsCard component
+      const event = new CustomEvent('gameStateChanged');
+      window.dispatchEvent(event);
+    }
+  }, [currentWordData, topic]);
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-8 pt-16">
-      <div className="max-w-4xl mx-auto">
-        <header className="text-center mb-12 relative">
-          <button
-            onClick={() => navigate('/')}
-            className="absolute left-0 top-0 flex items-center gap-2 px-3 py-1 sm:px-4 sm:py-2 bg-white/80 text-blue-600 
-              rounded-lg hover:bg-white transition-colors duration-200 shadow-sm text-sm sm:text-base"
-            aria-label="Return to home page"
-          >
-            <Home className="w-4 h-4" aria-hidden="true" />
-            <span className="hidden sm:inline">Back to Home</span>
-            <span className="sm:hidden">Home</span>
-          </button>
-          <h1 className="text-3xl sm:text-4xl font-bold text-blue-800 mb-4">
-            {topic?.name || 'Word Making Game'}
-          </h1>
-          <div className="flex items-center justify-center gap-8 mb-4">
-            <p className="text-gray-600">Drag the letters to form the word</p>
-            <div className="flex items-center gap-2">
-              <span className="text-gray-600">Score:</span>
-              <span className={`text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent
-                ${showScoreAnimation ? 'animate-bounce' : ''}`}
-                aria-live="polite"
-              >
-                {score}
-              </span>
-            </div>
-          </div>
-          <p className="text-sm text-gray-500 mb-4">
-            Words Completed: <span aria-live="polite">{completedWords.size}</span> / {topic?.words.length || 0}
-          </p>
-          <div className="flex items-center justify-center gap-2 text-sm text-gray-500 mb-4">
-            <span className="px-2 py-1 bg-gray-100 rounded">
-              Current Word Length: {currentWordData?.word.length || 0}
-            </span>
-          </div>
-          {currentWordData && currentWordData.word.length >= 5 && (
-            <div className="text-sm text-gray-500 mb-4">
-              <span className="px-2 py-1 bg-blue-50 rounded border border-blue-200">
-                <span className="text-blue-700 font-semibold">Hint:</span> Some letters have been pre-filled to help you
-              </span>
-            </div>
-          )}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-8 pt-16">
+        <div className="max-w-4xl mx-auto">
+          <header className="text-center mb-12 relative">
             <button
-              onClick={resetGame}
-              className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg 
-                hover:bg-blue-700 transition-colors duration-200 w-full sm:w-auto text-sm sm:text-base mb-2 sm:mb-0"
-              aria-label="Get next word"
+              onClick={() => navigate('/')}
+              className="absolute left-0 top-0 flex items-center gap-2 px-3 py-1 sm:px-4 sm:py-2 bg-white/80 text-blue-600 
+                rounded-lg hover:bg-white transition-colors duration-200 shadow-sm text-sm sm:text-base"
+              aria-label="Return to home page"
             >
-              <RotateCcw className="w-4 h-4" aria-hidden="true" />
-              Next Word
+              <Home className="w-4 h-4" aria-hidden="true" />
+              <span className="hidden sm:inline">Back to Home</span>
+              <span className="sm:hidden">Home</span>
             </button>
-
-            <button
-              onClick={resetCurrentWord}
-              className="flex items-center gap-2 px-4 py-2 bg-gray-600 text-white rounded-lg 
-                hover:bg-gray-700 transition-colors duration-200 w-full sm:w-auto text-sm sm:text-base mb-2 sm:mb-0"
-              disabled={success}
-              aria-label="Try again with the same word"
-            >
-              <RefreshCw className="w-4 h-4" aria-hidden="true" />
-              Try Again
-            </button>
-
-            <button
-              onClick={handleSolveClick}
-              className="flex items-center gap-2 px-4 py-2 bg-amber-500 text-white rounded-lg 
-                hover:bg-amber-600 transition-colors duration-200 w-full sm:w-auto text-sm sm:text-base"
-              disabled={success || usedSolve}
-              aria-label="Solve the current word automatically"
-            >
-              <Lightbulb className="w-4 h-4" aria-hidden="true" />
-              Solve
-            </button>
-          </div>
-        </header>
-
-        <main>
-          {showError && (
-            <div className="flex items-center justify-center gap-2 text-red-600 mb-6 animate-bounce"
-              aria-live="assertive" role="alert">
-              <AlertCircle className="w-5 h-5" aria-hidden="true" />
-              <p>Incorrect word! Try again.</p>
-            </div>
-          )}
-
-          <section aria-label="Word puzzle game area" ref={gameAreaRef}>
-            <div className="flex flex-wrap justify-center gap-3 mb-8 sm:mb-16" aria-label="Drop zones for letters">
-              {dropZones.map((zone) => (
-                <div
-                  key={zone.id}
-                  data-id={zone.id}
-                  onDrop={(e) => handleDrop(e, zone.id)}
-                  onDragOver={handleDragOver}
-                  className={`drop-zone w-12 h-12 sm:w-16 sm:h-16 border-2 
-                    ${zone.letter 
-                      ? zone.isPrefilled 
-                        ? 'border-blue-500 bg-blue-50' 
-                        : 'border-green-500 bg-green-50' 
-                      : 'border-dashed border-gray-400'
-                    } rounded-lg flex items-center justify-center transition-all`}
+            <h1 className="text-3xl sm:text-4xl font-bold text-blue-800 mb-4">
+              {topic?.name || 'Word Making Game'}
+            </h1>
+            <div className="flex items-center justify-center gap-8 mb-4">
+              <p className="text-gray-600">Drag the letters to form the word</p>
+              <div className="flex items-center gap-2">
+                <span className="text-gray-600">Score:</span>
+                <span className={`text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent
+                  ${showScoreAnimation ? 'animate-bounce' : ''}`}
+                  aria-live="polite"
                 >
-                  {zone.letter && (
-                    <span className={`text-xl sm:text-2xl font-bold ${zone.isPrefilled ? 'text-blue-700' : 'text-green-700'}`}>
-                      {zone.letter}
-                    </span>
-                  )}
-                </div>
-              ))}
+                  {score}
+                </span>
+              </div>
             </div>
-
-            {/* Touch dragging ghost element */}
-            {isDragging && touchedLetter && (
-              <div
-                id="touch-ghost"
-                className="fixed w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-lg flex items-center justify-center shadow-lg z-50 pointer-events-none"
-                style={{ left: '0', top: '0' }}
+            {currentWordData && currentWordData.word.length >= 5 && (
+              <div className="text-sm text-gray-500 mb-4">
+                <span className="px-2 py-1 bg-blue-50 rounded border border-blue-200">
+                  <span className="text-blue-700 font-semibold">Hint:</span> Some letters have been pre-filled to help you
+                </span>
+              </div>
+            )}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+              <button
+                onClick={resetGame}
+                className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg 
+                  hover:bg-blue-700 transition-colors duration-200 w-full sm:w-auto text-sm sm:text-base mb-2 sm:mb-0"
+                aria-label="Get next word"
               >
-                <span className="text-lg sm:text-xl font-bold text-blue-700">{touchedLetter.char}</span>
+                <RotateCcw className="w-4 h-4" aria-hidden="true" />
+                Next Word
+              </button>
+
+              <button
+                onClick={resetCurrentWord}
+                className="flex items-center gap-2 px-4 py-2 bg-gray-600 text-white rounded-lg 
+                  hover:bg-gray-700 transition-colors duration-200 w-full sm:w-auto text-sm sm:text-base mb-2 sm:mb-0"
+                disabled={success}
+                aria-label="Try again with the same word"
+              >
+                <RefreshCw className="w-4 h-4" aria-hidden="true" />
+                Try Again
+              </button>
+
+              <button
+                onClick={handleSolveClick}
+                className="flex items-center gap-2 px-4 py-2 bg-amber-500 text-white rounded-lg 
+                  hover:bg-amber-600 transition-colors duration-200 w-full sm:w-auto text-sm sm:text-base"
+                disabled={success || usedSolve}
+                aria-label="Solve the current word automatically"
+              >
+                <Lightbulb className="w-4 h-4" aria-hidden="true" />
+                Solve
+              </button>
+            </div>
+          </header>
+
+          <main>
+            {showError && (
+              <div className="flex items-center justify-center gap-2 text-red-600 mb-6 animate-bounce"
+                aria-live="assertive" role="alert">
+                <AlertCircle className="w-5 h-5" aria-hidden="true" />
+                <p>Incorrect word! Try again.</p>
               </div>
             )}
 
-            <div className="relative w-full h-[250px] sm:h-[300px] bg-white/50 rounded-xl p-4">
-              {letters.map((letter) => (
+            <section aria-label="Word puzzle game area" ref={gameAreaRef}>
+              <div className="flex flex-wrap justify-center gap-3 mb-8 sm:mb-16" aria-label="Drop zones for letters">
+                {dropZones.map((zone) => (
+                  <div
+                    key={zone.id}
+                    data-id={zone.id}
+                    onDrop={(e) => handleDrop(e, zone.id)}
+                    onDragOver={handleDragOver}
+                    className={`drop-zone w-12 h-12 sm:w-16 sm:h-16 border-2 
+                      ${zone.letter 
+                        ? zone.isPrefilled 
+                          ? 'border-blue-500 bg-blue-50' 
+                          : 'border-green-500 bg-green-50' 
+                        : 'border-dashed border-gray-400'
+                      } rounded-lg flex items-center justify-center transition-all`}
+                  >
+                    {zone.letter && (
+                      <span className={`text-xl sm:text-2xl font-bold ${zone.isPrefilled ? 'text-blue-700' : 'text-green-700'}`}>
+                        {zone.letter}
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              {/* Touch dragging ghost element */}
+              {isDragging && touchedLetter && (
                 <div
-                  key={letter.id}
-                  draggable
-                  onDragStart={(e) => handleDragStart(e, letter.id)}
-                  onDragEnd={handleDragEnd}
-                  onTouchStart={(e) => handleTouchStart(e, letter)}
-                  onTouchMove={handleTouchMove}
-                  onTouchEnd={handleTouchEnd}
-                  style={{
-                    position: 'absolute',
-                    left: `${letter.position.x}%`,
-                    top: `${letter.position.y}%`,
-                    transform: `rotate(${Math.random() * 20 - 10}deg)`,
-                    cursor: 'grab'
-                  }}
-                  className={`w-10 h-10 sm:w-12 sm:h-12 bg-white shadow-lg rounded-lg flex items-center justify-center
-                    ${isDragging ? 'opacity-50' : 'opacity-100'}
-                    active:scale-125 hover:scale-125 hover:shadow-xl hover:z-10 hover:bg-blue-50 hover:rotate-0
-                    transition-all duration-300 ease-in-out touch-manipulation`}
+                  id="touch-ghost"
+                  className="fixed w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-lg flex items-center justify-center shadow-lg z-50 pointer-events-none"
+                  style={{ left: '0', top: '0' }}
                 >
-                  <span className="text-lg sm:text-xl font-bold text-blue-700">{letter.char}</span>
+                  <span className="text-lg sm:text-xl font-bold text-blue-700">{touchedLetter.char}</span>
                 </div>
-              ))}
+              )}
+
+              <div className="relative w-full h-[250px] sm:h-[300px] bg-white/50 rounded-xl p-4">
+                {letters.map((letter) => (
+                  <div
+                    key={letter.id}
+                    draggable
+                    onDragStart={(e) => handleDragStart(e, letter.id)}
+                    onDragEnd={handleDragEnd}
+                    onTouchStart={(e) => handleTouchStart(e, letter)}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
+                    style={{
+                      position: 'absolute',
+                      left: `${letter.position.x}%`,
+                      top: `${letter.position.y}%`,
+                      transform: `rotate(${Math.random() * 20 - 10}deg)`,
+                      cursor: 'grab'
+                    }}
+                    className={`w-10 h-10 sm:w-12 sm:h-12 bg-white shadow-lg rounded-lg flex items-center justify-center
+                      ${isDragging ? 'opacity-50' : 'opacity-100'}
+                      active:scale-125 hover:scale-125 hover:shadow-xl hover:z-10 hover:bg-blue-50 hover:rotate-0
+                      transition-all duration-300 ease-in-out touch-manipulation`}
+                  >
+                    <span className="text-lg sm:text-xl font-bold text-blue-700">{letter.char}</span>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <div className="fixed bottom-0 left-0 right-0 z-10 bg-white/90 p-2 text-center text-xs text-gray-500 md:hidden">
+              Tap and drag letters to the boxes above
             </div>
-          </section>
+          </main>
 
-          <div className="fixed bottom-0 left-0 right-0 z-10 bg-white/90 p-2 text-center text-xs text-gray-500 md:hidden">
-            Tap and drag letters to the boxes above
+          <div className="text-center mt-6 mb-8 p-4 bg-white/80 rounded-lg shadow-sm">
+            <p className="text-gray-600">
+              <span className="font-semibold">Hint:</span> {currentWordData?.hint}
+            </p>
           </div>
-        </main>
 
-        <div className="text-center mt-6 mb-8 p-4 bg-white/80 rounded-lg shadow-sm">
-          <p className="text-gray-600">
-            <span className="font-semibold">Hint:</span> {currentWordData?.hint}
-          </p>
-        </div>
-
-        {success && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white p-8 rounded-xl text-center">
-              <Sparkles className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
-              <h2 className="text-2xl font-bold text-green-700 mb-4">
-                Congratulations!
-              </h2>
-              <p className="text-gray-600 mb-2">You successfully formed the word!</p>
-              <p className="text-xl font-bold mb-6">
-                <span className="text-gray-600">Score: </span>
-                <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                  {score}
-                </span>
-              </p>
-              <div className="space-y-2">
-                <p className="text-sm text-gray-500">
-                  Words Completed: {completedWords.size} / {topic?.words.length || 0}
+          {success && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+              <div className="bg-white p-8 rounded-xl text-center">
+                <Sparkles className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
+                <h2 className="text-2xl font-bold text-green-700 mb-4">
+                  Congratulations!
+                </h2>
+                <p className="text-gray-600 mb-2">You successfully formed the word!</p>
+                <p className="text-xl font-bold mb-6">
+                  <span className="text-gray-600">Score: </span>
+                  <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                    {score}
+                  </span>
                 </p>
-                <button
-                  onClick={resetGame}
-                  className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700
-                    transition-colors duration-200"
-                >
-                  Next Word
-                </button>
+                <div className="space-y-2">
+                  <p className="text-sm text-gray-500">
+                    Words Completed: {completedWords.size} / {topic?.words.length || 0}
+                  </p>
+                  <button
+                    onClick={resetGame}
+                    className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700
+                      transition-colors duration-200"
+                  >
+                    Next Word
+                  </button>
+                </div>
               </div>
             </div>
+          )}
+
+          {/* Trophy celebration */}
+          {showCelebration && (
+            <CompletionCelebration onClose={() => setShowCelebration(false)} />
+          )}
+
+          <div className="flex justify-center gap-2 mb-6">
+            <button
+              className="px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+              onClick={resetGame}
+            >
+              Reset
+            </button>
+            
+            {/* Debug button for force completing */}
+            <button
+              className="px-3 py-1 bg-green-500 hover:bg-green-600 text-white text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+              onClick={forceCompleteAllWords}
+            >
+              Force Complete
+            </button>
+          </div>
+        </div>
+        <VisitCounter />
+        
+        {/* Toast notification */}
+        {toast && (
+          <div 
+            className={`fixed bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-lg shadow-lg flex items-center gap-2 z-50 transition-all duration-300 ease-in-out animate-fade-in ${toast.type === 'success' ? 'bg-green-500' : 'bg-red-500'} text-white`}
+            role="alert"
+          >
+            {toast.type === 'success' ? (
+              <CheckCircle className="h-5 w-5" />
+            ) : (
+              <X className="h-5 w-5" />
+            )}
+            <span>{toast?.message}</span>
+            <button 
+              onClick={() => setToast(null)} 
+              className="ml-2 opacity-70 hover:opacity-100"
+              aria-label="Close notification"
+            >
+              <X className="h-5 w-5" />
+            </button>
           </div>
         )}
-
-        {/* Trophy celebration */}
-        {showCelebration && (
-          <CompletionCelebration onClose={() => setShowCelebration(false)} />
-        )}
-
-        <div className="flex justify-center gap-2 mb-6">
-          <button
-            className="px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-            onClick={resetGame}
-          >
-            Reset
-          </button>
-          
-          {/* Debug button for force completing */}
-          <button
-            className="px-3 py-1 bg-green-500 hover:bg-green-600 text-white text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
-            onClick={forceCompleteAllWords}
-          >
-            Force Complete
-          </button>
-        </div>
       </div>
-      <VisitCounter />
-      
-      {/* Toast notification */}
-      {toast && (
-        <div 
-          className={`fixed bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-lg shadow-lg flex items-center gap-2 z-50 transition-all duration-300 ease-in-out animate-fade-in ${toast.type === 'success' ? 'bg-green-500' : 'bg-red-500'} text-white`}
-          role="alert"
-        >
-          {toast.type === 'success' ? (
-            <CheckCircle className="h-5 w-5" />
-          ) : (
-            <X className="h-5 w-5" />
-          )}
-          <span>{toast?.message}</span>
-          <button 
-            onClick={() => setToast(null)} 
-            className="ml-2 opacity-70 hover:opacity-100"
-            aria-label="Close notification"
-          >
-            <X className="h-5 w-5" />
-          </button>
+
+      {/* Footer */}
+      <footer className="mt-12 text-center">
+        <div className="bg-white p-6 rounded-xl shadow-md max-w-4xl mx-auto">
+          <p className="font-medium text-blue-800">&copy; {new Date().getFullYear()} Word Making Games</p>
+          <p className="mt-2 text-gray-600 text-sm">
+            Improve your vocabulary with our educational word games.
+          </p>
+          <div className="mt-4 flex justify-center space-x-4">
+            <button 
+              onClick={() => setShowAboutModal(true)}
+              className="text-blue-500 hover:text-blue-700 transition"
+            >
+              About
+            </button>
+            <button
+              onClick={() => setShowPrivacyModal(true)}
+              className="text-blue-500 hover:text-blue-700 transition"
+            >
+              Privacy
+            </button>
+            <button
+              onClick={() => setShowContactModal(true)}
+              className="text-blue-500 hover:text-blue-700 transition"
+            >
+              Contact
+            </button>
+          </div>
         </div>
-      )}
-    </div>
+      </footer>
+
+      {/* Modals */}
+      {showAboutModal && <AboutModal isOpen={showAboutModal} onClose={() => setShowAboutModal(false)} />}
+      {showPrivacyModal && <PrivacyModal isOpen={showPrivacyModal} onClose={() => setShowPrivacyModal(false)} />}
+      {showContactModal && <ContactModal isOpen={showContactModal} onClose={() => setShowContactModal(false)} />}
+    </>
   );
 }
 

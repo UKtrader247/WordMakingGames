@@ -6,6 +6,7 @@ import VisitCounter from '../components/VisitCounter';
 import AboutModal from "../components/AboutModal";
 import PrivacyModal from "../components/PrivacyModal";
 import ContactModal from "../components/ContactModal";
+import StatsCard from '../components/StatsCard';
 
 function HomePage() {
   const navigate = useNavigate();

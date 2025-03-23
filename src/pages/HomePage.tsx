@@ -10,37 +10,57 @@ function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-8 pt-16">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-blue-800 mb-4 flex items-center justify-center gap-3">
-            <Gamepad2 className="w-12 h-12" />
-            Word Making Game
+        <header className="text-center mb-12">
+          <h1 className="text-5xl font-bold text-blue-800 mb-4 flex items-center justify-center gap-3" id="main-heading">
+            <Gamepad2 className="w-12 h-12" aria-hidden="true" />
+            <span>Word Making Game</span>
           </h1>
-          <p className="text-gray-600 text-lg">Choose a topic and start playing!</p>
-        </div>
+          <p className="text-gray-600 text-lg" id="site-description">Choose a topic and start playing to improve your vocabulary and spelling skills!</p>
+        </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {topics.map((topic) => (
-            <button
-              key={topic.id}
-              onClick={() => navigate(`/play/${topic.id}`)}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transform hover:-translate-y-1 
-                transition-all duration-200 text-left group"
-            >
-              <div className="flex items-start justify-between mb-4">
-                <span className="text-4xl">{topic.icon}</span>
-                <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-sm font-medium">
-                  {topic.words.length} words
-                </span>
-              </div>
-              <h2 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600">
-                {topic.name}
-              </h2>
-              <p className="text-gray-600 text-sm">
-                {topic.description}
-              </p>
-            </button>
-          ))}
-        </div>
+        <main>
+          <section aria-labelledby="topic-section">
+            <h2 className="sr-only" id="topic-section">Game Topics</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {topics.map((topic) => (
+                <article 
+                  key={topic.id}
+                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transform hover:-translate-y-1 
+                    transition-all duration-200"
+                >
+                  <button
+                    onClick={() => navigate(`/play/${topic.id}`)}
+                    className="w-full h-full text-left group"
+                    aria-label={`Play ${topic.name} word games`}
+                  >
+                    <div className="flex items-start justify-between mb-4">
+                      <span className="text-4xl" role="img" aria-label={topic.name + " icon"}>{topic.icon}</span>
+                      <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-sm font-medium">
+                        {topic.words.length} words
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600">
+                      {topic.name}
+                    </h3>
+                    <p className="text-gray-600 text-sm">
+                      {topic.description}
+                    </p>
+                  </button>
+                </article>
+              ))}
+            </div>
+          </section>
+        </main>
+
+        <footer className="mt-12 text-center text-sm text-gray-500">
+          <p>&copy; {new Date().getFullYear()} Word Making Games. All rights reserved.</p>
+          <p className="mt-1">Improve your vocabulary with our educational word games</p>
+          <p className="mt-1">
+            <a href="https://wordmakinggames.com" className="text-blue-600 hover:underline">
+              wordmakinggames.com
+            </a>
+          </p>
+        </footer>
       </div>
       <VisitCounter />
     </div>

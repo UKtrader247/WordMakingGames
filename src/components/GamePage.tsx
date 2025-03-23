@@ -260,13 +260,14 @@ function GamePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-8 pt-16">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12 relative">
+        <header className="text-center mb-12 relative">
           <button
             onClick={() => navigate('/')}
             className="absolute left-0 top-0 flex items-center gap-2 px-4 py-2 bg-white/80 text-blue-600 
               rounded-lg hover:bg-white transition-colors duration-200 shadow-sm"
+            aria-label="Return to home page"
           >
-            <Home className="w-4 h-4" />
+            <Home className="w-4 h-4" aria-hidden="true" />
             Back to Home
           </button>
           <h1 className="text-4xl font-bold text-blue-800 mb-4">
@@ -277,13 +278,15 @@ function GamePage() {
             <div className="flex items-center gap-2">
               <span className="text-gray-600">Score:</span>
               <span className={`text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent
-                ${showScoreAnimation ? 'animate-bounce' : ''}`}>
+                ${showScoreAnimation ? 'animate-bounce' : ''}`}
+                aria-live="polite"
+              >
                 {score}
               </span>
             </div>
           </div>
           <p className="text-sm text-gray-500 mb-4">
-            Words Completed: {completedWords.size} / {topic?.words.length || 0}
+            Words Completed: <span aria-live="polite">{completedWords.size}</span> / {topic?.words.length || 0}
           </p>
           <div className="flex items-center justify-center gap-2 text-sm text-gray-500 mb-4">
             <span className="px-2 py-1 bg-gray-100 rounded">
@@ -295,8 +298,9 @@ function GamePage() {
               onClick={resetGame}
               className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg 
                 hover:bg-blue-700 transition-colors duration-200"
+              aria-label="Get next word"
             >
-              <RotateCcw className="w-4 h-4" />
+              <RotateCcw className="w-4 h-4" aria-hidden="true" />
               Next Word
             </button>
 
@@ -305,8 +309,9 @@ function GamePage() {
               className="flex items-center gap-2 px-4 py-2 bg-gray-600 text-white rounded-lg 
                 hover:bg-gray-700 transition-colors duration-200"
               disabled={success}
+              aria-label="Try again with the same word"
             >
-              <RefreshCw className="w-4 h-4" />
+              <RefreshCw className="w-4 h-4" aria-hidden="true" />
               Try Again
             </button>
 
@@ -315,37 +320,43 @@ function GamePage() {
               className="flex items-center gap-2 px-4 py-2 bg-amber-500 text-white rounded-lg 
                 hover:bg-amber-600 transition-colors duration-200"
               disabled={success || usedSolve}
+              aria-label="Solve the current word automatically"
             >
-              <Lightbulb className="w-4 h-4" />
+              <Lightbulb className="w-4 h-4" aria-hidden="true" />
               Solve
             </button>
           </div>
-        </div>
+        </header>
 
-        {showError && (
-          <div className="flex items-center justify-center gap-2 text-red-600 mb-6 animate-bounce">
-            <AlertCircle className="w-5 h-5" />
-            <p>Incorrect word! Try again.</p>
-          </div>
-        )}
-
-        <div className="flex justify-center gap-4 mb-16">
-          {dropZones.map((zone) => (
-            <div
-              key={zone.id}
-              onDrop={(e) => handleDrop(e, zone.id)}
-              onDragOver={handleDragOver}
-              className={`drop-zone w-16 h-16 border-2 ${zone.letter ? 'border-green-500 bg-green-50' : 'border-dashed border-gray-400'
-                } rounded-lg flex items-center justify-center transition-all`}
-            >
-              {zone.letter && (
-                <span className="text-2xl font-bold text-green-700">
-                  {zone.letter}
-                </span>
-              )}
+        <main>
+          {showError && (
+            <div className="flex items-center justify-center gap-2 text-red-600 mb-6 animate-bounce" 
+                 aria-live="assertive" role="alert">
+              <AlertCircle className="w-5 h-5" aria-hidden="true" />
+              <p>Incorrect word! Try again.</p>
             </div>
-          ))}
-        </div>
+          )}
+
+          <section aria-label="Word puzzle game area">
+            <div className="flex justify-center gap-4 mb-16" aria-label="Drop zones for letters">
+              {dropZones.map((zone) => (
+                <div
+                  key={zone.id}
+                  onDrop={(e) => handleDrop(e, zone.id)}
+                  onDragOver={handleDragOver}
+                  className={`drop-zone w-16 h-16 border-2 ${zone.letter ? 'border-green-500 bg-green-50' : 'border-dashed border-gray-400'
+                    } rounded-lg flex items-center justify-center transition-all`}
+                >
+                  {zone.letter && (
+                    <span className="text-2xl font-bold text-green-700">
+                      {zone.letter}
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+        </main>
 
         <div className="relative w-full h-[300px] bg-white/50 rounded-xl p-4">
           {letters.map((letter) => (

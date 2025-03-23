@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Sparkles, RotateCcw, AlertCircle, Home, Lightbulb, RefreshCw } from 'lucide-react';
+import { Sparkles, RotateCcw, AlertCircle, Home, Lightbulb, RefreshCw, CheckCircle, X } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useParams, useNavigate } from 'react-router-dom';
 import { topics } from '../data/topics';
@@ -32,6 +32,7 @@ function GamePage() {
   const [showScoreAnimation, setShowScoreAnimation] = useState(false);
   const [completedWords, setCompletedWords] = useState<Set<string>>(new Set());
   const [usedSolve, setUsedSolve] = useState(false);
+  const [toast, setToast] = useState<{message: string, type: 'success' | 'error'} | null>(null);
 
   // Add new state for touch handling
   const [touchedLetter, setTouchedLetter] = useState<Letter | null>(null);
@@ -39,6 +40,12 @@ function GamePage() {
 
   // Add this new state
   const [showCelebration, setShowCelebration] = useState(false);
+
+  // Toast message display function
+  const showToast = (message: string, type: 'success' | 'error' | 'info' = 'info') => {
+    setToast({ message, type: type === 'info' ? 'success' : type });
+    setTimeout(() => setToast(null), 3000);
+  };
 
   const getRandomWord = () => {
     if (!topic) return null;
@@ -205,10 +212,24 @@ function GamePage() {
           setShowCelebration(true);
           
           // All words completed, emit completion event
-          const event = new CustomEvent('quizCompleted', { 
-            detail: { topicId: topic.id } 
-          });
-          window.dispatchEvent(event);
+          try {
+            console.log('Dispatching completion event for topic:', topic.id);
+            const event = new CustomEvent('quizCompleted', { 
+              detail: { topicId: topic.id }
+            });
+            window.dispatchEvent(event);
+            
+            // Direct localStorage update as a fallback
+            const storedTopics = localStorage.getItem('completedTopics');
+            let completedTopics = storedTopics ? JSON.parse(storedTopics) : [];
+            if (!completedTopics.includes(topic.id)) {
+              completedTopics.push(topic.id);
+              localStorage.setItem('completedTopics', JSON.stringify(completedTopics));
+              console.log('Directly updated localStorage with completed topic:', topic.id);
+            }
+          } catch (error) {
+            console.error('Error dispatching completion event:', error);
+          }
         }
         
         triggerConfetti();
@@ -250,6 +271,11 @@ function GamePage() {
 
   const resetGame = () => {
     initializeGame();
+    setToast({ 
+      message: 'Moving to next word', 
+      type: 'success' 
+    });
+    setTimeout(() => setToast(null), 3000);
   };
 
   const handleSolveClick = () => {
@@ -264,6 +290,13 @@ function GamePage() {
     setDropZones(solvedDropZones);
     setLetters([]); // Remove all draggable letters
     setUsedSolve(true);
+
+    // Show toast notification
+    setToast({ 
+      message: 'Word solved automatically', 
+      type: 'success' 
+    });
+    setTimeout(() => setToast(null), 3000);
 
     // Show success animation after a short delay
     setTimeout(() => {
@@ -280,10 +313,24 @@ function GamePage() {
         setShowCelebration(true);
         
         // All words completed, emit completion event
-        const event = new CustomEvent('quizCompleted', { 
-          detail: { topicId: topic.id } 
-        });
-        window.dispatchEvent(event);
+        try {
+          console.log('Dispatching completion event for topic:', topic.id);
+          const event = new CustomEvent('quizCompleted', { 
+            detail: { topicId: topic.id }
+          });
+          window.dispatchEvent(event);
+          
+          // Direct localStorage update as a fallback
+          const storedTopics = localStorage.getItem('completedTopics');
+          let completedTopics = storedTopics ? JSON.parse(storedTopics) : [];
+          if (!completedTopics.includes(topic.id)) {
+            completedTopics.push(topic.id);
+            localStorage.setItem('completedTopics', JSON.stringify(completedTopics));
+            console.log('Directly updated localStorage with completed topic:', topic.id);
+          }
+        } catch (error) {
+          console.error('Error dispatching completion event:', error);
+        }
       }
       
       triggerConfetti();
@@ -366,6 +413,13 @@ function GamePage() {
         };
       });
     setLetters(shuffledLetters);
+    
+    // Show toast notification
+    setToast({ 
+      message: 'Current word has been reset', 
+      type: 'success' 
+    });
+    setTimeout(() => setToast(null), 3000);
   };
 
   // Add new functions for touch handling
@@ -482,6 +536,49 @@ function GamePage() {
         </div>
       </div>
     );
+  };
+
+  // Add this new function directly after the handleSolveClick function
+  const forceCompleteAllWords = () => {
+    if (!topic) return;
+    
+    // Mark all words as completed
+    const allWords = new Set(topic.words.map(word => word.word));
+    setCompletedWords(allWords);
+    
+    // Show trophy celebration
+    setShowCelebration(true);
+    
+    // Update localStorage directly
+    try {
+      const storedTopics = localStorage.getItem('completedTopics');
+      let completedTopics = storedTopics ? JSON.parse(storedTopics) : [];
+      if (!completedTopics.includes(topic.id)) {
+        completedTopics.push(topic.id);
+        localStorage.setItem('completedTopics', JSON.stringify(completedTopics));
+        console.log('Force completed topic:', topic.id);
+      }
+      
+      // Dispatch event as well
+      const event = new CustomEvent('quizCompleted', { 
+        detail: { topicId: topic.id }
+      });
+      window.dispatchEvent(event);
+      
+      // Show toast notification
+      setToast({ 
+        message: `Topic "${topic.name}" has been force completed!`, 
+        type: 'success' 
+      });
+      setTimeout(() => setToast(null), 3000);
+    } catch (error) {
+      console.error('Error force completing topic:', error);
+      setToast({ 
+        message: 'Error while force completing topic',
+        type: 'error'
+      });
+      setTimeout(() => setToast(null), 3000);
+    }
   };
 
   return (
@@ -681,8 +778,47 @@ function GamePage() {
         {showCelebration && (
           <CompletionCelebration onClose={() => setShowCelebration(false)} />
         )}
+
+        <div className="flex justify-center gap-2 mb-6">
+          <button
+            className="px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+            onClick={resetGame}
+          >
+            Reset
+          </button>
+          
+          {/* Debug button for force completing */}
+          <button
+            className="px-3 py-1 bg-green-500 hover:bg-green-600 text-white text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+            onClick={forceCompleteAllWords}
+          >
+            Force Complete
+          </button>
+        </div>
       </div>
       <VisitCounter />
+      
+      {/* Toast notification */}
+      {toast && (
+        <div 
+          className={`fixed bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-lg shadow-lg flex items-center gap-2 z-50 transition-all duration-300 ease-in-out animate-fade-in ${toast.type === 'success' ? 'bg-green-500' : 'bg-red-500'} text-white`}
+          role="alert"
+        >
+          {toast.type === 'success' ? (
+            <CheckCircle className="h-5 w-5" />
+          ) : (
+            <X className="h-5 w-5" />
+          )}
+          <span>{toast?.message}</span>
+          <button 
+            onClick={() => setToast(null)} 
+            className="ml-2 opacity-70 hover:opacity-100"
+            aria-label="Close notification"
+          >
+            <X className="h-5 w-5" />
+          </button>
+        </div>
+      )}
     </div>
   );
 }

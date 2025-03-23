@@ -1,15 +1,23 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { topics } from '../data/topics';
-import { Gamepad2, Search, Trophy } from 'lucide-react';
+import { Gamepad2, Search, Trophy, CheckCircle, X } from 'lucide-react';
 import VisitCounter from '../components/VisitCounter';
 
 function HomePage() {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [completedTopics, setCompletedTopics] = useState<string[]>([]);
+  const [forceUpdate, setForceUpdate] = useState(0);
+  const [toast, setToast] = useState<{message: string, type: 'success' | 'error' | 'info'} | null>(null);
 
-  // Load completed topics from localStorage on component mount
+  // Toast message display function
+  const showToast = (message: string, type: 'success' | 'error' | 'info' = 'info') => {
+    setToast({ message, type });
+    setTimeout(() => setToast(null), 3000);
+  };
+
+  // Load completed topics from localStorage on component mount and periodically check for updates
   useEffect(() => {
     const loadCompletedTopics = () => {
       try {
@@ -26,7 +34,25 @@ function HomePage() {
       }
     };
 
+    // Load initially
     loadCompletedTopics();
+    
+    // Set up an interval to check for localStorage changes
+    const checkInterval = setInterval(() => {
+      const storedTopics = localStorage.getItem('completedTopics');
+      if (storedTopics) {
+        try {
+          const parsed = JSON.parse(storedTopics);
+          // Only update if different
+          if (JSON.stringify(parsed) !== JSON.stringify(completedTopics)) {
+            console.log('Detected localStorage change, updating completed topics');
+            setCompletedTopics(parsed);
+          }
+        } catch (e) {
+          console.error('Error checking localStorage:', e);
+        }
+      }
+    }, 1000); // Check every second
 
     // Listen for custom event from GamePage when a quiz is completed
     const handleQuizComplete = (event: CustomEvent) => {
@@ -40,10 +66,17 @@ function HomePage() {
             const updatedTopics = [...prevTopics, topicId];
             console.log('Updating completed topics to:', updatedTopics);
             localStorage.setItem('completedTopics', JSON.stringify(updatedTopics));
+            
+            // Show toast for automatically completed topic
+            const completedTopic = topics.find(t => t.id === topicId)?.name || topicId;
+            showToast(`Congratulations! You've completed the ${completedTopic} topic!`, 'success');
+            
             return updatedTopics;
           }
           return prevTopics;
         });
+        // Force a re-render
+        setForceUpdate(prev => prev + 1);
       }
     };
 
@@ -51,8 +84,9 @@ function HomePage() {
 
     return () => {
       window.removeEventListener('quizCompleted', handleQuizComplete as EventListener);
+      clearInterval(checkInterval);
     };
-  }, []); // Remove the dependency on completedTopics to avoid re-registering the event listener
+  }, [completedTopics]); // Re-add the dependency to detect changes
 
   // Add a function to debug the contents of localStorage
   const debugLocalStorage = () => {
@@ -111,10 +145,22 @@ function HomePage() {
         localStorage.setItem('completedTopics', JSON.stringify(updatedTopics));
         console.log('Manually marked as completed:', topicId);
         debugLocalStorage();
+        
+        // Show toast for manually marked topic
+        const completedTopic = topics.find(t => t.id === topicId)?.name || topicId;
+        showToast(`${completedTopic} topic marked as completed!`, 'success');
+        
         return updatedTopics;
       }
+      
+      // Already completed
+      const completedTopic = topics.find(t => t.id === topicId)?.name || topicId;
+      showToast(`${completedTopic} topic was already completed.`, 'info');
+      
       return prevTopics;
     });
+    // Force a re-render
+    setForceUpdate(prev => prev + 1);
   };
 
   // For testing - clear all completed topics
@@ -123,6 +169,11 @@ function HomePage() {
     localStorage.removeItem('completedTopics');
     console.log('Cleared all completed topics');
     debugLocalStorage();
+    // Force a re-render
+    setForceUpdate(prev => prev + 1);
+    
+    // Show toast
+    showToast('Progress has been reset. All completion data cleared.', 'error');
   };
 
   return (
@@ -138,6 +189,13 @@ function HomePage() {
           </p>
           <div className="mt-2 text-sm text-gray-500">
             Completed topics: {completedTopics.length} / {topics.length}
+          </div>
+          <div className="mt-2 text-xs text-gray-400">
+            {completedTopics.length > 0 ? (
+              <>Completed: {completedTopics.join(', ')}</>
+            ) : (
+              "No topics completed yet"
+            )}
           </div>
         </header>
 
@@ -168,14 +226,21 @@ function HomePage() {
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {filteredTopics.map((topic) => {
+                  // Check if this topic is in the completed list
                   const isCompleted = completedTopics.includes(topic.id);
-                  console.log(`Topic ${topic.id} completed:`, isCompleted);
+                  console.log(`Topic ${topic.id} completed:`, isCompleted, 'Current completedTopics:', completedTopics);
+                  
                   return (
                     <article 
                       key={topic.id}
-                      className={`${isCompleted ? 'bg-green-100' : 'bg-white'} rounded-xl p-6 
+                      className={`
+                        ${isCompleted ? 'bg-green-100 border-green-500' : 'bg-white border-transparent'} 
+                        rounded-xl p-6 
                         shadow-lg hover:shadow-xl transform hover:-translate-y-1 
-                        transition-all duration-200 border-2 ${isCompleted ? 'border-green-500' : 'border-transparent'}`}
+                        transition-all duration-200 border-2
+                      `}
+                      data-completed={isCompleted ? "true" : "false"}
+                      data-topic-id={topic.id}
                     >
                       <button
                         onClick={() => navigate(`/play/${topic.id}`)}
@@ -209,7 +274,7 @@ function HomePage() {
             )}
 
             {/* Admin/Debug buttons - remove in production */}
-            <div className="mt-10 flex justify-center gap-4">
+            <div className="mt-10 flex justify-center gap-4 flex-wrap">
               <button 
                 onClick={() => clearCompletedTopics()}
                 className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 text-sm"
@@ -218,7 +283,13 @@ function HomePage() {
               </button>
               {searchTerm && (
                 <button 
-                  onClick={() => filteredTopics.length > 0 && markTopicAsCompleted(filteredTopics[0].id)}
+                  onClick={() => {
+                    if (filteredTopics.length > 0) {
+                      markTopicAsCompleted(filteredTopics[0].id);
+                    } else {
+                      showToast('No topics found to mark as completed', 'error');
+                    }
+                  }}
                   className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 text-sm"
                 >
                   Mark First Result as Completed
@@ -227,11 +298,39 @@ function HomePage() {
               <button
                 onClick={() => {
                   const colorsTopic = topics.find(t => t.id === "colors");
-                  if (colorsTopic) markTopicAsCompleted(colorsTopic.id);
+                  if (colorsTopic) {
+                    markTopicAsCompleted(colorsTopic.id);
+                  } else {
+                    showToast('Colors topic not found', 'error');
+                  }
                 }}
                 className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm"
               >
                 Mark Colors as Completed
+              </button>
+              <button
+                onClick={() => {
+                  // Show toast first, then refresh after a small delay
+                  showToast('Page is refreshing...', 'info');
+                  setTimeout(() => {
+                    window.location.reload();
+                  }, 500);
+                }}
+                className="px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-600 text-sm"
+              >
+                Refresh Page
+              </button>
+              <button
+                onClick={() => {
+                  debugLocalStorage();
+                  // Force re-render and update localStorage timestamp to trigger the interval checker
+                  setForceUpdate(prev => prev + 1);
+                  localStorage.setItem('lastRefresh', Date.now().toString());
+                  showToast('Storage debugged and UI refreshed', 'info');
+                }}
+                className="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 text-sm"
+              >
+                Debug Storage & Refresh
               </button>
             </div>
           </section>
@@ -247,6 +346,34 @@ function HomePage() {
           </p>
         </footer>
       </div>
+      
+      {/* Toast notification */}
+      {toast && (
+        <div 
+          className={`fixed bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-lg shadow-lg flex items-center gap-2 z-50 transition-all duration-300 ease-in-out animate-fade-in
+            ${toast.type === 'success' ? 'bg-green-500 text-white' : 
+              toast.type === 'error' ? 'bg-red-500 text-white' : 
+              'bg-blue-500 text-white'}`}
+          role="alert"
+        >
+          {toast.type === 'success' ? (
+            <CheckCircle className="h-5 w-5" />
+          ) : toast.type === 'error' ? (
+            <X className="h-5 w-5" />
+          ) : (
+            <span className="h-5 w-5 flex items-center justify-center font-bold">i</span>
+          )}
+          <span>{toast.message}</span>
+          <button 
+            onClick={() => setToast(null)} 
+            className="ml-2 opacity-70 hover:opacity-100"
+            aria-label="Close notification"
+          >
+            <X className="h-4 w-4" />
+          </button>
+        </div>
+      )}
+      
       <VisitCounter />
     </div>
   );

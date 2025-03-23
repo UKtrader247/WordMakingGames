@@ -194,7 +194,7 @@ function HomePage() {
             <p className="mt-4 text-gray-600 text-lg">
               Choose a topic and start playing to improve your vocabulary and spelling skills!
             </p>
-            <div className="mt-4 flex justify-center">
+            <div className="mt-4 flex justify-center items-center gap-4 flex-wrap">
               <div className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full flex items-center">
                 <Trophy className="h-5 w-5 mr-2 text-yellow-500" />
                 <span>{completedTopics.length} / {topics.length} topics completed</span>
@@ -207,6 +207,16 @@ function HomePage() {
                   </>
                 )}
               </div>
+              
+              <button 
+                onClick={() => navigate('/play/sportscars')}
+                className="bg-blue-500 text-white px-6 py-2 rounded-full flex items-center gap-2 hover:bg-blue-600 transition-all duration-200"
+              >
+                <span>🏎️</span>
+                <span className="font-semibold">New Quiz!</span>
+                <span>•</span>
+                <span>Sports Cars</span>
+              </button>
             </div>
           </header>
 

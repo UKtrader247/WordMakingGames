@@ -3,8 +3,8 @@ import { Topic } from "../topics";
 export const animalsTopic: Topic = {
   id: "animals",
   name: "Animals",
-  description: "The animal kingdom",
-  icon: "🐘",
+  description: "Discover the animal kingdom",
+  icon: "🦁",
   words: [
     { word: "LION", hint: "King of the jungle", extraLetters: "PQWXYZ" },
     { word: "TIGER", hint: "Striped big cat", extraLetters: "PQWXYZ" },

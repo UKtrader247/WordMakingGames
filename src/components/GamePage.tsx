@@ -37,6 +37,9 @@ function GamePage() {
   const [touchedLetter, setTouchedLetter] = useState<Letter | null>(null);
   const gameAreaRef = useRef<HTMLDivElement>(null);
 
+  // Add this new state
+  const [showCelebration, setShowCelebration] = useState(false);
+
   const getRandomWord = () => {
     if (!topic) return null;
     const availableWords = topic.words.filter(word => !completedWords.has(word.word));
@@ -191,7 +194,23 @@ function GamePage() {
         setScore(prevScore => prevScore + 10);
         setShowScoreAnimation(true);
         setTimeout(() => setShowScoreAnimation(false), 1500);
-        setCompletedWords(prev => new Set([...prev, currentWordData.word]));
+        
+        // Add word to completed words
+        const newCompletedWords = new Set([...completedWords, currentWordData.word]);
+        setCompletedWords(newCompletedWords);
+        
+        // Check if all words in the topic are completed
+        if (newCompletedWords.size === topic?.words.length) {
+          // Show trophy celebration
+          setShowCelebration(true);
+          
+          // All words completed, emit completion event
+          const event = new CustomEvent('quizCompleted', { 
+            detail: { topicId: topic.id } 
+          });
+          window.dispatchEvent(event);
+        }
+        
         triggerConfetti();
       } else {
         setShowError(true);
@@ -250,7 +269,23 @@ function GamePage() {
     setTimeout(() => {
       setSuccess(true);
       setShowError(false);
-      setCompletedWords(prev => new Set([...prev, currentWordData.word]));
+      
+      // Add word to completed words
+      const newCompletedWords = new Set([...completedWords, currentWordData.word]);
+      setCompletedWords(newCompletedWords);
+      
+      // Check if all words in the topic are completed
+      if (newCompletedWords.size === topic?.words.length) {
+        // Show trophy celebration
+        setShowCelebration(true);
+        
+        // All words completed, emit completion event
+        const event = new CustomEvent('quizCompleted', { 
+          detail: { topicId: topic.id } 
+        });
+        window.dispatchEvent(event);
+      }
+      
       triggerConfetti();
       setScore(prevScore => prevScore + 5); // Award half points for using solve
       setShowScoreAnimation(true);
@@ -413,6 +448,40 @@ function GamePage() {
 
     setIsDragging(false);
     setTouchedLetter(null);
+  };
+
+  // Trophy celebration component
+  const CompletionCelebration = ({ onClose }: { onClose: () => void }) => {
+    useEffect(() => {
+      // Auto-close the celebration after 5 seconds
+      const timer = setTimeout(() => {
+        onClose();
+      }, 5000);
+      
+      return () => clearTimeout(timer);
+    }, [onClose]);
+
+    // Handle redirect to home page
+    const handleContinue = () => {
+      onClose();
+      navigate('/');
+    };
+
+    return (
+      <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-70">
+        <div className="bg-white rounded-lg p-8 max-w-md text-center animate-bounce-slow">
+          <div className="text-6xl mb-4">🏆</div>
+          <h2 className="text-2xl font-bold mb-2 text-yellow-600">Congratulations!</h2>
+          <p className="text-gray-700 mb-6">You've completed all the words in this topic!</p>
+          <button 
+            onClick={handleContinue}
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
+          >
+            Return to Home
+          </button>
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -606,6 +675,11 @@ function GamePage() {
               </div>
             </div>
           </div>
+        )}
+
+        {/* Trophy celebration */}
+        {showCelebration && (
+          <CompletionCelebration onClose={() => setShowCelebration(false)} />
         )}
       </div>
       <VisitCounter />

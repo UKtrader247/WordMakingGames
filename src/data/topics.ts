@@ -37,9 +37,11 @@ import { oceanTopic } from "./topics/ocean";
 import { gamingTopic } from "./topics/gaming";
 import { architectureTopic } from "./topics/architecture";
 import { carsTopic } from "./topics/cars";
+import { colorsTopic } from "./topics/colors";
 
 // Combine all topics into a single array
 export const topics: Topic[] = [
+  colorsTopic, // Put the mini quiz at the top for easy access
   programmingTopic,
   scienceTopic,
   spaceTopic,

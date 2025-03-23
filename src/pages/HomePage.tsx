@@ -177,24 +177,27 @@ function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-8 pt-16">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 p-4 md:p-8 pt-12 md:pt-16">
       <div className="max-w-6xl mx-auto">
         <header className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-blue-800 mb-4 flex items-center justify-center gap-3" id="main-heading">
-            <Gamepad2 className="w-12 h-12" aria-hidden="true" />
-            <span>Word Making Game</span>
+          <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4 flex items-center justify-center gap-3 animate-[pulse_5s_ease-in-out_infinite]" id="main-heading">
+            <Gamepad2 className="w-10 h-10 md:w-12 md:h-12 text-blue-600" aria-hidden="true" />
+            <span className="bg-gradient-to-r from-blue-700 to-indigo-600 text-transparent bg-clip-text">Word Making Game</span>
           </h1>
-          <p className="text-gray-600 text-lg" id="site-description">
+          <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto" id="site-description">
             Choose a topic and start playing to improve your vocabulary and spelling skills!
           </p>
-          <div className="mt-2 text-sm text-gray-500">
-            Completed topics: {completedTopics.length} / {topics.length}
-          </div>
-          <div className="mt-2 text-xs text-gray-400">
-            {completedTopics.length > 0 ? (
-              <>Completed: {completedTopics.join(', ')}</>
-            ) : (
-              "No topics completed yet"
+          <div className="mt-4 flex flex-wrap justify-center gap-3">
+            <div className="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full flex items-center">
+              <span className="font-medium">{completedTopics.length}</span>
+              <span className="mx-1">/</span>
+              <span>{topics.length}</span>
+              <span className="ml-1">topics completed</span>
+            </div>
+            {completedTopics.length > 0 && (
+              <div className="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                Latest: {topics.find(t => t.id === completedTopics[completedTopics.length - 1])?.name || "Unknown"}
+              </div>
             )}
           </div>
         </header>
@@ -203,28 +206,70 @@ function HomePage() {
           <section aria-labelledby="topic-section">
             <div className="relative mb-8 max-w-md mx-auto">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <Search className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                <Search className="h-5 w-5 text-blue-500" aria-hidden="true" />
               </div>
               <input
                 type="text"
-                className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white 
-                  placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 
-                  focus:border-blue-500 sm:text-sm"
+                className="block w-full pl-10 pr-12 py-3 border-2 border-blue-300 rounded-full leading-5 bg-white 
+                  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 
+                  focus:border-blue-400 transition-all duration-200 shadow-sm hover:shadow-md text-gray-700"
                 placeholder="Search topics..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 aria-label="Search topics"
               />
+              {searchTerm && (
+                <button 
+                  onClick={() => setSearchTerm('')}
+                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-blue-500"
+                  aria-label="Clear search"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+              )}
+            </div>
+
+            <div className="mb-6 flex flex-wrap justify-center gap-2">
+              <button 
+                onClick={() => setSearchTerm('')}
+                className={`px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 ${!searchTerm ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+              >
+                All Topics
+              </button>
+              <button 
+                onClick={() => setSearchTerm('nature')}
+                className={`px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 ${searchTerm === 'nature' ? 'bg-green-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+              >
+                Nature & Science
+              </button>
+              <button 
+                onClick={() => setSearchTerm('art')}
+                className={`px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 ${searchTerm === 'art' ? 'bg-purple-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+              >
+                Arts & Culture
+              </button>
+              <button 
+                onClick={() => setSearchTerm('technology')}
+                className={`px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 ${searchTerm === 'technology' ? 'bg-indigo-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+              >
+                Technology
+              </button>
+              <button 
+                onClick={() => setSearchTerm('travel')}
+                className={`px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 ${searchTerm === 'travel' ? 'bg-amber-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+              >
+                World & Travel
+              </button>
             </div>
 
             <h2 className="sr-only" id="topic-section">Game Topics</h2>
             
             {filteredTopics.length === 0 ? (
-              <p className="text-center text-gray-500 my-16">
-                No topics found matching "{searchTerm}". Try a different search term.
+              <p className="text-center text-gray-500 my-16 text-lg">
+                No topics found matching "<span className="font-semibold text-blue-600">{searchTerm}</span>". Try a different search term.
               </p>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-6 lg:gap-8">
                 {filteredTopics.map((topic) => {
                   // Check if this topic is in the completed list
                   const isCompleted = completedTopics.includes(topic.id);
@@ -234,10 +279,10 @@ function HomePage() {
                     <article 
                       key={topic.id}
                       className={`
-                        ${isCompleted ? 'bg-green-100 border-green-500' : 'bg-white border-transparent'} 
-                        rounded-xl p-6 
-                        shadow-lg hover:shadow-xl transform hover:-translate-y-1 
-                        transition-all duration-200 border-2
+                        ${isCompleted ? 'bg-green-100 border-green-500' : 'bg-white border-transparent hover:border-blue-300'} 
+                        rounded-xl p-5 md:p-6 
+                        shadow-md hover:shadow-xl transform hover:-translate-y-2 
+                        transition-all duration-300 ease-in-out border-2
                       `}
                       data-completed={isCompleted ? "true" : "false"}
                       data-topic-id={topic.id}
@@ -255,8 +300,8 @@ function HomePage() {
                           </div>
                         )}
                         <div className="flex items-start justify-between mb-4">
-                          <span className="text-4xl" role="img" aria-label={topic.name + " icon"}>{topic.icon}</span>
-                          <span className={`${isCompleted ? 'bg-green-200 text-green-800' : 'bg-blue-100 text-blue-800'} px-2 py-1 rounded-full text-sm font-medium`}>
+                          <span className="text-5xl" role="img" aria-label={topic.name + " icon"}>{topic.icon}</span>
+                          <span className={`${isCompleted ? 'bg-green-200 text-green-800' : 'bg-blue-100 text-blue-800'} px-3 py-1 rounded-full text-sm font-medium inline-flex items-center`}>
                             {topic.words.length} words
                           </span>
                         </div>
@@ -336,14 +381,24 @@ function HomePage() {
           </section>
         </main>
 
-        <footer className="mt-12 text-center text-sm text-gray-500">
-          <p>&copy; {new Date().getFullYear()} Word Making Games. All rights reserved.</p>
-          <p className="mt-1">Improve your vocabulary with our educational word games</p>
-          <p className="mt-1">
-            <a href="https://wordmakinggames.com" className="text-blue-600 hover:underline">
-              wordmakinggames.com
-            </a>
-          </p>
+        <footer className="mt-12 text-center">
+          <div className="bg-white p-6 rounded-xl shadow-md max-w-4xl mx-auto">
+            <p className="font-medium text-blue-800">&copy; {new Date().getFullYear()} Word Making Games</p>
+            <p className="mt-2 text-gray-600 text-sm">
+              Improve your vocabulary with our educational word games. Choose from {topics.length} topics and over {topics.reduce((sum, topic) => sum + topic.words.length, 0)} words!
+            </p>
+            <div className="mt-4 flex justify-center space-x-4">
+              <a href="#" className="text-blue-500 hover:text-blue-700 transition">
+                About
+              </a>
+              <a href="#" className="text-blue-500 hover:text-blue-700 transition">
+                Privacy
+              </a>
+              <a href="#" className="text-blue-500 hover:text-blue-700 transition">
+                Contact
+              </a>
+            </div>
+          </div>
         </footer>
       </div>
       

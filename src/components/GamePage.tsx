@@ -39,7 +39,7 @@ function GamePage() {
   const [showScoreAnimation, setShowScoreAnimation] = useState(false);
   const [completedWords, setCompletedWords] = useState<Set<string>>(new Set());
   const [usedSolve, setUsedSolve] = useState(false);
-  const [toast, setToast] = useState<{message: string, type: 'success' | 'error'} | null>(null);
+  const [toast, setToast] = useState<{ message: string, type: 'success' | 'error' } | null>(null);
 
   // Add new state for touch handling
   const [touchedLetter, setTouchedLetter] = useState<Letter | null>(null);
@@ -122,14 +122,14 @@ function GamePage() {
 
     // Initialize drop zones
     const wordLength = newWordData.word.length;
-    
+
     // Determine how many letters to pre-fill - never more than 3
     let numToFill = 0;
     if (wordLength >= 5) {
       // For 5 letters fill 2, for 6+ letters fill exactly 3
       numToFill = Math.min(wordLength === 5 ? 2 : 3, 3);
     }
-    
+
     // Generate random positions to fill
     const fillPositions: number[] = [];
     while (fillPositions.length < numToFill) {
@@ -138,7 +138,7 @@ function GamePage() {
         fillPositions.push(randomPos);
       }
     }
-    
+
     // Set up dropzones with the pre-filled letters
     const initialDropZones = newWordData.word.split('').map((letter, index) => {
       const shouldPreFill = fillPositions.includes(index);
@@ -148,20 +148,20 @@ function GamePage() {
         isPrefilled: shouldPreFill
       };
     });
-    
+
     setDropZones(initialDropZones);
 
     // Combine target word and extra letters, but only include letters that aren't pre-filled
     const preFilledLetters = initialDropZones
       .filter(zone => zone.letter !== null)
       .map(zone => zone.letter as string);
-    
+
     const remainingWordLetters = newWordData.word
       .split('')
-      .filter(letter => !preFilledLetters.includes(letter) || 
-                        // If letter appears multiple times, only exclude it once
-                        preFilledLetters.indexOf(letter) !== preFilledLetters.lastIndexOf(letter));
-    
+      .filter(letter => !preFilledLetters.includes(letter) ||
+        // If letter appears multiple times, only exclude it once
+        preFilledLetters.indexOf(letter) !== preFilledLetters.lastIndexOf(letter));
+
     const allLetters = (remainingWordLetters.join('') + newWordData.extraLetters).split('');
 
     // Create scattered letters with better distribution
@@ -213,24 +213,24 @@ function GamePage() {
         setScore(prevScore => prevScore + 10);
         setShowScoreAnimation(true);
         setTimeout(() => setShowScoreAnimation(false), 1500);
-        
+
         // Add word to completed words
         const newCompletedWords = new Set([...completedWords, currentWordData.word]);
         setCompletedWords(newCompletedWords);
-        
+
         // Check if all words in the topic are completed
         if (newCompletedWords.size === topic?.words.length) {
           // Show trophy celebration
           setShowCelebration(true);
-          
+
           // All words completed, emit completion event
           try {
             console.log('Dispatching completion event for topic:', topic.id);
-            const event = new CustomEvent('quizCompleted', { 
+            const event = new CustomEvent('quizCompleted', {
               detail: { topicId: topic.id }
             });
             window.dispatchEvent(event);
-            
+
             // Direct localStorage update as a fallback
             const storedTopics = localStorage.getItem('completedTopics');
             let completedTopics = storedTopics ? JSON.parse(storedTopics) : [];
@@ -243,7 +243,7 @@ function GamePage() {
             console.error('Error dispatching completion event:', error);
           }
         }
-        
+
         triggerConfetti();
       } else {
         setShowError(true);
@@ -265,7 +265,7 @@ function GamePage() {
 
     const dropZoneIndex = dropZones.findIndex(zone => zone.id === dropZoneId);
     if (dropZoneIndex === -1) return;
-    
+
     // Don't allow dropping on pre-filled letters
     if (dropZones[dropZoneIndex].isPrefilled) return;
 
@@ -283,9 +283,9 @@ function GamePage() {
 
   const resetGame = () => {
     initializeGame();
-    setToast({ 
-      message: 'Moving to next word', 
-      type: 'success' 
+    setToast({
+      message: 'Moving to next word',
+      type: 'success'
     });
     setTimeout(() => setToast(null), 3000);
   };
@@ -304,9 +304,9 @@ function GamePage() {
     setUsedSolve(true);
 
     // Show toast notification
-    setToast({ 
-      message: 'Word solved automatically', 
-      type: 'success' 
+    setToast({
+      message: 'Word solved automatically',
+      type: 'success'
     });
     setTimeout(() => setToast(null), 3000);
 
@@ -314,24 +314,24 @@ function GamePage() {
     setTimeout(() => {
       setSuccess(true);
       setShowError(false);
-      
+
       // Add word to completed words
       const newCompletedWords = new Set([...completedWords, currentWordData.word]);
       setCompletedWords(newCompletedWords);
-      
+
       // Check if all words in the topic are completed
       if (newCompletedWords.size === topic?.words.length) {
         // Show trophy celebration
         setShowCelebration(true);
-        
+
         // All words completed, emit completion event
         try {
           console.log('Dispatching completion event for topic:', topic.id);
-          const event = new CustomEvent('quizCompleted', { 
+          const event = new CustomEvent('quizCompleted', {
             detail: { topicId: topic.id }
           });
           window.dispatchEvent(event);
-          
+
           // Direct localStorage update as a fallback
           const storedTopics = localStorage.getItem('completedTopics');
           let completedTopics = storedTopics ? JSON.parse(storedTopics) : [];
@@ -344,7 +344,7 @@ function GamePage() {
           console.error('Error dispatching completion event:', error);
         }
       }
-      
+
       triggerConfetti();
       setScore(prevScore => prevScore + 5); // Award half points for using solve
       setShowScoreAnimation(true);
@@ -362,14 +362,14 @@ function GamePage() {
 
     // Reset drop zones to empty or pre-filled based on word length
     const wordLength = currentWordData.word.length;
-    
+
     // Determine how many letters to pre-fill - never more than 3
     let numToFill = 0;
     if (wordLength >= 5) {
       // For 5 letters fill 2, for 6+ letters fill exactly 3
       numToFill = Math.min(wordLength === 5 ? 2 : 3, 3);
     }
-    
+
     // Generate random positions to fill
     const fillPositions: number[] = [];
     while (fillPositions.length < numToFill) {
@@ -378,7 +378,7 @@ function GamePage() {
         fillPositions.push(randomPos);
       }
     }
-    
+
     // Set up dropzones with the pre-filled letters
     const initialDropZones = currentWordData.word.split('').map((letter, index) => {
       const shouldPreFill = fillPositions.includes(index);
@@ -388,20 +388,20 @@ function GamePage() {
         isPrefilled: shouldPreFill
       };
     });
-    
+
     setDropZones(initialDropZones);
 
     // Recreate remaining letters (both from word and extra letters)
     const preFilledLetters = initialDropZones
       .filter(zone => zone.letter !== null)
       .map(zone => zone.letter as string);
-    
+
     const remainingWordLetters = currentWordData.word
       .split('')
-      .filter(letter => !preFilledLetters.includes(letter) || 
-                        // If letter appears multiple times, only exclude it once
-                        preFilledLetters.indexOf(letter) !== preFilledLetters.lastIndexOf(letter));
-    
+      .filter(letter => !preFilledLetters.includes(letter) ||
+        // If letter appears multiple times, only exclude it once
+        preFilledLetters.indexOf(letter) !== preFilledLetters.lastIndexOf(letter));
+
     const allLetters = (remainingWordLetters.join('') + currentWordData.extraLetters).split('');
 
     // Create scattered letters with distribution
@@ -425,11 +425,11 @@ function GamePage() {
         };
       });
     setLetters(shuffledLetters);
-    
+
     // Show toast notification
-    setToast({ 
-      message: 'Current word has been reset', 
-      type: 'success' 
+    setToast({
+      message: 'Current word has been reset',
+      type: 'success'
     });
     setTimeout(() => setToast(null), 3000);
   };
@@ -523,7 +523,7 @@ function GamePage() {
       const timer = setTimeout(() => {
         onClose();
       }, 5000);
-      
+
       return () => clearTimeout(timer);
     }, [onClose]);
 
@@ -539,7 +539,7 @@ function GamePage() {
           <div className="text-6xl mb-4">🏆</div>
           <h2 className="text-2xl font-bold mb-2 text-yellow-600">Congratulations!</h2>
           <p className="text-gray-700 mb-6">You've completed all the words in this topic!</p>
-          <button 
+          <button
             onClick={handleContinue}
             className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
           >
@@ -553,14 +553,14 @@ function GamePage() {
   // Add this new function directly after the handleSolveClick function
   const forceCompleteAllWords = () => {
     if (!topic) return;
-    
+
     // Mark all words as completed
     const allWords = new Set(topic.words.map(word => word.word));
     setCompletedWords(allWords);
-    
+
     // Show trophy celebration
     setShowCelebration(true);
-    
+
     // Update localStorage directly
     try {
       const storedTopics = localStorage.getItem('completedTopics');
@@ -570,22 +570,22 @@ function GamePage() {
         localStorage.setItem('completedTopics', JSON.stringify(completedTopics));
         console.log('Force completed topic:', topic.id);
       }
-      
+
       // Dispatch event as well
-      const event = new CustomEvent('quizCompleted', { 
+      const event = new CustomEvent('quizCompleted', {
         detail: { topicId: topic.id }
       });
       window.dispatchEvent(event);
-      
+
       // Show toast notification
-      setToast({ 
-        message: `Topic "${topic.name}" has been force completed!`, 
-        type: 'success' 
+      setToast({
+        message: `Topic "${topic.name}" has been force completed!`,
+        type: 'success'
       });
       setTimeout(() => setToast(null), 3000);
     } catch (error) {
       console.error('Error force completing topic:', error);
-      setToast({ 
+      setToast({
         message: 'Error while force completing topic',
         type: 'error'
       });
@@ -596,7 +596,7 @@ function GamePage() {
   useEffect(() => {
     // Save completed words to localStorage
     localStorage.setItem("completedWords", JSON.stringify(Array.from(completedWords)));
-    
+
     // Dispatch custom event for StatsCard component
     const event = new CustomEvent('gameStateChanged');
     window.dispatchEvent(event);
@@ -609,7 +609,7 @@ function GamePage() {
         topic: topic,
         currentWord: currentWordData.word
       }));
-      
+
       // Dispatch custom event for StatsCard component
       const event = new CustomEvent('gameStateChanged');
       window.dispatchEvent(event);
@@ -621,7 +621,7 @@ function GamePage() {
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-8 pt-16">
         {/* Social Links */}
         <SocialLinks />
-        
+
         <div className="max-w-4xl mx-auto">
           <header className="text-center mb-12 relative">
             <button
@@ -709,10 +709,10 @@ function GamePage() {
                     onDrop={(e) => handleDrop(e, zone.id)}
                     onDragOver={handleDragOver}
                     className={`drop-zone w-12 h-12 sm:w-16 sm:h-16 border-2 
-                      ${zone.letter 
-                        ? zone.isPrefilled 
-                          ? 'border-blue-500 bg-blue-50' 
-                          : 'border-green-500 bg-green-50' 
+                      ${zone.letter
+                        ? zone.isPrefilled
+                          ? 'border-blue-500 bg-blue-50'
+                          : 'border-green-500 bg-green-50'
                         : 'border-dashed border-gray-400'
                       } rounded-lg flex items-center justify-center transition-all`}
                   >
@@ -817,7 +817,7 @@ function GamePage() {
             >
               Reset
             </button>
-            
+
             {/* Debug button for force completing */}
             <button
               className="px-3 py-1 bg-green-500 hover:bg-green-600 text-white text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
@@ -828,10 +828,10 @@ function GamePage() {
           </div>
         </div>
         <VisitCounter />
-        
+
         {/* Toast notification */}
         {toast && (
-          <div 
+          <div
             className={`fixed bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-lg shadow-lg flex items-center gap-2 z-50 transition-all duration-300 ease-in-out animate-fade-in ${toast.type === 'success' ? 'bg-green-500' : 'bg-red-500'} text-white`}
             role="alert"
           >
@@ -841,8 +841,8 @@ function GamePage() {
               <X className="h-5 w-5" />
             )}
             <span>{toast?.message}</span>
-            <button 
-              onClick={() => setToast(null)} 
+            <button
+              onClick={() => setToast(null)}
               className="ml-2 opacity-70 hover:opacity-100"
               aria-label="Close notification"
             >
@@ -860,7 +860,7 @@ function GamePage() {
             Improve your vocabulary with our educational word games.
           </p>
           <div className="mt-4 flex justify-center space-x-4">
-            <button 
+            <button
               onClick={() => setShowAboutModal(true)}
               className="text-blue-500 hover:text-blue-700 transition"
             >

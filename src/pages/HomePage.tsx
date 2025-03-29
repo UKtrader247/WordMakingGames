@@ -376,6 +376,14 @@ function HomePage() {
                 Improve your vocabulary with our educational word games. Choose from {topics.length} topics and over {topics.reduce((sum, topic) => sum + topic.words.length, 0)} words!
               </p>
               <div className="mt-4 flex justify-center space-x-4">
+                <a
+                  href="https://wordmakinggames.com/blog"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 hover:text-blue-700 transition"
+                >
+                  Blog
+                </a>
                 <button 
                   onClick={() => setShowAboutModal(true)}
                   className="text-blue-500 hover:text-blue-700 transition"

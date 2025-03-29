@@ -203,14 +203,6 @@ function HomePage() {
               <div className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full flex items-center">
                 <Trophy className="h-5 w-5 mr-2 text-yellow-500" />
                 <span>{completedTopics.length} / {topics.length} topics completed</span>
-                {completedTopics.length > 0 && (
-                  <>
-                    <span className="mx-2">•</span>
-                    <span className="text-green-600">
-                      Latest: {topics.find(t => t.id === completedTopics[completedTopics.length - 1])?.name || 'Unknown'}
-                    </span>
-                  </>
-                )}
               </div>
               
               <button 

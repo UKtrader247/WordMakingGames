@@ -14,7 +14,7 @@ export interface Topic {
 
 // Import all individual topics
 import { programmingTopic } from "./topics/programming";
-import { scienceTopic } from "./topics/science";
+// import { scienceTopic } from "./topics/science"; -- removed
 import { spaceTopic } from "./topics/space";
 import { moviesTopic } from "./topics/movies";
 import { animalsTopic } from "./topics/animals";
@@ -46,7 +46,6 @@ import { sportscarsTopic } from "./topics/sportscars";
 export const topics: Topic[] = [
   colorsTopic, // Put the mini quiz at the top for easy access
   programmingTopic,
-  scienceTopic,
   spaceTopic,
   natureTopic,
   foodTopic,

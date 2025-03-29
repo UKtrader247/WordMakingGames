@@ -361,7 +361,6 @@ function GamePage() {
       }
 
       triggerConfetti();
-      setScore(prevScore => prevScore + 5); // Award half points for using solve
       setShowScoreAnimation(true);
       setTimeout(() => setShowScoreAnimation(false), 1500);
     }, 500);

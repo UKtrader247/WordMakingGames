@@ -119,31 +119,56 @@ function HomePage() {
   const filteredTopics = useMemo(() => {
     if (!searchTerm.trim()) return topics;
 
-    const lowerSearchTerm = searchTerm.toLowerCase();
+    // Split search term into individual words
+    const searchTerms = searchTerm.toLowerCase().split(/\s+/).filter(term => term.length > 0);
+    
+    // If no valid search terms after filtering, return all topics
+    if (searchTerms.length === 0) return topics;
     
     return topics
-      .filter(topic => 
-        topic.name.toLowerCase().includes(lowerSearchTerm) || 
-        topic.description.toLowerCase().includes(lowerSearchTerm)
-      )
+      .filter(topic => {
+        // Check if topic name or description contains ALL of the search terms
+        return searchTerms.every(term => 
+          topic.name.toLowerCase().includes(term) || 
+          topic.description.toLowerCase().includes(term)
+        );
+      })
       .sort((a, b) => {
-        // Prioritize topics where the search term is in the name
-        const aNameMatch = a.name.toLowerCase().includes(lowerSearchTerm);
-        const bNameMatch = b.name.toLowerCase().includes(lowerSearchTerm);
+        // Calculate a relevance score for each topic
+        const aScore = calculateRelevanceScore(a, searchTerms);
+        const bScore = calculateRelevanceScore(b, searchTerms);
         
-        if (aNameMatch && !bNameMatch) return -1;
-        if (!aNameMatch && bNameMatch) return 1;
-        
-        // Then sort by how close to the beginning the match is
-        const aNameIndex = a.name.toLowerCase().indexOf(lowerSearchTerm);
-        const bNameIndex = b.name.toLowerCase().indexOf(lowerSearchTerm);
-        
-        if (aNameIndex !== -1 && bNameIndex !== -1) return aNameIndex - bNameIndex;
-        
-        // By default, sort alphabetically
-        return a.name.localeCompare(b.name);
+        // Sort by relevance score in descending order
+        return bScore - aScore;
       });
   }, [searchTerm]);
+
+  // Add this helper function to calculate relevance score
+  const calculateRelevanceScore = (topic: any, searchTerms: string[]) => {
+    let score = 0;
+    
+    for (const term of searchTerms) {
+      // Check if term appears in name (higher weight)
+      if (topic.name.toLowerCase().includes(term)) {
+        score += 10;
+        // Bonus points for exact match
+        if (topic.name.toLowerCase() === term) {
+          score += 15;
+        }
+        // Bonus points if term is at the start of name
+        if (topic.name.toLowerCase().startsWith(term)) {
+          score += 5;
+        }
+      }
+      
+      // Check if term appears in description (lower weight)
+      if (topic.description.toLowerCase().includes(term)) {
+        score += 3;
+      }
+    }
+    
+    return score;
+  };
 
   // For testing - add function to mark a topic as completed
   const markTopicAsCompleted = (topicId: string) => {
@@ -260,14 +285,14 @@ function HomePage() {
                   All Topics
                 </button>
                 <button 
-                  onClick={() => setSearchTerm('nature')}
-                  className={`px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 ${searchTerm === 'nature' ? 'bg-green-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+                  onClick={() => setSearchTerm('nature science')}
+                  className={`px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 ${searchTerm === 'nature science' ? 'bg-green-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
                 >
                   Nature & Science
                 </button>
                 <button 
-                  onClick={() => setSearchTerm('art')}
-                  className={`px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 ${searchTerm === 'art' ? 'bg-purple-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+                  onClick={() => setSearchTerm('art culture')}
+                  className={`px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 ${searchTerm === 'art culture' ? 'bg-purple-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
                 >
                   Arts & Culture
                 </button>
@@ -278,8 +303,8 @@ function HomePage() {
                   Technology
                 </button>
                 <button 
-                  onClick={() => setSearchTerm('travel')}
-                  className={`px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 ${searchTerm === 'travel' ? 'bg-amber-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+                  onClick={() => setSearchTerm('world travel')}
+                  className={`px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 ${searchTerm === 'world travel' ? 'bg-amber-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
                 >
                   World & Travel
                 </button>

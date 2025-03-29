@@ -24,6 +24,13 @@ interface DropZone {
   isPrefilled?: boolean;
 }
 
+// Create a type for the saved game state
+interface SavedGameState {
+  score: number;
+  completedWords: string[];
+  lastWordIndex: number;
+}
+
 function GamePage() {
   const { topicId } = useParams();
   const navigate = useNavigate();
@@ -52,6 +59,69 @@ function GamePage() {
   const [showAboutModal, setShowAboutModal] = useState(false);
   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
   const [showContactModal, setShowContactModal] = useState(false);
+
+  // Add state for the solve dialog
+  const [showSolveDialog, setShowSolveDialog] = useState(false);
+
+  // Add state for forced completion
+  const [showForcedCompletion, setShowForcedCompletion] = useState(false);
+
+  // Load saved game state when component mounts
+  useEffect(() => {
+    if (!topic) {
+      navigate('/');
+      return;
+    }
+    
+    // Try to load saved game state for this topic
+    try {
+      const savedStateJSON = localStorage.getItem(`gameState_${topicId}`);
+      if (savedStateJSON) {
+        const savedState: SavedGameState = JSON.parse(savedStateJSON);
+        
+        // Restore score
+        setScore(savedState.score || 0);
+        
+        // Restore completed words
+        const restoredCompletedWords = new Set(savedState.completedWords || []);
+        setCompletedWords(restoredCompletedWords);
+        
+        // Restore last played word or get a new word if all are completed
+        if (savedState.lastWordIndex !== undefined && topic.words[savedState.lastWordIndex]) {
+          setCurrentWordData(topic.words[savedState.lastWordIndex]);
+        } else {
+          // If no saved word index or invalid index, initialize a new word
+          initializeGame();
+        }
+      } else {
+        // No saved state, initialize a new game
+        initializeGame();
+      }
+    } catch (error) {
+      console.error('Error loading saved game state:', error);
+      // If there's an error, start a new game
+      initializeGame();
+    }
+  }, [topicId]);
+
+  // Save game state whenever relevant state changes
+  useEffect(() => {
+    if (!topic || !currentWordData) return;
+    
+    // Find the current word index
+    const currentWordIndex = topic.words.findIndex(w => w.word === currentWordData.word);
+    
+    // Create the state object to save
+    const gameState: SavedGameState = {
+      score,
+      completedWords: Array.from(completedWords),
+      lastWordIndex: currentWordIndex !== -1 ? currentWordIndex : 0
+    };
+    
+    // Save to localStorage
+    localStorage.setItem(`gameState_${topicId}`, JSON.stringify(gameState));
+    
+  }, [score, completedWords, currentWordData, topicId, topic]);
 
   // Toast message display function
   const showToast = (message: string, type: 'success' | 'error' | 'info' = 'info') => {
@@ -151,16 +221,29 @@ function GamePage() {
 
     setDropZones(initialDropZones);
 
-    // Combine target word and extra letters, but only include letters that aren't pre-filled
+    // Get the pre-filled letters
     const preFilledLetters = initialDropZones
       .filter(zone => zone.letter !== null)
       .map(zone => zone.letter as string);
 
-    const remainingWordLetters = newWordData.word
-      .split('')
-      .filter(letter => !preFilledLetters.includes(letter) ||
-        // If letter appears multiple times, only exclude it once
-        preFilledLetters.indexOf(letter) !== preFilledLetters.lastIndexOf(letter));
+    // Count occurrences of each letter in the target word
+    const wordLetterFrequency: Record<string, number> = {};
+    for (const letter of newWordData.word) {
+      wordLetterFrequency[letter] = (wordLetterFrequency[letter] || 0) + 1;
+    }
+
+    // Subtract pre-filled letters from the frequency
+    for (const letter of preFilledLetters) {
+      wordLetterFrequency[letter]--;
+    }
+
+    // Create remaining letters array using frequency
+    const remainingWordLetters: string[] = [];
+    for (const [letter, count] of Object.entries(wordLetterFrequency)) {
+      for (let i = 0; i < count; i++) {
+        if (count > 0) remainingWordLetters.push(letter);
+      }
+    }
 
     const allLetters = (remainingWordLetters.join('') + newWordData.extraLetters).split('');
 
@@ -186,14 +269,6 @@ function GamePage() {
       });
     setLetters(shuffledLetters);
   };
-
-  useEffect(() => {
-    if (!topic) {
-      navigate('/');
-      return;
-    }
-    initializeGame();
-  }, [topicId]);
 
   const handleDragStart = (e: React.DragEvent, letterId: string) => {
     e.dataTransfer.setData('text/plain', letterId);
@@ -268,6 +343,9 @@ function GamePage() {
 
     // Don't allow dropping on pre-filled letters
     if (dropZones[dropZoneIndex].isPrefilled) return;
+    
+    // Don't allow dropping on already filled zones (NEW CHECK)
+    if (dropZones[dropZoneIndex].letter !== null) return;
 
     const updatedDropZones = [...dropZones];
     updatedDropZones[dropZoneIndex] = { ...updatedDropZones[dropZoneIndex], letter: letter.char };
@@ -310,10 +388,11 @@ function GamePage() {
     });
     setTimeout(() => setToast(null), 3000);
 
-    // Show success animation after a short delay
+    // Show different message dialog for auto-solve (not success celebration)
     setTimeout(() => {
-      setSuccess(true);
-      setShowError(false);
+      // Don't set success state for auto-solve
+      // Instead show a different dialog
+      setShowSolveDialog(true);
 
       // Add word to completed words
       const newCompletedWords = new Set([...completedWords, currentWordData.word]);
@@ -345,10 +424,8 @@ function GamePage() {
         }
       }
 
-      triggerConfetti();
-      setScore(prevScore => prevScore + 5); // Award half points for using solve
-      setShowScoreAnimation(true);
-      setTimeout(() => setShowScoreAnimation(false), 1500);
+      // We don't trigger confetti for auto-solve
+      // And we don't add to score for auto-solve
     }, 500);
   };
 
@@ -497,6 +574,13 @@ function GamePage() {
             setTouchedLetter(null);
             return;
           }
+          
+          // Don't allow placing letters on already filled positions (NEW CHECK)
+          if (dropZones[dropZoneIndex].letter !== null) {
+            setIsDragging(false);
+            setTouchedLetter(null);
+            return;
+          }
 
           // Update dropzones with the letter
           const updatedDropZones = [...dropZones];
@@ -558,8 +642,12 @@ function GamePage() {
     const allWords = new Set(topic.words.map(word => word.word));
     setCompletedWords(allWords);
 
-    // Show trophy celebration
-    setShowCelebration(true);
+    // Show a different message for forced completion
+    setToast({
+      message: `Topic "${topic.name}" has been force completed!`,
+      type: 'success'
+    });
+    setTimeout(() => setToast(null), 3000);
 
     // Update localStorage directly
     try {
@@ -576,13 +664,6 @@ function GamePage() {
         detail: { topicId: topic.id }
       });
       window.dispatchEvent(event);
-
-      // Show toast notification
-      setToast({
-        message: `Topic "${topic.name}" has been force completed!`,
-        type: 'success'
-      });
-      setTimeout(() => setToast(null), 3000);
     } catch (error) {
       console.error('Error force completing topic:', error);
       setToast({
@@ -591,6 +672,40 @@ function GamePage() {
       });
       setTimeout(() => setToast(null), 3000);
     }
+  };
+
+  // Add forced completion celebration component
+  const ForcedCompletionCelebration = ({ onClose }: { onClose: () => void }) => {
+    useEffect(() => {
+      // Auto-close the celebration after 5 seconds
+      const timer = setTimeout(() => {
+        onClose();
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }, [onClose]);
+
+    // Handle redirect to home page
+    const handleContinue = () => {
+      onClose();
+      navigate('/');
+    };
+
+    return (
+      <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-70">
+        <div className="bg-white rounded-lg p-8 max-w-md text-center animate-bounce-slow">
+          <div className="text-6xl mb-4">🔄</div> {/* Use a different emoji */}
+          <h2 className="text-2xl font-bold mb-2 text-blue-600">Topic Force Completed</h2>
+          <p className="text-gray-700 mb-6">This topic has been marked as completed via the force complete feature.</p>
+          <button
+            onClick={handleContinue}
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
+          >
+            Return to Home
+          </button>
+        </div>
+      </div>
+    );
   };
 
   useEffect(() => {
@@ -615,6 +730,42 @@ function GamePage() {
       window.dispatchEvent(event);
     }
   }, [currentWordData, topic]);
+
+  // Add a new function to handle clicking on drop zones to remove letters
+  const handleDropZoneClick = (zoneId: string) => {
+    const zoneIndex = dropZones.findIndex(zone => zone.id === zoneId);
+    if (zoneIndex === -1 || !dropZones[zoneIndex].letter || dropZones[zoneIndex].isPrefilled) return;
+
+    // Get the letter that was in the drop zone
+    const letterChar = dropZones[zoneIndex].letter as string;
+    
+    // Create a new letter object to add back to the draggable letters
+    const newLetter = {
+      id: `letter-${Date.now()}`, // Unique ID
+      char: letterChar,
+      position: {
+        x: 50 + (Math.random() * 20 - 10), // Center + random offset
+        y: 50 + (Math.random() * 20 - 10)
+      }
+    };
+    
+    // Add the letter back to the letters array
+    setLetters([...letters, newLetter]);
+    
+    // Remove the letter from the drop zone
+    const updatedDropZones = [...dropZones];
+    updatedDropZones[zoneIndex] = { ...updatedDropZones[zoneIndex], letter: null };
+    setDropZones(updatedDropZones);
+    
+    // Reset error state if it was showing
+    if (showError) setShowError(false);
+  };
+
+  // Add a function to check if a letter is correct for a position
+  const isLetterCorrect = (letter: string | null, index: number): boolean => {
+    if (!letter || !currentWordData) return false;
+    return currentWordData.word[index] === letter;
+  };
 
   return (
     <>
@@ -702,27 +853,39 @@ function GamePage() {
 
             <section aria-label="Word puzzle game area" ref={gameAreaRef}>
               <div className="flex flex-wrap justify-center gap-3 mb-8 sm:mb-16" aria-label="Drop zones for letters">
-                {dropZones.map((zone) => (
-                  <div
-                    key={zone.id}
-                    data-id={zone.id}
-                    onDrop={(e) => handleDrop(e, zone.id)}
-                    onDragOver={handleDragOver}
-                    className={`drop-zone w-12 h-12 sm:w-16 sm:h-16 border-2 
-                      ${zone.letter
-                        ? zone.isPrefilled
-                          ? 'border-blue-500 bg-blue-50'
-                          : 'border-green-500 bg-green-50'
-                        : 'border-dashed border-gray-400'
-                      } rounded-lg flex items-center justify-center transition-all`}
-                  >
-                    {zone.letter && (
-                      <span className={`text-xl sm:text-2xl font-bold ${zone.isPrefilled ? 'text-blue-700' : 'text-green-700'}`}>
-                        {zone.letter}
-                      </span>
-                    )}
-                  </div>
-                ))}
+                {dropZones.map((zone, index) => {
+                  const isCorrect = isLetterCorrect(zone.letter, index);
+                  return (
+                    <div
+                      key={zone.id}
+                      data-id={zone.id}
+                      onDrop={(e) => handleDrop(e, zone.id)}
+                      onDragOver={handleDragOver}
+                      onClick={() => handleDropZoneClick(zone.id)}
+                      className={`drop-zone w-12 h-12 sm:w-16 sm:h-16 border-2 
+                        ${zone.letter
+                          ? zone.isPrefilled
+                            ? 'border-blue-500 bg-blue-50'
+                            : isCorrect 
+                              ? 'border-green-500 bg-green-50 cursor-pointer hover:bg-green-100'
+                              : 'border-red-500 bg-red-50 cursor-pointer hover:bg-red-100'
+                          : 'border-dashed border-gray-400'
+                        } rounded-lg flex items-center justify-center transition-all`}
+                    >
+                      {zone.letter && (
+                        <span className={`text-xl sm:text-2xl font-bold ${
+                          zone.isPrefilled 
+                            ? 'text-blue-700' 
+                            : isCorrect 
+                              ? 'text-green-700' 
+                              : 'text-red-700'
+                          }`}>
+                          {zone.letter}
+                        </span>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
 
               {/* Touch dragging ghost element */}
@@ -776,13 +939,24 @@ function GamePage() {
           </div>
 
           {success && (
-            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-              <div className="bg-white p-8 rounded-xl text-center">
+            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+              <div className="bg-white p-8 rounded-xl text-center max-w-sm relative">
+                <button
+                  onClick={() => setSuccess(false)}
+                  className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 transition-colors"
+                  aria-label="Close dialog"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+                
                 <Sparkles className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
                 <h2 className="text-2xl font-bold text-green-700 mb-4">
                   Congratulations!
                 </h2>
                 <p className="text-gray-600 mb-2">You successfully formed the word!</p>
+                <p className="text-2xl font-bold mb-4 text-blue-700">
+                  {currentWordData?.word}
+                </p>
                 <p className="text-xl font-bold mb-6">
                   <span className="text-gray-600">Score: </span>
                   <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
@@ -793,13 +967,22 @@ function GamePage() {
                   <p className="text-sm text-gray-500">
                     Words Completed: {completedWords.size} / {topic?.words.length || 0}
                   </p>
-                  <button
-                    onClick={resetGame}
-                    className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700
-                      transition-colors duration-200"
-                  >
-                    Next Word
-                  </button>
+                  <div className="flex justify-center gap-3">
+                    <button
+                      onClick={() => setSuccess(false)}
+                      className="px-6 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400
+                        transition-colors duration-200"
+                    >
+                      Stay
+                    </button>
+                    <button
+                      onClick={resetGame}
+                      className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700
+                        transition-colors duration-200"
+                    >
+                      Next Word
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -808,6 +991,10 @@ function GamePage() {
           {/* Trophy celebration */}
           {showCelebration && (
             <CompletionCelebration onClose={() => setShowCelebration(false)} />
+          )}
+
+          {showForcedCompletion && (
+            <ForcedCompletionCelebration onClose={() => setShowForcedCompletion(false)} />
           )}
 
           <div className="flex justify-center gap-2 mb-6">
@@ -886,6 +1073,35 @@ function GamePage() {
       {showAboutModal && <AboutModal isOpen={showAboutModal} onClose={() => setShowAboutModal(false)} />}
       {showPrivacyModal && <PrivacyModal isOpen={showPrivacyModal} onClose={() => setShowPrivacyModal(false)} />}
       {showContactModal && <ContactModal isOpen={showContactModal} onClose={() => setShowContactModal(false)} />}
+
+      {/* Solve dialog */}
+      {showSolveDialog && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-8 rounded-xl text-center max-w-sm">
+            <Lightbulb className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
+            <h2 className="text-2xl font-bold text-blue-700 mb-4">
+              Solution Revealed
+            </h2>
+            <p className="text-gray-600 mb-2">The correct word was:</p>
+            <p className="text-xl font-bold mb-6 text-blue-700">
+              {currentWordData?.word}
+            </p>
+            <p className="text-sm text-gray-500 mb-4">
+              Try to solve the next word by yourself!
+            </p>
+            <button
+              onClick={() => {
+                setShowSolveDialog(false);
+                resetGame();
+              }}
+              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700
+                transition-colors duration-200"
+            >
+              Next Word
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      Word Making Games - Improve Your Vocabulary Through Fun Puzzles
+    </title>
+    <meta
+      name="description"
+      content="Engaging word making games to improve vocabulary, spelling, and language skills through fun interactive puzzles."
+    />
+    <meta
+      name="keywords"
+      content="word games, vocabulary games, spelling games, educational games, language learning"
+    />
+    <meta name="author" content="Word Making Games" />
+    <link rel="canonical" href="https://wordmakinggames.com" />
+
+    <!-- Favicon and app icons -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="Word Making Games - Improve Your Vocabulary Through Fun Puzzles"
+    />
+    <meta
+      property="og:description"
+      content="Engaging word making games to improve vocabulary, spelling, and language skills through fun interactive puzzles."
+    />
+    <meta
+      property="og:image"
+      content="https://wordmakinggames.com/og-image.jpg"
+    />
+    <meta property="og:url" content="https://wordmakinggames.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Word Making Games - Improve Your Vocabulary Through Fun Puzzles"
+    />
+    <meta
+      name="twitter:description"
+      content="Engaging word making games to improve vocabulary, spelling, and language skills through fun interactive puzzles."
+    />
+    <meta
+      name="twitter:image"
+      content="https://wordmakinggames.com/twitter-image.jpg"
+    />
+
+    <!-- Meta theme color -->
+    <meta name="theme-color" content="#3b82f6" />
+
+    <!-- Add service worker registration for offline support -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("/service-worker.js").then(
+            function (registration) {
+              console.log(
+                "ServiceWorker registration successful with scope: ",
+                registration.scope
+              );
+            },
+            function (err) {
+              console.log("ServiceWorker registration failed: ", err);
+            }
+          );
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Fallback content for no JavaScript -->
+    <noscript>
+      <div style="text-align: center; padding: 2rem; font-family: sans-serif">
+        <h1>JavaScript Required</h1>
+        <p>
+          Word Making Games requires JavaScript to run. Please enable JavaScript
+          in your browser settings and reload the page.
+        </p>
+      </div>
+    </noscript>
+
+    <!-- Offline fallback message (hidden by default) -->
+    <div
+      id="offline-message"
+      style="
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #fff;
+        border: 2px solid #3b82f6;
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 9999;
+      "
+    >
+      <p style="margin: 0; font-family: sans-serif">
+        You are currently offline. Some features may be limited.
+      </p>
+    </div>
+
+    <!-- Offline detection script -->
+    <script>
+      function updateOnlineStatus() {
+        const offlineMessage = document.getElementById("offline-message");
+        if (offlineMessage) {
+          if (navigator.onLine) {
+            offlineMessage.style.display = "none";
+          } else {
+            offlineMessage.style.display = "block";
+          }
+        }
+      }
+
+      window.addEventListener("online", updateOnlineStatus);
+      window.addEventListener("offline", updateOnlineStatus);
+      document.addEventListener("DOMContentLoaded", updateOnlineStatus);
+    </script>
+  </body>
+</html>

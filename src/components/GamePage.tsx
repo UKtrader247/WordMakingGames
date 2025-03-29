@@ -22,6 +22,7 @@ interface DropZone {
   id: string;
   letter: string | null;
   isPrefilled?: boolean;
+  isIncorrect?: boolean;
 }
 
 function GamePage() {
@@ -145,7 +146,8 @@ function GamePage() {
       return {
         id: `dropzone-${index}`,
         letter: shouldPreFill ? letter : null,
-        isPrefilled: shouldPreFill
+        isPrefilled: shouldPreFill,
+        isIncorrect: false
       };
     });
 
@@ -247,6 +249,7 @@ function GamePage() {
         triggerConfetti();
       } else {
         setShowError(true);
+        
         const dropZoneElements = document.querySelectorAll('.drop-zone');
         dropZoneElements.forEach(element => {
           element.classList.add('shake');
@@ -268,9 +271,21 @@ function GamePage() {
 
     // Don't allow dropping on pre-filled letters
     if (dropZones[dropZoneIndex].isPrefilled) return;
+    
+    // Don't allow dropping on zones that already have a letter
+    if (dropZones[dropZoneIndex].letter !== null) return;
 
     const updatedDropZones = [...dropZones];
-    updatedDropZones[dropZoneIndex] = { ...updatedDropZones[dropZoneIndex], letter: letter.char };
+    
+    // Check if the letter is correct for this position
+    const isCorrect = letter.char === currentWordData?.word[dropZoneIndex];
+    
+    updatedDropZones[dropZoneIndex] = { 
+      ...updatedDropZones[dropZoneIndex], 
+      letter: letter.char,
+      isIncorrect: !isCorrect 
+    };
+    
     setDropZones(updatedDropZones);
 
     setLetters(letters.filter(l => l.id !== letterId));
@@ -385,7 +400,8 @@ function GamePage() {
       return {
         id: `dropzone-${index}`,
         letter: shouldPreFill ? letter : null,
-        isPrefilled: shouldPreFill
+        isPrefilled: shouldPreFill,
+        isIncorrect: false
       };
     });
 
@@ -498,9 +514,25 @@ function GamePage() {
             return;
           }
 
+          // Don't allow placing letters on zones that already have a letter
+          if (dropZones[dropZoneIndex].letter !== null) {
+            setIsDragging(false);
+            setTouchedLetter(null);
+            return;
+          }
+
           // Update dropzones with the letter
           const updatedDropZones = [...dropZones];
-          updatedDropZones[dropZoneIndex] = { ...updatedDropZones[dropZoneIndex], letter: touchedLetter.char };
+          
+          // Check if the letter is correct for this position
+          const isCorrect = touchedLetter.char === currentWordData?.word[dropZoneIndex];
+          
+          updatedDropZones[dropZoneIndex] = { 
+            ...updatedDropZones[dropZoneIndex], 
+            letter: touchedLetter.char,
+            isIncorrect: !isCorrect 
+          };
+          
           setDropZones(updatedDropZones);
 
           // Remove the letter from available letters
@@ -591,6 +623,38 @@ function GamePage() {
       });
       setTimeout(() => setToast(null), 3000);
     }
+  };
+
+  // New function to handle removing letters from dropzones when clicked
+  const handleLetterClick = (dropZoneId: string) => {
+    const dropZoneIndex = dropZones.findIndex(zone => zone.id === dropZoneId);
+    
+    // Don't allow removing pre-filled letters
+    if (dropZones[dropZoneIndex].isPrefilled) return;
+    
+    const letter = dropZones[dropZoneIndex].letter;
+    if (letter === null) return;
+    
+    // Create a new letter object and add it back to the letters array
+    const newLetter = {
+      id: `letter-${Date.now()}`, // Create a unique ID
+      char: letter,
+      position: {
+        x: 40 + (Math.random() * 20), // Position somewhat in the middle
+        y: 40 + (Math.random() * 20)
+      }
+    };
+    
+    // Update the dropzones to remove the letter
+    const updatedDropZones = [...dropZones];
+    updatedDropZones[dropZoneIndex] = { 
+      ...updatedDropZones[dropZoneIndex], 
+      letter: null,
+      isIncorrect: false // Remove the incorrect flag if it was set
+    };
+    
+    setDropZones(updatedDropZones);
+    setLetters([...letters, newLetter]);
   };
 
   useEffect(() => {
@@ -708,16 +772,26 @@ function GamePage() {
                     data-id={zone.id}
                     onDrop={(e) => handleDrop(e, zone.id)}
                     onDragOver={handleDragOver}
+                    onClick={() => zone.letter && !zone.isPrefilled ? handleLetterClick(zone.id) : null}
                     className={`drop-zone w-12 h-12 sm:w-16 sm:h-16 border-2 
                       ${zone.letter
                         ? zone.isPrefilled
                           ? 'border-blue-500 bg-blue-50'
-                          : 'border-green-500 bg-green-50'
+                          : zone.isIncorrect
+                            ? 'border-red-500 bg-red-50'
+                            : 'border-green-500 bg-green-50'
                         : 'border-dashed border-gray-400'
-                      } rounded-lg flex items-center justify-center transition-all`}
+                      } rounded-lg flex items-center justify-center transition-all
+                      ${zone.letter && !zone.isPrefilled ? 'cursor-pointer' : ''}`}
                   >
                     {zone.letter && (
-                      <span className={`text-xl sm:text-2xl font-bold ${zone.isPrefilled ? 'text-blue-700' : 'text-green-700'}`}>
+                      <span className={`text-xl sm:text-2xl font-bold 
+                        ${zone.isPrefilled 
+                          ? 'text-blue-700' 
+                          : zone.isIncorrect 
+                            ? 'text-red-700' 
+                            : 'text-green-700'}`}
+                      >
                         {zone.letter}
                       </span>
                     )}

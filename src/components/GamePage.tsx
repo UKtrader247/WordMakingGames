@@ -887,7 +887,7 @@ function GamePage() {
           <div className="flex justify-center gap-2 mb-6">
             <button
               className="px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-              onClick={resetGame}
+              onClick={resetCurrentWord}
             >
               Reset
             </button>

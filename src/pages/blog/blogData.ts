@@ -20,6 +20,6 @@ export interface BlogPost {
   };
 }
 
-import { posts } from "./posts";
+import { posts } from "../../../public/images/blog/posts";
 
 export const blogPosts: BlogPost[] = posts;

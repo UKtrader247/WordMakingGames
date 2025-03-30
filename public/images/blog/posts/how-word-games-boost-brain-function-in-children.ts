@@ -1,4 +1,4 @@
-import { BlogPost } from "../blogData";
+import { BlogPost } from "../../../../src/pages/blog/blogData";
 
 export const post2: BlogPost = {
   id: 2,
@@ -125,7 +125,7 @@ export const post2: BlogPost = {
   author: "Emily Johnson",
   date: "March 29, 2025",
   readTime: "6 min read",
-  imageUrl: "/src/pages/images/word-games-for-children.avif",
+  imageUrl: "/images/word-games-for-children.avif",
   tags: [
     "children",
     "brain development",

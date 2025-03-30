@@ -1,4 +1,4 @@
-import { BlogPost } from "../blogData";
+import { BlogPost } from "../../../../src/pages/blog/blogData";
 
 export const post3: BlogPost = {
   id: 3,

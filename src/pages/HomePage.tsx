@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { topics } from '../data/topics';
 import { Gamepad2, Search, Trophy, CheckCircle, X } from 'lucide-react';
 import VisitCounter from '../components/VisitCounter';
@@ -376,14 +376,12 @@ function HomePage() {
                 Improve your vocabulary with our educational word games. Choose from {topics.length} topics and over {topics.reduce((sum, topic) => sum + topic.words.length, 0)} words!
               </p>
               <div className="mt-4 flex justify-center space-x-4">
-                <a
-                  href="https://wordmakinggames.com/blog"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/blog"
                   className="text-blue-500 hover:text-blue-700 transition"
                 >
                   Blog
-                </a>
+                </Link>
                 <button 
                   onClick={() => setShowAboutModal(true)}
                   className="text-blue-500 hover:text-blue-700 transition"

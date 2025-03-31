@@ -2,6 +2,10 @@ export interface WordData {
   word: string;
   hint: string;
   extraLetters: string;
+  meaning?: string; // Optional detailed meaning of the word
+  pronunciation?: string; // Optional pronunciation guide
+  audioUrl?: string; // Optional URL to pronunciation audio
+  example?: string; // Optional example sentence using the word
 }
 
 export interface Topic {

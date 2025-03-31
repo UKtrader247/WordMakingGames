@@ -850,12 +850,36 @@ function GamePage() {
 
           {success && (
             <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-              <div className="bg-white p-8 rounded-xl text-center">
+              <div className="bg-white p-8 rounded-xl text-center max-w-lg w-full mx-4">
                 <Sparkles className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
                 <h2 className="text-2xl font-bold text-green-700 mb-4">
                   Congratulations!
                 </h2>
                 <p className="text-gray-600 mb-2">You successfully formed the word!</p>
+                
+                {/* Word Details Section */}
+                <div className="mt-4 mb-6 text-left bg-gray-50 p-4 rounded-lg">
+                  <h3 className="text-xl font-bold text-blue-800 mb-2">{currentWordData?.word}</h3>
+                  {currentWordData?.pronunciation && (
+                    <p className="text-gray-600 mb-2">
+                      <span className="font-semibold">Pronunciation:</span> {currentWordData.pronunciation}
+                    </p>
+                  )}
+                  {currentWordData?.meaning && (
+                    <p className="text-gray-600 mb-2">
+                      <span className="font-semibold">Meaning:</span> {currentWordData.meaning}
+                    </p>
+                  )}
+                  {currentWordData?.audioUrl && (
+                    <div className="mt-2">
+                      <audio controls className="w-full">
+                        <source src={currentWordData.audioUrl} type="audio/mpeg" />
+                        Your browser does not support the audio element.
+                      </audio>
+                    </div>
+                  )}
+                </div>
+
                 <p className="text-xl font-bold mb-6">
                   <span className="text-gray-600">Score: </span>
                   <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">

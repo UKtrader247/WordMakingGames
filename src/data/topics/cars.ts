@@ -9,155 +9,175 @@ export const carsTopic: Topic = {
     {
       word: "ENGINE",
       hint: "Power source",
-      extraLetters: "PQWXYZ",
-      meaning: "The main power unit of a vehicle that converts fuel into mechanical energy",
+      extraLetters: "ENGIRTZ",
+      meaning:
+        "The main power unit of a vehicle that converts fuel into mechanical energy",
       pronunciation: "ĕn′jĭn",
     },
     {
       word: "WHEEL",
       hint: "Circular component",
-      extraLetters: "PQWXYZ",
-      meaning: "A circular object that rotates around an axle and is used for vehicle movement",
+      extraLetters: "WHELTRS",
+      meaning:
+        "A circular object that rotates around an axle and is used for vehicle movement",
       pronunciation: "wēl",
     },
     {
       word: "TIRE",
       hint: "Rubber covering",
-      extraLetters: "PQWXYZ",
-      meaning: "A rubber covering placed around a wheel to provide traction and cushion",
+      extraLetters: "TIRESDQ",
+      meaning:
+        "A rubber covering placed around a wheel to provide traction and cushion",
       pronunciation: "tī′ər",
     },
     {
       word: "BRAKE",
       hint: "Stopping mechanism",
-      extraLetters: "PQWXYZ",
+      extraLetters: "BRAKESDM",
       meaning: "A device for slowing or stopping a moving vehicle by friction",
       pronunciation: "brāk",
     },
     {
       word: "CLUTCH",
       hint: "Engage/disengage power",
-      extraLetters: "PQWXYZ",
-      meaning: "A mechanism for connecting and disconnecting the engine from the transmission system",
+      extraLetters: "CLUTHDPS",
+      meaning:
+        "A mechanism for connecting and disconnecting the engine from the transmission system",
       pronunciation: "klŭch",
     },
     {
       word: "GEAR",
       hint: "Mechanical ratio",
-      extraLetters: "PQWXYZ",
-      meaning: "A toothed wheel that works with others to alter the relation between speed and power",
+      extraLetters: "GEARSPH",
+      meaning:
+        "A toothed wheel that works with others to alter the relation between speed and power",
       pronunciation: "gîr",
     },
     {
       word: "STEERING",
       hint: "Direction control",
-      extraLetters: "PQWXYZ",
-      meaning: "The system of parts by which a vehicle is guided or controlled directionally",
+      extraLetters: "STERINGX",
+      meaning:
+        "The system of parts by which a vehicle is guided or controlled directionally",
       pronunciation: "stîr′ĭng",
     },
     {
       word: "CHASSIS",
       hint: "Vehicle frame",
-      extraLetters: "PQWXYZ",
-      meaning: "The base frame of a motor vehicle that supports the body and engine",
+      extraLetters: "CHASISPL",
+      meaning:
+        "The base frame of a motor vehicle that supports the body and engine",
       pronunciation: "shăs′ē",
     },
     {
       word: "HOOD",
       hint: "Engine cover",
-      extraLetters: "PQWXYZ",
-      meaning: "The hinged cover over the engine compartment of a motor vehicle",
+      extraLetters: "HOODPSLM",
+      meaning:
+        "The hinged cover over the engine compartment of a motor vehicle",
       pronunciation: "ho͝od",
     },
     {
       word: "TRUNK",
       hint: "Storage space",
-      extraLetters: "PQWXYZ",
-      meaning: "A compartment for luggage or storage, typically at the rear of a car",
+      extraLetters: "TRUNKSBM",
+      meaning:
+        "A compartment for luggage or storage, typically at the rear of a car",
       pronunciation: "trŭngk",
     },
     {
       word: "BUMPER",
       hint: "Shock absorber",
-      extraLetters: "PQWXYZ",
-      meaning: "A horizontal bar at the front and rear of a vehicle to absorb impact in a collision",
+      extraLetters: "BUMPERSK",
+      meaning:
+        "A horizontal bar at the front and rear of a vehicle to absorb impact in a collision",
       pronunciation: "bŭm′pər",
     },
     {
       word: "DOOR",
       hint: "Entry point",
-      extraLetters: "PQWXYZ",
-      meaning: "A hinged or removable barrier that allows entry to or exit from a vehicle",
+      extraLetters: "DOORPCQM",
+      meaning:
+        "A hinged or removable barrier that allows entry to or exit from a vehicle",
       pronunciation: "dôr",
     },
     {
       word: "WINDOW",
       hint: "Glass panel",
-      extraLetters: "PQWXYZ",
-      meaning: "A transparent panel in a vehicle that allows visibility while providing protection",
+      extraLetters: "WINDOWSB",
+      meaning:
+        "A transparent panel in a vehicle that allows visibility while providing protection",
       pronunciation: "wĭn′dō",
     },
     {
       word: "WINDSHIELD",
       hint: "Front window",
-      extraLetters: "PQWXYZ",
-      meaning: "The front window of a vehicle that protects occupants from wind and debris",
+      extraLetters: "WINDSHELF",
+      meaning:
+        "The front window of a vehicle that protects occupants from wind and debris",
       pronunciation: "wĭnd′shēld′",
     },
     {
       word: "MIRROR",
       hint: "Reflective surface",
-      extraLetters: "PQWXYZ",
-      meaning: "A reflective surface on a vehicle used to see behind or to the side",
+      extraLetters: "MIRORSPZ",
+      meaning:
+        "A reflective surface on a vehicle used to see behind or to the side",
       pronunciation: "mĭr′ər",
     },
     {
       word: "SEAT",
       hint: "Sitting place",
-      extraLetters: "PQWXYZ",
-      meaning: "A place designed for sitting in a vehicle, typically with a back and cushioning",
+      extraLetters: "SEATBCVN",
+      meaning:
+        "A place designed for sitting in a vehicle, typically with a back and cushioning",
       pronunciation: "sēt",
     },
     {
       word: "SEATBELT",
       hint: "Safety restraint",
-      extraLetters: "PQWXYZ",
-      meaning: "A belt or strap that secures a person in their seat during travel",
+      extraLetters: "SEATBLKR",
+      meaning:
+        "A belt or strap that secures a person in their seat during travel",
       pronunciation: "sēt′bĕlt′",
     },
     {
       word: "AIRBAG",
       hint: "Safety device",
-      extraLetters: "PQWXYZ",
-      meaning: "An inflatable cushion designed to protect vehicle occupants in a collision",
+      extraLetters: "AIRBGSPX",
+      meaning:
+        "An inflatable cushion designed to protect vehicle occupants in a collision",
       pronunciation: "âr′băg′",
     },
     {
       word: "DASHBOARD",
       hint: "Instrument panel",
       extraLetters: "PQWXYZ",
-      meaning: "The panel facing the driver of a vehicle, containing instrumentation and controls",
+      meaning:
+        "The panel facing the driver of a vehicle, containing instrumentation and controls",
       pronunciation: "dăsh′bôrd′",
     },
     {
       word: "ACCELERATOR",
       hint: "Speed control",
       extraLetters: "PQWXYZ",
-      meaning: "A pedal that controls the flow of fuel to the engine, increasing speed when pressed",
+      meaning:
+        "A pedal that controls the flow of fuel to the engine, increasing speed when pressed",
       pronunciation: "ăk-sĕl′ə-rā′tər",
     },
     {
       word: "PEDAL",
       hint: "Foot control",
       extraLetters: "PQWXYZ",
-      meaning: "A lever operated by the foot to control various functions in a vehicle",
+      meaning:
+        "A lever operated by the foot to control various functions in a vehicle",
       pronunciation: "pĕd′l",
     },
     {
       word: "TRANSMISSION",
-      hint: "Gear system",
-      extraLetters: "PQWXYZ",
-      meaning: "The system that transmits power from the engine to the driving wheels",
+      hint: "Power transfer system",
+      extraLetters: "TRANSMIKL",
+      meaning: "The system that transfers power from the engine to the wheels",
       pronunciation: "trăns-mĭsh′ən",
     },
     {
@@ -171,28 +191,24 @@ export const carsTopic: Topic = {
       word: "MANUAL",
       hint: "Hand-shifting type",
       extraLetters: "PQWXYZ",
-      meaning: "A type of transmission where the driver changes gears using a clutch and shifter",
+      meaning:
+        "A type of transmission where the driver changes gears using a clutch and shifter",
       pronunciation: "măn′yōō-əl",
     },
     {
-      word: "HYBRID",
-      hint: "Dual power source",
-      extraLetters: "PQWXYZ",
-      meaning: "A vehicle that uses both a conventional engine and an electric motor for power",
-      pronunciation: "hī′brĭd",
-    },
-    {
-      word: "ELECTRIC",
-      hint: "Battery powered",
-      extraLetters: "PQWXYZ",
-      meaning: "A vehicle powered by electricity stored in rechargeable batteries",
-      pronunciation: "ĭ-lĕk′trĭk",
+      word: "FUEL",
+      hint: "Energy source",
+      extraLetters: "FUELQRPM",
+      meaning:
+        "A substance that provides energy to power an engine, typically gasoline or diesel",
+      pronunciation: "fyo͞o′əl",
     },
     {
       word: "DIESEL",
       hint: "Fuel type",
-      extraLetters: "PQWXYZ",
-      meaning: "A type of engine that uses compression rather than spark ignition",
+      extraLetters: "DIESLJQM",
+      meaning:
+        "A type of fuel and engine that uses compression rather than spark ignition",
       pronunciation: "dē′zəl",
     },
     {
@@ -204,73 +220,83 @@ export const carsTopic: Topic = {
     },
     {
       word: "EXHAUST",
-      hint: "Gas discharge",
-      extraLetters: "PQWXYZ",
-      meaning: "The system that removes waste gases from the engine and out of the vehicle",
+      hint: "Gas removal system",
+      extraLetters: "EXHUSTQP",
+      meaning:
+        "System that removes waste gases from the engine and reduces noise",
       pronunciation: "ĭg-zôst′",
     },
     {
       word: "MUFFLER",
       hint: "Noise reducer",
       extraLetters: "PQWXYZ",
-      meaning: "A device that reduces the noise emitted by the exhaust of an engine",
+      meaning:
+        "A device that reduces the noise emitted by the exhaust of an engine",
       pronunciation: "mŭf′lər",
     },
     {
       word: "RADIATOR",
-      hint: "Cooling system",
-      extraLetters: "PQWXYZ",
-      meaning: "A heat exchanger used to transfer thermal energy from the engine to the air",
+      hint: "Cooling component",
+      extraLetters: "RADIOTXV",
+      meaning:
+        "Component that helps cool the engine by transferring heat from coolant",
       pronunciation: "rā′dē-ā′tər",
     },
     {
       word: "BATTERY",
       hint: "Power storage",
-      extraLetters: "PQWXYZ",
-      meaning: "A device that stores electrical energy for use in starting the engine and powering accessories",
+      extraLetters: "BATRYJQZ",
+      meaning:
+        "A device that stores electrical energy for starting the engine and powering electrical systems",
       pronunciation: "băt′ə-rē",
     },
     {
       word: "HEADLIGHT",
       hint: "Front illumination",
       extraLetters: "PQWXYZ",
-      meaning: "A light at the front of a vehicle used to illuminate the road ahead",
+      meaning:
+        "A light at the front of a vehicle used to illuminate the road ahead",
       pronunciation: "hĕd′līt′",
     },
     {
       word: "TAILLIGHT",
       hint: "Rear illumination",
       extraLetters: "PQWXYZ",
-      meaning: "A light at the rear of a vehicle that makes it visible from behind",
+      meaning:
+        "A light at the rear of a vehicle that makes it visible from behind",
       pronunciation: "tāl′līt′",
     },
     {
       word: "WIPER",
       hint: "Rain clearer",
       extraLetters: "PQWXYZ",
-      meaning: "A device with a rubber blade that clears rain or snow from a windshield",
+      meaning:
+        "A device with a rubber blade that clears rain or snow from a windshield",
       pronunciation: "wī′pər",
     },
     {
       word: "SEDAN",
       hint: "Car type",
-      extraLetters: "PQWXYZ",
-      meaning: "A passenger car with a closed body and a closed trunk separated from the part where people sit",
+      extraLetters: "SEDANKPQ",
+      meaning:
+        "A passenger car with a closed body, typically with four doors and a separate trunk",
       pronunciation: "sĭ-dăn′",
     },
     {
       word: "COUPE",
       hint: "Two-door car",
       extraLetters: "PQWXYZ",
-      meaning: "A two-door automobile with a fixed roof and typically a sporty appearance",
+      meaning:
+        "A two-door automobile with a fixed roof and typically a sporty appearance",
       pronunciation: "kōōp",
     },
     {
       word: "SUV",
-      hint: "Sport utility vehicle",
-      extraLetters: "PQWXYZ",
-      meaning: "A rugged vehicle with a station wagon body style and typically four-wheel drive",
-      pronunciation: "ĕs′yōō′vē′",
+      hint: "Vehicle type",
+      extraLetters: "SUVPQMTN",
+      meaning:
+        "Sport Utility Vehicle; a large vehicle designed for off-road driving but commonly used as family transport",
+      pronunciation: "ĕs′yo͞o′vē′",
     },
     {
       word: "TRUCK",
@@ -281,38 +307,43 @@ export const carsTopic: Topic = {
     },
     {
       word: "CONVERTIBLE",
-      hint: "Retractable roof",
-      extraLetters: "PQWXYZ",
-      meaning: "A car with a folding or detachable roof",
+      hint: "Car type",
+      extraLetters: "CONVERTIBLZ",
+      meaning:
+        "A car with a roof that can be folded or removed, allowing open-air driving",
       pronunciation: "kən-vûr′tə-bəl",
     },
     {
       word: "HATCHBACK",
-      hint: "Rear door type",
-      extraLetters: "PQWXYZ",
-      meaning: "A car with a rear door that opens upward, providing access to the cargo area",
+      hint: "Car type",
+      extraLetters: "HATCHBKWZ",
+      meaning:
+        "A car with a rear door that opens upward, providing access to a cargo area",
       pronunciation: "hăch′băk′",
     },
     {
       word: "FERRARI",
       hint: "Italian sports car",
       extraLetters: "PQWXYZ",
-      meaning: "An Italian luxury sports car manufacturer founded by Enzo Ferrari",
+      meaning:
+        "An Italian luxury sports car manufacturer founded by Enzo Ferrari",
       pronunciation: "fə-rär′ē",
     },
     {
       word: "PORSCHE",
       hint: "German sports car",
       extraLetters: "PQWXYZ",
-      meaning: "A German automobile manufacturer specializing in high-performance sports cars",
+      meaning:
+        "A German automobile manufacturer specializing in high-performance sports cars",
       pronunciation: "pôr′shə",
     },
     {
       word: "TOYOTA",
       hint: "Japanese car brand",
-      extraLetters: "PQWXYZ",
-      meaning: "A Japanese automotive manufacturer known for reliable and fuel-efficient vehicles",
-      pronunciation: "toi-ō′tə",
+      extraLetters: "TOYATQPX",
+      meaning:
+        "One of the largest global automobile manufacturers, founded in Japan",
+      pronunciation: "toi-yō′tə",
     },
     {
       word: "FORD",
@@ -323,38 +354,91 @@ export const carsTopic: Topic = {
     },
     {
       word: "BMW",
-      hint: "German luxury brand",
-      extraLetters: "PQWXYZ",
-      meaning: "A German luxury vehicle manufacturer known for performance and quality",
-      pronunciation: "bē′ĕm′dŭb′əl-yōō′",
+      hint: "German car brand",
+      extraLetters: "BMWPQVXZ",
+      meaning:
+        "Bayerische Motoren Werke; a German luxury vehicle and motorcycle manufacturer",
+      pronunciation: "bē′ĕm-dŭb′əl-yōō′",
     },
     {
       word: "MERCEDES",
-      hint: "German luxury brand",
-      extraLetters: "PQWXYZ",
-      meaning: "A German global automobile marque known for luxury vehicles and commercial vehicles",
+      hint: "German car brand",
+      extraLetters: "MERCDSXZ",
+      meaning:
+        "Short for Mercedes-Benz; a German luxury and commercial vehicle manufacturer",
       pronunciation: "mər-sā′dēz",
     },
     {
       word: "AUDI",
       hint: "German luxury brand",
       extraLetters: "PQWXYZ",
-      meaning: "A German automobile manufacturer that designs, engineers, produces and markets luxury vehicles",
+      meaning:
+        "A German automobile manufacturer that designs, engineers, produces and markets luxury vehicles",
       pronunciation: "ou′dē",
     },
     {
       word: "HONDA",
       hint: "Japanese car brand",
-      extraLetters: "PQWXYZ",
-      meaning: "A Japanese multinational corporation known for automobiles, motorcycles, and power equipment",
+      extraLetters: "HONDAVQZ",
+      meaning:
+        "Japanese multinational company known for cars, motorcycles, and power equipment",
       pronunciation: "hŏn′də",
     },
     {
       word: "TESLA",
       hint: "Electric car company",
       extraLetters: "PQWXYZ",
-      meaning: "An American electric vehicle and clean energy company founded by Elon Musk",
+      meaning:
+        "An American electric vehicle and clean energy company founded by Elon Musk",
       pronunciation: "tĕs′lə",
+    },
+    {
+      word: "SUSPENSION",
+      hint: "Shock absorption system",
+      extraLetters: "SUSPENIOX",
+      meaning:
+        "System of springs and shock absorbers connecting wheels to the chassis",
+      pronunciation: "sə-spĕn′shən",
+    },
+    {
+      word: "ALTERNATOR",
+      hint: "Power generator",
+      extraLetters: "ALTERNOSX",
+      meaning:
+        "Device that generates electricity to recharge the battery and power electrical systems",
+      pronunciation: "ôl′tər-nā′tər",
+    },
+    {
+      word: "SPARK PLUG",
+      hint: "Ignition component",
+      extraLetters: "SPARKLUGI",
+      meaning:
+        "Device that ignites the fuel-air mixture in the engine's combustion chamber",
+      pronunciation: "spärk plŭg",
+    },
+    {
+      word: "CYLINDER",
+      hint: "Engine chamber",
+      extraLetters: "CYLINDEQJ",
+      meaning:
+        "Chamber within an engine where fuel combustion occurs to power the pistons",
+      pronunciation: "sĭl′ĭn-dər",
+    },
+    {
+      word: "HYBRID",
+      hint: "Power system",
+      extraLetters: "HYBRIDQM",
+      meaning:
+        "A vehicle that combines a conventional engine with an electric propulsion system",
+      pronunciation: "hī′brĭd",
+    },
+    {
+      word: "ELECTRIC",
+      hint: "Power type",
+      extraLetters: "ELCTRIXVN",
+      meaning:
+        "A vehicle powered by one or more electric motors using energy from rechargeable batteries",
+      pronunciation: "ĭ-lĕk′trĭk",
     },
   ],
 };

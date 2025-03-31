@@ -1,4 +1,4 @@
-import { Topic } from "../types";
+import { Topic } from "../topics";
 
 export const oceanTopic: Topic = {
   id: "ocean",
@@ -9,118 +9,132 @@ export const oceanTopic: Topic = {
     {
       word: "WAVE",
       hint: "Moving ridge on water surface",
-      extraLetters: "XZQPWY",
-      meaning: "A ridge or swell moving through water, caused by wind or other forces",
+      extraLetters: "WAVEXZQP",
+      meaning:
+        "A ridge or swell moving through water, caused by wind or other forces",
       pronunciation: "wāv",
     },
     {
       word: "TIDE",
       hint: "Cyclical rise and fall of sea level",
-      extraLetters: "YWZXQP",
-      meaning: "The alternate rising and falling of the sea due to the gravitational attraction of the moon and sun",
+      extraLetters: "TIDEWZXQ",
+      meaning:
+        "The alternate rising and falling of the sea due to the gravitational attraction of the moon and sun",
       pronunciation: "tīd",
     },
     {
       word: "CORAL",
       hint: "Marine invertebrate that forms reefs",
-      extraLetters: "ZYXWQP",
-      meaning: "A hard, stony substance secreted by certain marine invertebrates as an external skeleton",
+      extraLetters: "CORALZQP",
+      meaning:
+        "A hard, stony substance secreted by certain marine invertebrates as an external skeleton",
       pronunciation: "kôr′əl, kŏr′-",
     },
     {
       word: "REEF",
       hint: "Ridge of rock or coral near surface",
-      extraLetters: "QPWXZY",
-      meaning: "A ridge of rock, coral, or sand at or near the surface of the sea",
+      extraLetters: "REFQPWXZ",
+      meaning:
+        "A ridge of rock, coral, or sand at or near the surface of the sea",
       pronunciation: "rēf",
     },
     {
       word: "SHARK",
       hint: "Cartilaginous marine predator",
-      extraLetters: "XZQPWY",
-      meaning: "A long-bodied marine fish with cartilaginous skeleton and prominent dorsal fin",
+      extraLetters: "SHARKZQW",
+      meaning:
+        "A long-bodied marine fish with cartilaginous skeleton and prominent dorsal fin",
       pronunciation: "shärk",
     },
-    { 
-      word: "WHALE", 
-      hint: "Large marine mammal", 
-      extraLetters: "YWZXQP",
-      meaning: "A very large marine mammal with a streamlined body and horizontal tail fin",
+    {
+      word: "WHALE",
+      hint: "Large marine mammal",
+      extraLetters: "WHALEXQP",
+      meaning:
+        "A very large marine mammal with a streamlined body and horizontal tail fin",
       pronunciation: "hwāl, wāl",
     },
     {
       word: "DOLPHIN",
       hint: "Highly intelligent marine mammal",
-      extraLetters: "ZYXWQP",
-      meaning: "A small, toothed whale with a beaklike snout and high intelligence",
+      extraLetters: "DOLPHINQZ",
+      meaning:
+        "A small, toothed whale with a beaklike snout and high intelligence",
       pronunciation: "dŏl′fĭn",
     },
     {
       word: "OCTOPUS",
       hint: "Eight-armed marine mollusk",
-      extraLetters: "QPWXZY",
-      meaning: "A marine mollusk with eight arms, a soft body, and highly developed eyes",
+      extraLetters: "OCTPUSQWZ",
+      meaning:
+        "A marine mollusk with eight arms, a soft body, and highly developed eyes",
       pronunciation: "ŏk′tə-pəs",
     },
     {
       word: "JELLYFISH",
       hint: "Gelatinous marine animal",
-      extraLetters: "XZQPWY",
-      meaning: "A free-swimming marine animal with a gelatinous umbrella-shaped body and trailing tentacles",
+      extraLetters: "JELYFISHX",
+      meaning:
+        "A free-swimming marine animal with a gelatinous umbrella-shaped body and trailing tentacles",
       pronunciation: "jĕl′ē-fĭsh′",
     },
-    { 
-      word: "SEAWEED", 
-      hint: "Marine algae", 
-      extraLetters: "YWZXQP",
-      meaning: "Marine algae that grows in the sea, often along rocky shorelines",
+    {
+      word: "SEAWEED",
+      hint: "Marine algae",
+      extraLetters: "SEAWDQPZ",
+      meaning:
+        "Marine algae that grows in the sea, often along rocky shorelines",
       pronunciation: "sē′wēd′",
     },
     {
       word: "PLANKTON",
       hint: "Small drifting marine organisms",
-      extraLetters: "ZYXWQP",
-      meaning: "Tiny organisms that float or drift in great numbers in bodies of salt or fresh water",
+      extraLetters: "PLANKTOQZ",
+      meaning:
+        "Tiny organisms that float or drift in great numbers in bodies of salt or fresh water",
       pronunciation: "plăngk′tən",
     },
     {
       word: "TSUNAMI",
       hint: "Large ocean wave from seismic activity",
-      extraLetters: "QPWXZY",
-      meaning: "A long, high sea wave caused by an earthquake or other disturbance",
+      extraLetters: "TSUNAMIQZ",
+      meaning:
+        "A long, high sea wave caused by an earthquake or other disturbance",
       pronunciation: "tsōō-nä′mē",
     },
     {
       word: "CURRENT",
       hint: "Flowing body of water within larger body",
-      extraLetters: "XZQPWY",
-      meaning: "A body of water or air moving in a definite direction within a larger body",
+      extraLetters: "CURETNXZQ",
+      meaning:
+        "A body of water or air moving in a definite direction within a larger body",
       pronunciation: "kûr′ənt",
     },
     {
       word: "TRENCH",
       hint: "Deep depression in ocean floor",
-      extraLetters: "YWZXQP",
+      extraLetters: "TRENCHQP",
       meaning: "A long, narrow, deep depression in the ocean floor",
       pronunciation: "trĕnch",
     },
-    { 
-      word: "ATOLL", 
-      hint: "Ring-shaped coral reef", 
-      extraLetters: "ZYXWQP",
-      meaning: "A ring-shaped coral reef or chain of coral islands surrounding a lagoon",
+    {
+      word: "ATOLL",
+      hint: "Ring-shaped coral reef",
+      extraLetters: "ATOLZXWQ",
+      meaning:
+        "A ring-shaped coral reef or chain of coral islands surrounding a lagoon",
       pronunciation: "ăt′ôl′, ə-tŏl′",
     },
     {
       word: "ISLAND",
       hint: "Land surrounded by water",
-      extraLetters: "QPWXZY",
+      extraLetters: "ISLANDQPZ",
       meaning: "A piece of land completely surrounded by water",
       pronunciation: "ī′lənd",
     },
-    { 
-      word: "COAST", 
-      hint: "Land near the sea", 
+    {
+      word: "COAST",
+      hint: "Land near the sea",
       extraLetters: "XZQPWY",
       meaning: "The land next to or close to the sea or ocean",
       pronunciation: "kōst",
@@ -129,21 +143,23 @@ export const oceanTopic: Topic = {
       word: "SHORE",
       hint: "Land at the edge of a body of water",
       extraLetters: "YWZXQP",
-      meaning: "The land along the edge of a sea, lake, or other large body of water",
+      meaning:
+        "The land along the edge of a sea, lake, or other large body of water",
       pronunciation: "shôr",
     },
-    { 
-      word: "BEACH", 
-      hint: "Sandy or pebbly shore", 
+    {
+      word: "BEACH",
+      hint: "Sandy or pebbly shore",
       extraLetters: "ZYXWQP",
       meaning: "A shore of a body of water covered by sand, pebbles, or rocks",
       pronunciation: "bēch",
     },
-    { 
-      word: "MARINE", 
-      hint: "Relating to the sea", 
+    {
+      word: "MARINE",
+      hint: "Relating to the sea",
       extraLetters: "QPWXZY",
-      meaning: "Of or relating to the sea and the plants and animals that live there",
+      meaning:
+        "Of or relating to the sea and the plants and animals that live there",
       pronunciation: "mə-rēn′",
     },
     {
@@ -153,25 +169,28 @@ export const oceanTopic: Topic = {
       meaning: "The distance from the top to the bottom of the ocean or sea",
       pronunciation: "dĕpth",
     },
-    { 
-      word: "OCEAN", 
-      hint: "Vast body of saltwater", 
+    {
+      word: "OCEAN",
+      hint: "Vast body of saltwater",
       extraLetters: "YWZXQP",
-      meaning: "The vast body of salt water that covers almost three-fourths of the earth's surface",
+      meaning:
+        "The vast body of salt water that covers almost three-fourths of the earth's surface",
       pronunciation: "ō′shən",
     },
-    { 
-      word: "SEA", 
-      hint: "Large body of saltwater", 
+    {
+      word: "SEA",
+      hint: "Large body of saltwater",
       extraLetters: "ZYXWQP",
-      meaning: "A large body of salt water that is partly or completely surrounded by land",
+      meaning:
+        "A large body of salt water that is partly or completely surrounded by land",
       pronunciation: "sē",
     },
     {
       word: "SALT",
       hint: "Sodium chloride in seawater",
       extraLetters: "QPWXZY",
-      meaning: "A crystalline compound, sodium chloride, that gives seawater its characteristic taste",
+      meaning:
+        "A crystalline compound, sodium chloride, that gives seawater its characteristic taste",
       pronunciation: "sôlt",
     },
     {
@@ -185,14 +204,16 @@ export const oceanTopic: Topic = {
       word: "CRAB",
       hint: "Hard-shelled marine crustacean",
       extraLetters: "YWZXQP",
-      meaning: "A marine crustacean with a broad carapace, stalked eyes, and five pairs of legs",
+      meaning:
+        "A marine crustacean with a broad carapace, stalked eyes, and five pairs of legs",
       pronunciation: "krăb",
     },
     {
       word: "LOBSTER",
       hint: "Large marine crustacean",
       extraLetters: "ZYXWQP",
-      meaning: "A large marine crustacean with a hard shell and claws, often eaten as seafood",
+      meaning:
+        "A large marine crustacean with a hard shell and claws, often eaten as seafood",
       pronunciation: "lŏb′stər",
     },
     {
@@ -206,70 +227,80 @@ export const oceanTopic: Topic = {
       word: "BARNACLE",
       hint: "Small marine crustacean",
       extraLetters: "XZQPWY",
-      meaning: "A marine crustacean that attaches itself to rocks, ship bottoms, and other surfaces",
+      meaning:
+        "A marine crustacean that attaches itself to rocks, ship bottoms, and other surfaces",
       pronunciation: "bär′nə-kəl",
     },
     {
       word: "OYSTER",
       hint: "Marine mollusk with valuable shell",
       extraLetters: "YWZXQP",
-      meaning: "A bivalve mollusk with a rough irregular shell, some species of which produce pearls",
+      meaning:
+        "A bivalve mollusk with a rough irregular shell, some species of which produce pearls",
       pronunciation: "oi′stər",
     },
-    { 
-      word: "CLAM", 
-      hint: "Bivalve mollusk", 
+    {
+      word: "CLAM",
+      hint: "Bivalve mollusk",
       extraLetters: "ZYXWQP",
-      meaning: "A marine bivalve mollusk with shells of equal size connected by a hinge",
+      meaning:
+        "A marine bivalve mollusk with shells of equal size connected by a hinge",
       pronunciation: "klăm",
     },
     {
       word: "SQUID",
       hint: "Fast-swimming marine cephalopod",
       extraLetters: "QPWXZY",
-      meaning: "A fast-swimming cephalopod mollusk with ten arms, a long body, and a pair of fins",
+      meaning:
+        "A fast-swimming cephalopod mollusk with ten arms, a long body, and a pair of fins",
       pronunciation: "skwĭd",
     },
-    { 
-      word: "TUNA", 
-      hint: "Large ocean fish", 
+    {
+      word: "TUNA",
+      hint: "Large ocean fish",
       extraLetters: "XZQPWY",
-      meaning: "A large, active, predatory fish of warm seas, widely caught for food",
+      meaning:
+        "A large, active, predatory fish of warm seas, widely caught for food",
       pronunciation: "tōō′nə",
     },
-    { 
-      word: "KELP", 
-      hint: "Large brown seaweed", 
+    {
+      word: "KELP",
+      hint: "Large brown seaweed",
       extraLetters: "YWZXQP",
-      meaning: "A large brown seaweed that typically has a long, tough stalk with a broad frond",
+      meaning:
+        "A large brown seaweed that typically has a long, tough stalk with a broad frond",
       pronunciation: "kĕlp",
     },
     {
       word: "URCHIN",
       hint: "Spiny marine echinoderm",
       extraLetters: "ZYXWQP",
-      meaning: "A sea creature with a spherical spiny shell and tube feet for movement",
+      meaning:
+        "A sea creature with a spherical spiny shell and tube feet for movement",
       pronunciation: "ûr′chĭn",
     },
     {
       word: "ANEMONE",
       hint: "Colorful marine animal related to coral",
       extraLetters: "QPWXZY",
-      meaning: "A marine animal with a columnar body and tentacles surrounding the mouth",
+      meaning:
+        "A marine animal with a columnar body and tentacles surrounding the mouth",
       pronunciation: "ə-nĕm′ə-nē",
     },
     {
       word: "ALGAE",
       hint: "Simple aquatic plant organisms",
       extraLetters: "XZQPWY",
-      meaning: "A diverse group of photosynthetic organisms that lack true roots, stems, and leaves",
+      meaning:
+        "A diverse group of photosynthetic organisms that lack true roots, stems, and leaves",
       pronunciation: "ăl′jē",
     },
     {
       word: "SPONGE",
       hint: "Simple marine animal with porous body",
       extraLetters: "YWZXQP",
-      meaning: "A simple, sessile aquatic animal with a porous body and no distinct organs",
+      meaning:
+        "A simple, sessile aquatic animal with a porous body and no distinct organs",
       pronunciation: "spŭnj",
     },
     {
@@ -290,7 +321,8 @@ export const oceanTopic: Topic = {
       word: "SAILING",
       hint: "Travel by boat with wind power",
       extraLetters: "XZQPWY",
-      meaning: "The action of sailing in a boat, especially as a sport or recreation",
+      meaning:
+        "The action of sailing in a boat, especially as a sport or recreation",
       pronunciation: "sā′lĭng",
     },
     {
@@ -300,60 +332,68 @@ export const oceanTopic: Topic = {
       meaning: "A tube for breathing while swimming with the face under water",
       pronunciation: "snôr′kəl",
     },
-    { 
-      word: "DIVE", 
-      hint: "Plunge into water", 
+    {
+      word: "DIVE",
+      hint: "Plunge into water",
       extraLetters: "ZYXWQP",
-      meaning: "To plunge into water headfirst, especially with arms raised above one's head",
+      meaning:
+        "To plunge into water headfirst, especially with arms raised above one's head",
       pronunciation: "dīv",
     },
     {
       word: "SCUBA",
       hint: "Underwater breathing apparatus",
       extraLetters: "QPWXZY",
-      meaning: "An apparatus used for breathing underwater, consisting of a tank of compressed air",
+      meaning:
+        "An apparatus used for breathing underwater, consisting of a tank of compressed air",
       pronunciation: "skōō′bə",
     },
-    { 
-      word: "BUOY", 
-      hint: "Floating marker in water", 
+    {
+      word: "BUOY",
+      hint: "Floating marker in water",
       extraLetters: "XZQPWY",
-      meaning: "A floating object moored to the sea bottom to mark a channel or warn of danger",
+      meaning:
+        "A floating object moored to the sea bottom to mark a channel or warn of danger",
       pronunciation: "boi, bōō′ē",
     },
     {
       word: "MARINA",
       hint: "Harbor for pleasure boats",
       extraLetters: "YWZXQP",
-      meaning: "A specially designed harbor with moorings for pleasure craft and small boats",
+      meaning:
+        "A specially designed harbor with moorings for pleasure craft and small boats",
       pronunciation: "mə-rē′nə",
     },
     {
       word: "PACIFIC",
       hint: "Largest ocean on Earth",
       extraLetters: "ZYXWQP",
-      meaning: "The largest and deepest ocean on Earth, extending from the Arctic to the Antarctic",
+      meaning:
+        "The largest and deepest ocean on Earth, extending from the Arctic to the Antarctic",
       pronunciation: "pə-sĭf′ĭk",
     },
     {
       word: "ATLANTIC",
       hint: "Ocean between Americas and Europe/Africa",
       extraLetters: "QPWXZY",
-      meaning: "The ocean lying between Europe and Africa on the east and the Americas on the west",
+      meaning:
+        "The ocean lying between Europe and Africa on the east and the Americas on the west",
       pronunciation: "ət-lăn′tĭk",
     },
     {
       word: "ARCTIC",
       hint: "Ocean around the North Pole",
       extraLetters: "XZQPWY",
-      meaning: "The ocean surrounding the North Pole, largely covered by floating ice",
+      meaning:
+        "The ocean surrounding the North Pole, largely covered by floating ice",
       pronunciation: "ärk′tĭk",
     },
     {
       word: "PHYTOPLANKTON",
       hint: "Tiny plant-like ocean organisms",
       extraLetters: "YWZXQP",
-      meaning: "Microscopic marine plants that drift on or near the surface of the sea",
+      meaning:
+        "Microscopic marine plants that drift on or near the surface of the sea",
       pronunciation: "fī′tō-plăngk′tən",
     },
   ],

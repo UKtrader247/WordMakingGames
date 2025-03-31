@@ -9,120 +9,133 @@ export const literatureTopic: Topic = {
     {
       word: "NOVEL",
       hint: "Long fictional story",
-      extraLetters: "XZQPWY",
-      meaning: "A long work of fiction, typically with a complex plot and characters",
+      extraLetters: "NOVELQWZ",
+      meaning:
+        "A long work of fiction, typically with a complex plot and characters",
       pronunciation: "nŏv′əl",
     },
     {
       word: "POEM",
       hint: "Rhythmic composition",
-      extraLetters: "YWZXQP",
-      meaning: "A composition in verse, especially one that uses rhythm and often rhyme to express emotions or ideas",
+      extraLetters: "POEMXZQ",
+      meaning:
+        "A composition in verse, especially one that uses rhythm and often rhyme to express emotions or ideas",
       pronunciation: "pō′əm",
     },
     {
       word: "AUTHOR",
       hint: "Book writer",
-      extraLetters: "ZYXWQP",
+      extraLetters: "AUTHORQZ",
       meaning: "A writer of books, stories, or other literary works",
       pronunciation: "ô′thər",
     },
     {
       word: "POET",
       hint: "Verse writer",
-      extraLetters: "QPWXZY",
+      extraLetters: "POETXZQW",
       meaning: "A person who writes poems, especially as a profession",
       pronunciation: "pō′ĭt",
     },
     {
       word: "FICTION",
       hint: "Imaginary stories",
-      extraLetters: "XZQPWY",
-      meaning: "Literature that describes imaginary events and people rather than actual ones",
+      extraLetters: "FICTIONZ",
+      meaning:
+        "Literature that describes imaginary events and people rather than actual ones",
       pronunciation: "fĭk′shən",
     },
     {
       word: "NONFICTION",
       hint: "Factual writing",
-      extraLetters: "YWZXQP",
-      meaning: "Prose writing that is based on facts, real events, and real people",
+      extraLetters: "NOFICTWZ",
+      meaning:
+        "Prose writing that is based on facts, real events, and real people",
       pronunciation: "nŏn-fĭk′shən",
     },
     {
       word: "GENRE",
       hint: "Literary category",
-      extraLetters: "ZYXWQP",
-      meaning: "A category of artistic composition characterized by similarities in form, style, or subject matter",
+      extraLetters: "GENREQZX",
+      meaning:
+        "A category of artistic composition characterized by similarities in form, style, or subject matter",
       pronunciation: "zhän′rə",
     },
     {
       word: "PLOT",
       hint: "Story events",
-      extraLetters: "QPWXZY",
-      meaning: "The main events of a play, novel, movie, or similar work, devised and presented by the writer",
+      extraLetters: "PLOTWXZQ",
+      meaning:
+        "The main events of a play, novel, movie, or similar work, devised and presented by the writer",
       pronunciation: "plŏt",
     },
     {
       word: "CHARACTER",
       hint: "Story person",
-      extraLetters: "XZQPWY",
-      meaning: "A person in a novel, play, or movie portrayed with specific traits and qualities",
+      extraLetters: "CHARETPZ",
+      meaning:
+        "A person in a novel, play, or movie portrayed with specific traits and qualities",
       pronunciation: "kăr′ĭk-tər",
     },
     {
       word: "SETTING",
       hint: "Story location",
-      extraLetters: "YWZXQP",
-      meaning: "The place and time at which a play, novel, or film is represented as happening",
+      extraLetters: "SETTINGQ",
+      meaning:
+        "The place and time at which a play, novel, or film is represented as happening",
       pronunciation: "sĕt′ĭng",
     },
     {
       word: "THEME",
       hint: "Central idea",
-      extraLetters: "ZYXWQP",
-      meaning: "The central topic, subject, or message of a story or literary work",
+      extraLetters: "THEMZQXP",
+      meaning:
+        "The central topic, subject, or message of a story or literary work",
       pronunciation: "thēm",
     },
     {
       word: "CONFLICT",
       hint: "Story struggle",
-      extraLetters: "QPWXZY",
-      meaning: "A serious disagreement or struggle between opposing forces in a story",
+      extraLetters: "CONFLITP",
+      meaning:
+        "A serious disagreement or struggle between opposing forces in a story",
       pronunciation: "kŏn′flĭkt′",
     },
     {
       word: "CLIMAX",
       hint: "Story peak",
-      extraLetters: "XZQPWY",
+      extraLetters: "CLIMAXQW",
       meaning: "The most intense, exciting, or important point of a story",
       pronunciation: "klī′măks′",
     },
     {
       word: "RESOLUTION",
       hint: "Story conclusion",
-      extraLetters: "YWZXQP",
-      meaning: "The part of a story where the problem is solved or situation is resolved",
+      extraLetters: "RESOLUTNQ",
+      meaning:
+        "The part of a story where the problem is solved or situation is resolved",
       pronunciation: "rĕz′ə-lōō′shən",
     },
     {
       word: "CHAPTER",
       hint: "Book section",
-      extraLetters: "ZYXWQP",
+      extraLetters: "CHAPTERZ",
       meaning: "A main division of a book, typically with a number or title",
       pronunciation: "chăp′tər",
     },
     {
       word: "VERSE",
       hint: "Poetic line",
-      extraLetters: "QPWXZY",
-      meaning: "Writing arranged with a metrical rhythm, typically having a rhyme",
+      extraLetters: "VERSZQPX",
+      meaning:
+        "Writing arranged with a metrical rhythm, typically having a rhyme",
       pronunciation: "vûrs",
     },
     {
       word: "STANZA",
       hint: "Poem section",
       extraLetters: "XZQPWY",
-      meaning: "A group of lines forming the basic recurring metrical unit in a poem",
+      meaning:
+        "A group of lines forming the basic recurring metrical unit in a poem",
       pronunciation: "stăn′zə",
     },
     {
@@ -136,112 +149,128 @@ export const literatureTopic: Topic = {
       word: "METER",
       hint: "Rhythmic pattern",
       extraLetters: "ZYXWQP",
-      meaning: "The rhythmic arrangement of syllables in poetry, often in stressed and unstressed patterns",
+      meaning:
+        "The rhythmic arrangement of syllables in poetry, often in stressed and unstressed patterns",
       pronunciation: "mē′tər",
     },
     {
       word: "SONNET",
       hint: "14-line poem",
       extraLetters: "QPWXZY",
-      meaning: "A poem of fourteen lines using any of a number of formal rhyme schemes",
+      meaning:
+        "A poem of fourteen lines using any of a number of formal rhyme schemes",
       pronunciation: "sŏn′ĭt",
     },
     {
       word: "HAIKU",
       hint: "Japanese poem form",
       extraLetters: "XZQPWY",
-      meaning: "A Japanese poem of seventeen syllables, in three lines of five, seven, and five",
+      meaning:
+        "A Japanese poem of seventeen syllables, in three lines of five, seven, and five",
       pronunciation: "hī′kōō′",
     },
     {
       word: "SHAKESPEARE",
       hint: "Famous playwright",
       extraLetters: "YWZXQP",
-      meaning: "English poet, playwright, and actor, widely regarded as the greatest writer in the English language",
+      meaning:
+        "English poet, playwright, and actor, widely regarded as the greatest writer in the English language",
       pronunciation: "shāk′spîr′",
     },
     {
       word: "DICKENS",
       hint: "Christmas Carol author",
       extraLetters: "ZYXWQP",
-      meaning: "English writer and social critic who created some of the world's best-known fictional characters",
+      meaning:
+        "English writer and social critic who created some of the world's best-known fictional characters",
       pronunciation: "dĭk′ĭnz",
     },
     {
       word: "HEMINGWAY",
       hint: "Old Man and the Sea author",
       extraLetters: "QPWXZY",
-      meaning: "American novelist, short-story writer, and journalist known for his economical and understated style",
+      meaning:
+        "American novelist, short-story writer, and journalist known for his economical and understated style",
       pronunciation: "hĕm′ĭng-wā′",
     },
     {
       word: "AUSTEN",
       hint: "Pride and Prejudice author",
       extraLetters: "XZQPWY",
-      meaning: "English novelist known primarily for her six major novels, which interpret, critique and comment upon the British landed gentry",
+      meaning:
+        "English novelist known primarily for her six major novels, which interpret, critique and comment upon the British landed gentry",
       pronunciation: "ô′stən",
     },
     {
       word: "TOLKIEN",
       hint: "Lord of the Rings author",
       extraLetters: "YWZXQP",
-      meaning: "English writer, poet, philologist, and academic, best known as the author of the high fantasy works The Hobbit and The Lord of the Rings",
+      meaning:
+        "English writer, poet, philologist, and academic, best known as the author of the high fantasy works The Hobbit and The Lord of the Rings",
       pronunciation: "tōl′kēn, tŏl′-",
     },
     {
       word: "ROWLING",
       hint: "Harry Potter author",
       extraLetters: "ZYXWQP",
-      meaning: "British author, philanthropist, film producer, and screenwriter best known for writing the Harry Potter fantasy series",
+      meaning:
+        "British author, philanthropist, film producer, and screenwriter best known for writing the Harry Potter fantasy series",
       pronunciation: "rō′lĭng",
     },
     {
       word: "ODYSSEY",
       hint: "Homer's epic",
       extraLetters: "QPWXZY",
-      meaning: "An ancient Greek epic poem attributed to Homer, describing Odysseus's adventures in his ten-year attempt to return home",
+      meaning:
+        "An ancient Greek epic poem attributed to Homer, describing Odysseus's adventures in his ten-year attempt to return home",
       pronunciation: "ŏd′ĭ-sē",
     },
     {
       word: "HAMLET",
       hint: "Shakespeare tragedy",
       extraLetters: "XZQPWY",
-      meaning: "A tragedy written by William Shakespeare about a Danish prince who seeks revenge upon his uncle for murdering his father",
+      meaning:
+        "A tragedy written by William Shakespeare about a Danish prince who seeks revenge upon his uncle for murdering his father",
       pronunciation: "hăm′lĭt",
     },
     {
       word: "GATSBY",
       hint: "Fitzgerald novel",
       extraLetters: "YWZXQP",
-      meaning: "The titular character of F. Scott Fitzgerald's novel The Great Gatsby, a mysterious millionaire with a dark past",
+      meaning:
+        "The titular character of F. Scott Fitzgerald's novel The Great Gatsby, a mysterious millionaire with a dark past",
       pronunciation: "găts′bē",
     },
     {
       word: "MOCKINGBIRD",
       hint: "Harper Lee novel",
       extraLetters: "ZYXWQP",
-      meaning: "Part of the title of Harper Lee's novel about racial injustice in the American South during the 1930s",
+      meaning:
+        "Part of the title of Harper Lee's novel about racial injustice in the American South during the 1930s",
       pronunciation: "mŏk′ĭng-bûrd′",
     },
     {
       word: "DRACULA",
       hint: "Stoker's vampire",
       extraLetters: "QPWXZY",
-      meaning: "A Gothic horror novel by Bram Stoker about the vampire Count Dracula's attempt to move from Transylvania to England",
+      meaning:
+        "A Gothic horror novel by Bram Stoker about the vampire Count Dracula's attempt to move from Transylvania to England",
       pronunciation: "drăk′yə-lə",
     },
     {
       word: "FRANKENSTEIN",
       hint: "Shelley's monster",
       extraLetters: "XZQPWY",
-      meaning: "A novel by Mary Shelley about a scientist who creates a sapient creature in an unorthodox scientific experiment",
+      meaning:
+        "A novel by Mary Shelley about a scientist who creates a sapient creature in an unorthodox scientific experiment",
       pronunciation: "frăng′kən-stīn′",
     },
     {
       word: "NARRATOR",
       hint: "Story teller",
       extraLetters: "YWZXQP",
-      meaning: "The voice or person who tells a story or gives an account of something",
+      meaning:
+        "The voice or person who tells a story or gives an account of something",
       pronunciation: "năr′ā-tər, nə-rā′-",
     },
     {
@@ -262,98 +291,112 @@ export const literatureTopic: Topic = {
       word: "ESSAY",
       hint: "Short composition",
       extraLetters: "XZQPWY",
-      meaning: "A short piece of writing on a particular subject, often expressing personal views",
+      meaning:
+        "A short piece of writing on a particular subject, often expressing personal views",
       pronunciation: "ĕs′ā′",
     },
     {
       word: "JOURNAL",
       hint: "Daily writing",
       extraLetters: "YWZXQP",
-      meaning: "A daily record of news and events of a personal nature; a diary",
+      meaning:
+        "A daily record of news and events of a personal nature; a diary",
       pronunciation: "jûr′nəl",
     },
     {
       word: "MEMOIR",
       hint: "Personal account",
       extraLetters: "ZYXWQP",
-      meaning: "A historical account or biography written from personal knowledge or special sources",
+      meaning:
+        "A historical account or biography written from personal knowledge or special sources",
       pronunciation: "mĕm′wär′, -wôr′",
     },
     {
       word: "PUBLISHER",
       hint: "Book producer",
       extraLetters: "QPWXZY",
-      meaning: "A company or person that prepares and issues books, journals, or music for sale",
+      meaning:
+        "A company or person that prepares and issues books, journals, or music for sale",
       pronunciation: "pŭb′lĭ-shər",
     },
     {
       word: "EDITOR",
       hint: "Text reviser",
       extraLetters: "XZQPWY",
-      meaning: "A person who prepares written material for publication by correcting, condensing, or otherwise modifying it",
+      meaning:
+        "A person who prepares written material for publication by correcting, condensing, or otherwise modifying it",
       pronunciation: "ĕd′ĭ-tər",
     },
     {
       word: "LIBRARY",
       hint: "Book collection",
       extraLetters: "YWZXQP",
-      meaning: "A building or room containing collections of books, periodicals, and sometimes films for use or borrowing",
+      meaning:
+        "A building or room containing collections of books, periodicals, and sometimes films for use or borrowing",
       pronunciation: "lī′brĕr′ē",
     },
     {
       word: "BESTSELLER",
       hint: "Popular book",
       extraLetters: "ZYXWQP",
-      meaning: "A book that is among those having the largest sales during a given period",
+      meaning:
+        "A book that is among those having the largest sales during a given period",
       pronunciation: "bĕst′sĕl′ər",
     },
     {
       word: "CLASSIC",
       hint: "Timeless literature",
       extraLetters: "QPWXZY",
-      meaning: "A work of art of recognized and established value, especially a literary or musical composition",
+      meaning:
+        "A work of art of recognized and established value, especially a literary or musical composition",
       pronunciation: "klăs′ĭk",
     },
     {
       word: "ROMANCE",
       hint: "Love story",
       extraLetters: "XZQPWY",
-      meaning: "A novel or other prose narrative depicting heroic or marvelous deeds, pageantry, romantic exploits, etc.",
+      meaning:
+        "A novel or other prose narrative depicting heroic or marvelous deeds, pageantry, romantic exploits, etc.",
       pronunciation: "rō-măns′, rō′măns′",
     },
     {
       word: "MYSTERY",
       hint: "Detective story",
       extraLetters: "YWZXQP",
-      meaning: "A genre of fiction that deals with the solution of a crime or the unraveling of secrets",
+      meaning:
+        "A genre of fiction that deals with the solution of a crime or the unraveling of secrets",
       pronunciation: "mĭs′tə-rē",
     },
     {
       word: "FANTASY",
       hint: "Magical stories",
       extraLetters: "ZYXWQP",
-      meaning: "A genre of fiction that uses magic and other supernatural phenomena as a primary element of plot or setting",
+      meaning:
+        "A genre of fiction that uses magic and other supernatural phenomena as a primary element of plot or setting",
       pronunciation: "făn′tə-sē",
     },
     {
       word: "SCIFI",
       hint: "Futuristic stories",
       extraLetters: "QPWXZY",
-      meaning: "A genre of fiction dealing with the impact of imagined innovations in science or technology",
+      meaning:
+        "A genre of fiction dealing with the impact of imagined innovations in science or technology",
       pronunciation: "sī′fī′",
     },
     {
       word: "HORROR",
       hint: "Frightening stories",
       extraLetters: "XZQPWY",
-      meaning: "A genre of fiction which is intended to frighten, scare, or disgust",
+      meaning:
+        "A genre of fiction which is intended to frighten, scare, or disgust",
       pronunciation: "hôr′ər",
     },
     {
       word: "COMEDY",
       hint: "Humorous stories",
       extraLetters: "YWZXQP",
-      meaning: "A genre of fiction that refers to any discourse or work generally intended to be humorous",
+      meaning:
+        "A genre of fiction that refers to any discourse or work generally intended to be humorous",
       pronunciation: "kŏm′ĭ-dē",
     },
   ],

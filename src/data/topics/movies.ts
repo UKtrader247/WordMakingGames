@@ -9,211 +9,239 @@ export const moviesTopic: Topic = {
     {
       word: "ACTOR",
       hint: "Performer in a film",
-      extraLetters: "XZQPWY",
-      meaning: "A person who portrays a character in a film or theatrical production",
+      extraLetters: "ACTORZQP",
+      meaning:
+        "A person who portrays a character in a film or theatrical production",
       pronunciation: "ăk′tər",
     },
     {
       word: "SCENE",
       hint: "Part of a movie",
-      extraLetters: "YWZXQP",
-      meaning: "A sequence of continuous action in a film taking place in a single location",
+      extraLetters: "SCENQPZX",
+      meaning:
+        "A sequence of continuous action in a film taking place in a single location",
       pronunciation: "sēn",
     },
     {
       word: "COMEDY",
       hint: "Funny film",
-      extraLetters: "ZYXWQP",
-      meaning: "A genre of film intended to entertain and provoke laughter through humor",
+      extraLetters: "COMEDYXZ",
+      meaning:
+        "A genre of film intended to entertain and provoke laughter through humor",
       pronunciation: "kŏm′ĭ-dē",
     },
     {
       word: "DRAMA",
       hint: "Serious film",
-      extraLetters: "QPWXZY",
-      meaning: "A genre of film focused on realistic characters dealing with emotional themes",
+      extraLetters: "DRAMQWXZ",
+      meaning:
+        "A genre of film focused on realistic characters dealing with emotional themes",
       pronunciation: "drä′mə, drăm′ə",
     },
     {
       word: "HORROR",
       hint: "Scary film",
-      extraLetters: "XZQPWY",
-      meaning: "A genre of film designed to frighten and unsettle viewers with disturbing or terrifying content",
+      extraLetters: "HORRZQPX",
+      meaning:
+        "A genre of film designed to frighten and unsettle viewers with disturbing or terrifying content",
       pronunciation: "hôr′ər",
     },
     {
       word: "ACTION",
       hint: "Exciting film",
-      extraLetters: "YWZXQP",
-      meaning: "A genre of film characterized by physical feats, chases, fights, and special effects",
+      extraLetters: "ACTIONZQ",
+      meaning:
+        "A genre of film characterized by physical feats, chases, fights, and special effects",
       pronunciation: "ăk′shən",
     },
     {
       word: "SEQUEL",
       hint: "Follow-up film",
-      extraLetters: "ZYXWQP",
-      meaning: "A film that continues the story or develops the theme of an earlier one",
+      extraLetters: "SEQULZPX",
+      meaning:
+        "A film that continues the story or develops the theme of an earlier one",
       pronunciation: "sē′kwəl",
     },
     {
       word: "REMAKE",
       hint: "Redone film",
-      extraLetters: "QPWXZY",
+      extraLetters: "REMAKZQX",
       meaning: "A new version of a film that has been made before",
       pronunciation: "rē′māk′",
     },
     {
       word: "SCRIPT",
       hint: "Movie text",
-      extraLetters: "XZQPWY",
-      meaning: "The written text of a film, including dialogue and scene directions",
+      extraLetters: "SCRIPTQZ",
+      meaning:
+        "The written text of a film, including dialogue and scene directions",
       pronunciation: "skrĭpt",
     },
     {
       word: "OSCAR",
       hint: "Academy Award",
-      extraLetters: "YWZXQP",
-      meaning: "A prestigious award given annually by the Academy of Motion Picture Arts and Sciences",
+      extraLetters: "OSCARWQP",
+      meaning:
+        "A prestigious award given annually by the Academy of Motion Picture Arts and Sciences",
       pronunciation: "ŏs′kər",
     },
     {
       word: "CAMERA",
       hint: "Filming device",
-      extraLetters: "ZYXWQP",
-      meaning: "An apparatus for recording visual images in the form of photographs, film, or video signals",
+      extraLetters: "CAMERAQZ",
+      meaning:
+        "An apparatus for recording visual images in the form of photographs, film, or video signals",
       pronunciation: "kăm′ər-ə",
     },
     {
       word: "STUDIO",
       hint: "Film company",
-      extraLetters: "QPWXZY",
+      extraLetters: "STUDIOPX",
       meaning: "A company that produces films or a place where films are made",
       pronunciation: "stōō′dē-ō′",
     },
     {
       word: "EDITOR",
       hint: "Film cutter",
-      extraLetters: "XZQPWY",
-      meaning: "A person who assembles the separate shots and scenes of a film into a coherent sequence",
+      extraLetters: "EDITORQZ",
+      meaning:
+        "A person who assembles the separate shots and scenes of a film into a coherent sequence",
       pronunciation: "ĕd′ĭ-tər",
     },
     {
       word: "AVATAR",
       hint: "Blue aliens film",
-      extraLetters: "YWZXQP",
-      meaning: "A science fiction film directed by James Cameron about humans colonizing a moon called Pandora",
+      extraLetters: "AVTRQZPX",
+      meaning:
+        "A science fiction film directed by James Cameron about humans colonizing a moon called Pandora",
       pronunciation: "ăv′ə-tär′",
     },
     {
       word: "MATRIX",
       hint: "Reality-bending film",
-      extraLetters: "ZYXWQP",
-      meaning: "A science fiction film about a simulated reality created by machines to subdue the human population",
+      extraLetters: "MATRXIPQ",
+      meaning:
+        "A science fiction film about a simulated reality created by machines to subdue the human population",
       pronunciation: "mā′trĭks",
     },
     {
       word: "TITANIC",
       hint: "Ship disaster film",
-      extraLetters: "QPWXZY",
-      meaning: "A film directed by James Cameron about the sinking of the RMS Titanic and a fictional romance aboard it",
+      extraLetters: "TITANCPQ",
+      meaning:
+        "A film directed by James Cameron about the sinking of the RMS Titanic and a fictional romance aboard it",
       pronunciation: "tī-tăn′ĭk",
     },
     {
       word: "FROZEN",
       hint: "Icy princess film",
       extraLetters: "XZQPWY",
-      meaning: "An animated Disney film about a princess with ice powers and her relationship with her sister",
+      meaning:
+        "An animated Disney film about a princess with ice powers and her relationship with her sister",
       pronunciation: "frō′zən",
     },
     {
       word: "JAWS",
       hint: "Shark film",
       extraLetters: "YWZXQP",
-      meaning: "A thriller film directed by Steven Spielberg about a man-eating great white shark",
+      meaning:
+        "A thriller film directed by Steven Spielberg about a man-eating great white shark",
       pronunciation: "jôz",
     },
     {
       word: "ALIENS",
       hint: "Extraterrestrial film",
       extraLetters: "ZYXWQP",
-      meaning: "A science fiction action film directed by James Cameron and sequel to the film Alien",
+      meaning:
+        "A science fiction action film directed by James Cameron and sequel to the film Alien",
       pronunciation: "ā′lē-ənz",
     },
     {
       word: "PSYCHO",
       hint: "Hitchcock classic",
       extraLetters: "QPWXZY",
-      meaning: "A psychological horror film directed by Alfred Hitchcock featuring the character Norman Bates",
+      meaning:
+        "A psychological horror film directed by Alfred Hitchcock featuring the character Norman Bates",
       pronunciation: "sī′kō",
     },
     {
       word: "ALIEN",
       hint: "Space monster film",
       extraLetters: "XZQPWY",
-      meaning: "A science fiction horror film directed by Ridley Scott about a deadly extraterrestrial creature",
+      meaning:
+        "A science fiction horror film directed by Ridley Scott about a deadly extraterrestrial creature",
       pronunciation: "ā′lē-ən",
     },
     {
       word: "GODFATHER",
       hint: "Mafia film series",
       extraLetters: "YWZXQP",
-      meaning: "A crime film series directed by Francis Ford Coppola about a fictional Sicilian Mafia family",
+      meaning:
+        "A crime film series directed by Francis Ford Coppola about a fictional Sicilian Mafia family",
       pronunciation: "gŏd′fä′thər",
     },
     {
       word: "STAR",
       hint: "___ Wars franchise",
       extraLetters: "ZYXWQP",
-      meaning: "The first word in the title of a space opera franchise created by George Lucas",
+      meaning:
+        "The first word in the title of a space opera franchise created by George Lucas",
       pronunciation: "stär",
     },
     {
       word: "WARS",
       hint: "Star ___ franchise",
       extraLetters: "QPWXZY",
-      meaning: "The second word in the title of a space opera franchise created by George Lucas",
+      meaning:
+        "The second word in the title of a space opera franchise created by George Lucas",
       pronunciation: "wôrz",
     },
     {
       word: "ROCKY",
       hint: "Boxing film series",
       extraLetters: "XZQPWY",
-      meaning: "A sports drama film series starring Sylvester Stallone as the title character, a boxer",
+      meaning:
+        "A sports drama film series starring Sylvester Stallone as the title character, a boxer",
       pronunciation: "rŏk′ē",
     },
     {
       word: "MARVEL",
       hint: "Superhero studio",
       extraLetters: "YWZXQP",
-      meaning: "A film studio known for producing superhero films based on Marvel Comics characters",
+      meaning:
+        "A film studio known for producing superhero films based on Marvel Comics characters",
       pronunciation: "mär′vəl",
     },
     {
       word: "DISNEY",
       hint: "Animation studio",
       extraLetters: "ZYXWQP",
-      meaning: "A major film studio known for its animated features and family entertainment",
+      meaning:
+        "A major film studio known for its animated features and family entertainment",
       pronunciation: "dĭz′nē",
     },
     {
       word: "PIXAR",
       hint: "3D animation studio",
       extraLetters: "QPWXZY",
-      meaning: "A computer animation studio known for films like Toy Story and Finding Nemo",
+      meaning:
+        "A computer animation studio known for films like Toy Story and Finding Nemo",
       pronunciation: "pĭk′sär′",
     },
     {
       word: "SOUND",
       hint: "Audio in films",
       extraLetters: "XZQPWY",
-      meaning: "The audio component of a film, including dialogue, music, and effects",
+      meaning:
+        "The audio component of a film, including dialogue, music, and effects",
       pronunciation: "sound",
     },
     {
       word: "PLOT",
       hint: "Story line",
       extraLetters: "YWZXQP",
-      meaning: "The main events of a film, devised and presented by the writer as an interrelated sequence",
+      meaning:
+        "The main events of a film, devised and presented by the writer as an interrelated sequence",
       pronunciation: "plŏt",
     },
     {
@@ -234,7 +262,8 @@ export const moviesTopic: Topic = {
       word: "REEL",
       hint: "Film spool",
       extraLetters: "XZQPWY",
-      meaning: "A cylindrical object around which film is wound for storage or projection",
+      meaning:
+        "A cylindrical object around which film is wound for storage or projection",
       pronunciation: "rēl",
     },
     {
@@ -269,7 +298,8 @@ export const moviesTopic: Topic = {
       word: "CGI",
       hint: "Computer effects",
       extraLetters: "YWZXQP",
-      meaning: "Computer-generated imagery used to create visual effects in films",
+      meaning:
+        "Computer-generated imagery used to create visual effects in films",
       pronunciation: "sē′jē′ī′",
     },
     {
@@ -290,21 +320,24 @@ export const moviesTopic: Topic = {
       word: "SET",
       hint: "Film location",
       extraLetters: "XZQPWY",
-      meaning: "The location where a film scene is shot, often constructed specifically for filming",
+      meaning:
+        "The location where a film scene is shot, often constructed specifically for filming",
       pronunciation: "sĕt",
     },
     {
       word: "ZOOM",
       hint: "Camera move",
       extraLetters: "YWZXQP",
-      meaning: "A camera technique that changes the focal length of the lens to make a subject appear closer or farther away",
+      meaning:
+        "A camera technique that changes the focal length of the lens to make a subject appear closer or farther away",
       pronunciation: "zōōm",
     },
     {
       word: "PAN",
       hint: "Camera sweep",
       extraLetters: "ZYXWQP",
-      meaning: "A camera movement that rotates horizontally from a fixed position",
+      meaning:
+        "A camera movement that rotates horizontally from a fixed position",
       pronunciation: "păn",
     },
     {
@@ -318,7 +351,8 @@ export const moviesTopic: Topic = {
       word: "GENRE",
       hint: "Film category",
       extraLetters: "XZQPWY",
-      meaning: "A category of film characterized by a particular style, form, or content",
+      meaning:
+        "A category of film characterized by a particular style, form, or content",
       pronunciation: "zhän′rə",
     },
     {
@@ -353,7 +387,8 @@ export const moviesTopic: Topic = {
       word: "CAMEO",
       hint: "Brief appearance",
       extraLetters: "YWZXQP",
-      meaning: "A brief appearance or role played by a well-known actor in a film",
+      meaning:
+        "A brief appearance or role played by a well-known actor in a film",
       pronunciation: "kăm′ē-ō′",
     },
   ],

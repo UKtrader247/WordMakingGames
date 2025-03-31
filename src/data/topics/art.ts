@@ -9,260 +9,295 @@ export const artTopic: Topic = {
     {
       word: "PAINTING",
       hint: "Canvas art",
-      extraLetters: "PQWXYZ",
-      meaning: "The art of applying paint to a surface to create images or decoration",
+      extraLetters: "PNTGAIZR",
+      meaning:
+        "The art of applying paint to a surface to create images or decoration",
       pronunciation: "pān′tĭng",
     },
     {
       word: "SCULPTURE",
       hint: "3D art form",
-      extraLetters: "PQWXYZ",
-      meaning: "The art of creating three-dimensional forms or figures by carving, casting, or other shaping techniques",
+      extraLetters: "SCLPTUREX",
+      meaning:
+        "The art of creating three-dimensional forms or figures by carving, casting, or other shaping techniques",
       pronunciation: "skŭlp′chər",
     },
     {
       word: "DRAWING",
       hint: "Pencil or pen art",
-      extraLetters: "PQWXYZ",
-      meaning: "The art of creating pictures or diagrams using lines, typically with pen, pencil, or crayon",
+      extraLetters: "DRAWNGIXY",
+      meaning:
+        "The art of creating pictures or diagrams using lines, typically with pen, pencil, or crayon",
       pronunciation: "drô′ĭng",
     },
     {
       word: "POTTERY",
       hint: "Clay art",
-      extraLetters: "PQWXYZ",
-      meaning: "The craft or profession of making ceramic ware by shaping clay and firing it at high temperatures",
+      extraLetters: "POTERYXZV",
+      meaning:
+        "The craft or profession of making ceramic ware by shaping clay and firing it at high temperatures",
       pronunciation: "pŏt′ə-rē",
     },
     {
       word: "CERAMICS",
       hint: "Fired clay art",
-      extraLetters: "PQWXYZ",
-      meaning: "The art of making objects from clay that are hardened by firing at high temperatures",
+      extraLetters: "CERAMISVT",
+      meaning:
+        "The art of making objects from clay that are hardened by firing at high temperatures",
       pronunciation: "sə-răm′ĭks",
     },
     {
       word: "MOSAIC",
       hint: "Tile art",
-      extraLetters: "PQWXYZ",
-      meaning: "A picture or pattern produced by arranging small colored pieces of hard material such as stone or tile",
+      extraLetters: "MOSAICZTRX",
+      meaning:
+        "A picture or pattern produced by arranging small colored pieces of hard material such as stone or tile",
       pronunciation: "mō-zā′ĭk",
     },
     {
       word: "COLLAGE",
       hint: "Mixed media art",
-      extraLetters: "PQWXYZ",
-      meaning: "An artistic composition made of various materials glued on a surface",
+      extraLetters: "COLAGETRX",
+      meaning:
+        "An artistic composition made of various materials glued on a surface",
       pronunciation: "kə-läzh′",
     },
     {
       word: "PRINT",
       hint: "Reproduced art",
-      extraLetters: "PQWXYZ",
-      meaning: "A picture or design made by transferring an image from a prepared surface to paper or other material",
+      extraLetters: "PRINTQZYW",
+      meaning:
+        "A picture or design made by transferring an image from a prepared surface to paper or other material",
       pronunciation: "prĭnt",
     },
     {
       word: "PHOTOGRAPHY",
       hint: "Camera art",
-      extraLetters: "PQWXYZ",
+      extraLetters: "PHOTGRAYX",
       meaning: "The art or practice of taking and processing photographs",
       pronunciation: "fə-tŏg′rə-fē",
     },
     {
       word: "DIGITAL",
       hint: "Computer art",
-      extraLetters: "PQWXYZ",
+      extraLetters: "DIGITALBP",
       meaning: "Art created or modified using computer technology",
       pronunciation: "dĭj′ĭ-tl",
     },
     {
       word: "ABSTRACT",
       hint: "Non-representational art",
-      extraLetters: "PQWXYZ",
-      meaning: "Art that does not attempt to represent external reality, but seeks to achieve its effect using shapes, forms, colors, and textures",
+      extraLetters: "ABSTRACTPZ",
+      meaning:
+        "Art that does not attempt to represent external reality, but seeks to achieve its effect using shapes, forms, colors, and textures",
       pronunciation: "ăb′străkt′",
     },
     {
       word: "REALISM",
       hint: "True-to-life art",
       extraLetters: "PQWXYZ",
-      meaning: "The artistic movement characterized by the representation of subjects as they appear in everyday life",
+      meaning:
+        "The artistic movement characterized by the representation of subjects as they appear in everyday life",
       pronunciation: "rē′ə-lĭz′əm",
     },
     {
       word: "IMPRESSIONISM",
       hint: "Light-focused art style",
       extraLetters: "PQWXYZ",
-      meaning: "A style of painting characterized by small, visible brushstrokes that offer the impression of form rather than detail",
+      meaning:
+        "A style of painting characterized by small, visible brushstrokes that offer the impression of form rather than detail",
       pronunciation: "ĭm-prĕsh′ə-nĭz′əm",
     },
     {
       word: "SURREALISM",
       hint: "Dream-like art",
       extraLetters: "PQWXYZ",
-      meaning: "An artistic movement that seeks to express the subconscious mind by creating fantastic imagery and unexpected juxtapositions",
+      meaning:
+        "An artistic movement that seeks to express the subconscious mind by creating fantastic imagery and unexpected juxtapositions",
       pronunciation: "sə-rē′ə-lĭz′əm",
     },
     {
       word: "CUBISM",
       hint: "Geometric art style",
       extraLetters: "PQWXYZ",
-      meaning: "An early 20th-century style of art that depicts objects as geometric forms from multiple viewpoints",
+      meaning:
+        "An early 20th-century style of art that depicts objects as geometric forms from multiple viewpoints",
       pronunciation: "kyōō′bĭz′əm",
     },
     {
       word: "RENAISSANCE",
       hint: "14-17th century art",
       extraLetters: "PQWXYZ",
-      meaning: "The revival of European art and literature under the influence of classical models during the 14th-17th centuries",
+      meaning:
+        "The revival of European art and literature under the influence of classical models during the 14th-17th centuries",
       pronunciation: "rĕn′ĭ-säns′",
     },
     {
       word: "BAROQUE",
       hint: "Ornate art style",
       extraLetters: "PQWXYZ",
-      meaning: "A highly ornate and extravagant style of art, architecture, and music that flourished in Europe from the early 17th to mid-18th century",
+      meaning:
+        "A highly ornate and extravagant style of art, architecture, and music that flourished in Europe from the early 17th to mid-18th century",
       pronunciation: "bə-rōk′",
     },
     {
       word: "MODERN",
       hint: "Contemporary art",
       extraLetters: "PQWXYZ",
-      meaning: "Art characterized by a departure from traditional styles and values and a tendency toward experimentation",
+      meaning:
+        "Art characterized by a departure from traditional styles and values and a tendency toward experimentation",
       pronunciation: "mŏd′ərn",
     },
     {
       word: "PICASSO",
       hint: "Spanish cubist",
-      extraLetters: "PQWXYZ",
-      meaning: "Pablo Picasso, a Spanish painter, sculptor, and co-founder of the Cubist movement",
+      extraLetters: "PICASOBZQR",
+      meaning:
+        "Pablo Picasso, a Spanish painter, sculptor, and co-founder of the Cubist movement",
       pronunciation: "pĭ-kä′sō",
     },
     {
       word: "VANGOGH",
       hint: "Dutch post-impressionist",
-      extraLetters: "PQWXYZ",
-      meaning: "Vincent van Gogh, a Dutch post-impressionist painter known for bold colors and expressive brushwork",
+      extraLetters: "VANGOHPRTY",
+      meaning:
+        "Vincent van Gogh, a Dutch post-impressionist painter known for bold colors and expressive brushwork",
       pronunciation: "văn gō′",
     },
     {
       word: "DAVINCI",
       hint: "Mona Lisa painter",
-      extraLetters: "PQWXYZ",
-      meaning: "Leonardo da Vinci, an Italian Renaissance polymath known for works like the Mona Lisa and The Last Supper",
+      extraLetters: "DAVINCRTBZ",
+      meaning:
+        "Leonardo da Vinci, an Italian Renaissance polymath known for works like the Mona Lisa and The Last Supper",
       pronunciation: "də vĭn′chē",
     },
     {
       word: "MONET",
       hint: "Water lilies painter",
-      extraLetters: "PQWXYZ",
-      meaning: "Claude Monet, a French impressionist painter known for his water lily paintings and studies of light",
+      extraLetters: "MONETBXZA",
+      meaning:
+        "Claude Monet, a French impressionist painter known for his water lily paintings and studies of light",
       pronunciation: "mō-nā′",
     },
     {
       word: "WARHOL",
       hint: "Pop art pioneer",
-      extraLetters: "PQWXYZ",
-      meaning: "Andy Warhol, an American artist who was a leading figure in the visual art movement known as pop art",
+      extraLetters: "WARHOLBPZ",
+      meaning:
+        "Andy Warhol, an American artist who was a leading figure in the visual art movement known as pop art",
       pronunciation: "wôr′hōl",
     },
     {
       word: "MICHELANGELO",
       hint: "Sistine Chapel painter",
-      extraLetters: "PQWXYZ",
-      meaning: "Italian Renaissance sculptor, painter, and architect known for works like the Sistine Chapel ceiling and David",
+      extraLetters: "MICHELAGNO",
+      meaning:
+        "Italian Renaissance sculptor, painter, and architect known for works like the Sistine Chapel ceiling and David",
       pronunciation: "mī′kəl-ăn′jə-lō",
     },
     {
       word: "REMBRANDT",
       hint: "Dutch master",
-      extraLetters: "PQWXYZ",
-      meaning: "Rembrandt van Rijn, a Dutch painter and etcher, generally considered one of the greatest visual artists in history",
+      extraLetters: "REMBRANDT",
+      meaning:
+        "Rembrandt van Rijn, a Dutch painter and etcher, generally considered one of the greatest visual artists in history",
       pronunciation: "rĕm′brănt",
     },
     {
       word: "DALI",
       hint: "Melting clocks artist",
-      extraLetters: "PQWXYZ",
-      meaning: "Salvador Dalí, a Spanish surrealist artist known for his striking and bizarre images, including melting clocks",
+      extraLetters: "DALIQWXYZ",
+      meaning:
+        "Salvador Dalí, a Spanish surrealist artist known for his striking and bizarre images, including melting clocks",
       pronunciation: "dä-lē′",
     },
     {
       word: "MONALISA",
       hint: "Famous portrait",
-      extraLetters: "PQWXYZ",
-      meaning: "A famous portrait painting by Leonardo da Vinci, known for its subject's enigmatic smile",
+      extraLetters: "MONALISRTZ",
+      meaning:
+        "A famous portrait painting by Leonardo da Vinci, known for its subject's enigmatic smile",
       pronunciation: "mō′nə lē′sə",
     },
     {
       word: "STARRY",
       hint: "___ Night painting",
       extraLetters: "PQWXYZ",
-      meaning: "First word in the title of Vincent van Gogh's famous painting depicting a night sky swirling with stars",
+      meaning:
+        "First word in the title of Vincent van Gogh's famous painting depicting a night sky swirling with stars",
       pronunciation: "stär′ē",
     },
     {
       word: "NIGHT",
       hint: "Starry ___ painting",
       extraLetters: "PQWXYZ",
-      meaning: "Second word in the title of Vincent van Gogh's famous painting depicting a swirling night sky",
+      meaning:
+        "Second word in the title of Vincent van Gogh's famous painting depicting a swirling night sky",
       pronunciation: "nīt",
     },
     {
       word: "CANVAS",
       hint: "Painting surface",
-      extraLetters: "PQWXYZ",
-      meaning: "A strong, coarse cloth on which paintings are created, typically stretched across a wooden frame",
+      extraLetters: "CANVASRTZ",
+      meaning:
+        "A strong, coarse cloth on which paintings are created, typically stretched across a wooden frame",
       pronunciation: "kăn′vəs",
     },
     {
       word: "PALETTE",
       hint: "Paint mixing board",
-      extraLetters: "PQWXYZ",
-      meaning: "A thin board or slab on which an artist mixes colors for painting",
+      extraLetters: "PALETTRZ",
+      meaning:
+        "A thin board or slab on which an artist mixes colors for painting",
       pronunciation: "păl′ĭt",
     },
     {
       word: "EASEL",
       hint: "Painting stand",
-      extraLetters: "PQWXYZ",
-      meaning: "A wooden frame used to support a canvas while an artist is working on it",
+      extraLetters: "EASELRTBZ",
+      meaning:
+        "A wooden frame used to support a canvas while an artist is working on it",
       pronunciation: "ē′zəl",
     },
     {
       word: "BRUSH",
       hint: "Paint applicator",
-      extraLetters: "PQWXYZ",
-      meaning: "An implement with bristles, used for applying paint or for cleaning surfaces",
+      extraLetters: "BRUSHZTP",
+      meaning:
+        "An implement with bristles, used for applying paint or for cleaning surfaces",
       pronunciation: "brŭsh",
     },
     {
       word: "OIL",
       hint: "___ paint",
       extraLetters: "PQWXYZ",
-      meaning: "A type of slow-drying paint made with pigment mixed with linseed or other drying oils",
+      meaning:
+        "A type of slow-drying paint made with pigment mixed with linseed or other drying oils",
       pronunciation: "oil",
     },
     {
       word: "ACRYLIC",
       hint: "Fast-drying paint",
       extraLetters: "PQWXYZ",
-      meaning: "A type of fast-drying paint containing pigment suspended in an acrylic polymer emulsion",
+      meaning:
+        "A type of fast-drying paint containing pigment suspended in an acrylic polymer emulsion",
       pronunciation: "ə-krĭl′ĭk",
     },
     {
       word: "WATERCOLOR",
       hint: "Water-soluble paint",
       extraLetters: "PQWXYZ",
-      meaning: "A type of paint made with pigments suspended in a water-based solution",
+      meaning:
+        "A type of paint made with pigments suspended in a water-based solution",
       pronunciation: "wô′tər-kŭl′ər",
     },
     {
       word: "FRESCO",
       hint: "Wall painting",
       extraLetters: "PQWXYZ",
-      meaning: "A technique of mural painting executed upon freshly laid lime plaster",
+      meaning:
+        "A technique of mural painting executed upon freshly laid lime plaster",
       pronunciation: "frĕs′kō",
     },
     {
@@ -275,85 +310,96 @@ export const artTopic: Topic = {
     {
       word: "GALLERY",
       hint: "Art display space",
-      extraLetters: "PQWXYZ",
+      extraLetters: "GALERYTZV",
       meaning: "A room or building for the display or sale of works of art",
       pronunciation: "găl′ə-rē",
     },
     {
       word: "MUSEUM",
       hint: "Art collection building",
-      extraLetters: "PQWXYZ",
-      meaning: "A building in which objects of historical, scientific, artistic, or cultural interest are stored and exhibited",
+      extraLetters: "MUSEUMXTP",
+      meaning:
+        "A building in which objects of historical, scientific, artistic, or cultural interest are stored and exhibited",
       pronunciation: "myo͞o-zē′əm",
     },
     {
       word: "EXHIBIT",
       hint: "Art display",
       extraLetters: "PQWXYZ",
-      meaning: "A collection of objects displayed to the public in a museum or art gallery",
+      meaning:
+        "A collection of objects displayed to the public in a museum or art gallery",
       pronunciation: "ĭg-zĭb′ĭt",
     },
     {
       word: "CURATOR",
       hint: "Art collection manager",
       extraLetters: "PQWXYZ",
-      meaning: "A keeper or custodian of a museum or other collection, who selects and organizes exhibitions",
+      meaning:
+        "A keeper or custodian of a museum or other collection, who selects and organizes exhibitions",
       pronunciation: "kyo͝or-ā′tər",
     },
     {
       word: "FRAME",
       hint: "Art border",
       extraLetters: "PQWXYZ",
-      meaning: "A rigid structure that surrounds and supports a picture, door, or window",
+      meaning:
+        "A rigid structure that surrounds and supports a picture, door, or window",
       pronunciation: "frām",
     },
     {
       word: "SKETCH",
       hint: "Preliminary drawing",
       extraLetters: "PQWXYZ",
-      meaning: "A rough or unfinished drawing or painting, often made to assist in making a more finished picture",
+      meaning:
+        "A rough or unfinished drawing or painting, often made to assist in making a more finished picture",
       pronunciation: "skĕch",
     },
     {
       word: "PORTRAIT",
       hint: "Person depiction",
       extraLetters: "PQWXYZ",
-      meaning: "A painting, drawing, photograph, or engraving of a person, especially one depicting only the face or head and shoulders",
+      meaning:
+        "A painting, drawing, photograph, or engraving of a person, especially one depicting only the face or head and shoulders",
       pronunciation: "pôr′trĭt",
     },
     {
       word: "LANDSCAPE",
       hint: "Scenery art",
       extraLetters: "PQWXYZ",
-      meaning: "A picture representing a view of natural inland scenery, such as mountains, valleys, trees, rivers, and forests",
+      meaning:
+        "A picture representing a view of natural inland scenery, such as mountains, valleys, trees, rivers, and forests",
       pronunciation: "lănd′skāp′",
     },
     {
       word: "STILL",
       hint: "___ life art",
       extraLetters: "PQWXYZ",
-      meaning: "First word in a type of painting featuring an arrangement of inanimate objects",
+      meaning:
+        "First word in a type of painting featuring an arrangement of inanimate objects",
       pronunciation: "stĭl",
     },
     {
       word: "LIFE",
       hint: "Still ___ art",
       extraLetters: "PQWXYZ",
-      meaning: "Second word in a type of painting featuring an arrangement of inanimate objects",
+      meaning:
+        "Second word in a type of painting featuring an arrangement of inanimate objects",
       pronunciation: "līf",
     },
     {
       word: "COMPOSITION",
       hint: "Art arrangement",
       extraLetters: "PQWXYZ",
-      meaning: "The arrangement of elements in a work of art according to certain principles to achieve a unified whole",
+      meaning:
+        "The arrangement of elements in a work of art according to certain principles to achieve a unified whole",
       pronunciation: "kŏm′pə-zĭsh′ən",
     },
     {
       word: "PERSPECTIVE",
       hint: "Depth technique",
       extraLetters: "PQWXYZ",
-      meaning: "The art of drawing solid objects on a two-dimensional surface so as to give the right impression of their height, width, depth, and position",
+      meaning:
+        "The art of drawing solid objects on a two-dimensional surface so as to give the right impression of their height, width, depth, and position",
       pronunciation: "pər-spĕk′tĭv",
     },
   ],

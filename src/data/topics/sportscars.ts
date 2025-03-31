@@ -1,4 +1,4 @@
-import { Topic } from "../types";
+import { Topic } from "../topics";
 
 export const sportscarsTopic: Topic = {
   id: "sportscars",
@@ -9,71 +9,81 @@ export const sportscarsTopic: Topic = {
     {
       word: "FERRARI",
       hint: "Italian luxury sports car manufacturer",
-      extraLetters: "BCDFGJ",
-      meaning: "An Italian luxury sports car manufacturer founded by Enzo Ferrari in 1939",
+      extraLetters: "FERAIXZQP",
+      meaning:
+        "An Italian luxury sports car manufacturer founded by Enzo Ferrari in 1939",
       pronunciation: "fə-rär′ē",
     },
     {
       word: "LAMBORGHINI",
       hint: "Italian maker of exotic supercars",
-      extraLetters: "CDFHJK",
-      meaning: "An Italian manufacturer of luxury sports cars and SUVs founded by Ferruccio Lamborghini",
+      extraLetters: "LAMBORGHINZ",
+      meaning:
+        "An Italian manufacturer of luxury sports cars and SUVs founded by Ferruccio Lamborghini",
       pronunciation: "läm′bôr-gē′nē",
     },
     {
       word: "PORSCHE",
       hint: "German sports car maker known for 911",
-      extraLetters: "ABCDFG",
-      meaning: "A German automobile manufacturer specializing in high-performance sports cars",
+      extraLetters: "PORSCHEZQ",
+      meaning:
+        "A German automobile manufacturer specializing in high-performance sports cars",
       pronunciation: "pôr′shə",
     },
     {
       word: "BUGATTI",
       hint: "Hypercar maker of the Chiron",
-      extraLetters: "BCDFGJ",
-      meaning: "A French luxury automobile manufacturer known for designing and manufacturing high-performance hypercars",
+      extraLetters: "BUGATIZXQ",
+      meaning:
+        "A French luxury automobile manufacturer known for designing and manufacturing high-performance hypercars",
       pronunciation: "bo͞o-gä′tē",
     },
     {
       word: "MCLAREN",
       hint: "British supercar and F1 racing team",
-      extraLetters: "CDFHJK",
-      meaning: "A British automotive manufacturer of luxury, high-performance sports cars and supercars",
+      extraLetters: "MCLARENZQ",
+      meaning:
+        "A British automotive manufacturer of luxury, high-performance sports cars and supercars",
       pronunciation: "mə-klâr′ən",
     },
     {
       word: "ASTON MARTIN",
       hint: "British luxury sports car brand",
-      extraLetters: "ABCDFG",
-      meaning: "A British independent manufacturer of luxury sports cars and grand tourers",
+      extraLetters: "ASTONMARI",
+      meaning:
+        "A British independent manufacturer of luxury sports cars and grand tourers",
       pronunciation: "ăs′tən mär′tĭn",
     },
     {
       word: "CORVETTE",
       hint: "American sports car by Chevrolet",
-      extraLetters: "BCDFGJ",
-      meaning: "A sports car manufactured by Chevrolet, known as America's sports car",
+      extraLetters: "CORVETZXQ",
+      meaning:
+        "A sports car manufactured by Chevrolet, known as America's sports car",
       pronunciation: "kôr-vĕt′",
     },
     {
       word: "MUSTANG",
       hint: "Ford's iconic pony car",
-      extraLetters: "CDFHJK",
-      meaning: "An American car manufactured by Ford, known for its long production run and cultural impact",
+      extraLetters: "MUSTANGZQ",
+      meaning:
+        "An American car manufactured by Ford, known for its long production run and cultural impact",
       pronunciation: "mŭs′tăng′",
     },
     {
       word: "TURBO",
       hint: "Engine forced induction system",
       extraLetters: "ABCDFG",
-      meaning: "A turbine-driven forced induction device that increases an engine's efficiency and power output",
+      meaning:
+        "A turbine-driven forced induction device that increases an engine's efficiency and power output",
       pronunciation: "tûr′bō",
     },
     {
       word: "SUPERCHARGER",
       hint: "Mechanical air compressor for engines",
       extraLetters: "BCDFGJ",
-      meaning: "An air compressor that increases the pressure or density of air supplied to an internal combustion engine",
+      meaning:
+        "An air compressor that increases the pressure or density of air supplied to an internal combustion engine",
       pronunciation: "so͞o′pər-chär′jər",
     },
     {
@@ -87,273 +97,312 @@ export const sportscarsTopic: Topic = {
       word: "TORQUE",
       hint: "Rotational force of an engine",
       extraLetters: "ABCDFG",
-      meaning: "A twisting force that tends to cause rotation, crucial for vehicle acceleration",
+      meaning:
+        "A twisting force that tends to cause rotation, crucial for vehicle acceleration",
       pronunciation: "tôrk",
     },
     {
       word: "COUPE",
       hint: "Two-door fixed-roof sports car body",
       extraLetters: "BCDFGJ",
-      meaning: "A closed two-door car body style with a permanently attached fixed roof",
+      meaning:
+        "A closed two-door car body style with a permanently attached fixed roof",
       pronunciation: "ko͞op",
     },
     {
       word: "ROADSTER",
       hint: "Open two-seat sports car",
       extraLetters: "CDFHJK",
-      meaning: "An open two-seat car with emphasis on sporting appearance or character",
+      meaning:
+        "An open two-seat car with emphasis on sporting appearance or character",
       pronunciation: "rōd′stər",
     },
     {
       word: "CONVERTIBLE",
       hint: "Car with a retractable roof",
       extraLetters: "ABCDFG",
-      meaning: "A car with a folding or detachable roof, allowing open-air driving",
+      meaning:
+        "A car with a folding or detachable roof, allowing open-air driving",
       pronunciation: "kən-vûr′tə-bəl",
     },
     {
       word: "SPEEDSTER",
       hint: "Low-windshield open sports car",
       extraLetters: "BCDFGJ",
-      meaning: "A type of sports car with a low windshield and often no roof or side windows",
+      meaning:
+        "A type of sports car with a low windshield and often no roof or side windows",
       pronunciation: "spēd′stər",
     },
     {
       word: "SPOILER",
       hint: "Aerodynamic device reducing lift",
       extraLetters: "CDFHJK",
-      meaning: "An automotive aerodynamic device designed to 'spoil' unfavorable air movement across a body",
+      meaning:
+        "An automotive aerodynamic device designed to 'spoil' unfavorable air movement across a body",
       pronunciation: "spoi′lər",
     },
     {
       word: "DIFFUSER",
       hint: "Underbody aerodynamic component",
       extraLetters: "ABCDFG",
-      meaning: "A shaped section of a car underbody that improves the car's aerodynamic properties",
+      meaning:
+        "A shaped section of a car underbody that improves the car's aerodynamic properties",
       pronunciation: "dĭ-fyo͞o′zər",
     },
     {
       word: "DOWNFORCE",
       hint: "Aerodynamic pressing force",
       extraLetters: "BCDFGJ",
-      meaning: "The downward pressure created by aerodynamic characteristics of a car, increasing traction",
+      meaning:
+        "The downward pressure created by aerodynamic characteristics of a car, increasing traction",
       pronunciation: "doun′fôrs′",
     },
     {
       word: "TRACTION",
       hint: "Grip between tires and road",
       extraLetters: "CDFHJK",
-      meaning: "The friction between a drive wheel and the road surface that allows a vehicle to accelerate",
+      meaning:
+        "The friction between a drive wheel and the road surface that allows a vehicle to accelerate",
       pronunciation: "trăk′shən",
     },
     {
       word: "HANDLING",
       hint: "Car's response to steering input",
       extraLetters: "ABCDFG",
-      meaning: "The way a vehicle responds to driver inputs, especially during cornering",
+      meaning:
+        "The way a vehicle responds to driver inputs, especially during cornering",
       pronunciation: "hănd′lĭng",
     },
     {
       word: "DRIFT",
       hint: "Controlled oversteer technique",
       extraLetters: "BCDFGJ",
-      meaning: "A driving technique where the driver intentionally oversteers, causing loss of traction in the rear wheels",
+      meaning:
+        "A driving technique where the driver intentionally oversteers, causing loss of traction in the rear wheels",
       pronunciation: "drĭft",
     },
     {
       word: "APEX",
       hint: "Optimal point for cornering",
       extraLetters: "CDFHJK",
-      meaning: "The innermost point of a corner where a racing driver aims to place the car",
+      meaning:
+        "The innermost point of a corner where a racing driver aims to place the car",
       pronunciation: "ā′pĕks′",
     },
-    { 
-      word: "GEARBOX", 
-      hint: "Transmission system", 
+    {
+      word: "GEARBOX",
+      hint: "Transmission system",
       extraLetters: "ABCDFG",
-      meaning: "A mechanical device that changes the speed and torque of a vehicle's engine",
+      meaning:
+        "A mechanical device that changes the speed and torque of a vehicle's engine",
       pronunciation: "gîr′bŏks′",
     },
     {
       word: "PADDLE SHIFT",
       hint: "Steering wheel gear control",
       extraLetters: "BCDFGJ",
-      meaning: "A system allowing drivers to change gears using paddles mounted behind the steering wheel",
+      meaning:
+        "A system allowing drivers to change gears using paddles mounted behind the steering wheel",
       pronunciation: "păd′l shĭft",
     },
     {
       word: "CAMSHAFT",
       hint: "Engine part controlling valves",
       extraLetters: "CDFHJK",
-      meaning: "A shaft with cams that controls the opening and closing of engine valves",
+      meaning:
+        "A shaft with cams that controls the opening and closing of engine valves",
       pronunciation: "kăm′shăft′",
     },
     {
       word: "PISTONS",
       hint: "Reciprocating engine components",
       extraLetters: "ABCDFG",
-      meaning: "Components that move up and down in the cylinders of an internal combustion engine",
+      meaning:
+        "Components that move up and down in the cylinders of an internal combustion engine",
       pronunciation: "pĭs′tənz",
     },
     {
       word: "CARBON FIBER",
       hint: "Lightweight material for car bodies",
       extraLetters: "BCDFGJ",
-      meaning: "A strong, lightweight material used in high-performance vehicle construction",
+      meaning:
+        "A strong, lightweight material used in high-performance vehicle construction",
       pronunciation: "kär′bən fī′bər",
     },
     {
       word: "AERODYNAMICS",
       hint: "Study of air flow around objects",
       extraLetters: "CDFHJK",
-      meaning: "The study of how air moves around objects, crucial for vehicle performance and efficiency",
+      meaning:
+        "The study of how air moves around objects, crucial for vehicle performance and efficiency",
       pronunciation: "âr′ō-dī-năm′ĭks",
     },
     {
       word: "CHASSIS",
       hint: "Car's structural framework",
       extraLetters: "ABCDFG",
-      meaning: "The base frame of a motor vehicle, supporting the body and major components",
+      meaning:
+        "The base frame of a motor vehicle, supporting the body and major components",
       pronunciation: "shăs′ē",
     },
     {
       word: "SUSPENSION",
       hint: "System connecting wheels to car body",
       extraLetters: "BCDFGJ",
-      meaning: "The system of springs, shock absorbers, and linkages connecting a vehicle to its wheels",
+      meaning:
+        "The system of springs, shock absorbers, and linkages connecting a vehicle to its wheels",
       pronunciation: "sə-spĕn′shən",
     },
     {
       word: "BRAKES",
       hint: "System to slow or stop a vehicle",
       extraLetters: "CDFHJK",
-      meaning: "A mechanical device that inhibits motion by absorbing energy from a moving system",
+      meaning:
+        "A mechanical device that inhibits motion by absorbing energy from a moving system",
       pronunciation: "brāks",
     },
     {
       word: "EXHAUST",
       hint: "System expelling engine gases",
       extraLetters: "ABCDFG",
-      meaning: "A system that removes spent gases from an engine and often reduces noise",
+      meaning:
+        "A system that removes spent gases from an engine and often reduces noise",
       pronunciation: "ĭg-zôst′",
     },
     {
       word: "NITROUS",
       hint: "Performance-enhancing gas system",
       extraLetters: "BCDFGJ",
-      meaning: "A system that adds nitrous oxide to an engine, temporarily increasing power",
+      meaning:
+        "A system that adds nitrous oxide to an engine, temporarily increasing power",
       pronunciation: "nī′trəs",
     },
     {
       word: "INTERCOOLER",
       hint: "Device cooling engine intake air",
       extraLetters: "CDFHJK",
-      meaning: "A mechanical device used to cool air that has been compressed by a turbocharger or supercharger",
+      meaning:
+        "A mechanical device used to cool air that has been compressed by a turbocharger or supercharger",
       pronunciation: "ĭn′tər-ko͞o′lər",
     },
     {
       word: "HEADERS",
       hint: "Performance exhaust manifold",
       extraLetters: "ABCDFG",
-      meaning: "Performance exhaust components that collect exhaust gases from multiple cylinders",
+      meaning:
+        "Performance exhaust components that collect exhaust gases from multiple cylinders",
       pronunciation: "hĕd′ərz",
     },
     {
       word: "VALVES",
       hint: "Control air/fuel in engine cylinders",
       extraLetters: "BCDFGJ",
-      meaning: "Mechanical devices that regulate the flow of air and fuel into engine cylinders",
+      meaning:
+        "Mechanical devices that regulate the flow of air and fuel into engine cylinders",
       pronunciation: "vălvz",
     },
     {
       word: "INTAKE",
       hint: "System bringing air to engine",
       extraLetters: "CDFHJK",
-      meaning: "The system that brings air into an engine, often including filters and ducts",
+      meaning:
+        "The system that brings air into an engine, often including filters and ducts",
       pronunciation: "ĭn′tāk′",
     },
     {
       word: "CLUTCH",
       hint: "Engages/disengages power transmission",
       extraLetters: "ABCDFG",
-      meaning: "A mechanical device that engages and disengages power transmission between engine and drivetrain",
+      meaning:
+        "A mechanical device that engages and disengages power transmission between engine and drivetrain",
       pronunciation: "klŭch",
     },
     {
       word: "THROTTLE",
       hint: "Controls engine power output",
       extraLetters: "BCDFGJ",
-      meaning: "A device controlling the flow of fuel or power to an engine, affecting its speed",
+      meaning:
+        "A device controlling the flow of fuel or power to an engine, affecting its speed",
       pronunciation: "thrŏt′l",
     },
     {
       word: "DASHBOARD",
       hint: "Car's instrument panel",
       extraLetters: "CDFHJK",
-      meaning: "A control panel located in front of a driver of a vehicle, displaying instrumentation",
+      meaning:
+        "A control panel located in front of a driver of a vehicle, displaying instrumentation",
       pronunciation: "dăsh′bôrd′",
     },
-    { 
-      word: "RPM", 
-      hint: "Engine speed measurement", 
+    {
+      word: "RPM",
+      hint: "Engine speed measurement",
       extraLetters: "ABCDFG",
-      meaning: "Revolutions per minute, a measure of the frequency of rotation of an engine",
+      meaning:
+        "Revolutions per minute, a measure of the frequency of rotation of an engine",
       pronunciation: "är′pē′ĕm′",
     },
     {
       word: "DRAG RACE",
       hint: "Straight-line acceleration contest",
       extraLetters: "BCDFGJ",
-      meaning: "A race between two vehicles to be the first to cross a set finish line from a standing start",
+      meaning:
+        "A race between two vehicles to be the first to cross a set finish line from a standing start",
       pronunciation: "drăg rās",
     },
     {
       word: "CIRCUIT",
       hint: "Closed course racing track",
       extraLetters: "CDFHJK",
-      meaning: "A closed racing course, typically featuring various types of corners and straights",
+      meaning:
+        "A closed racing course, typically featuring various types of corners and straights",
       pronunciation: "sûr′kĭt",
     },
-    { 
-      word: "PIT STOP", 
-      hint: "Racing service break", 
+    {
+      word: "PIT STOP",
+      hint: "Racing service break",
       extraLetters: "ABCDFG",
-      meaning: "A pause in a race for refueling, tire changes, and other maintenance",
+      meaning:
+        "A pause in a race for refueling, tire changes, and other maintenance",
       pronunciation: "pĭt stŏp",
     },
     {
       word: "FORMULA ONE",
       hint: "Premier open-wheel racing series",
       extraLetters: "BCDFGJ",
-      meaning: "The highest class of international auto racing for single-seater formula racing cars",
+      meaning:
+        "The highest class of international auto racing for single-seater formula racing cars",
       pronunciation: "fôr′myə-lə wŭn",
     },
     {
       word: "NASCAR",
       hint: "American stock car racing organization",
       extraLetters: "CDFHJK",
-      meaning: "The National Association for Stock Car Auto Racing, the largest racing organization in the US",
+      meaning:
+        "The National Association for Stock Car Auto Racing, the largest racing organization in the US",
       pronunciation: "năs′kär′",
     },
     {
       word: "LE MANS",
       hint: "Famous 24-hour endurance race",
       extraLetters: "ABCDFG",
-      meaning: "A prestigious 24-hour endurance race held annually near Le Mans, France",
+      meaning:
+        "A prestigious 24-hour endurance race held annually near Le Mans, France",
       pronunciation: "lə mäns′",
     },
     {
       word: "RALLY",
       hint: "Off-road racing on various terrains",
       extraLetters: "BCDFGJ",
-      meaning: "A form of motorsport that takes place on public or private roads with modified production or specially built cars",
+      meaning:
+        "A form of motorsport that takes place on public or private roads with modified production or specially built cars",
       pronunciation: "răl′ē",
     },
     {
       word: "TRACK DAY",
       hint: "Recreational circuit driving event",
       extraLetters: "CDFHJK",
-      meaning: "An organized event allowing drivers to drive their own cars on a race track",
+      meaning:
+        "An organized event allowing drivers to drive their own cars on a race track",
       pronunciation: "trăk dā",
     },
   ],

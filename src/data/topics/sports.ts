@@ -9,106 +9,121 @@ export const sportsTopic: Topic = {
     {
       word: "SOCCER",
       hint: "Football outside US",
-      extraLetters: "BCDFGJ",
-      meaning: "A team sport played with a spherical ball between two teams of 11 players",
+      extraLetters: "SOCERXZQ",
+      meaning:
+        "A team sport played with a spherical ball between two teams of 11 players",
       pronunciation: "sŏk′ər",
     },
     {
       word: "FOOTBALL",
       hint: "American sport",
-      extraLetters: "CDFHJK",
-      meaning: "A team sport played with an oval ball, involving running with the ball and tackling",
+      extraLetters: "FOTBALZXQ",
+      meaning:
+        "A team sport played with an oval ball, involving running with the ball and tackling",
       pronunciation: "fo͝ot′bôl′",
     },
     {
       word: "BASEBALL",
       hint: "Bat and ball sport",
-      extraLetters: "ABCDFG",
-      meaning: "A game played with a bat and ball between two teams of nine players each",
+      extraLetters: "BASEBLXZQ",
+      meaning:
+        "A game played with a bat and ball between two teams of nine players each",
       pronunciation: "bās′bôl′",
     },
     {
       word: "BASKETBALL",
       hint: "Hoop sport",
-      extraLetters: "BCDFGJ",
-      meaning: "A game played between two teams of five players who score by throwing a ball through a raised hoop",
+      extraLetters: "BASKETBLZ",
+      meaning:
+        "A game played between two teams of five players who score by throwing a ball through a raised hoop",
       pronunciation: "băs′kĭt-bôl′",
     },
     {
       word: "TENNIS",
       hint: "Racket sport",
-      extraLetters: "CDFHJK",
-      meaning: "A game in which two or four players strike a ball with rackets over a net",
+      extraLetters: "TENISXZQP",
+      meaning:
+        "A game in which two or four players strike a ball with rackets over a net",
       pronunciation: "tĕn′ĭs",
     },
     {
       word: "GOLF",
       hint: "Club and ball sport",
-      extraLetters: "ABCDFG",
-      meaning: "A game played on a large outdoor course, in which a small ball is struck with clubs into a series of holes",
+      extraLetters: "GOLFXZQPW",
+      meaning:
+        "A game played on a large outdoor course, in which a small ball is struck with clubs into a series of holes",
       pronunciation: "gŏlf",
     },
     {
       word: "HOCKEY",
       hint: "Ice puck sport",
-      extraLetters: "BCDFGJ",
-      meaning: "A game played on ice in which two teams try to hit a puck into the opposing goal using sticks",
+      extraLetters: "HOCKEYZXQ",
+      meaning:
+        "A game played on ice in which two teams try to hit a puck into the opposing goal using sticks",
       pronunciation: "hŏk′ē",
     },
     {
       word: "RUGBY",
       hint: "Oval ball sport",
-      extraLetters: "CDFHJK",
-      meaning: "A team game played with an oval ball that may be kicked, carried, and passed from hand to hand",
+      extraLetters: "RUGBYZXQP",
+      meaning:
+        "A team game played with an oval ball that may be kicked, carried, and passed from hand to hand",
       pronunciation: "rŭg′bē",
     },
     {
       word: "CRICKET",
       hint: "Bat and wicket sport",
       extraLetters: "ABCDFG",
-      meaning: "A team game played with a ball and bat by two sides of eleven players on a large field",
+      meaning:
+        "A team game played with a ball and bat by two sides of eleven players on a large field",
       pronunciation: "krĭk′ĭt",
     },
     {
       word: "VOLLEYBALL",
       hint: "Net ball sport",
       extraLetters: "BCDFGJ",
-      meaning: "A game for two teams in which a ball is hit by hand over a high net",
+      meaning:
+        "A game for two teams in which a ball is hit by hand over a high net",
       pronunciation: "vŏl′ē-bôl′",
     },
     {
       word: "SWIMMING",
       hint: "Water sport",
       extraLetters: "CDFHJK",
-      meaning: "The sport or activity of propelling oneself through water using the limbs",
+      meaning:
+        "The sport or activity of propelling oneself through water using the limbs",
       pronunciation: "swĭm′ĭng",
     },
     {
       word: "BOXING",
       hint: "Fighting sport",
       extraLetters: "ABCDFG",
-      meaning: "A combat sport in which two people wearing protective gloves throw punches at each other",
+      meaning:
+        "A combat sport in which two people wearing protective gloves throw punches at each other",
       pronunciation: "bŏk′sĭng",
     },
     {
       word: "WRESTLING",
       hint: "Grappling sport",
       extraLetters: "BCDFGJ",
-      meaning: "A sport in which two competitors attempt to throw or immobilize each other by grappling",
+      meaning:
+        "A sport in which two competitors attempt to throw or immobilize each other by grappling",
       pronunciation: "rĕs′lĭng",
     },
     {
       word: "GYMNASTICS",
       hint: "Acrobatic sport",
       extraLetters: "CDFHJK",
-      meaning: "Exercises developing or displaying physical agility and coordination",
+      meaning:
+        "Exercises developing or displaying physical agility and coordination",
       pronunciation: "jĭm-năs′tĭks",
     },
     {
       word: "SKIING",
       hint: "Snow slope sport",
       extraLetters: "ABCDFG",
-      meaning: "The activity of gliding over snow on skis, especially as a sport or recreation",
+      meaning:
+        "The activity of gliding over snow on skis, especially as a sport or recreation",
       pronunciation: "skē′ĭng",
     },
     {
@@ -136,7 +151,8 @@ export const sportsTopic: Topic = {
       word: "MARATHON",
       hint: "Long distance race",
       extraLetters: "BCDFGJ",
-      meaning: "A long-distance running race, strictly one of 26 miles 385 yards",
+      meaning:
+        "A long-distance running race, strictly one of 26 miles 385 yards",
       pronunciation: "măr′ə-thŏn′",
     },
     {
@@ -185,14 +201,16 @@ export const sportsTopic: Topic = {
       word: "FENCING",
       hint: "Sword sport",
       extraLetters: "CDFHJK",
-      meaning: "The sport of fighting with swords, especially foils, épées, or sabers",
+      meaning:
+        "The sport of fighting with swords, especially foils, épées, or sabers",
       pronunciation: "fĕn′sĭng",
     },
     {
       word: "KARATE",
       hint: "Martial art",
       extraLetters: "ABCDFG",
-      meaning: "A Japanese martial art in which sharp blows and kicks are administered to pressure-sensitive points on the body",
+      meaning:
+        "A Japanese martial art in which sharp blows and kicks are administered to pressure-sensitive points on the body",
       pronunciation: "kə-rä′tē",
     },
     {
@@ -206,7 +224,8 @@ export const sportsTopic: Topic = {
       word: "SUMO",
       hint: "Japanese wrestling",
       extraLetters: "CDFHJK",
-      meaning: "A form of wrestling in which a wrestler wins by forcing his opponent out of the ring or by making him touch the ground with any part of his body other than the soles of his feet",
+      meaning:
+        "A form of wrestling in which a wrestler wins by forcing his opponent out of the ring or by making him touch the ground with any part of his body other than the soles of his feet",
       pronunciation: "so͞o′mō",
     },
     {
@@ -220,7 +239,8 @@ export const sportsTopic: Topic = {
       word: "SURFING",
       hint: "Wave riding sport",
       extraLetters: "BCDFGJ",
-      meaning: "The sport or pastime of riding a wave toward the shore while standing or lying on a surfboard",
+      meaning:
+        "The sport or pastime of riding a wave toward the shore while standing or lying on a surfboard",
       pronunciation: "sûr′fĭng",
     },
     {
@@ -262,70 +282,80 @@ export const sportsTopic: Topic = {
       word: "BOWLING",
       hint: "Pin knocking sport",
       extraLetters: "BCDFGJ",
-      meaning: "A game in which a player rolls a heavy ball down a narrow lane to knock down pins",
+      meaning:
+        "A game in which a player rolls a heavy ball down a narrow lane to knock down pins",
       pronunciation: "bō′lĭng",
     },
     {
       word: "BILLIARDS",
       hint: "Cue sport",
       extraLetters: "CDFHJK",
-      meaning: "Any of various games played on a rectangular table with a cue and billiard balls",
+      meaning:
+        "Any of various games played on a rectangular table with a cue and billiard balls",
       pronunciation: "bĭl′yərdz",
     },
     {
       word: "DARTS",
       hint: "Throwing target sport",
       extraLetters: "ABCDFG",
-      meaning: "A game in which darts are thrown at a circular target fixed to a wall",
+      meaning:
+        "A game in which darts are thrown at a circular target fixed to a wall",
       pronunciation: "därts",
     },
     {
       word: "CHESS",
       hint: "Board strategy game",
       extraLetters: "BCDFGJ",
-      meaning: "A board game of strategic skill for two players, played on a checkered board",
+      meaning:
+        "A board game of strategic skill for two players, played on a checkered board",
       pronunciation: "chĕs",
     },
     {
       word: "OLYMPICS",
       hint: "International games",
       extraLetters: "CDFHJK",
-      meaning: "A major international multi-sport event held once every four years",
+      meaning:
+        "A major international multi-sport event held once every four years",
       pronunciation: "ə-lĭm′pĭks",
     },
     {
       word: "MEDAL",
       hint: "Award token",
       extraLetters: "ABCDFG",
-      meaning: "A metal disk with an inscription or design, awarded as an honor or as a token of victory in a competition",
+      meaning:
+        "A metal disk with an inscription or design, awarded as an honor or as a token of victory in a competition",
       pronunciation: "mĕd′l",
     },
     {
       word: "TROPHY",
       hint: "Victory cup",
       extraLetters: "BCDFGJ",
-      meaning: "A cup or other decorative object awarded as a prize for a victory or achievement",
+      meaning:
+        "A cup or other decorative object awarded as a prize for a victory or achievement",
       pronunciation: "trō′fē",
     },
     {
       word: "CHAMPION",
       hint: "Winner title",
       extraLetters: "CDFHJK",
-      meaning: "A person who has defeated all opponents in a competition or series of competitions",
+      meaning:
+        "A person who has defeated all opponents in a competition or series of competitions",
       pronunciation: "chăm′pē-ən",
     },
     {
       word: "REFEREE",
       hint: "Game official",
       extraLetters: "ABCDFG",
-      meaning: "An official who watches a game or match closely to ensure that the rules are adhered to",
+      meaning:
+        "An official who watches a game or match closely to ensure that the rules are adhered to",
       pronunciation: "rĕf′ə-rē′",
     },
     {
       word: "UMPIRE",
       hint: "Sports judge",
       extraLetters: "BCDFGJ",
-      meaning: "An official who watches a game or match closely to ensure that the rules are adhered to",
+      meaning:
+        "An official who watches a game or match closely to ensure that the rules are adhered to",
       pronunciation: "ŭm′pīr′",
     },
     {
@@ -346,14 +376,16 @@ export const sportsTopic: Topic = {
       word: "TEAM",
       hint: "Player group",
       extraLetters: "BCDFGJ",
-      meaning: "A group of players forming one side in a competitive game or sport",
+      meaning:
+        "A group of players forming one side in a competitive game or sport",
       pronunciation: "tēm",
     },
     {
       word: "LEAGUE",
       hint: "Sports association",
       extraLetters: "CDFHJK",
-      meaning: "A group of sports clubs or countries that compete against each other",
+      meaning:
+        "A group of sports clubs or countries that compete against each other",
       pronunciation: "lēg",
     },
   ],

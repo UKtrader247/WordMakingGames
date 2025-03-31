@@ -9,148 +9,165 @@ export const fashionTopic: Topic = {
     {
       word: "JACKET",
       hint: "Short outer garment",
-      extraLetters: "PQWXYZ",
-      meaning: "A short coat typically extending to the hips, worn as outer clothing",
+      extraLetters: "JACKETPQ",
+      meaning:
+        "A short coat typically extending to the hips, worn as outer clothing",
       pronunciation: "jăk′ĭt",
     },
     {
       word: "DRESS",
       hint: "One-piece garment",
-      extraLetters: "PQWXYZ",
-      meaning: "A one-piece garment consisting of a skirt with an attached bodice, typically worn by women and girls",
+      extraLetters: "DRESQWZ",
+      meaning:
+        "A one-piece garment consisting of a skirt with an attached bodice, typically worn by women and girls",
       pronunciation: "drĕs",
     },
     {
       word: "JEANS",
       hint: "Denim pants",
-      extraLetters: "PQWXYZ",
+      extraLetters: "JEANSPQ",
       meaning: "Pants made of denim or dungaree cloth, often blue",
       pronunciation: "jēnz",
     },
     {
       word: "SKIRT",
       hint: "Lower body garment",
-      extraLetters: "PQWXYZ",
-      meaning: "A garment fastened around the waist and hanging down around the legs, worn typically by women and girls",
+      extraLetters: "SKIRTPQ",
+      meaning:
+        "A garment fastened around the waist and hanging down around the legs, worn typically by women and girls",
       pronunciation: "skûrt",
     },
     {
       word: "BLOUSE",
       hint: "Woman's shirt",
-      extraLetters: "PQWXYZ",
-      meaning: "A loose-fitting upper garment, typically worn by women, resembling a shirt",
+      extraLetters: "BLOUSETX",
+      meaning:
+        "A loose-fitting upper garment, typically worn by women, resembling a shirt",
       pronunciation: "blous",
     },
     {
       word: "SHIRT",
       hint: "Upper body garment",
-      extraLetters: "PQWXYZ",
-      meaning: "A garment for the upper body made of fabric, typically with a collar, sleeves, and buttons down the front",
+      extraLetters: "SHIRTPQ",
+      meaning:
+        "A garment for the upper body made of fabric, typically with a collar, sleeves, and buttons down the front",
       pronunciation: "shûrt",
     },
     {
       word: "SUIT",
       hint: "Formal matching outfit",
-      extraLetters: "PQWXYZ",
-      meaning: "A set of outer clothes made of the same fabric and designed to be worn together, typically consisting of a jacket and trousers or a skirt",
+      extraLetters: "SUITPQZ",
+      meaning:
+        "A set of outer clothes made of the same fabric and designed to be worn together, typically consisting of a jacket and trousers or a skirt",
       pronunciation: "so͞ot",
     },
     {
       word: "PANTS",
       hint: "Leg coverings",
-      extraLetters: "PQWXYZ",
-      meaning: "An outer garment covering the body from the waist to the ankles, with a separate part for each leg",
+      extraLetters: "PANTSQW",
+      meaning:
+        "An outer garment covering the body from the waist to the ankles, with a separate part for each leg",
       pronunciation: "pănts",
     },
     {
       word: "SOCKS",
       hint: "Feet coverings",
-      extraLetters: "PQWXYZ",
-      meaning: "Garments for the feet and lower legs, typically knitted or woven",
+      extraLetters: "SOCKSPQ",
+      meaning:
+        "Garments for the feet and lower legs, typically knitted or woven",
       pronunciation: "sŏks",
     },
     {
       word: "SHOES",
       hint: "Footwear",
-      extraLetters: "PQWXYZ",
-      meaning: "Coverings for the feet, typically made of leather or rubber, with a sturdy sole and a heel",
+      extraLetters: "SHOESPQ",
+      meaning:
+        "Coverings for the feet, typically made of leather or rubber, with a sturdy sole and a heel",
       pronunciation: "sho͞oz",
     },
     {
       word: "BOOTS",
       hint: "High footwear",
-      extraLetters: "PQWXYZ",
+      extraLetters: "BOOTSPQ",
       meaning: "Sturdy footwear covering the foot and part of the leg",
       pronunciation: "bo͞ots",
     },
     {
       word: "HEELS",
       hint: "Elevated shoes",
-      extraLetters: "PQWXYZ",
-      meaning: "Shoes with a raised part at the back of the sole beneath the heel of the foot",
+      extraLetters: "HEELPWX",
+      meaning:
+        "Shoes with a raised part at the back of the sole beneath the heel of the foot",
       pronunciation: "hēlz",
     },
     {
       word: "SCARF",
       hint: "Neck accessory",
-      extraLetters: "PQWXYZ",
-      meaning: "A piece of fabric worn around the neck, head, or shoulders for warmth or decoration",
+      extraLetters: "SCARFPQ",
+      meaning:
+        "A piece of fabric worn around the neck, head, or shoulders for warmth or decoration",
       pronunciation: "skärf",
     },
     {
       word: "HAT",
       hint: "Head covering",
-      extraLetters: "PQWXYZ",
-      meaning: "A shaped covering for the head worn for warmth, as a fashion item, or as part of a uniform",
+      extraLetters: "HATPQWX",
+      meaning:
+        "A shaped covering for the head worn for warmth, as a fashion item, or as part of a uniform",
       pronunciation: "hăt",
     },
     {
       word: "CAP",
       hint: "Flat head covering",
-      extraLetters: "PQWXYZ",
+      extraLetters: "CAPQWXZ",
       meaning: "A soft, flat head covering with a visor but no brim",
       pronunciation: "kăp",
     },
     {
       word: "BELT",
       hint: "Waist fastener",
-      extraLetters: "PQWXYZ",
-      meaning: "A strip of leather or other material worn around the waist to support clothes or for decoration",
+      extraLetters: "BELTPQWZ",
+      meaning:
+        "A strip of leather or other material worn around the waist to support clothes or for decoration",
       pronunciation: "bĕlt",
     },
     {
       word: "GLOVES",
       hint: "Hand coverings",
-      extraLetters: "PQWXYZ",
+      extraLetters: "GLOVESPQ",
       meaning: "Coverings for the hands with separate parts for each finger",
       pronunciation: "glŭvz",
     },
     {
       word: "COAT",
       hint: "Heavy outer garment",
-      extraLetters: "PQWXYZ",
-      meaning: "An outer garment worn on the upper body, typically having sleeves and fastening down the front",
+      extraLetters: "COATPQWZ",
+      meaning:
+        "An outer garment worn on the upper body, typically having sleeves and fastening down the front",
       pronunciation: "kōt",
     },
     {
       word: "SWEATER",
       hint: "Knitted top",
-      extraLetters: "PQWXYZ",
-      meaning: "A knitted garment worn on the upper body, typically with long sleeves",
+      extraLetters: "SWEATRPQ",
+      meaning:
+        "A knitted garment worn on the upper body, typically with long sleeves",
       pronunciation: "swĕt′ər",
     },
     {
       word: "VEST",
       hint: "Sleeveless top",
-      extraLetters: "PQWXYZ",
-      meaning: "A sleeveless garment that buttons up the front, worn over a shirt and under a jacket",
+      extraLetters: "VESTPQWZ",
+      meaning:
+        "A sleeveless garment that buttons up the front, worn over a shirt and under a jacket",
       pronunciation: "vĕst",
     },
     {
       word: "TIE",
       hint: "Formal neck piece",
       extraLetters: "PQWXYZ",
-      meaning: "A long, narrow piece of fabric worn around the neck and tied in a knot at the front with the ends hanging down",
+      meaning:
+        "A long, narrow piece of fabric worn around the neck and tied in a knot at the front with the ends hanging down",
       pronunciation: "tī",
     },
     {
@@ -164,14 +181,16 @@ export const fashionTopic: Topic = {
       word: "TANK",
       hint: "___ top",
       extraLetters: "PQWXYZ",
-      meaning: "A sleeveless shirt with wide shoulder straps and a low-cut neck",
+      meaning:
+        "A sleeveless shirt with wide shoulder straps and a low-cut neck",
       pronunciation: "tăngk",
     },
     {
       word: "BIKINI",
       hint: "Two-piece swimwear",
       extraLetters: "PQWXYZ",
-      meaning: "A two-piece swimsuit for women consisting of a bra top and underwear",
+      meaning:
+        "A two-piece swimsuit for women consisting of a bra top and underwear",
       pronunciation: "bĭ-kē′nē",
     },
     {
@@ -191,43 +210,49 @@ export const fashionTopic: Topic = {
     {
       word: "DENIM",
       hint: "Jean material",
-      extraLetters: "PQWXYZ",
-      meaning: "A sturdy cotton twill fabric, typically blue, used for jeans and other clothing",
+      extraLetters: "DENIMPQX",
+      meaning:
+        "A sturdy cotton twill fabric, typically blue, used for jeans and other clothing",
       pronunciation: "dĕn′ĭm",
     },
     {
       word: "COTTON",
       hint: "Soft fabric",
-      extraLetters: "PQWXYZ",
-      meaning: "A soft, fluffy staple fiber that grows in a boll around the seeds of cotton plants",
+      extraLetters: "COTNPQXZ",
+      meaning:
+        "A soft, fluffy staple fiber that grows in a boll around the seeds of cotton plants",
       pronunciation: "kŏt′n",
     },
     {
       word: "SILK",
       hint: "Luxurious fabric",
-      extraLetters: "PQWXYZ",
-      meaning: "A fine, strong, soft, lustrous fiber produced by silkworms in making cocoons",
+      extraLetters: "SILKPQWZ",
+      meaning:
+        "A fine, strong, soft, lustrous fiber produced by silkworms in making cocoons",
       pronunciation: "sĭlk",
     },
     {
       word: "WOOL",
       hint: "Sheep fiber fabric",
-      extraLetters: "PQWXYZ",
-      meaning: "The fine, soft curly or wavy hair forming the coat of sheep and certain other mammals",
+      extraLetters: "WOLPQXYZ",
+      meaning:
+        "The fine, soft curly or wavy hair forming the coat of sheep and certain other mammals",
       pronunciation: "wo͝ol",
     },
     {
       word: "LINEN",
       hint: "Lightweight fabric",
-      extraLetters: "PQWXYZ",
-      meaning: "A textile made from the fibers of the flax plant, known for its exceptional coolness and freshness in hot weather",
+      extraLetters: "LINEPQXZ",
+      meaning:
+        "A textile made from the fibers of the flax plant, known for its exceptional coolness and freshness in hot weather",
       pronunciation: "lĭn′ən",
     },
     {
       word: "LEATHER",
       hint: "Animal skin material",
       extraLetters: "PQWXYZ",
-      meaning: "Material made from the skin of an animal by tanning or a similar process",
+      meaning:
+        "Material made from the skin of an animal by tanning or a similar process",
       pronunciation: "lĕth′ər",
     },
     {
@@ -241,28 +266,32 @@ export const fashionTopic: Topic = {
       word: "VELVET",
       hint: "Soft dense fabric",
       extraLetters: "PQWXYZ",
-      meaning: "A closely woven fabric of silk, cotton, or nylon, with a thick short pile on one side",
+      meaning:
+        "A closely woven fabric of silk, cotton, or nylon, with a thick short pile on one side",
       pronunciation: "vĕl′vĭt",
     },
     {
       word: "CASHMERE",
       hint: "Soft goat wool",
       extraLetters: "PQWXYZ",
-      meaning: "Fine, soft wool from the Kashmir goat, used to make luxury clothing",
+      meaning:
+        "Fine, soft wool from the Kashmir goat, used to make luxury clothing",
       pronunciation: "kăsh′mîr",
     },
     {
       word: "DESIGNER",
       hint: "Fashion creator",
       extraLetters: "PQWXYZ",
-      meaning: "A person who plans the form, look, or workings of something before its creation",
+      meaning:
+        "A person who plans the form, look, or workings of something before its creation",
       pronunciation: "dĭ-zī′nər",
     },
     {
       word: "RUNWAY",
       hint: "Fashion show walkway",
       extraLetters: "PQWXYZ",
-      meaning: "A raised platform along which models walk to display clothes in a fashion show",
+      meaning:
+        "A raised platform along which models walk to display clothes in a fashion show",
       pronunciation: "rŭn′wā′",
     },
     {
@@ -276,56 +305,64 @@ export const fashionTopic: Topic = {
       word: "TREND",
       hint: "Popular style",
       extraLetters: "PQWXYZ",
-      meaning: "A general direction in which fashion or style is developing or changing",
+      meaning:
+        "A general direction in which fashion or style is developing or changing",
       pronunciation: "trĕnd",
     },
     {
       word: "VINTAGE",
       hint: "Old style clothing",
       extraLetters: "PQWXYZ",
-      meaning: "Clothing or accessories representing the high-quality products of an earlier time period",
+      meaning:
+        "Clothing or accessories representing the high-quality products of an earlier time period",
       pronunciation: "vĭn′tĭj",
     },
     {
       word: "COUTURE",
       hint: "High fashion",
       extraLetters: "PQWXYZ",
-      meaning: "The design and manufacture of fashionable clothes to a client's specific requirements and measurements",
+      meaning:
+        "The design and manufacture of fashionable clothes to a client's specific requirements and measurements",
       pronunciation: "ko͞o-to͝or′",
     },
     {
       word: "TAILOR",
       hint: "Clothing alterer",
       extraLetters: "PQWXYZ",
-      meaning: "A person whose occupation is making fitted clothes such as suits, pants, and jackets to fit individual customers",
+      meaning:
+        "A person whose occupation is making fitted clothes such as suits, pants, and jackets to fit individual customers",
       pronunciation: "tā′lər",
     },
     {
       word: "BUTTON",
       hint: "Clothing fastener",
       extraLetters: "PQWXYZ",
-      meaning: "A small disk or knob sewn onto a garment, used to fasten it by passing through a buttonhole",
+      meaning:
+        "A small disk or knob sewn onto a garment, used to fasten it by passing through a buttonhole",
       pronunciation: "bŭt′n",
     },
     {
       word: "ZIPPER",
       hint: "Sliding fastener",
       extraLetters: "PQWXYZ",
-      meaning: "A device consisting of two rows of metal or plastic teeth that interlock when a sliding piece is pulled along them",
+      meaning:
+        "A device consisting of two rows of metal or plastic teeth that interlock when a sliding piece is pulled along them",
       pronunciation: "zĭp′ər",
     },
     {
       word: "STYLE",
       hint: "Fashion expression",
       extraLetters: "PQWXYZ",
-      meaning: "A distinctive appearance, typically determined by the principles according to which something is designed",
+      meaning:
+        "A distinctive appearance, typically determined by the principles according to which something is designed",
       pronunciation: "stīl",
     },
     {
       word: "JEWELRY",
       hint: "Decorative accessories",
       extraLetters: "PQWXYZ",
-      meaning: "Personal ornaments, such as necklaces, rings, or bracelets, made from precious metals and stones",
+      meaning:
+        "Personal ornaments, such as necklaces, rings, or bracelets, made from precious metals and stones",
       pronunciation: "jo͞o′əl-rē",
     },
     {
@@ -339,21 +376,24 @@ export const fashionTopic: Topic = {
       word: "NECKLACE",
       hint: "Neck ornament",
       extraLetters: "PQWXYZ",
-      meaning: "An ornamental chain or string of beads, jewels, or links worn around the neck",
+      meaning:
+        "An ornamental chain or string of beads, jewels, or links worn around the neck",
       pronunciation: "nĕk′lĭs",
     },
     {
       word: "RING",
       hint: "Finger ornament",
       extraLetters: "PQWXYZ",
-      meaning: "A circular band, typically of precious metal, worn as ornamental jewelry around the finger",
+      meaning:
+        "A circular band, typically of precious metal, worn as ornamental jewelry around the finger",
       pronunciation: "rĭng",
     },
     {
       word: "BRACELET",
       hint: "Wrist ornament",
       extraLetters: "PQWXYZ",
-      meaning: "An ornamental band, hoop, or chain worn around the wrist or arm",
+      meaning:
+        "An ornamental band, hoop, or chain worn around the wrist or arm",
       pronunciation: "brās′lĭt",
     },
   ],

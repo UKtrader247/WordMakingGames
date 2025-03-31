@@ -247,33 +247,41 @@ export const animalsTopic: Topic = {
       word: "TURTLE",
       hint: "Shelled reptile",
       extraLetters: "TURTLEVP",
-      meaning: "A reptile with a hard shell covering its body and a beak-like mouth",
+      meaning:
+        "A reptile with a hard shell covering its body and a beak-like mouth",
       pronunciation: "tûr′tl",
-      example: "The sea turtle returned to the same beach where it was born to lay its eggs.",
+      example:
+        "The sea turtle returned to the same beach where it was born to lay its eggs.",
     },
     {
       word: "FROG",
       hint: "Jumping amphibian",
       extraLetters: "FROGQWZ",
-      meaning: "A tailless amphibian with a short body, webbed feet, and protruding eyes",
+      meaning:
+        "A tailless amphibian with a short body, webbed feet, and protruding eyes",
       pronunciation: "frŏg",
-      example: "The green tree frog clung to the leaf with its sticky toe pads.",
+      example:
+        "The green tree frog clung to the leaf with its sticky toe pads.",
     },
     {
       word: "TOAD",
       hint: "Warty amphibian",
       extraLetters: "TOADNBZ",
-      meaning: "A tailless amphibian with a squat body, short legs, and warty skin",
+      meaning:
+        "A tailless amphibian with a squat body, short legs, and warty skin",
       pronunciation: "tōd",
-      example: "The common toad burrowed into the soft garden soil for the winter.",
+      example:
+        "The common toad burrowed into the soft garden soil for the winter.",
     },
     {
       word: "FISH",
       hint: "Aquatic vertebrate",
       extraLetters: "FISHQWZ",
-      meaning: "A cold-blooded aquatic vertebrate with gills, fins, and typically scales",
+      meaning:
+        "A cold-blooded aquatic vertebrate with gills, fins, and typically scales",
       pronunciation: "fĭsh",
-      example: "The colorful tropical fish darted among the coral reef formations.",
+      example:
+        "The colorful tropical fish darted among the coral reef formations.",
     },
     {
       word: "BIRD",
@@ -281,7 +289,8 @@ export const animalsTopic: Topic = {
       extraLetters: "BIRDQVZ",
       meaning: "A warm-blooded vertebrate with feathers, wings, and a beak",
       pronunciation: "bûrd",
-      example: "The small bird gathered twigs and grass to build its nest in the tree.",
+      example:
+        "The small bird gathered twigs and grass to build its nest in the tree.",
     },
     {
       word: "BAT",
@@ -289,15 +298,18 @@ export const animalsTopic: Topic = {
       extraLetters: "BATHQVZ",
       meaning: "A nocturnal mammal with forelimbs adapted as wings for flight",
       pronunciation: "băt",
-      example: "The fruit bat hung upside down from the branch as it ate a ripe mango.",
+      example:
+        "The fruit bat hung upside down from the branch as it ate a ripe mango.",
     },
     {
       word: "MOUSE",
       hint: "Small rodent",
       extraLetters: "MOUSEQZX",
-      meaning: "A small rodent with a pointed snout, rounded ears, and a long tail",
+      meaning:
+        "A small rodent with a pointed snout, rounded ears, and a long tail",
       pronunciation: "mous",
-      example: "The field mouse gathered seeds and stored them in its underground burrow.",
+      example:
+        "The field mouse gathered seeds and stored them in its underground burrow.",
     },
     {
       word: "RAT",
@@ -305,47 +317,58 @@ export const animalsTopic: Topic = {
       extraLetters: "RATPQJX",
       meaning: "A medium-sized rodent with a long tail and sharp teeth",
       pronunciation: "răt",
-      example: "The brown rat scurried along the alleyway in search of food scraps.",
+      example:
+        "The brown rat scurried along the alleyway in search of food scraps.",
     },
     {
       word: "SQUIRREL",
       hint: "Tree-climbing rodent",
       extraLetters: "SQUIRRELZ",
-      meaning: "A small to medium-sized rodent with a bushy tail and strong hind legs",
+      meaning:
+        "A small to medium-sized rodent with a bushy tail and strong hind legs",
       pronunciation: "skwûr′əl",
-      example: "The gray squirrel buried acorns in the park to retrieve during winter.",
+      example:
+        "The gray squirrel buried acorns in the park to retrieve during winter.",
     },
     {
       word: "BEAVER",
       hint: "Dam-building rodent",
       extraLetters: "BEAVERZQW",
-      meaning: "A large semiaquatic rodent with a flat tail and strong teeth for cutting wood",
+      meaning:
+        "A large semiaquatic rodent with a flat tail and strong teeth for cutting wood",
       pronunciation: "bē′vər",
-      example: "The beaver constructed an impressive dam that created a small pond in the stream.",
+      example:
+        "The beaver constructed an impressive dam that created a small pond in the stream.",
     },
     {
       word: "CAMEL",
       hint: "Desert animal",
       extraLetters: "CAMELQVZ",
-      meaning: "A large desert mammal with one or two humps on its back for storing fat",
+      meaning:
+        "A large desert mammal with one or two humps on its back for storing fat",
       pronunciation: "kăm′əl",
-      example: "The dromedary camel traveled across the hot desert without drinking for days.",
+      example:
+        "The dromedary camel traveled across the hot desert without drinking for days.",
     },
     {
       word: "LLAMA",
       hint: "South American camelid",
       extraLetters: "LLAMAQVZ",
-      meaning: "A domesticated South American camelid used as a pack animal and for wool",
+      meaning:
+        "A domesticated South American camelid used as a pack animal and for wool",
       pronunciation: "lä′mə",
-      example: "The llama carried supplies for the hikers on their journey through the Andes mountains.",
+      example:
+        "The llama carried supplies for the hikers on their journey through the Andes mountains.",
     },
     {
       word: "HORSE",
       hint: "Equine animal",
       extraLetters: "HORSEQZP",
-      meaning: "A large hoofed mammal with a flowing mane and tail, used for riding and racing",
+      meaning:
+        "A large hoofed mammal with a flowing mane and tail, used for riding and racing",
       pronunciation: "hôrs",
-      example: "The wild horse galloped freely across the open plains with its herd.",
+      example:
+        "The wild horse galloped freely across the open plains with its herd.",
     },
     {
       word: "DONKEY",
@@ -360,7 +383,8 @@ export const animalsTopic: Topic = {
       word: "PIG",
       hint: "Pork source",
       extraLetters: "PIGQZTW",
-      meaning: "A domesticated omnivorous mammal with a stout body and short legs",
+      meaning:
+        "A domesticated omnivorous mammal with a stout body and short legs",
       pronunciation: "pĭg",
       example: "The pig rolled happily in the mud on the hot summer day.",
     },
@@ -378,7 +402,8 @@ export const animalsTopic: Topic = {
       extraLetters: "CHICKENZQV",
       meaning: "A domestic fowl kept for its eggs and meat",
       pronunciation: "chĭk′ən",
-      example: "The chicken clucked loudly as it scratched for food in the yard.",
+      example:
+        "The chicken clucked loudly as it scratched for food in the yard.",
     },
     {
       word: "SHEEP",
@@ -392,23 +417,28 @@ export const animalsTopic: Topic = {
       word: "GOAT",
       hint: "Mountain climber",
       extraLetters: "GOATZPQF",
-      meaning: "A hardy domesticated ruminant animal with backward-curving horns",
+      meaning:
+        "A hardy domesticated ruminant animal with backward-curving horns",
       pronunciation: "gōt",
-      example: "The mountain goat leaped effortlessly from rock to rock on the steep cliff.",
+      example:
+        "The mountain goat leaped effortlessly from rock to rock on the steep cliff.",
     },
     {
       word: "DOG",
       hint: "Man's best friend",
       extraLetters: "DOGQPZV",
-      meaning: "A domesticated carnivorous mammal that typically has a long snout and acute sense of smell",
+      meaning:
+        "A domesticated carnivorous mammal that typically has a long snout and acute sense of smell",
       pronunciation: "dôg",
-      example: "The loyal dog waited patiently by the door for its owner to return.",
+      example:
+        "The loyal dog waited patiently by the door for its owner to return.",
     },
     {
       word: "CAT",
       hint: "Purring pet",
       extraLetters: "CATPQZV",
-      meaning: "A small domesticated carnivorous mammal with soft fur and retractable claws",
+      meaning:
+        "A small domesticated carnivorous mammal with soft fur and retractable claws",
       pronunciation: "kăt",
       example: "The cat purred contentedly while curled up on its owner's lap.",
     },
@@ -416,33 +446,41 @@ export const animalsTopic: Topic = {
       word: "HAMSTER",
       hint: "Pocket pet",
       extraLetters: "HAMSTERZQJ",
-      meaning: "A small rodent with a short tail and large cheek pouches for carrying food",
+      meaning:
+        "A small rodent with a short tail and large cheek pouches for carrying food",
       pronunciation: "hăm′stər",
-      example: "The hamster stuffed its cheeks with seeds before returning to its burrow.",
+      example:
+        "The hamster stuffed its cheeks with seeds before returning to its burrow.",
     },
     {
       word: "GUINEA",
       hint: "Small pet rodent",
-      extraLetters: "GUINEAZPQ",
-      meaning: "A small, stout-bodied, short-eared rodent domesticated as a pet",
+      extraLetters: "GUINEAZPQR",
+      meaning:
+        "A small, stout-bodied, short-eared rodent domesticated as a pet",
       pronunciation: "gĭn′ē",
-      example: "The guinea pig squeaked excitedly when it heard the refrigerator door open.",
+      example:
+        "The guinea pig squeaked excitedly when it heard the refrigerator door open.",
     },
     {
       word: "PARROT",
       hint: "Talking bird",
       extraLetters: "PARROTZPQ",
-      meaning: "A tropical bird with a curved beak, known for mimicking human speech",
+      meaning:
+        "A tropical bird with a curved beak, known for mimicking human speech",
       pronunciation: "pâr′ət",
-      example: "The colorful parrot repeated the phrase it had been taught over and over.",
+      example:
+        "The colorful parrot repeated the phrase it had been taught over and over.",
     },
     {
       word: "FINCH",
       hint: "Small songbird",
       extraLetters: "FINCHZVT",
-      meaning: "A small passerine bird with a conical beak adapted for eating seeds",
+      meaning:
+        "A small passerine bird with a conical beak adapted for eating seeds",
       pronunciation: "fĭnch",
-      example: "The finch's beautiful song filled the garden on the spring morning.",
+      example:
+        "The finch's beautiful song filled the garden on the spring morning.",
     },
   ],
 };

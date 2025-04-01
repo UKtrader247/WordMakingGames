@@ -54,6 +54,9 @@ function GamePage() {
   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
   const [showContactModal, setShowContactModal] = useState(false);
 
+  // Add Reset Confirmation Modal
+  const [showResetConfirm, setShowResetConfirm] = useState(false);
+
   // Toast message display function
   const showToast = (message: string, type: 'success' | 'error' | 'info' = 'info') => {
     setToast({ message, type: type === 'info' ? 'success' : type });
@@ -368,80 +371,7 @@ function GamePage() {
 
   const resetCurrentWord = () => {
     if (!currentWordData) return;
-
-    // Reset success and error states
-    setShowError(false);
-    setSuccess(false);
-    setUsedSolve(false);
-
-    // Reset drop zones to empty or pre-filled based on word length
-    const wordLength = currentWordData.word.length;
-
-    // Determine how many letters to pre-fill - never more than 3
-    let numToFill = 0;
-    if (wordLength >= 5) {
-      // For 5 letters fill 2, for 6+ letters fill exactly 3
-      numToFill = Math.min(wordLength === 5 ? 2 : 3, 3);
-    }
-
-    // Generate random positions to fill
-    const fillPositions: number[] = [];
-    while (fillPositions.length < numToFill) {
-      const randomPos = Math.floor(Math.random() * wordLength);
-      if (!fillPositions.includes(randomPos)) {
-        fillPositions.push(randomPos);
-      }
-    }
-
-    // Set up dropzones with the pre-filled letters
-    const initialDropZones = currentWordData.word.split('').map((letter, index) => {
-      const shouldPreFill = fillPositions.includes(index);
-      return {
-        id: `dropzone-${index}`,
-        letter: shouldPreFill ? letter : null,
-        isPrefilled: shouldPreFill,
-        isIncorrect: false
-      };
-    });
-
-    setDropZones(initialDropZones);
-
-    // Recreate remaining letters (both from word and extra letters)
-    const preFilledLetters = initialDropZones
-      .filter(zone => zone.letter !== null)
-      .map(zone => zone.letter as string);
-
-    const remainingWordLetters = currentWordData.word
-      .split('')
-      .filter(letter => !preFilledLetters.includes(letter) ||
-        // If letter appears multiple times, only exclude it once
-        preFilledLetters.indexOf(letter) !== preFilledLetters.lastIndexOf(letter));
-
-    const allLetters = (remainingWordLetters.join('') + currentWordData.extraLetters).split('');
-
-    // Create scattered letters with distribution
-    const shuffledLetters = allLetters
-      .sort(() => Math.random() - 0.5)
-      .map((char, index) => {
-        const gridSize = Math.ceil(Math.sqrt(allLetters.length));
-        const row = Math.floor(index / gridSize);
-        const col = index % gridSize;
-
-        const xBase = (col / gridSize) * 80 + 10;
-        const yBase = (row / gridSize) * 80 + 10;
-
-        return {
-          id: `letter-${index}`,
-          char,
-          position: {
-            x: xBase + (Math.random() * 10 - 5),
-            y: yBase + (Math.random() * 10 - 5)
-          }
-        };
-      });
-    setLetters(shuffledLetters);
-
-    // Show toast notification
+    initializeGameWithWord(currentWordData);
     setToast({
       message: 'Current word has been reset',
       type: 'success'
@@ -679,6 +609,139 @@ function GamePage() {
     }
   }, [currentWordData, topic]);
 
+  // Add save game state function
+  const saveGameState = () => {
+    try {
+      const gameState = {
+        topicId,
+        completedWords: Array.from(completedWords),
+        score,
+        currentWord: currentWordData?.word,
+        lastSaved: new Date().toISOString(),
+        version: '1.0'
+      };
+      localStorage.setItem(`gameState_${topicId}`, JSON.stringify(gameState));
+    } catch (error) {
+      console.error('Error saving game state:', error);
+    }
+  };
+
+  // Add load game state function
+  const loadGameState = () => {
+    try {
+      const savedState = localStorage.getItem(`gameState_${topicId}`);
+      if (savedState) {
+        const parsedState = JSON.parse(savedState);
+        if (parsedState.completedWords) {
+          setCompletedWords(new Set(parsedState.completedWords));
+        }
+        if (parsedState.score) {
+          setScore(parsedState.score);
+        }
+        if (parsedState.currentWord) {
+          // Find the word data for the saved word
+          const savedWordData = topic?.words.find(w => w.word === parsedState.currentWord);
+          if (savedWordData) {
+            setCurrentWordData(savedWordData);
+            // Reinitialize the game with the saved word
+            initializeGameWithWord(savedWordData);
+          }
+        }
+      }
+    } catch (error) {
+      console.error('Error loading game state:', error);
+    }
+  };
+
+  // Load saved game state on component mount
+  useEffect(() => {
+    if (topicId) {
+      loadGameState();
+    }
+  }, [topicId]);
+
+  // Auto-save game state periodically and when state changes
+  useEffect(() => {
+    if (topicId) {
+      saveGameState();
+    }
+  }, [completedWords, score, currentWordData]);
+
+  // Add function to initialize game with specific word
+  const initializeGameWithWord = (wordData: typeof currentWordData) => {
+    if (!wordData) return;
+
+    setCurrentWordData(wordData);
+    setShowError(false);
+    setSuccess(false);
+    setUsedSolve(false);
+
+    // Initialize drop zones
+    const wordLength = wordData.word.length;
+
+    // Determine how many letters to pre-fill - never more than 3
+    let numToFill = 0;
+    if (wordLength >= 5) {
+      numToFill = Math.min(wordLength === 5 ? 2 : 3, 3);
+    }
+
+    // Generate random positions to fill
+    const fillPositions: number[] = [];
+    while (fillPositions.length < numToFill) {
+      const randomPos = Math.floor(Math.random() * wordLength);
+      if (!fillPositions.includes(randomPos)) {
+        fillPositions.push(randomPos);
+      }
+    }
+
+    // Set up dropzones with the pre-filled letters
+    const initialDropZones = wordData.word.split('').map((letter, index) => {
+      const shouldPreFill = fillPositions.includes(index);
+      return {
+        id: `dropzone-${index}`,
+        letter: shouldPreFill ? letter : null,
+        isPrefilled: shouldPreFill,
+        isIncorrect: false
+      };
+    });
+
+    setDropZones(initialDropZones);
+
+    // Combine target word and extra letters, but only include letters that aren't pre-filled
+    const preFilledLetters = initialDropZones
+      .filter(zone => zone.letter !== null)
+      .map(zone => zone.letter as string);
+
+    const remainingWordLetters = wordData.word
+      .split('')
+      .filter(letter => !preFilledLetters.includes(letter) ||
+        preFilledLetters.indexOf(letter) !== preFilledLetters.lastIndexOf(letter));
+
+    const allLetters = (remainingWordLetters.join('') + wordData.extraLetters).split('');
+
+    // Create scattered letters with distribution
+    const shuffledLetters = allLetters
+      .sort(() => Math.random() - 0.5)
+      .map((char, index) => {
+        const gridSize = Math.ceil(Math.sqrt(allLetters.length));
+        const row = Math.floor(index / gridSize);
+        const col = index % gridSize;
+
+        const xBase = (col / gridSize) * 80 + 10;
+        const yBase = (row / gridSize) * 80 + 10;
+
+        return {
+          id: `letter-${index}`,
+          char,
+          position: {
+            x: xBase + (Math.random() * 10 - 5),
+            y: yBase + (Math.random() * 10 - 5)
+          }
+        };
+      });
+    setLetters(shuffledLetters);
+  };
+
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-8 pt-16">
@@ -848,6 +911,26 @@ function GamePage() {
             </p>
           </div>
 
+          {/* Progress Bar */}
+          <div className="mt-4 mb-8">
+            <div className="flex justify-between items-center mb-2">
+              <span className="text-sm font-medium text-blue-700">Topic Progress</span>
+              <span className="text-sm font-medium text-blue-700">
+                {completedWords.size} / {topic?.words.length || 0} words
+              </span>
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
+              <div 
+                className="bg-gradient-to-r from-blue-500 to-purple-600 h-4 rounded-full transition-all duration-500 flex items-center justify-end"
+                style={{ width: `${topic?.words.length ? (completedWords.size / topic.words.length) * 100 : 0}%` }}
+              >
+                {completedWords.size > 0 && topic?.words && completedWords.size === topic.words.length && (
+                  <span className="text-xs text-white px-2">Complete!</span>
+                )}
+              </div>
+            </div>
+          </div>
+
           {success && (
             <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
               <div className="bg-white p-8 rounded-xl text-center max-w-lg w-full mx-4">
@@ -947,6 +1030,39 @@ function GamePage() {
             </button>
           </div>
         )}
+
+        {/* Add Reset Confirmation Modal */}
+        {showResetConfirm && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div className="bg-white p-6 rounded-lg max-w-md w-full mx-4">
+              <h3 className="text-xl font-bold text-red-600 mb-4">Reset Progress</h3>
+              <p className="text-gray-600 mb-6">
+                Are you sure you want to reset your progress for this topic? This action cannot be undone.
+              </p>
+              <div className="flex justify-end gap-4">
+                <button
+                  onClick={() => setShowResetConfirm(false)}
+                  className="px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={() => {
+                    localStorage.removeItem(`gameState_${topicId}`);
+                    setCompletedWords(new Set());
+                    setScore(0);
+                    initializeGame();
+                    setShowResetConfirm(false);
+                    showToast('Progress has been reset for this topic', 'success');
+                  }}
+                  className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+                >
+                  Reset Progress
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Footer */}
@@ -983,6 +1099,14 @@ function GamePage() {
       {showAboutModal && <AboutModal isOpen={showAboutModal} onClose={() => setShowAboutModal(false)} />}
       {showPrivacyModal && <PrivacyModal isOpen={showPrivacyModal} onClose={() => setShowPrivacyModal(false)} />}
       {showContactModal && <ContactModal isOpen={showContactModal} onClose={() => setShowContactModal(false)} />}
+
+      {/* Add Reset Progress button */}
+      <button
+        onClick={() => setShowResetConfirm(true)}
+        className="px-3 py-1 bg-red-500 hover:bg-red-600 text-white text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
+      >
+        Reset Topic Progress
+      </button>
     </>
   );
 }

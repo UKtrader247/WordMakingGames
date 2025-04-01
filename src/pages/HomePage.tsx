@@ -18,6 +18,7 @@ function HomePage() {
   const [showAboutModal, setShowAboutModal] = useState(false);
   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
   const [showContactModal, setShowContactModal] = useState(false);
+  const [showResetConfirm, setShowResetConfirm] = useState(false);
 
   // Toast message display function
   const showToast = (message: string, type: 'success' | 'error' | 'info' = 'info') => {
@@ -171,16 +172,59 @@ function HomePage() {
     setForceUpdate(prev => prev + 1);
   };
 
-  // For testing - clear all completed topics
+  // Add save game state function
+  const saveGameState = () => {
+    try {
+      const gameState = {
+        completedTopics,
+        lastSaved: new Date().toISOString(),
+        version: '1.0'
+      };
+      localStorage.setItem('gameState', JSON.stringify(gameState));
+      showToast('Game progress saved successfully!', 'success');
+    } catch (error) {
+      console.error('Error saving game state:', error);
+      showToast('Failed to save game progress', 'error');
+    }
+  };
+
+  // Add load game state function
+  const loadGameState = () => {
+    try {
+      const savedState = localStorage.getItem('gameState');
+      if (savedState) {
+        const parsedState = JSON.parse(savedState);
+        if (parsedState.completedTopics) {
+          setCompletedTopics(parsedState.completedTopics);
+          showToast('Game progress loaded successfully!', 'success');
+        }
+      }
+    } catch (error) {
+      console.error('Error loading game state:', error);
+      showToast('Failed to load game progress', 'error');
+    }
+  };
+
+  // Load saved game state on component mount
+  useEffect(() => {
+    loadGameState();
+  }, []);
+
+  // Auto-save game state periodically
+  useEffect(() => {
+    const autoSaveInterval = setInterval(saveGameState, 5 * 60 * 1000); // Auto-save every 5 minutes
+    return () => clearInterval(autoSaveInterval);
+  }, [completedTopics]);
+
+  // Replace the clearCompletedTopics function with this enhanced version
   const clearCompletedTopics = () => {
     setCompletedTopics([]);
     localStorage.removeItem('completedTopics');
+    localStorage.removeItem('gameState');
     console.log('Cleared all completed topics');
     debugLocalStorage();
-    // Force a re-render
     setForceUpdate(prev => prev + 1);
-    
-    // Show toast
+    setShowResetConfirm(false);
     showToast('Progress has been reset. All completion data cleared.', 'error');
   };
 
@@ -336,7 +380,7 @@ function HomePage() {
               {/* Admin/Debug buttons - remove in production */}
               <div className="mt-10 flex justify-center gap-4 flex-wrap">
                 <button 
-                  onClick={() => clearCompletedTopics()}
+                  onClick={() => setShowResetConfirm(true)}
                   className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 text-sm"
                 >
                   Reset Progress
@@ -439,6 +483,32 @@ function HomePage() {
       <AboutModal isOpen={showAboutModal} onClose={() => setShowAboutModal(false)} />
       <PrivacyModal isOpen={showPrivacyModal} onClose={() => setShowPrivacyModal(false)} />
       <ContactModal isOpen={showContactModal} onClose={() => setShowContactModal(false)} />
+
+      {/* Add Reset Confirmation Modal */}
+      {showResetConfirm && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded-lg max-w-md w-full mx-4">
+            <h3 className="text-xl font-bold text-red-600 mb-4">Reset Progress</h3>
+            <p className="text-gray-600 mb-6">
+              Are you sure you want to reset all your progress? This action cannot be undone.
+            </p>
+            <div className="flex justify-end gap-4">
+              <button
+                onClick={() => setShowResetConfirm(false)}
+                className="px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={clearCompletedTopics}
+                className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+              >
+                Reset Progress
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

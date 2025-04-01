@@ -9,7 +9,7 @@ export const foodTopic: Topic = {
     {
       word: "PIZZA",
       hint: "Italian pie",
-      extraLetters: "PIZZAXQW",
+      extraLetters: "XQWVBMN",
       meaning:
         "A savory dish consisting of a round, flattened base of dough topped with various ingredients, typically cheese, tomatoes, and other toppings",
       pronunciation: "pēt′sə",
@@ -17,7 +17,7 @@ export const foodTopic: Topic = {
     {
       word: "PASTA",
       hint: "Italian noodles",
-      extraLetters: "PASTAZXQ",
+      extraLetters: "ZXQVBMN",
       meaning:
         "A food made from a dough of wheat flour mixed with water or eggs, formed into various shapes, and typically cooked in boiling water",
       pronunciation: "pä′stə",
@@ -25,7 +25,7 @@ export const foodTopic: Topic = {
     {
       word: "BURGER",
       hint: "Sandwich patty",
-      extraLetters: "BURGERZQ",
+      extraLetters: "ZQXVMNT",
       meaning:
         "A sandwich consisting of a flat round patty of ground beef that is typically served in a split round bun",
       pronunciation: "bûr′gər",
@@ -33,7 +33,7 @@ export const foodTopic: Topic = {
     {
       word: "TACO",
       hint: "Mexican dish",
-      extraLetters: "TACOZXQW",
+      extraLetters: "ZXQWVBN",
       meaning:
         "A Mexican dish consisting of a folded or rolled tortilla filled with various mixtures, such as seasoned meat, beans, lettuce, and tomatoes",
       pronunciation: "tä′kō",
@@ -41,7 +41,7 @@ export const foodTopic: Topic = {
     {
       word: "SUSHI",
       hint: "Japanese dish",
-      extraLetters: "SUSHIZXQ",
+      extraLetters: "ZXQVBNM",
       meaning:
         "A Japanese dish consisting of small balls or rolls of vinegar-flavored cold rice served with a garnish of vegetables, egg, or raw seafood",
       pronunciation: "so͞o′shē",
@@ -49,7 +49,7 @@ export const foodTopic: Topic = {
     {
       word: "CURRY",
       hint: "Spiced dish",
-      extraLetters: "CURYQZXW",
+      extraLetters: "QZXWVBN",
       meaning:
         "A dish of meat, vegetables, etc., cooked in an Indian-style sauce of strong spices and typically served with rice",
       pronunciation: "kûr′ē",
@@ -57,7 +57,7 @@ export const foodTopic: Topic = {
     {
       word: "STEAK",
       hint: "Beef cut",
-      extraLetters: "STEAKZQX",
+      extraLetters: "ZQXVBNM",
       meaning:
         "A slice of meat, typically beef, cut from the fleshy part of an animal or large fish",
       pronunciation: "stāk",
@@ -65,7 +65,7 @@ export const foodTopic: Topic = {
     {
       word: "SALAD",
       hint: "Leafy dish",
-      extraLetters: "SALADZQX",
+      extraLetters: "ZQXVBNM",
       meaning:
         "A cold dish of various mixtures of raw or cooked vegetables, usually seasoned with oil, vinegar, or other dressing",
       pronunciation: "săl′əd",
@@ -73,7 +73,7 @@ export const foodTopic: Topic = {
     {
       word: "SOUP",
       hint: "Liquid food",
-      extraLetters: "XZQPYW",
+      extraLetters: "XZQPYWV",
       meaning:
         "A liquid dish, typically made by boiling meat, fish, or vegetables, etc., in stock or water",
       pronunciation: "so͞op",
@@ -81,7 +81,7 @@ export const foodTopic: Topic = {
     {
       word: "BREAD",
       hint: "Baked staple",
-      extraLetters: "YWZXQP",
+      extraLetters: "YWZXQPV",
       meaning:
         "A staple food made from flour, water, and yeast mixed together and baked",
       pronunciation: "brĕd",
@@ -89,7 +89,7 @@ export const foodTopic: Topic = {
     {
       word: "RICE",
       hint: "Grain dish",
-      extraLetters: "QPWXZY",
+      extraLetters: "QPWXZYV",
       meaning:
         "A cereal grain that is the seed of a grass species, widely cultivated as a food source",
       pronunciation: "rīs",
@@ -97,7 +97,7 @@ export const foodTopic: Topic = {
     {
       word: "CHEESE",
       hint: "Dairy product",
-      extraLetters: "ZYXWQP",
+      extraLetters: "ZYXWQPV",
       meaning:
         "A food made from the pressed curds of milk, firm and elastic or soft and semi-liquid in texture",
       pronunciation: "chēz",
@@ -105,7 +105,7 @@ export const foodTopic: Topic = {
     {
       word: "APPLE",
       hint: "Common fruit",
-      extraLetters: "XZQPYW",
+      extraLetters: "XZQPYWV",
       meaning:
         "The round fruit of a tree of the rose family, which typically has thin red or green skin and crisp flesh",
       pronunciation: "ăp′əl",
@@ -113,14 +113,14 @@ export const foodTopic: Topic = {
     {
       word: "BANANA",
       hint: "Yellow fruit",
-      extraLetters: "YPZWQX",
+      extraLetters: "YPZWQXV",
       meaning: "A long curved fruit with a yellow skin and soft sweet flesh",
       pronunciation: "bə-năn′ə",
     },
     {
       word: "ORANGE",
       hint: "Citrus fruit",
-      extraLetters: "QWPXZY",
+      extraLetters: "QWPXZYV",
       meaning:
         "A round juicy citrus fruit with a tough bright reddish-yellow rind",
       pronunciation: "ôr′ĭnj",
@@ -128,7 +128,7 @@ export const foodTopic: Topic = {
     {
       word: "GRAPE",
       hint: "Wine fruit",
-      extraLetters: "XZPQYW",
+      extraLetters: "XZPQYWV",
       meaning:
         "A small, sweet fruit growing in clusters on a vine, eaten as fruit or used in making wine",
       pronunciation: "grāp",
@@ -136,7 +136,7 @@ export const foodTopic: Topic = {
     {
       word: "PEACH",
       hint: "Fuzzy fruit",
-      extraLetters: "YWZPQX",
+      extraLetters: "YWZPQXV",
       meaning:
         "A round fruit with juicy, sweet yellow flesh, a downy pinkish-yellow skin, and a hard stone",
       pronunciation: "pēch",
@@ -144,7 +144,7 @@ export const foodTopic: Topic = {
     {
       word: "POTATO",
       hint: "Starchy tuber",
-      extraLetters: "PZQXWY",
+      extraLetters: "PZQXWYV",
       meaning:
         "A starchy plant tuber that is one of the most important food crops, cooked and eaten as a vegetable",
       pronunciation: "pə-tā′tō",
@@ -152,14 +152,14 @@ export const foodTopic: Topic = {
     {
       word: "CARROT",
       hint: "Orange vegetable",
-      extraLetters: "QXPZYW",
+      extraLetters: "QXPZYWV",
       meaning: "A tapering orange-colored root eaten as a vegetable",
       pronunciation: "kăr′ət",
     },
     {
       word: "TOMATO",
       hint: "Red fruit/vegetable",
-      extraLetters: "XZQPWY",
+      extraLetters: "XZQPWYV",
       meaning:
         "A glossy red, or occasionally yellow, pulpy edible fruit that is eaten as a vegetable or in salad",
       pronunciation: "tə-mā′tō",
@@ -167,7 +167,7 @@ export const foodTopic: Topic = {
     {
       word: "ONION",
       hint: "Layered vegetable",
-      extraLetters: "YWZXQP",
+      extraLetters: "YWZXQPV",
       meaning:
         "An edible bulb with a pungent taste and smell, composed of several concentric layers",
       pronunciation: "ŭn′yən",
@@ -175,7 +175,7 @@ export const foodTopic: Topic = {
     {
       word: "GARLIC",
       hint: "Aromatic bulb",
-      extraLetters: "YPZWQX",
+      extraLetters: "YPZWQXV",
       meaning:
         "A strong-smelling pungent-tasting bulb, used as a flavoring agent in cooking",
       pronunciation: "gär′lĭk",
@@ -183,7 +183,7 @@ export const foodTopic: Topic = {
     {
       word: "CHICKEN",
       hint: "Poultry meat",
-      extraLetters: "XZPQYW",
+      extraLetters: "XZPQYWV",
       meaning:
         "A domestic fowl kept for its eggs or meat, especially a young one",
       pronunciation: "chĭk′ən",
@@ -191,28 +191,28 @@ export const foodTopic: Topic = {
     {
       word: "BEEF",
       hint: "Cow meat",
-      extraLetters: "QWPXZY",
+      extraLetters: "QWPXZYV",
       meaning: "The flesh of a cow, bull, or ox, used as food",
       pronunciation: "bēf",
     },
     {
       word: "PORK",
       hint: "Pig meat",
-      extraLetters: "ZYXWQP",
+      extraLetters: "ZYXWQPV",
       meaning: "The flesh of a pig used as food",
       pronunciation: "pôrk",
     },
     {
       word: "LAMB",
       hint: "Young sheep meat",
-      extraLetters: "YWZPQX",
+      extraLetters: "YWZPQXV",
       meaning: "The flesh of a young domestic sheep eaten as food",
       pronunciation: "lăm",
     },
     {
       word: "FISH",
       hint: "Seafood animal",
-      extraLetters: "XZQPYW",
+      extraLetters: "XZQPYWV",
       meaning:
         "A limbless cold-blooded vertebrate animal with gills and fins living wholly in water",
       pronunciation: "fĭsh",
@@ -220,7 +220,7 @@ export const foodTopic: Topic = {
     {
       word: "SHRIMP",
       hint: "Small seafood",
-      extraLetters: "YWZXQP",
+      extraLetters: "YWZXQPV",
       meaning:
         "A small free-swimming crustacean with an elongated body, typically marine and widely caught for food",
       pronunciation: "shrĭmp",
@@ -228,7 +228,7 @@ export const foodTopic: Topic = {
     {
       word: "CRAB",
       hint: "Shellfish",
-      extraLetters: "QPWXZY",
+      extraLetters: "QPWXZYV",
       meaning:
         "A crustacean with a broad carapace, stalked eyes, and five pairs of legs, the first pair of which are modified as pincers",
       pronunciation: "krăb",
@@ -236,7 +236,7 @@ export const foodTopic: Topic = {
     {
       word: "CAKE",
       hint: "Sweet dessert",
-      extraLetters: "ZYXWQP",
+      extraLetters: "ZYXWQPV",
       meaning:
         "A sweet baked food made from a mixture of flour, sugar, and other ingredients",
       pronunciation: "kāk",
@@ -244,7 +244,7 @@ export const foodTopic: Topic = {
     {
       word: "PIE",
       hint: "Filled pastry",
-      extraLetters: "XZQPYW",
+      extraLetters: "XZQPYWV",
       meaning:
         "A baked dish of fruit, meat, or vegetables, typically with a top and base of pastry",
       pronunciation: "pī",
@@ -252,7 +252,7 @@ export const foodTopic: Topic = {
     {
       word: "COOKIE",
       hint: "Sweet biscuit",
-      extraLetters: "YPZWQX",
+      extraLetters: "YPZWQXV",
       meaning:
         "A sweet baked food that is typically small, flat, and round and is made from flour and sugar",
       pronunciation: "ko͝ok′ē",
@@ -260,14 +260,14 @@ export const foodTopic: Topic = {
     {
       word: "ICE",
       hint: "___ cream",
-      extraLetters: "QWPXZY",
+      extraLetters: "QWPXZYV",
       meaning: "Frozen water, a brittle, transparent crystalline solid",
       pronunciation: "īs",
     },
     {
       word: "CANDY",
       hint: "Sweet treat",
-      extraLetters: "XZPQYW",
+      extraLetters: "XZPQYWV",
       meaning:
         "A sweet food made with sugar or syrup combined with fruit, chocolate, or nuts",
       pronunciation: "kăn′dē",
@@ -275,7 +275,7 @@ export const foodTopic: Topic = {
     {
       word: "CHOCOLATE",
       hint: "Cocoa treat",
-      extraLetters: "YWZPQX",
+      extraLetters: "YWZPQXV",
       meaning:
         "A food preparation in the form of a paste or solid block made from roasted and ground cacao seeds",
       pronunciation: "chŏk′ə-lĭt",
@@ -283,7 +283,7 @@ export const foodTopic: Topic = {
     {
       word: "SUGAR",
       hint: "Sweet ingredient",
-      extraLetters: "PZQXWY",
+      extraLetters: "PZQXWYV",
       meaning:
         "A sweet crystalline substance obtained from various plants, especially sugar cane and sugar beet",
       pronunciation: "sho͝og′ər",
@@ -291,7 +291,7 @@ export const foodTopic: Topic = {
     {
       word: "SALT",
       hint: "Savory mineral",
-      extraLetters: "QXPZYW",
+      extraLetters: "QXPZYWV",
       meaning:
         "A white crystalline substance that gives seawater its characteristic taste and is used for seasoning or preserving food",
       pronunciation: "sôlt",
@@ -299,7 +299,7 @@ export const foodTopic: Topic = {
     {
       word: "PEPPER",
       hint: "Spicy seasoning",
-      extraLetters: "XZQPWY",
+      extraLetters: "XZQPWYV",
       meaning:
         "A pungent, hot-tasting powder prepared from dried and ground peppercorns, used as a spice or condiment",
       pronunciation: "pĕp′ər",
@@ -307,7 +307,7 @@ export const foodTopic: Topic = {
     {
       word: "COFFEE",
       hint: "Caffeinated drink",
-      extraLetters: "YWZXQP",
+      extraLetters: "YWZXQPV",
       meaning:
         "A hot drink made from the roasted and ground seeds of a tropical shrub",
       pronunciation: "kô′fē",
@@ -315,7 +315,7 @@ export const foodTopic: Topic = {
     {
       word: "TEA",
       hint: "Steeped beverage",
-      extraLetters: "YPZWQX",
+      extraLetters: "YPZWQXV",
       meaning:
         "A hot drink made by infusing the dried, crushed leaves of a shrub in boiling water",
       pronunciation: "tē",
@@ -323,14 +323,14 @@ export const foodTopic: Topic = {
     {
       word: "JUICE",
       hint: "Fruit beverage",
-      extraLetters: "XZPQYW",
+      extraLetters: "XZPQYWV",
       meaning: "The liquid obtained from or present in fruit or vegetables",
       pronunciation: "jo͞os",
     },
     {
       word: "WATER",
       hint: "Essential drink",
-      extraLetters: "QWPXZY",
+      extraLetters: "QWPXZYV",
       meaning:
         "A colorless, transparent, odorless liquid that forms the seas, lakes, rivers, and rain",
       pronunciation: "wô′tər",
@@ -338,7 +338,7 @@ export const foodTopic: Topic = {
     {
       word: "MILK",
       hint: "Dairy beverage",
-      extraLetters: "ZYXWQP",
+      extraLetters: "ZYXWQPV",
       meaning:
         "An opaque white fluid rich in fat and protein, secreted by female mammals for the nourishment of their young",
       pronunciation: "mĭlk",
@@ -346,14 +346,14 @@ export const foodTopic: Topic = {
     {
       word: "SODA",
       hint: "Carbonated drink",
-      extraLetters: "YWZPQX",
+      extraLetters: "YWZPQXV",
       meaning: "A carbonated drink, typically flavored with syrup",
       pronunciation: "sō′də",
     },
     {
       word: "BEER",
       hint: "Alcoholic beverage",
-      extraLetters: "XZQPYW",
+      extraLetters: "XZQPYWV",
       meaning:
         "An alcoholic drink made from yeast-fermented malt flavored with hops",
       pronunciation: "bîr",
@@ -361,21 +361,21 @@ export const foodTopic: Topic = {
     {
       word: "WINE",
       hint: "Grape alcohol",
-      extraLetters: "YWZXQP",
+      extraLetters: "YWZXQPV",
       meaning: "An alcoholic drink made from fermented grape juice",
       pronunciation: "wīn",
     },
     {
       word: "WHISKEY",
       hint: "Grain spirit",
-      extraLetters: "QPWXZY",
+      extraLetters: "QPWXZYV",
       meaning: "A spirit distilled from malted grain, especially barley or rye",
       pronunciation: "hwĭs′kē",
     },
     {
       word: "VODKA",
       hint: "Clear spirit",
-      extraLetters: "ZYXWQP",
+      extraLetters: "ZYXWQPV",
       meaning:
         "An alcoholic spirit distilled from grain or potatoes, typically without flavor or color",
       pronunciation: "vŏd′kə",
@@ -383,7 +383,7 @@ export const foodTopic: Topic = {
     {
       word: "RUM",
       hint: "Sugar spirit",
-      extraLetters: "XZQPYW",
+      extraLetters: "XZQPYWV",
       meaning:
         "An alcoholic liquor distilled from sugar-cane residues or molasses",
       pronunciation: "rŭm",
@@ -391,7 +391,7 @@ export const foodTopic: Topic = {
     {
       word: "GIN",
       hint: "Juniper spirit",
-      extraLetters: "YPZWQX",
+      extraLetters: "YPZWQXV",
       meaning:
         "A clear alcoholic spirit distilled from grain or malt and flavored with juniper berries",
       pronunciation: "jĭn",

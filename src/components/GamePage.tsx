@@ -977,7 +977,7 @@ function GamePage() {
                 </div>
               )}
 
-              <div className="relative w-full h-[250px] sm:h-[300px] bg-white/50 rounded-xl p-4">
+              <div className="relative w-full h-[250px] sm:h-[300px] bg-white/50 rounded-xl p-4 border border-blue-100 shadow-sm">
                 {letters.map((letter) => (
                   <div
                     key={letter.id}
@@ -1010,7 +1010,7 @@ function GamePage() {
             </div>
           </main>
 
-          <div className="text-center mt-6 mb-8 p-4 bg-white/80 rounded-lg shadow-sm">
+          <div className="text-center mt-6 mb-8 p-4 bg-white/80 rounded-lg shadow-sm border border-blue-100">
             <p className="text-gray-600">
               <span className="font-semibold">Hint:</span> {currentWordData?.hint}
             </p>
@@ -1026,13 +1026,19 @@ function GamePage() {
             </div>
             <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
               <div 
-                className={`bg-gradient-to-r from-blue-500 to-purple-600 h-4 rounded-full transition-all duration-700 ease-out flex items-center justify-end
-                  ${progressAnimation ? 'animate-pulse-once' : ''} 
-                  ${completedWords.size > 0 && topic?.words && completedWords.size === topic.words.length ? 'animate-progress-complete' : ''}`}
+                className="bg-blue-300 h-4 rounded-full transition-all duration-500 flex items-center justify-center relative overflow-hidden"
                 style={{ width: `${topic?.words.length ? (completedWords.size / topic.words.length) * 100 : 0}%` }}
+                role="progressbar" 
+                aria-valuenow={topic?.words.length ? (completedWords.size / topic.words.length) * 100 : 0} 
+                aria-valuemin={0} 
+                aria-valuemax={100}
               >
+                <div className="absolute inset-0 bg-white bg-opacity-30 overflow-hidden animate-progress-stripes" style={{ 
+                  backgroundImage: 'linear-gradient(45deg, rgba(255,255,255,.25) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.25) 50%, rgba(255,255,255,.25) 75%, transparent 75%, transparent)', 
+                  backgroundSize: '1rem 1rem'
+                }}></div>
                 {completedWords.size > 0 && topic?.words && completedWords.size === topic.words.length && (
-                  <span className="text-xs text-white px-2 font-bold animate-bounce">Complete!</span>
+                  <span className="text-xs text-white px-2 font-bold animate-bounce relative z-10">Complete!</span>
                 )}
               </div>
             </div>

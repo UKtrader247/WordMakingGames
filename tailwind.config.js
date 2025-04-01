@@ -8,6 +8,7 @@ export default {
         'fade-in': 'fadeIn 0.3s ease-in-out',
         'pulse-once': 'pulseOnce 1s ease-in-out',
         'progress-complete': 'progressComplete 2s ease-in-out infinite alternate',
+        'progress-stripes': 'progressStripes 1s linear infinite',
       },
       keyframes: {
         fadeIn: {
@@ -22,6 +23,10 @@ export default {
         progressComplete: {
           '0%': { backgroundPosition: '0% 50%', backgroundSize: '100% 100%' },
           '100%': { backgroundPosition: '100% 50%', backgroundSize: '200% 100%' }
+        },
+        progressStripes: {
+          '0%': { backgroundPosition: '0 0' },
+          '100%': { backgroundPosition: '20px 0' }
         }
       }
     },

@@ -41,6 +41,7 @@ function GamePage() {
   const [completedWords, setCompletedWords] = useState<Set<string>>(new Set());
   const [usedSolve, setUsedSolve] = useState(false);
   const [toast, setToast] = useState<{ message: string, type: 'success' | 'error' } | null>(null);
+  const [progressAnimation, setProgressAnimation] = useState(false);
 
   // Add new state for touch handling
   const [touchedLetter, setTouchedLetter] = useState<Letter | null>(null);
@@ -197,8 +198,85 @@ function GamePage() {
       navigate('/');
       return;
     }
-    initializeGame();
-  }, [topicId]);
+    
+    // Make sure we track if the component is still mounted
+    let isMounted = true;
+    console.log('GamePage mounting for topic:', topicId);
+    
+    // First load game state
+    const initializeGameFlow = async () => {
+      try {
+        console.log('Starting initialization flow');
+        
+        // Check if we have saved state first
+        const savedState = localStorage.getItem(`gameState_${topicId}`);
+        if (savedState) {
+          console.log('Found saved state:', savedState);
+          try {
+            const parsedState = JSON.parse(savedState);
+            
+            // Set score first
+            if (parsedState.score) {
+              console.log('Setting score from saved state:', parsedState.score);
+              setScore(parsedState.score);
+            }
+            
+            // Then set completed words
+            if (parsedState.completedWords && Array.isArray(parsedState.completedWords)) {
+              console.log('Setting completed words from saved state:', parsedState.completedWords.length);
+              setCompletedWords(new Set(parsedState.completedWords));
+            }
+            
+            // Finally handle current word if needed
+            if (parsedState.currentWord) {
+              // Find the word data for the saved word
+              const savedWordData = topic.words.find(w => w.word === parsedState.currentWord);
+              if (savedWordData) {
+                console.log('Resuming saved word:', parsedState.currentWord);
+                setCurrentWordData(savedWordData);
+                // Short delay to ensure state is set before initializing
+                await new Promise(resolve => setTimeout(resolve, 50));
+                // Reinitialize the game with the saved word
+                initializeGameWithWord(savedWordData);
+                return; // Exit early as we've initialized with saved word
+              }
+            }
+          } catch (err) {
+            console.error('Error parsing saved state:', err);
+          }
+        } else {
+          console.log('No saved state found for topic:', topicId);
+        }
+        
+        // If we get here, either no saved state or couldn't use saved word
+        // Short delay to ensure state updates have propagated
+        await new Promise(resolve => setTimeout(resolve, 50));
+        
+        // Only initialize if still mounted
+        if (isMounted) {
+          console.log('Initializing new game');
+          initializeGame();
+        }
+      } catch (err) {
+        console.error('Error in game initialization:', err);
+        // Fallback to initializing a new game
+        if (isMounted) initializeGame();
+      }
+    };
+    
+    // Start the initialization flow
+    initializeGameFlow();
+    
+    // Save state when component unmounts
+    return () => {
+      isMounted = false;
+      console.log('GamePage unmounting, saving final state');
+      // Save game state one last time when leaving
+      if (topic && topicId && (completedWords.size > 0 || score > 0)) {
+        saveGameState();
+      }
+    };
+  }, [topicId]); // Only run when topicId changes
 
   const handleDragStart = (e: React.DragEvent, letterId: string) => {
     e.dataTransfer.setData('text/plain', letterId);
@@ -222,6 +300,13 @@ function GamePage() {
         // Add word to completed words
         const newCompletedWords = new Set([...completedWords, currentWordData.word]);
         setCompletedWords(newCompletedWords);
+        
+        // Immediately save progress to ensure it's not lost on page leave
+        saveGameState();
+        
+        // Trigger progress bar animation
+        setProgressAnimation(true);
+        setTimeout(() => setProgressAnimation(false), 1000);
 
         // Check if all words in the topic are completed
         if (newCompletedWords.size === topic?.words.length) {
@@ -336,6 +421,13 @@ function GamePage() {
       // Add word to completed words
       const newCompletedWords = new Set([...completedWords, currentWordData.word]);
       setCompletedWords(newCompletedWords);
+      
+      // Immediately save progress to ensure it's not lost on page leave
+      saveGameState();
+      
+      // Trigger progress bar animation
+      setProgressAnimation(true);
+      setTimeout(() => setProgressAnimation(false), 1000);
 
       // Check if all words in the topic are completed
       if (newCompletedWords.size === topic?.words.length) {
@@ -518,6 +610,13 @@ function GamePage() {
     // Mark all words as completed
     const allWords = new Set(topic.words.map(word => word.word));
     setCompletedWords(allWords);
+    
+    // Immediately save progress to ensure it's not lost on page leave
+    saveGameState();
+    
+    // Trigger progress bar animation
+    setProgressAnimation(true);
+    setTimeout(() => setProgressAnimation(false), 1000);
 
     // Show trophy celebration
     setShowCelebration(true);
@@ -609,9 +708,12 @@ function GamePage() {
     }
   }, [currentWordData, topic]);
 
-  // Add save game state function
+  // Update the saveGameState function to be more reliable
   const saveGameState = () => {
     try {
+      if (!topic || !topicId) return;
+      
+      console.log('Saving game state for topic:', topicId);
       const gameState = {
         topicId,
         completedWords: Array.from(completedWords),
@@ -620,49 +722,52 @@ function GamePage() {
         lastSaved: new Date().toISOString(),
         version: '1.0'
       };
-      localStorage.setItem(`gameState_${topicId}`, JSON.stringify(gameState));
+      
+      // Ensure we're using stringify correctly
+      const gameStateString = JSON.stringify(gameState);
+      console.log('Saving game state:', gameStateString);
+      
+      // Save to topic-specific storage
+      localStorage.setItem(`gameState_${topicId}`, gameStateString);
+      console.log(`Saved ${completedWords.size} completed words for topic ${topicId}`);
+      
+      // Also update global completed words list
+      try {
+        // Get existing global completed words
+        const existingGlobalData = localStorage.getItem('completedWords');
+        let allCompletedWords: string[] = [];
+        
+        if (existingGlobalData) {
+          const parsed = JSON.parse(existingGlobalData);
+          if (Array.isArray(parsed)) {
+            // Filter out any words from this topic (to avoid duplicates)
+            const topicWords = topic.words.map(w => w.word);
+            allCompletedWords = parsed.filter(word => !topicWords.includes(word));
+          }
+        }
+        
+        // Add current topic's completed words
+        allCompletedWords = [...allCompletedWords, ...Array.from(completedWords)];
+        
+        // Save back to global storage
+        localStorage.setItem('completedWords', JSON.stringify(allCompletedWords));
+        console.log('Updated global completed words list, new length:', allCompletedWords.length);
+      } catch (e) {
+        console.error('Error updating global completed words:', e);
+      }
+      
+      // Add special debug indicator for easier troubleshooting
+      localStorage.setItem('saveTimestamp', new Date().toISOString());
     } catch (error) {
       console.error('Error saving game state:', error);
     }
   };
 
-  // Add load game state function
-  const loadGameState = () => {
-    try {
-      const savedState = localStorage.getItem(`gameState_${topicId}`);
-      if (savedState) {
-        const parsedState = JSON.parse(savedState);
-        if (parsedState.completedWords) {
-          setCompletedWords(new Set(parsedState.completedWords));
-        }
-        if (parsedState.score) {
-          setScore(parsedState.score);
-        }
-        if (parsedState.currentWord) {
-          // Find the word data for the saved word
-          const savedWordData = topic?.words.find(w => w.word === parsedState.currentWord);
-          if (savedWordData) {
-            setCurrentWordData(savedWordData);
-            // Reinitialize the game with the saved word
-            initializeGameWithWord(savedWordData);
-          }
-        }
-      }
-    } catch (error) {
-      console.error('Error loading game state:', error);
-    }
-  };
-
-  // Load saved game state on component mount
+  // Update the saveGameState calls to be more immediate and reliable
   useEffect(() => {
-    if (topicId) {
-      loadGameState();
-    }
-  }, [topicId]);
-
-  // Auto-save game state periodically and when state changes
-  useEffect(() => {
-    if (topicId) {
+    // Only save when we have meaningful data
+    if (topicId && topic && (completedWords.size > 0 || score > 0)) {
+      console.log('Auto-saving game state due to state change');
       saveGameState();
     }
   }, [completedWords, score, currentWordData]);
@@ -919,13 +1024,15 @@ function GamePage() {
                 {completedWords.size} / {topic?.words.length || 0} words
               </span>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
+            <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
               <div 
-                className="bg-gradient-to-r from-blue-500 to-purple-600 h-4 rounded-full transition-all duration-500 flex items-center justify-end"
+                className={`bg-gradient-to-r from-blue-500 to-purple-600 h-4 rounded-full transition-all duration-700 ease-out flex items-center justify-end
+                  ${progressAnimation ? 'animate-pulse-once' : ''} 
+                  ${completedWords.size > 0 && topic?.words && completedWords.size === topic.words.length ? 'animate-progress-complete' : ''}`}
                 style={{ width: `${topic?.words.length ? (completedWords.size / topic.words.length) * 100 : 0}%` }}
               >
                 {completedWords.size > 0 && topic?.words && completedWords.size === topic.words.length && (
-                  <span className="text-xs text-white px-2">Complete!</span>
+                  <span className="text-xs text-white px-2 font-bold animate-bounce">Complete!</span>
                 )}
               </div>
             </div>

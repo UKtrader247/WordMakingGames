@@ -1048,10 +1048,14 @@ function GamePage() {
             <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
               <div className="bg-white p-8 rounded-xl text-center max-w-lg w-full mx-4">
                 <Sparkles className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
-                <h2 className="text-2xl font-bold text-green-700 mb-4">
-                  Congratulations!
+                <h2 className="text-2xl font-bold mb-4" style={{ color: usedSolve ? '#6B7280' : '#15803D' }}>
+                  {usedSolve ? 'Word Solved' : 'Congratulations!'}
                 </h2>
-                <p className="text-gray-600 mb-2">You successfully formed the word!</p>
+                <p className="text-gray-600 mb-2">
+                  {usedSolve 
+                    ? 'Solved with help! It\'s okay to get a little boost. Ready for the next challenge?' 
+                    : 'You successfully formed the word!'}
+                </p>
                 
                 {/* Word Details Section */}
                 <div className="mt-4 mb-6 text-left bg-gray-50 p-4 rounded-lg">

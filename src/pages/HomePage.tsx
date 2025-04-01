@@ -116,18 +116,34 @@ function HomePage() {
     debugLocalStorage();
   }, []);
 
-  // Filter and sort topics based on search term
+  // Filter and sort topics based on search term and category
   const filteredTopics = useMemo(() => {
-    if (!searchTerm.trim()) return topics;
-
     const lowerSearchTerm = searchTerm.toLowerCase();
     
-    return topics
-      .filter(topic => 
+    // Define category mappings
+    const categoryMappings = {
+      'nature': ['nature', 'animals', 'flowers', 'ocean', 'astronomy', 'space'],
+      'art': ['art', 'colors', 'movies', 'music', 'literature', 'fashion', 'architecture'],
+      'technology': ['technology', 'programming', 'electronics', 'gaming'],
+      'travel': ['travel', 'geography', 'history', 'mythology']
+    };
+    
+    // Filter by search term or category
+    let filtered = topics;
+    
+    if (['nature', 'art', 'technology', 'travel'].includes(lowerSearchTerm)) {
+      // Category filter
+      const categoryTopics = categoryMappings[lowerSearchTerm as keyof typeof categoryMappings] || [];
+      filtered = topics.filter(topic => categoryTopics.includes(topic.id.toLowerCase()));
+    } else if (lowerSearchTerm) {
+      // Text search
+      filtered = topics.filter(topic => 
         topic.name.toLowerCase().includes(lowerSearchTerm) || 
         topic.description.toLowerCase().includes(lowerSearchTerm)
-      )
-      .sort((a, b) => {
+      );
+      
+      // Sort by relevance for text search
+      filtered = filtered.sort((a, b) => {
         // Prioritize topics where the search term is in the name
         const aNameMatch = a.name.toLowerCase().includes(lowerSearchTerm);
         const bNameMatch = b.name.toLowerCase().includes(lowerSearchTerm);
@@ -144,6 +160,9 @@ function HomePage() {
         // By default, sort alphabetically
         return a.name.localeCompare(b.name);
       });
+    }
+    
+    return filtered;
   }, [searchTerm]);
 
   // For testing - add function to mark a topic as completed
@@ -288,7 +307,7 @@ function HomePage() {
                 )}
               </div>
 
-              <div className="mb-6 flex flex-wrap justify-center gap-2">
+              <div className="flex flex-wrap justify-center gap-2 mb-8">
                 <button 
                   onClick={() => setSearchTerm('')}
                   className={`px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 ${!searchTerm ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}

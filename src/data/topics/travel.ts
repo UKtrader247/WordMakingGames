@@ -73,7 +73,7 @@ export const travelTopic: Topic = {
     {
       word: "ITINERARY",
       hint: "Travel plan",
-      extraLetters: "ABCDFG",
+      extraLetters: "ITNERAYQP",
       meaning:
         "A planned route or journey, often including the times and places you will visit",
       pronunciation: "ī-tĭn′ə-rĕr′ē",
@@ -81,7 +81,7 @@ export const travelTopic: Topic = {
     {
       word: "HOTEL",
       hint: "Lodging establishment",
-      extraLetters: "BCDFGJ",
+      extraLetters: "HOTELZXQP",
       meaning:
         "An establishment providing accommodations, meals, and other services for travelers and tourists",
       pronunciation: "hō-tĕl′",
@@ -89,7 +89,7 @@ export const travelTopic: Topic = {
     {
       word: "MOTEL",
       hint: "Roadside lodging",
-      extraLetters: "CDFHJK",
+      extraLetters: "MOTELZXQP",
       meaning:
         "A hotel designed for motorists, typically having direct access from rooms to parking area",
       pronunciation: "mō-tĕl′",
@@ -97,7 +97,7 @@ export const travelTopic: Topic = {
     {
       word: "HOSTEL",
       hint: "Budget accommodation",
-      extraLetters: "ABCDFG",
+      extraLetters: "HOSTELZXQ",
       meaning:
         "Inexpensive lodging for travelers, typically with dormitory-style sleeping arrangements",
       pronunciation: "hŏs′təl",
@@ -105,7 +105,7 @@ export const travelTopic: Topic = {
     {
       word: "RESORT",
       hint: "Vacation retreat",
-      extraLetters: "BCDFGJ",
+      extraLetters: "RESOTZXQP",
       meaning:
         "A place frequented for holidays or recreation, often with accommodations and amenities",
       pronunciation: "rĭ-zôrt′",
@@ -113,7 +113,7 @@ export const travelTopic: Topic = {
     {
       word: "CABIN",
       hint: "Small shelter",
-      extraLetters: "CDFHJK",
+      extraLetters: "CABINZXQP",
       meaning:
         "A small simple dwelling or shelter, often in a rural or remote location",
       pronunciation: "kăb′ĭn",
@@ -121,7 +121,7 @@ export const travelTopic: Topic = {
     {
       word: "CRUISE",
       hint: "Ship vacation",
-      extraLetters: "ABCDFG",
+      extraLetters: "CRUISEZXQ",
       meaning:
         "A voyage on a ship or boat taken for pleasure, typically calling at several places",
       pronunciation: "kro͞oz",
@@ -129,7 +129,7 @@ export const travelTopic: Topic = {
     {
       word: "AIRPLANE",
       hint: "Flying vehicle",
-      extraLetters: "BCDFGJ",
+      extraLetters: "AIRPLNEXQ",
       meaning:
         "A powered flying vehicle with fixed wings and a weight greater than that of the air it displaces",
       pronunciation: "âr′plān′",
@@ -137,7 +137,7 @@ export const travelTopic: Topic = {
     {
       word: "AIRPORT",
       hint: "Flight hub",
-      extraLetters: "CDFHJK",
+      extraLetters: "AIRPOTZXQ",
       meaning:
         "A complex of runways and buildings for the takeoff, landing, and maintenance of aircraft",
       pronunciation: "âr′pôrt′",
@@ -145,7 +145,7 @@ export const travelTopic: Topic = {
     {
       word: "TERMINAL",
       hint: "Transport station",
-      extraLetters: "ABCDFG",
+      extraLetters: "TERMINALZX",
       meaning:
         "A building where passengers can board and exit transportation vehicles",
       pronunciation: "tûr′mə-nəl",
@@ -153,7 +153,7 @@ export const travelTopic: Topic = {
     {
       word: "TAXI",
       hint: "Hired transport",
-      extraLetters: "BCDFGJ",
+      extraLetters: "TAXIZXQPW",
       meaning:
         "A motor vehicle licensed to transport passengers in return for payment of a fare",
       pronunciation: "tăk′sē",
@@ -161,7 +161,7 @@ export const travelTopic: Topic = {
     {
       word: "TRAIN",
       hint: "Rail transport",
-      extraLetters: "CDFHJK",
+      extraLetters: "TRAINZXQP",
       meaning:
         "A connected series of vehicles that runs on rails and transports people or freight",
       pronunciation: "trān",
@@ -169,7 +169,7 @@ export const travelTopic: Topic = {
     {
       word: "BUS",
       hint: "Public transport",
-      extraLetters: "ABCDFG",
+      extraLetters: "BUSZXQPWV",
       meaning:
         "A large motor vehicle designed to carry passengers, typically along a fixed route",
       pronunciation: "bŭs",
@@ -177,7 +177,7 @@ export const travelTopic: Topic = {
     {
       word: "SUBWAY",
       hint: "Underground train",
-      extraLetters: "BCDFGJ",
+      extraLetters: "SUBWAYZXQ",
       meaning:
         "An underground railway system in a city, also known as metro in some countries",
       pronunciation: "sŭb′wā′",
@@ -185,7 +185,7 @@ export const travelTopic: Topic = {
     {
       word: "FERRY",
       hint: "Boat transport",
-      extraLetters: "CDFHJK",
+      extraLetters: "FERRYZXQP",
       meaning:
         "A boat or ship for conveying passengers and goods across a body of water",
       pronunciation: "fĕr′ē",
@@ -193,7 +193,7 @@ export const travelTopic: Topic = {
     {
       word: "RENTAL",
       hint: "Temporary hire",
-      extraLetters: "ABCDFG",
+      extraLetters: "RENTALZXQ",
       meaning:
         "Something, especially a car or property, that is rented or is available for renting",
       pronunciation: "rĕn′tl",
@@ -201,7 +201,7 @@ export const travelTopic: Topic = {
     {
       word: "BEACH",
       hint: "Sandy shore",
-      extraLetters: "BCDFGJ",
+      extraLetters: "BEACHZXQP",
       meaning:
         "A pebbly or sandy shore, especially by the sea between high and low water marks",
       pronunciation: "bēch",
@@ -209,7 +209,7 @@ export const travelTopic: Topic = {
     {
       word: "MOUNTAIN",
       hint: "Elevated landform",
-      extraLetters: "CDFHJK",
+      extraLetters: "MOUNTAIZXQ",
       meaning:
         "A large natural elevation of the earth's surface rising abruptly from the surrounding level",
       pronunciation: "moun′tn",
@@ -217,14 +217,14 @@ export const travelTopic: Topic = {
     {
       word: "ISLAND",
       hint: "Land surrounded by water",
-      extraLetters: "ABCDFG",
+      extraLetters: "ISLANDZXQ",
       meaning: "A piece of land surrounded by water",
       pronunciation: "ī′lənd",
     },
     {
       word: "CITY",
       hint: "Urban area",
-      extraLetters: "BCDFGJ",
+      extraLetters: "CITYZXQPW",
       meaning:
         "A large town, typically with a significant population and urban infrastructure",
       pronunciation: "sĭt′ē",
@@ -232,7 +232,7 @@ export const travelTopic: Topic = {
     {
       word: "LANDMARK",
       hint: "Famous location",
-      extraLetters: "CDFHJK",
+      extraLetters: "LANDMRKZX",
       meaning:
         "A building or feature that is easily recognized and serves as a guide or point of reference",
       pronunciation: "lănd′märk′",
@@ -240,7 +240,7 @@ export const travelTopic: Topic = {
     {
       word: "TOURIST",
       hint: "Recreational traveler",
-      extraLetters: "ABCDFG",
+      extraLetters: "TOURISTZX",
       meaning:
         "A person who travels for pleasure, typically sightseeing and staying in hotels",
       pronunciation: "to͝or′ĭst",
@@ -248,7 +248,7 @@ export const travelTopic: Topic = {
     {
       word: "SOUVENIR",
       hint: "Travel memento",
-      extraLetters: "BCDFGJ",
+      extraLetters: "SOUVENIRZ",
       meaning:
         "A thing that is kept as a reminder of a person, place, or event",
       pronunciation: "so͞o′və-nîr′",
@@ -256,7 +256,7 @@ export const travelTopic: Topic = {
     {
       word: "GUIDE",
       hint: "Travel leader",
-      extraLetters: "CDFHJK",
+      extraLetters: "GUIDEZXQP",
       meaning:
         "A person who shows the way to others, especially tourists or travelers",
       pronunciation: "gīd",
@@ -264,7 +264,7 @@ export const travelTopic: Topic = {
     {
       word: "TOUR",
       hint: "Organized journey",
-      extraLetters: "ABCDFG",
+      extraLetters: "TOURZXQPW",
       meaning:
         "A journey for pleasure in which several different places are visited",
       pronunciation: "to͝or",
@@ -272,7 +272,7 @@ export const travelTopic: Topic = {
     {
       word: "SAFARI",
       hint: "Wildlife expedition",
-      extraLetters: "BCDFGJ",
+      extraLetters: "SAFARIZXQ",
       meaning:
         "An expedition to observe or hunt animals in their natural habitat, especially in East Africa",
       pronunciation: "sə-fär′ē",
@@ -280,7 +280,7 @@ export const travelTopic: Topic = {
     {
       word: "HIKE",
       hint: "Long walk",
-      extraLetters: "CDFHJK",
+      extraLetters: "HIKEZXQPW",
       meaning:
         "A long walk or walking tour for pleasure or exercise, especially in a rural area",
       pronunciation: "hīk",
@@ -288,14 +288,14 @@ export const travelTopic: Topic = {
     {
       word: "TREK",
       hint: "Difficult journey",
-      extraLetters: "ABCDFG",
+      extraLetters: "TREKZXQPW",
       meaning: "A long arduous journey, especially one made on foot",
       pronunciation: "trĕk",
     },
     {
       word: "CAMPING",
       hint: "Outdoor lodging",
-      extraLetters: "BCDFGJ",
+      extraLetters: "CAMPINGZX",
       meaning:
         "The activity of spending a vacation living in a camp, tent, or camper",
       pronunciation: "kăm′pĭng",
@@ -303,7 +303,7 @@ export const travelTopic: Topic = {
     {
       word: "ADVENTURE",
       hint: "Exciting experience",
-      extraLetters: "CDFHJK",
+      extraLetters: "ADVENTURZ",
       meaning:
         "An unusual and exciting or daring experience, typically involving travel",
       pronunciation: "əd-vĕn′chər",
@@ -311,14 +311,14 @@ export const travelTopic: Topic = {
     {
       word: "EXCURSION",
       hint: "Short trip",
-      extraLetters: "ABCDFG",
+      extraLetters: "EXCURSION",
       meaning: "A short journey or trip, especially one taken for pleasure",
       pronunciation: "ĭk-skûr′zhən",
     },
     {
       word: "VACATION",
       hint: "Leisure travel",
-      extraLetters: "BCDFGJ",
+      extraLetters: "VACATIONZ",
       meaning:
         "An extended period of leisure and recreation, especially one spent away from home",
       pronunciation: "vā-kā′shən",
@@ -326,7 +326,7 @@ export const travelTopic: Topic = {
     {
       word: "HOLIDAY",
       hint: "Time off travel",
-      extraLetters: "CDFHJK",
+      extraLetters: "HOLIDAYZX",
       meaning:
         "A day of festivity or recreation when no work is done, often involving travel",
       pronunciation: "hŏl′ĭ-dā′",
@@ -334,7 +334,7 @@ export const travelTopic: Topic = {
     {
       word: "CHECKIN",
       hint: "Arrival process",
-      extraLetters: "ABCDFG",
+      extraLetters: "CHECKINZX",
       meaning:
         "The action of registering one's arrival at a hotel, airport, or other venue",
       pronunciation: "chĕk′ĭn′",
@@ -342,7 +342,7 @@ export const travelTopic: Topic = {
     {
       word: "CHECKOUT",
       hint: "Departure process",
-      extraLetters: "BCDFGJ",
+      extraLetters: "CHECKOUTZ",
       meaning:
         "The action of paying for goods or services and leaving a hotel or other establishment",
       pronunciation: "chĕk′out′",
@@ -350,7 +350,7 @@ export const travelTopic: Topic = {
     {
       word: "BOARDING",
       hint: "Entry process",
-      extraLetters: "CDFHJK",
+      extraLetters: "BOARDINGZ",
       meaning:
         "The process of getting on a plane, train, ship, or other vehicle",
       pronunciation: "bôr′dĭng",
@@ -358,14 +358,14 @@ export const travelTopic: Topic = {
     {
       word: "FLIGHT",
       hint: "Air journey",
-      extraLetters: "ABCDFG",
+      extraLetters: "FLIGHTZXQ",
       meaning: "A journey made by flying, especially in an aircraft",
       pronunciation: "flīt",
     },
     {
       word: "LAYOVER",
       hint: "Transit stop",
-      extraLetters: "BCDFGJ",
+      extraLetters: "LAYOVERZX",
       meaning:
         "A period of rest or waiting before a further stage in a journey",
       pronunciation: "lā′ō′vər",
@@ -373,7 +373,7 @@ export const travelTopic: Topic = {
     {
       word: "CUSTOMS",
       hint: "Border control",
-      extraLetters: "CDFHJK",
+      extraLetters: "CUSTOMSZX",
       meaning:
         "The official department that administers and collects duties on imported goods",
       pronunciation: "kŭs′təmz",
@@ -381,7 +381,7 @@ export const travelTopic: Topic = {
     {
       word: "JETLAG",
       hint: "Time zone fatigue",
-      extraLetters: "ABCDFG",
+      extraLetters: "JETLAGZXQ",
       meaning:
         "Extreme tiredness and other physical effects felt by a person after a long flight across time zones",
       pronunciation: "jĕt′lăg′",
@@ -389,7 +389,7 @@ export const travelTopic: Topic = {
     {
       word: "CRUISE",
       hint: "Sea voyage",
-      extraLetters: "BCDFGJ",
+      extraLetters: "CRUISEZXQ",
       meaning:
         "A voyage on a ship or boat taken for pleasure, typically calling at several places",
       pronunciation: "kro͞oz",
@@ -397,7 +397,7 @@ export const travelTopic: Topic = {
     {
       word: "ABROAD",
       hint: "Overseas",
-      extraLetters: "CDFHJK",
+      extraLetters: "ABROADZXQ",
       meaning: "In or to a foreign country or countries",
       pronunciation: "ə-brôd′",
     },

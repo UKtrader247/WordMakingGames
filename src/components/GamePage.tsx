@@ -339,7 +339,10 @@ function GamePage() {
           }
         }
 
-        triggerConfetti();
+        // Only show confetti when the user solves the word themselves
+        if (!usedSolve) {
+          triggerConfetti();
+        }
       } else {
         setShowError(true);
         
@@ -461,7 +464,9 @@ function GamePage() {
         }
       }
 
-      triggerConfetti();
+      // Don't trigger confetti when using the solve button
+      // triggerConfetti(); - removed
+      
       setShowScoreAnimation(true);
       setTimeout(() => setShowScoreAnimation(false), 1500);
     }, 500);

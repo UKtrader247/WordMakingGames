@@ -42,10 +42,15 @@ function GamePage() {
   const [usedSolve, setUsedSolve] = useState(false);
   const [toast, setToast] = useState<{ message: string, type: 'success' | 'error' } | null>(null);
   const [progressAnimation, setProgressAnimation] = useState(false);
+  const [timerStartTime, setTimerStartTime] = useState(Date.now());
+  const [timerText, setTimerText] = useState('00:00:00');
 
   // Add new state for touch handling
   const [touchedLetter, setTouchedLetter] = useState<Letter | null>(null);
   const gameAreaRef = useRef<HTMLDivElement>(null);
+  
+  // Timer animation frame reference
+  const requestRef = useRef<number>();
 
   // Add this new state
   const [showCelebration, setShowCelebration] = useState(false);
@@ -386,6 +391,7 @@ function GamePage() {
 
   const resetGame = () => {
     initializeGame();
+    setTimerStartTime(Date.now()); // Reset timer
     setToast({
       message: 'Moving to next word',
       type: 'success'
@@ -568,6 +574,41 @@ function GamePage() {
     setIsDragging(false);
     setTouchedLetter(null);
   };
+
+  // Timer tick function
+  const timerTick = () => {
+    if (success) return;
+
+    const now = Date.now();
+    const elapsed = now - timerStartTime;
+    
+    const minutes = Math.floor((elapsed % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((elapsed % (1000 * 60)) / 1000);
+    
+    const formattedMinutes = minutes.toString().padStart(2, '0');
+    const formattedSeconds = seconds.toString().padStart(2, '0');
+    
+    setTimerText(`${formattedMinutes}:${formattedSeconds}`);
+    
+    requestRef.current = requestAnimationFrame(timerTick);
+  };
+
+  // Start the timer
+  useEffect(() => {
+    requestRef.current = requestAnimationFrame(timerTick);
+    return () => {
+      if (requestRef.current) {
+        cancelAnimationFrame(requestRef.current);
+      }
+    };
+  }, [timerStartTime, success]);
+
+  // Reset timer when loading a new word
+  useEffect(() => {
+    if (!success) {
+      setTimerStartTime(Date.now());
+    }
+  }, [currentWordData]);
 
   // Trophy celebration component
   const CompletionCelebration = ({ onClose }: { onClose: () => void }) => {
@@ -1002,6 +1043,23 @@ function GamePage() {
                     <span className="text-lg sm:text-xl font-bold text-blue-700">{letter.char}</span>
                   </div>
                 ))}
+                
+                {/* Chronograph Timer */}
+                <div className="absolute bottom-2 right-2 bg-blue-100 rounded-full h-12 w-12 flex items-center justify-center overflow-hidden z-10">
+                  <div className="timer-group relative h-full w-full">
+                    <div className="timer minute absolute inset-0 rounded-full overflow-hidden">
+                      <div className="hand"><span></span></div>
+                      <div className="hand"><span></span></div>
+                    </div>
+                    <div className="timer second absolute inset-0 rounded-full overflow-hidden" style={{ transform: 'scale(0.85)', margin: 'auto' }}>
+                      <div className="hand"><span></span></div>
+                      <div className="hand"><span></span></div>
+                    </div>
+                    <div className="face absolute inset-0 flex items-center justify-center rounded-full">
+                      <p id="timer-display" className="text-xs font-mono text-blue-700">{timerText}</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
 
@@ -1224,6 +1282,64 @@ function GamePage() {
       >
         Reset Topic Progress
       </button>
+
+      {/* Add Timer Styles */}
+      <style jsx>{`
+        .timer .hand span {
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+        }
+        
+        .timer .hand:first-child {
+          transform: rotate(180deg);
+        }
+        
+        .timer .hand:first-child span {
+          animation-name: spin1;
+        }
+        
+        .timer .hand:last-child span {
+          animation-name: spin2;
+        }
+        
+        .timer.minute .hand span {
+          animation-duration: 60s;
+          border-top-color: rgba(59, 130, 246, 0.6);
+          border-right-color: rgba(59, 130, 246, 0.6);
+        }
+        
+        .timer.second .hand span {
+          animation-duration: 1s;
+          border-top-color: rgba(59, 130, 246, 0.8);
+          border-right-color: rgba(59, 130, 246, 0.8);
+        }
+        
+        .timer .hand span {
+          border: 5px solid transparent;
+          border-bottom-color: transparent;
+          border-left-color: transparent;
+          border-radius: 50%;
+          display: block;
+          height: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          transform: rotate(225deg);
+          width: 0;
+        }
+        
+        @keyframes spin1 {
+          0% { transform: rotate(225deg); }
+          50% { transform: rotate(225deg); }
+          100% { transform: rotate(405deg); }
+        }
+        
+        @keyframes spin2 {
+          0% { transform: rotate(225deg); }
+          50% { transform: rotate(405deg); }
+          100% { transform: rotate(405deg); }
+        }
+      `}</style>
     </>
   );
 }

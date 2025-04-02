@@ -48,7 +48,7 @@ function GamePage() {
   // Add new state for touch handling
   const [touchedLetter, setTouchedLetter] = useState<Letter | null>(null);
   const gameAreaRef = useRef<HTMLDivElement>(null);
-  
+
   // Timer animation frame reference
   const requestRef = useRef<number>();
 
@@ -203,35 +203,35 @@ function GamePage() {
       navigate('/');
       return;
     }
-    
+
     // Make sure we track if the component is still mounted
     let isMounted = true;
     console.log('GamePage mounting for topic:', topicId);
-    
+
     // First load game state
     const initializeGameFlow = async () => {
       try {
         console.log('Starting initialization flow');
-        
+
         // Check if we have saved state first
         const savedState = localStorage.getItem(`gameState_${topicId}`);
         if (savedState) {
           console.log('Found saved state:', savedState);
           try {
             const parsedState = JSON.parse(savedState);
-            
+
             // Set score first
             if (parsedState.score) {
               console.log('Setting score from saved state:', parsedState.score);
               setScore(parsedState.score);
             }
-            
+
             // Then set completed words
             if (parsedState.completedWords && Array.isArray(parsedState.completedWords)) {
               console.log('Setting completed words from saved state:', parsedState.completedWords.length);
               setCompletedWords(new Set(parsedState.completedWords));
             }
-            
+
             // Finally handle current word if needed
             if (parsedState.currentWord) {
               // Find the word data for the saved word
@@ -252,11 +252,11 @@ function GamePage() {
         } else {
           console.log('No saved state found for topic:', topicId);
         }
-        
+
         // If we get here, either no saved state or couldn't use saved word
         // Short delay to ensure state updates have propagated
         await new Promise(resolve => setTimeout(resolve, 50));
-        
+
         // Only initialize if still mounted
         if (isMounted) {
           console.log('Initializing new game');
@@ -268,10 +268,10 @@ function GamePage() {
         if (isMounted) initializeGame();
       }
     };
-    
+
     // Start the initialization flow
     initializeGameFlow();
-    
+
     // Save state when component unmounts
     return () => {
       isMounted = false;
@@ -305,10 +305,10 @@ function GamePage() {
         // Add word to completed words
         const newCompletedWords = new Set([...completedWords, currentWordData.word]);
         setCompletedWords(newCompletedWords);
-        
+
         // Immediately save progress to ensure it's not lost on page leave
         saveGameState();
-        
+
         // Trigger progress bar animation
         setProgressAnimation(true);
         setTimeout(() => setProgressAnimation(false), 1000);
@@ -345,7 +345,7 @@ function GamePage() {
         }
       } else {
         setShowError(true);
-        
+
         const dropZoneElements = document.querySelectorAll('.drop-zone');
         dropZoneElements.forEach(element => {
           element.classList.add('shake');
@@ -367,21 +367,21 @@ function GamePage() {
 
     // Don't allow dropping on pre-filled letters
     if (dropZones[dropZoneIndex].isPrefilled) return;
-    
+
     // Don't allow dropping on zones that already have a letter
     if (dropZones[dropZoneIndex].letter !== null) return;
 
     const updatedDropZones = [...dropZones];
-    
+
     // Check if the letter is correct for this position
     const isCorrect = letter.char === currentWordData?.word[dropZoneIndex];
-    
-    updatedDropZones[dropZoneIndex] = { 
-      ...updatedDropZones[dropZoneIndex], 
+
+    updatedDropZones[dropZoneIndex] = {
+      ...updatedDropZones[dropZoneIndex],
       letter: letter.char,
-      isIncorrect: !isCorrect 
+      isIncorrect: !isCorrect
     };
-    
+
     setDropZones(updatedDropZones);
 
     setLetters(letters.filter(l => l.id !== letterId));
@@ -430,10 +430,10 @@ function GamePage() {
       // Add word to completed words
       const newCompletedWords = new Set([...completedWords, currentWordData.word]);
       setCompletedWords(newCompletedWords);
-      
+
       // Immediately save progress to ensure it's not lost on page leave
       saveGameState();
-      
+
       // Trigger progress bar animation
       setProgressAnimation(true);
       setTimeout(() => setProgressAnimation(false), 1000);
@@ -466,7 +466,7 @@ function GamePage() {
 
       // Don't trigger confetti when using the solve button
       // triggerConfetti(); - removed
-      
+
       setShowScoreAnimation(true);
       setTimeout(() => setShowScoreAnimation(false), 1500);
     }, 500);
@@ -555,16 +555,16 @@ function GamePage() {
 
           // Update dropzones with the letter
           const updatedDropZones = [...dropZones];
-          
+
           // Check if the letter is correct for this position
           const isCorrect = touchedLetter.char === currentWordData?.word[dropZoneIndex];
-          
-          updatedDropZones[dropZoneIndex] = { 
-            ...updatedDropZones[dropZoneIndex], 
+
+          updatedDropZones[dropZoneIndex] = {
+            ...updatedDropZones[dropZoneIndex],
             letter: touchedLetter.char,
-            isIncorrect: !isCorrect 
+            isIncorrect: !isCorrect
           };
-          
+
           setDropZones(updatedDropZones);
 
           // Remove the letter from available letters
@@ -586,15 +586,15 @@ function GamePage() {
 
     const now = Date.now();
     const elapsed = now - timerStartTime;
-    
+
     const minutes = Math.floor((elapsed % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((elapsed % (1000 * 60)) / 1000);
-    
+
     const formattedMinutes = minutes.toString().padStart(2, '0');
     const formattedSeconds = seconds.toString().padStart(2, '0');
-    
+
     setTimerText(`${formattedMinutes}:${formattedSeconds}`);
-    
+
     requestRef.current = requestAnimationFrame(timerTick);
   };
 
@@ -656,10 +656,10 @@ function GamePage() {
     // Mark all words as completed
     const allWords = new Set(topic.words.map(word => word.word));
     setCompletedWords(allWords);
-    
+
     // Immediately save progress to ensure it's not lost on page leave
     saveGameState();
-    
+
     // Trigger progress bar animation
     setProgressAnimation(true);
     setTimeout(() => setProgressAnimation(false), 1000);
@@ -702,13 +702,13 @@ function GamePage() {
   // New function to handle removing letters from dropzones when clicked
   const handleLetterClick = (dropZoneId: string) => {
     const dropZoneIndex = dropZones.findIndex(zone => zone.id === dropZoneId);
-    
+
     // Don't allow removing pre-filled letters
     if (dropZones[dropZoneIndex].isPrefilled) return;
-    
+
     const letter = dropZones[dropZoneIndex].letter;
     if (letter === null) return;
-    
+
     // Create a new letter object and add it back to the letters array
     const newLetter = {
       id: `letter-${Date.now()}`, // Create a unique ID
@@ -718,15 +718,15 @@ function GamePage() {
         y: 40 + (Math.random() * 20)
       }
     };
-    
+
     // Update the dropzones to remove the letter
     const updatedDropZones = [...dropZones];
-    updatedDropZones[dropZoneIndex] = { 
-      ...updatedDropZones[dropZoneIndex], 
+    updatedDropZones[dropZoneIndex] = {
+      ...updatedDropZones[dropZoneIndex],
       letter: null,
       isIncorrect: false // Remove the incorrect flag if it was set
     };
-    
+
     setDropZones(updatedDropZones);
     setLetters([...letters, newLetter]);
   };
@@ -758,7 +758,7 @@ function GamePage() {
   const saveGameState = () => {
     try {
       if (!topic || !topicId) return;
-      
+
       console.log('Saving game state for topic:', topicId);
       const gameState = {
         topicId,
@@ -768,21 +768,21 @@ function GamePage() {
         lastSaved: new Date().toISOString(),
         version: '1.0'
       };
-      
+
       // Ensure we're using stringify correctly
       const gameStateString = JSON.stringify(gameState);
       console.log('Saving game state:', gameStateString);
-      
+
       // Save to topic-specific storage
       localStorage.setItem(`gameState_${topicId}`, gameStateString);
       console.log(`Saved ${completedWords.size} completed words for topic ${topicId}`);
-      
+
       // Also update global completed words list
       try {
         // Get existing global completed words
         const existingGlobalData = localStorage.getItem('completedWords');
         let allCompletedWords: string[] = [];
-        
+
         if (existingGlobalData) {
           const parsed = JSON.parse(existingGlobalData);
           if (Array.isArray(parsed)) {
@@ -791,17 +791,17 @@ function GamePage() {
             allCompletedWords = parsed.filter(word => !topicWords.includes(word));
           }
         }
-        
+
         // Add current topic's completed words
         allCompletedWords = [...allCompletedWords, ...Array.from(completedWords)];
-        
+
         // Save back to global storage
         localStorage.setItem('completedWords', JSON.stringify(allCompletedWords));
         console.log('Updated global completed words list, new length:', allCompletedWords.length);
       } catch (e) {
         console.error('Error updating global completed words:', e);
       }
-      
+
       // Add special debug indicator for easier troubleshooting
       localStorage.setItem('saveTimestamp', new Date().toISOString());
     } catch (error) {
@@ -999,10 +999,10 @@ function GamePage() {
                   >
                     {zone.letter && (
                       <span className={`text-xl sm:text-2xl font-bold 
-                        ${zone.isPrefilled 
-                          ? 'text-blue-700' 
-                          : zone.isIncorrect 
-                            ? 'text-red-700' 
+                        ${zone.isPrefilled
+                          ? 'text-blue-700'
+                          : zone.isIncorrect
+                            ? 'text-red-700'
                             : 'text-green-700'}`}
                       >
                         {zone.letter}
@@ -1048,7 +1048,7 @@ function GamePage() {
                     <span className="text-lg sm:text-xl font-bold text-blue-700">{letter.char}</span>
                   </div>
                 ))}
-                
+
                 {/* Chronograph Timer */}
                 <div className="absolute bottom-2 right-2 bg-blue-100 rounded-full h-12 w-12 flex items-center justify-center overflow-hidden z-10">
                   <div className="timer-group relative h-full w-full">
@@ -1088,16 +1088,16 @@ function GamePage() {
               </span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
-              <div 
+              <div
                 className="bg-blue-300 h-4 rounded-full transition-all duration-500 flex items-center justify-center relative overflow-hidden"
                 style={{ width: `${topic?.words.length ? (completedWords.size / topic.words.length) * 100 : 0}%` }}
-                role="progressbar" 
-                aria-valuenow={topic?.words.length ? (completedWords.size / topic.words.length) * 100 : 0} 
-                aria-valuemin={0} 
+                role="progressbar"
+                aria-valuenow={topic?.words.length ? (completedWords.size / topic.words.length) * 100 : 0}
+                aria-valuemin={0}
                 aria-valuemax={100}
               >
-                <div className="absolute inset-0 bg-white bg-opacity-30 overflow-hidden animate-progress-stripes" style={{ 
-                  backgroundImage: 'linear-gradient(45deg, rgba(255,255,255,.25) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.25) 50%, rgba(255,255,255,.25) 75%, transparent 75%, transparent)', 
+                <div className="absolute inset-0 bg-white bg-opacity-30 overflow-hidden animate-progress-stripes" style={{
+                  backgroundImage: 'linear-gradient(45deg, rgba(255,255,255,.25) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.25) 50%, rgba(255,255,255,.25) 75%, transparent 75%, transparent)',
                   backgroundSize: '1rem 1rem'
                 }}></div>
                 {completedWords.size > 0 && topic?.words && completedWords.size === topic.words.length && (
@@ -1115,11 +1115,11 @@ function GamePage() {
                   {usedSolve ? 'Word Solved' : 'Congratulations!'}
                 </h2>
                 <p className="text-gray-600 mb-2">
-                  {usedSolve 
-                    ? 'Solved with help! It\'s okay to get a little boost. Ready for the next challenge?' 
+                  {usedSolve
+                    ? 'Solved with help! It\'s okay to get a little boost. Ready for the next challenge?'
                     : 'You successfully formed the word!'}
                 </p>
-                
+
                 {/* Word Details Section */}
                 <div className="mt-4 mb-6 text-left bg-gray-50 p-4 rounded-lg">
                   <h3 className="text-xl font-bold text-blue-800 mb-2">{currentWordData?.word}</h3>

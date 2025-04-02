@@ -1075,7 +1075,7 @@ function GamePage() {
 
           <div className="text-center mt-6 mb-8 p-4 bg-white/80 rounded-lg shadow-sm border border-blue-100">
             <p className="text-gray-600">
-              <span className="font-semibold">Hint:</span> {currentWordData?.hint}
+              <span className="font-semibold">💡 Hint:</span> {currentWordData?.hint}
             </p>
           </div>
 

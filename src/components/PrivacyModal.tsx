@@ -36,7 +36,7 @@ const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) => {
             
             <div className="prose dark:prose-invert max-w-none">
               <p className="text-gray-600 dark:text-gray-300 mb-5">
-                Welcome to WordMakingGames.com – a fun and educational project by Unique Evolutions Limited. We value your privacy and want to be transparent about how we handle your information.
+                Welcome to WordMakingGames.com – a fun and educational project by <a href="https://www.linkedin.com/in/sarder-iftekhar/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 hover:underline">Sarder Iftekhar</a>. We value your privacy and want to be transparent about how we handle your information.
               </p>
               
               <div className="space-y-5">
@@ -97,8 +97,8 @@ const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) => {
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">
                     If you have any questions or concerns about this Privacy Policy, feel free to reach out to us at: 
-                    <a href="mailto:contact@uniqevo.co.uk" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 ml-1 inline-flex items-center">
-                      contact@uniqevo.co.uk
+                    <a href="mailto:sarder2008@gmail.com" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 ml-1 inline-flex items-center">
+                      sarder2008@gmail.com
                       <ExternalLink className="h-3 w-3 ml-1" />
                     </a>
                   </p>

@@ -45,7 +45,7 @@ const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
               <div className="flex items-start space-x-3 my-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
                 <Shield className="h-5 w-5 mt-0.5 flex-shrink-0 text-blue-600 dark:text-blue-400" />
                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                  WordMakingGames.com is a project by Unique Evolutions Limited. It's created purely for educational and entertainment purposes. We don't store any personal data or collect any information from you. There's no sharing, no tracking – just clean fun and learning!
+                  WordMakingGames.com is a project by <a href="https://www.linkedin.com/in/sarder-iftekhar/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 hover:underline">Sarder Iftekhar</a>. It's created purely for educational and entertainment purposes. We don't store any personal data or collect any information from you. There's no sharing, no tracking – just clean fun and learning!
                 </p>
               </div>
               

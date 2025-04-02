@@ -47,10 +47,10 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                       You can reach us anytime at:
                     </p>
                     <a 
-                      href="mailto:contact@uniqevo.co.uk" 
+                      href="mailto:sarder2008@gmail.com" 
                       className="flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
                     >
-                      📧 contact@uniqevo.co.uk
+                      📧 sarder2008@gmail.com
                       <ExternalLink className="h-4 w-4 ml-1" />
                     </a>
                   </div>
@@ -69,7 +69,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
             
             <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700 flex justify-center">
               <div className="text-sm text-gray-500 dark:text-gray-400">
-                © {new Date().getFullYear()} Word Making Games | Unique Evolutions Limited
+                © {new Date().getFullYear()} Word Making Games | <a href="https://www.linkedin.com/in/sarder-iftekhar/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 hover:underline">Sarder Iftekhar</a>
               </div>
             </div>
           </div>

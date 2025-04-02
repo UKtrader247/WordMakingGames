@@ -165,7 +165,7 @@ export const fashionTopic: Topic = {
     {
       word: "TIE",
       hint: "Formal neck piece",
-      extraLetters: "PQWXYZ",
+      extraLetters: "TIEPQWXYZ",
       meaning:
         "A long, narrow piece of fabric worn around the neck and tied in a knot at the front with the ends hanging down",
       pronunciation: "tī",
@@ -173,14 +173,14 @@ export const fashionTopic: Topic = {
     {
       word: "PAJAMAS",
       hint: "Sleep clothes",
-      extraLetters: "PQWXYZ",
+      extraLetters: "PAJAMSPQWXYZ",
       meaning: "A loose-fitting jacket and pants for sleeping or lounging",
       pronunciation: "pə-jä′məz",
     },
     {
       word: "TANK",
       hint: "___ top",
-      extraLetters: "PQWXYZ",
+      extraLetters: "TANKPQWXYZ",
       meaning:
         "A sleeveless shirt with wide shoulder straps and a low-cut neck",
       pronunciation: "tăngk",
@@ -188,7 +188,7 @@ export const fashionTopic: Topic = {
     {
       word: "BIKINI",
       hint: "Two-piece swimwear",
-      extraLetters: "PQWXYZ",
+      extraLetters: "BIKINPQWXYZ",
       meaning:
         "A two-piece swimsuit for women consisting of a bra top and underwear",
       pronunciation: "bĭ-kē′nē",
@@ -196,14 +196,14 @@ export const fashionTopic: Topic = {
     {
       word: "SHORTS",
       hint: "Short pants",
-      extraLetters: "PQWXYZ",
+      extraLetters: "SHORTSPQWXYZ",
       meaning: "Pants that reach only to the knees or above",
       pronunciation: "shôrts",
     },
     {
       word: "HOODIE",
       hint: "Hooded sweatshirt",
-      extraLetters: "PQWXYZ",
+      extraLetters: "HOODIEPQWXYZ",
       meaning: "A sweatshirt with a hood attached",
       pronunciation: "ho͝od′ē",
     },
@@ -250,7 +250,7 @@ export const fashionTopic: Topic = {
     {
       word: "LEATHER",
       hint: "Animal skin material",
-      extraLetters: "PQWXYZ",
+      extraLetters: "LEATHERPQWXYZ",
       meaning:
         "Material made from the skin of an animal by tanning or a similar process",
       pronunciation: "lĕth′ər",
@@ -258,14 +258,14 @@ export const fashionTopic: Topic = {
     {
       word: "CHIFFON",
       hint: "Sheer fabric",
-      extraLetters: "PQWXYZ",
+      extraLetters: "CHIFFONPQWXYZ",
       meaning: "A lightweight, sheer fabric made of silk or synthetic material",
       pronunciation: "shĭ-fŏn′",
     },
     {
       word: "VELVET",
       hint: "Soft dense fabric",
-      extraLetters: "PQWXYZ",
+      extraLetters: "VELVETPQWXYZ",
       meaning:
         "A closely woven fabric of silk, cotton, or nylon, with a thick short pile on one side",
       pronunciation: "vĕl′vĭt",
@@ -273,7 +273,7 @@ export const fashionTopic: Topic = {
     {
       word: "CASHMERE",
       hint: "Soft goat wool",
-      extraLetters: "PQWXYZ",
+      extraLetters: "CASHMEREPQWXYZ",
       meaning:
         "Fine, soft wool from the Kashmir goat, used to make luxury clothing",
       pronunciation: "kăsh′mîr",
@@ -281,7 +281,7 @@ export const fashionTopic: Topic = {
     {
       word: "DESIGNER",
       hint: "Fashion creator",
-      extraLetters: "PQWXYZ",
+      extraLetters: "DESIGNERPQWXYZ",
       meaning:
         "A person who plans the form, look, or workings of something before its creation",
       pronunciation: "dĭ-zī′nər",
@@ -289,7 +289,7 @@ export const fashionTopic: Topic = {
     {
       word: "RUNWAY",
       hint: "Fashion show walkway",
-      extraLetters: "PQWXYZ",
+      extraLetters: "RUNWAYPQWXYZ",
       meaning:
         "A raised platform along which models walk to display clothes in a fashion show",
       pronunciation: "rŭn′wā′",
@@ -297,14 +297,14 @@ export const fashionTopic: Topic = {
     {
       word: "MODEL",
       hint: "Fashion display person",
-      extraLetters: "PQWXYZ",
+      extraLetters: "MODELPQWXYZ",
       meaning: "A person employed to display clothes by wearing them",
       pronunciation: "mŏd′l",
     },
     {
       word: "TREND",
       hint: "Popular style",
-      extraLetters: "PQWXYZ",
+      extraLetters: "TRENDPQWXYZ",
       meaning:
         "A general direction in which fashion or style is developing or changing",
       pronunciation: "trĕnd",
@@ -312,7 +312,7 @@ export const fashionTopic: Topic = {
     {
       word: "VINTAGE",
       hint: "Old style clothing",
-      extraLetters: "PQWXYZ",
+      extraLetters: "VINTAGEPQWXYZ",
       meaning:
         "Clothing or accessories representing the high-quality products of an earlier time period",
       pronunciation: "vĭn′tĭj",
@@ -320,7 +320,7 @@ export const fashionTopic: Topic = {
     {
       word: "COUTURE",
       hint: "High fashion",
-      extraLetters: "PQWXYZ",
+      extraLetters: "COUTUREPQWXYZ",
       meaning:
         "The design and manufacture of fashionable clothes to a client's specific requirements and measurements",
       pronunciation: "ko͞o-to͝or′",
@@ -328,7 +328,7 @@ export const fashionTopic: Topic = {
     {
       word: "TAILOR",
       hint: "Clothing alterer",
-      extraLetters: "PQWXYZ",
+      extraLetters: "TAILORPQWXYZ",
       meaning:
         "A person whose occupation is making fitted clothes such as suits, pants, and jackets to fit individual customers",
       pronunciation: "tā′lər",
@@ -336,7 +336,7 @@ export const fashionTopic: Topic = {
     {
       word: "BUTTON",
       hint: "Clothing fastener",
-      extraLetters: "PQWXYZ",
+      extraLetters: "BUTTONPQWXYZ",
       meaning:
         "A small disk or knob sewn onto a garment, used to fasten it by passing through a buttonhole",
       pronunciation: "bŭt′n",
@@ -344,7 +344,7 @@ export const fashionTopic: Topic = {
     {
       word: "ZIPPER",
       hint: "Sliding fastener",
-      extraLetters: "PQWXYZ",
+      extraLetters: "ZIPPERPQWXYZ",
       meaning:
         "A device consisting of two rows of metal or plastic teeth that interlock when a sliding piece is pulled along them",
       pronunciation: "zĭp′ər",
@@ -352,7 +352,7 @@ export const fashionTopic: Topic = {
     {
       word: "STYLE",
       hint: "Fashion expression",
-      extraLetters: "PQWXYZ",
+      extraLetters: "STYLEPQWXYZ",
       meaning:
         "A distinctive appearance, typically determined by the principles according to which something is designed",
       pronunciation: "stīl",
@@ -360,7 +360,7 @@ export const fashionTopic: Topic = {
     {
       word: "JEWELRY",
       hint: "Decorative accessories",
-      extraLetters: "PQWXYZ",
+      extraLetters: "JEWELRYPQWXYZ",
       meaning:
         "Personal ornaments, such as necklaces, rings, or bracelets, made from precious metals and stones",
       pronunciation: "jo͞o′əl-rē",
@@ -368,14 +368,14 @@ export const fashionTopic: Topic = {
     {
       word: "EARRINGS",
       hint: "Ear ornaments",
-      extraLetters: "PQWXYZ",
+      extraLetters: "EARRINGSPQWXYZ",
       meaning: "Ornaments worn on the ears, typically attached to the earlobes",
       pronunciation: "îr′rĭngz′",
     },
     {
       word: "NECKLACE",
       hint: "Neck ornament",
-      extraLetters: "PQWXYZ",
+      extraLetters: "NECKLACEPQWXYZ",
       meaning:
         "An ornamental chain or string of beads, jewels, or links worn around the neck",
       pronunciation: "nĕk′lĭs",
@@ -383,7 +383,7 @@ export const fashionTopic: Topic = {
     {
       word: "RING",
       hint: "Finger ornament",
-      extraLetters: "PQWXYZ",
+      extraLetters: "RINGPQWXYZ",
       meaning:
         "A circular band, typically of precious metal, worn as ornamental jewelry around the finger",
       pronunciation: "rĭng",
@@ -391,7 +391,7 @@ export const fashionTopic: Topic = {
     {
       word: "BRACELET",
       hint: "Wrist ornament",
-      extraLetters: "PQWXYZ",
+      extraLetters: "BRACELETPQWXYZ",
       meaning:
         "An ornamental band, hoop, or chain worn around the wrist or arm",
       pronunciation: "brās′lĭt",

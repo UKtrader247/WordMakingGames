@@ -9,7 +9,7 @@ export const mythologyTopic: Topic = {
     {
       word: "ZEUS",
       hint: "Greek king of gods",
-      extraLetters: "ZEUSQXPW",
+      extraLetters: "ZEUSQXPWY",
       meaning:
         "The supreme deity in Greek mythology, ruler of Mount Olympus and god of the sky, thunder, and lightning",
       pronunciation: "zōōs",
@@ -17,7 +17,7 @@ export const mythologyTopic: Topic = {
     {
       word: "HERA",
       hint: "Greek queen of gods",
-      extraLetters: "HERAQZXP",
+      extraLetters: "HERAQZXPWY",
       meaning:
         "The queen of the Greek gods, goddess of women, marriage, and childbirth, and wife of Zeus",
       pronunciation: "hîr′ə",
@@ -25,7 +25,7 @@ export const mythologyTopic: Topic = {
     {
       word: "APOLLO",
       hint: "Greek sun god",
-      extraLetters: "APOLXZQW",
+      extraLetters: "APOLXZQWPY",
       meaning:
         "Greek god of music, poetry, art, oracles, archery, plague, medicine, sun, light and knowledge",
       pronunciation: "ə-pŏl′ō",
@@ -33,7 +33,7 @@ export const mythologyTopic: Topic = {
     {
       word: "ATHENA",
       hint: "Greek wisdom goddess",
-      extraLetters: "ATHENQPZ",
+      extraLetters: "ATHENQPZWXY",
       meaning:
         "Greek goddess of wisdom, courage, inspiration, civilization, law, strategic warfare, and arts and crafts",
       pronunciation: "ə-thē′nə",
@@ -41,7 +41,7 @@ export const mythologyTopic: Topic = {
     {
       word: "POSEIDON",
       hint: "Greek sea god",
-      extraLetters: "POSEIDNX",
+      extraLetters: "POSEIDNXZQPWY",
       meaning:
         "Greek god of the sea, earthquakes, storms, and horses, brother of Zeus and Hades",
       pronunciation: "pō-sīd′n",
@@ -49,7 +49,7 @@ export const mythologyTopic: Topic = {
     {
       word: "HADES",
       hint: "Greek underworld god",
-      extraLetters: "HADESQXP",
+      extraLetters: "HADESQXPWZY",
       meaning:
         "Greek god of the underworld and the dead, brother of Zeus and Poseidon",
       pronunciation: "hā′dēz",
@@ -57,7 +57,7 @@ export const mythologyTopic: Topic = {
     {
       word: "THOR",
       hint: "Norse thunder god",
-      extraLetters: "THORZYXQ",
+      extraLetters: "THORZYXQPW",
       meaning:
         "Norse god of thunder, lightning, storms, oak trees, strength, and protection of mankind",
       pronunciation: "thôr",
@@ -65,7 +65,7 @@ export const mythologyTopic: Topic = {
     {
       word: "ODIN",
       hint: "Norse chief god",
-      extraLetters: "ODINQPWZ",
+      extraLetters: "ODINQPWZYX",
       meaning:
         "Principal god in Norse mythology, associated with wisdom, healing, death, royalty, and poetry",
       pronunciation: "ō′dĭn",
@@ -73,7 +73,7 @@ export const mythologyTopic: Topic = {
     {
       word: "LOKI",
       hint: "Norse trickster god",
-      extraLetters: "LOKIQXWZ",
+      extraLetters: "LOKIQXWZPY",
       meaning:
         "Norse god known for being a shapeshifter and a trickster, often causing trouble for other gods",
       pronunciation: "lō′kē",
@@ -81,7 +81,7 @@ export const mythologyTopic: Topic = {
     {
       word: "FREYA",
       hint: "Norse love goddess",
-      extraLetters: "FREYAZXQ",
+      extraLetters: "FREYAZXQPW",
       meaning:
         "Norse goddess associated with love, beauty, fertility, sex, war, gold, and seiðr (magic)",
       pronunciation: "frā′ə",
@@ -105,7 +105,7 @@ export const mythologyTopic: Topic = {
     {
       word: "OSIRIS",
       hint: "Egyptian underworld god",
-      extraLetters: "OSIRXZQW",
+      extraLetters: "OSIRXZQWPY",
       meaning:
         "Egyptian god of the afterlife, the underworld, and rebirth, husband of Isis",
       pronunciation: "ō-sī′rĭs",
@@ -113,7 +113,7 @@ export const mythologyTopic: Topic = {
     {
       word: "ANUBIS",
       hint: "Egyptian jackal god",
-      extraLetters: "ANUBISQP",
+      extraLetters: "ANUBISQPWXZY",
       meaning:
         "Egyptian god associated with mummification and the afterlife, depicted with a jackal head",
       pronunciation: "ə-nōō′bĭs",
@@ -121,7 +121,7 @@ export const mythologyTopic: Topic = {
     {
       word: "SHIVA",
       hint: "Hindu destroyer god",
-      extraLetters: "SHIVAZXQ",
+      extraLetters: "SHIVAZXQPWY",
       meaning:
         "Hindu deity representing the destructive aspect of the divine, part of the Trimurti with Brahma and Vishnu",
       pronunciation: "shē′və",
@@ -129,7 +129,7 @@ export const mythologyTopic: Topic = {
     {
       word: "VISHNU",
       hint: "Hindu preserver god",
-      extraLetters: "VISHNUQPZ",
+      extraLetters: "VISHNUQPZWXY",
       meaning:
         "Hindu deity representing the preserving aspect of the divine, part of the Trimurti with Brahma and Shiva",
       pronunciation: "vĭsh′nōō",
@@ -137,7 +137,7 @@ export const mythologyTopic: Topic = {
     {
       word: "BRAHMA",
       hint: "Hindu creator god",
-      extraLetters: "XZQPWY",
+      extraLetters: "BRAHMAXZQPWY",
       meaning:
         "Hindu deity representing the creative aspect of the divine, part of the Trimurti with Vishnu and Shiva",
       pronunciation: "brä′mə",
@@ -145,7 +145,7 @@ export const mythologyTopic: Topic = {
     {
       word: "HERCULES",
       hint: "Greek hero of strength",
-      extraLetters: "YWZXQP",
+      extraLetters: "HERCULESYWZXQP",
       meaning:
         "Greek demigod known for his extraordinary strength and the completion of twelve impossible labors",
       pronunciation: "hûr′kyə-lēz′",
@@ -153,7 +153,7 @@ export const mythologyTopic: Topic = {
     {
       word: "PERSEUS",
       hint: "Slayer of Medusa",
-      extraLetters: "ZYXWQP",
+      extraLetters: "PERSEUSZYXWQP",
       meaning:
         "Greek hero who slew the Gorgon Medusa and rescued Andromeda from a sea monster",
       pronunciation: "pûr′sē-əs, pûr′sōōs",
@@ -161,7 +161,7 @@ export const mythologyTopic: Topic = {
     {
       word: "ACHILLES",
       hint: "Greek warrior with weak heel",
-      extraLetters: "QPWXZY",
+      extraLetters: "ACHILLESQPWXZY",
       meaning:
         "Greek hero of the Trojan War, known for his invulnerability except for his heel",
       pronunciation: "ə-kĭl′ēz",
@@ -169,7 +169,7 @@ export const mythologyTopic: Topic = {
     {
       word: "ODYSSEUS",
       hint: "Hero of Troy",
-      extraLetters: "XZQPWY",
+      extraLetters: "ODYSSEUSXZQPWY",
       meaning:
         "Greek hero known for his role in the Trojan War and his ten-year journey home, as told in Homer's Odyssey",
       pronunciation: "ō-dĭs′ē-əs, ō-dĭs′yōōs",
@@ -177,7 +177,7 @@ export const mythologyTopic: Topic = {
     {
       word: "MEDUSA",
       hint: "Snake-haired gorgon",
-      extraLetters: "YWZXQP",
+      extraLetters: "MEDUSAYWZXQP",
       meaning:
         "Greek mythological monster with living snakes for hair whose gaze turned onlookers to stone",
       pronunciation: "mĭ-dōō′sə",
@@ -185,7 +185,7 @@ export const mythologyTopic: Topic = {
     {
       word: "PEGASUS",
       hint: "Winged horse",
-      extraLetters: "ZYXWQP",
+      extraLetters: "PEGASUSZYXWQP",
       meaning:
         "Immortal winged horse in Greek mythology, born from the blood of Medusa",
       pronunciation: "pĕg′ə-səs",
@@ -193,7 +193,7 @@ export const mythologyTopic: Topic = {
     {
       word: "PHOENIX",
       hint: "Reborn from ashes",
-      extraLetters: "QPWXZY",
+      extraLetters: "PHOENIXQPWXZY",
       meaning:
         "Mythical bird that cyclically regenerates by obtaining new life through rising from the ashes of its predecessor",
       pronunciation: "fē′nĭks",
@@ -201,7 +201,7 @@ export const mythologyTopic: Topic = {
     {
       word: "GRIFFIN",
       hint: "Lion-eagle hybrid",
-      extraLetters: "XZQPWY",
+      extraLetters: "GRIFFINXZQPWY",
       meaning:
         "Legendary creature with the body, tail, and back legs of a lion and the head and wings of an eagle",
       pronunciation: "grĭf′ĭn",
@@ -209,7 +209,7 @@ export const mythologyTopic: Topic = {
     {
       word: "DRAGON",
       hint: "Fire-breathing creature",
-      extraLetters: "YWZXQP",
+      extraLetters: "DRAGONYWZXQP",
       meaning:
         "Legendary creature typically depicted as a large, serpentine or reptilian creature with magical or spiritual qualities",
       pronunciation: "drăg′ən",
@@ -217,7 +217,7 @@ export const mythologyTopic: Topic = {
     {
       word: "MINOTAUR",
       hint: "Bull-headed man",
-      extraLetters: "ZYXWQP",
+      extraLetters: "MINOTAURZYXWQP",
       meaning:
         "Greek mythological creature with the head of a bull and the body of a man, dwelling at the center of the Labyrinth",
       pronunciation: "mĭn′ə-tôr′",
@@ -225,7 +225,7 @@ export const mythologyTopic: Topic = {
     {
       word: "SPHINX",
       hint: "Lion with human head",
-      extraLetters: "QPWXZY",
+      extraLetters: "SPHINXQPWXZY",
       meaning:
         "Mythical creature with the head of a human and the body of a lion, known for posing riddles",
       pronunciation: "sfĭngks",
@@ -233,7 +233,7 @@ export const mythologyTopic: Topic = {
     {
       word: "CYCLOPS",
       hint: "One-eyed giant",
-      extraLetters: "XZQPWY",
+      extraLetters: "CYCLOPSXZQPWY",
       meaning:
         "Giant with a single eye in the middle of its forehead in Greek and Roman mythology",
       pronunciation: "sī′klŏps′",
@@ -241,7 +241,7 @@ export const mythologyTopic: Topic = {
     {
       word: "HYDRA",
       hint: "Many-headed serpent",
-      extraLetters: "YWZXQP",
+      extraLetters: "HYDRAYWZXQP",
       meaning:
         "Ancient Greek mythological serpent-like water monster with many heads that grew back when cut off",
       pronunciation: "hī′drə",
@@ -249,7 +249,7 @@ export const mythologyTopic: Topic = {
     {
       word: "CERBERUS",
       hint: "Three-headed dog",
-      extraLetters: "ZYXWQP",
+      extraLetters: "CERBERUSZYXWQP",
       meaning:
         "Multi-headed dog that guards the entrance to the underworld in Greek mythology",
       pronunciation: "sûr′bər-əs",
@@ -257,7 +257,7 @@ export const mythologyTopic: Topic = {
     {
       word: "CHIMERA",
       hint: "Multi-part beast",
-      extraLetters: "QPWXZY",
+      extraLetters: "CHIMERAQPWXZY",
       meaning:
         "Fire-breathing hybrid creature composed of parts from multiple animals in Greek mythology",
       pronunciation: "kī-mîr′ə, kĭm′ər-ə",
@@ -265,7 +265,7 @@ export const mythologyTopic: Topic = {
     {
       word: "KRAKEN",
       hint: "Giant sea monster",
-      extraLetters: "XZQPWY",
+      extraLetters: "KRAKENXZQPWY",
       meaning:
         "Legendary sea monster of enormous size said to appear off the coasts of Norway",
       pronunciation: "krä′kən",
@@ -273,7 +273,7 @@ export const mythologyTopic: Topic = {
     {
       word: "MERMAID",
       hint: "Half-woman, half-fish",
-      extraLetters: "YWZXQP",
+      extraLetters: "MERMAIDYWZXQP",
       meaning:
         "Legendary aquatic creature with the head and upper body of a woman and the tail of a fish",
       pronunciation: "mûr′mād′",
@@ -281,7 +281,7 @@ export const mythologyTopic: Topic = {
     {
       word: "CENTAUR",
       hint: "Half-man, half-horse",
-      extraLetters: "ZYXWQP",
+      extraLetters: "CENTAURZYXWQP",
       meaning:
         "Mythological creature with the upper body of a human and the lower body and legs of a horse",
       pronunciation: "sĕn′tôr′",
@@ -289,7 +289,7 @@ export const mythologyTopic: Topic = {
     {
       word: "SIREN",
       hint: "Deadly singing creature",
-      extraLetters: "QPWXZY",
+      extraLetters: "SIRENQPWXZY",
       meaning:
         "Dangerous creatures in Greek mythology who lured sailors with enchanting music and singing voices",
       pronunciation: "sī′rən",
@@ -297,7 +297,7 @@ export const mythologyTopic: Topic = {
     {
       word: "OLYMPUS",
       hint: "Greek god mountain",
-      extraLetters: "XZQPWY",
+      extraLetters: "OLYMPUSXZQPWY",
       meaning:
         "Mountain in Greece that was considered the home of the Twelve Olympian gods in Greek mythology",
       pronunciation: "ə-lĭm′pəs",
@@ -305,7 +305,7 @@ export const mythologyTopic: Topic = {
     {
       word: "ASGARD",
       hint: "Norse god realm",
-      extraLetters: "YWZXQP",
+      extraLetters: "ASGARDYWZXQP",
       meaning:
         "Realm of the gods in Norse mythology, connected to Midgard (Earth) by the rainbow bridge Bifröst",
       pronunciation: "ăs′gärd′",
@@ -313,7 +313,7 @@ export const mythologyTopic: Topic = {
     {
       word: "VALHALLA",
       hint: "Norse warrior heaven",
-      extraLetters: "ZYXWQP",
+      extraLetters: "VALHALLAZYXWQP",
       meaning:
         "Great hall in Norse mythology where warriors slain in battle are brought by Valkyries",
       pronunciation: "văl-hăl′ə",
@@ -321,7 +321,7 @@ export const mythologyTopic: Topic = {
     {
       word: "TARTARUS",
       hint: "Greek hell",
-      extraLetters: "QPWXZY",
+      extraLetters: "TARTARUSQPWXZY",
       meaning:
         "Deep abyss in Greek mythology used as a dungeon of torment for the wicked and prison for the Titans",
       pronunciation: "tär′tər-əs",
@@ -329,7 +329,7 @@ export const mythologyTopic: Topic = {
     {
       word: "ELYSIUM",
       hint: "Greek paradise",
-      extraLetters: "XZQPWY",
+      extraLetters: "ELYSIUMXZQPWY",
       meaning:
         "Conception of the afterlife in Greek mythology reserved for those chosen by the gods",
       pronunciation: "ĭ-lĭzh′ē-əm",
@@ -337,7 +337,7 @@ export const mythologyTopic: Topic = {
     {
       word: "AMBROSIA",
       hint: "Food of the gods",
-      extraLetters: "YWZXQP",
+      extraLetters: "AMBROSIAYWZXQP",
       meaning:
         "Food or drink of the Greek gods, often depicted as conferring longevity or immortality",
       pronunciation: "ăm-brō′zhə",
@@ -345,7 +345,7 @@ export const mythologyTopic: Topic = {
     {
       word: "NECTAR",
       hint: "Drink of the gods",
-      extraLetters: "ZYXWQP",
+      extraLetters: "NECTARZYXWQP",
       meaning:
         "Divine drink of the Greek gods, often paired with ambrosia as their sustenance",
       pronunciation: "nĕk′tər",
@@ -353,7 +353,7 @@ export const mythologyTopic: Topic = {
     {
       word: "ORACLE",
       hint: "Divine prophet",
-      extraLetters: "QPWXZY",
+      extraLetters: "ORACLEQPWXZY",
       meaning:
         "Person or agency considered to provide wise and insightful counsel or prophetic predictions",
       pronunciation: "ôr′ə-kəl",
@@ -361,7 +361,7 @@ export const mythologyTopic: Topic = {
     {
       word: "FATE",
       hint: "Divine destiny",
-      extraLetters: "XZQPWY",
+      extraLetters: "FATEXZQPWY",
       meaning:
         "Development of events beyond a person's control, regarded as determined by a supernatural power",
       pronunciation: "fāt",
@@ -369,7 +369,7 @@ export const mythologyTopic: Topic = {
     {
       word: "TITAN",
       hint: "Pre-Olympic gods",
-      extraLetters: "YWZXQP",
+      extraLetters: "TITANYWZXQP",
       meaning:
         "Race of deities in Greek mythology who preceded the Olympians, descendants of Gaia and Uranus",
       pronunciation: "tīt′n",
@@ -377,7 +377,7 @@ export const mythologyTopic: Topic = {
     {
       word: "MUSE",
       hint: "Inspiration goddess",
-      extraLetters: "ZYXWQP",
+      extraLetters: "MUSEZYXWQP",
       meaning:
         "Any of the nine daughters of Zeus and Mnemosyne who presided over the arts and sciences",
       pronunciation: "myōōz",
@@ -385,7 +385,7 @@ export const mythologyTopic: Topic = {
     {
       word: "NYMPH",
       hint: "Nature spirit",
-      extraLetters: "QPWXZY",
+      extraLetters: "NYMPHQPWXZY",
       meaning:
         "Minor female nature deity typically associated with a particular location or landform",
       pronunciation: "nĭmf",
@@ -393,7 +393,7 @@ export const mythologyTopic: Topic = {
     {
       word: "VALKYRIE",
       hint: "Battle maiden",
-      extraLetters: "XZQPWY",
+      extraLetters: "VALKYRIEXZQPWY",
       meaning:
         "Female figures in Norse mythology who choose who lives and dies in battle and escort the slain to Valhalla",
       pronunciation: "văl-kîr′ē, văl′kə-rē",

@@ -9,7 +9,7 @@ export const musicTopic: Topic = {
     {
       word: "PIANO",
       hint: "Keyboard instrument",
-      extraLetters: "PIANOZQW",
+      extraLetters: "PIANOZQWXY",
       meaning:
         "A large musical instrument with a keyboard of black and white keys that are pressed to play notes",
       pronunciation: "pē-ăn′ō, pyăn′ō",
@@ -17,7 +17,7 @@ export const musicTopic: Topic = {
     {
       word: "GUITAR",
       hint: "Stringed instrument",
-      extraLetters: "GUITARZX",
+      extraLetters: "GUITARZYXWQP",
       meaning:
         "A musical instrument with strings that are plucked or strummed to produce sound",
       pronunciation: "gĭ-tär′",
@@ -25,7 +25,7 @@ export const musicTopic: Topic = {
     {
       word: "VIOLIN",
       hint: "Orchestral string",
-      extraLetters: "VIOLNZQP",
+      extraLetters: "VIOLINZQPWXY",
       meaning:
         "A stringed musical instrument with four strings tuned in perfect fifths, played with a bow",
       pronunciation: "vī′ə-lĭn",
@@ -33,7 +33,7 @@ export const musicTopic: Topic = {
     {
       word: "DRUMS",
       hint: "Percussion set",
-      extraLetters: "DRUMSQPX",
+      extraLetters: "DRUMSQPXZWY",
       meaning:
         "A set of percussion instruments played by striking with sticks or hands",
       pronunciation: "drŭmz",
@@ -41,7 +41,7 @@ export const musicTopic: Topic = {
     {
       word: "FLUTE",
       hint: "Wind instrument",
-      extraLetters: "FLUTEXZQ",
+      extraLetters: "FLUTEXZQPWY",
       meaning:
         "A musical wind instrument consisting of a tube with holes that are stopped by the fingers",
       pronunciation: "flōōt",
@@ -49,7 +49,7 @@ export const musicTopic: Topic = {
     {
       word: "TRUMPET",
       hint: "Brass instrument",
-      extraLetters: "TRUMPETX",
+      extraLetters: "TRUMPETZQPWY",
       meaning:
         "A brass musical instrument with a flared bell and a bright, penetrating tone",
       pronunciation: "trŭm′pĭt",
@@ -57,7 +57,7 @@ export const musicTopic: Topic = {
     {
       word: "SAXOPHONE",
       hint: "Jazz instrument",
-      extraLetters: "SAXOPHNEQ",
+      extraLetters: "SAXOPHONEQZWXY",
       meaning:
         "A brass instrument with a single-reed mouthpiece, commonly used in jazz and popular music",
       pronunciation: "săk′sə-fōn′",
@@ -65,7 +65,7 @@ export const musicTopic: Topic = {
     {
       word: "CELLO",
       hint: "Large violin",
-      extraLetters: "CELOWXPZ",
+      extraLetters: "CELLOWXPZQY",
       meaning:
         "A large stringed instrument of the violin family, held between the knees to play",
       pronunciation: "chĕl′ō",
@@ -73,7 +73,7 @@ export const musicTopic: Topic = {
     {
       word: "HARP",
       hint: "Plucked strings",
-      extraLetters: "HARPZQXW",
+      extraLetters: "HARPZQXWPY",
       meaning:
         "A musical instrument consisting of a triangular frame with strings stretched between the top and soundboard",
       pronunciation: "härp",
@@ -81,7 +81,7 @@ export const musicTopic: Topic = {
     {
       word: "CLARINET",
       hint: "Woodwind instrument",
-      extraLetters: "CLARINETZ",
+      extraLetters: "CLARINETZYXWQP",
       meaning:
         "A woodwind instrument with a single-reed mouthpiece and a straight cylindrical tube",
       pronunciation: "klăr′ə-nĕt′",
@@ -89,7 +89,7 @@ export const musicTopic: Topic = {
     {
       word: "TROMBONE",
       hint: "Sliding brass",
-      extraLetters: "TROMBNEQZ",
+      extraLetters: "TROMBONEQZXWPY",
       meaning:
         "A brass instrument with a sliding tube that alters the length of the air column to change pitch",
       pronunciation: "trŏm-bōn′",
@@ -97,7 +97,7 @@ export const musicTopic: Topic = {
     {
       word: "BASS",
       hint: "Low instrument",
-      extraLetters: "BASQPWXZ",
+      extraLetters: "BASSQPWXZY",
       meaning:
         "A low-pitched musical instrument, or the lowest part in harmonized music",
       pronunciation: "bās",
@@ -105,7 +105,7 @@ export const musicTopic: Topic = {
     {
       word: "OBOE",
       hint: "Double reed woodwind",
-      extraLetters: "OBEQZWXY",
+      extraLetters: "OBOEQZWXYP",
       meaning:
         "A woodwind instrument with a double-reed mouthpiece that produces a distinctive, somewhat nasal sound",
       pronunciation: "ō′bō",
@@ -113,7 +113,7 @@ export const musicTopic: Topic = {
     {
       word: "ACCORDION",
       hint: "Squeezebox instrument",
-      extraLetters: "ACORDINPQ",
+      extraLetters: "ACCORDIONPQZWXY",
       meaning:
         "A portable musical instrument with metal reeds and a keyboard, played by expanding and contracting a bellows",
       pronunciation: "ə-kôr′dē-ən",
@@ -121,7 +121,7 @@ export const musicTopic: Topic = {
     {
       word: "BANJO",
       hint: "Folk string instrument",
-      extraLetters: "BANJOQZX",
+      extraLetters: "BANJOQZXWPY",
       meaning:
         "A stringed instrument with a circular body and a long neck, commonly used in folk and country music",
       pronunciation: "băn′jō",
@@ -129,7 +129,7 @@ export const musicTopic: Topic = {
     {
       word: "UKULELE",
       hint: "Small four-string guitar",
-      extraLetters: "UKELQZXP",
+      extraLetters: "UKULELEQZXPWY",
       meaning:
         "A small four-stringed guitar of Hawaiian origin, played by plucking or strumming",
       pronunciation: "yo͞o′kə-lā′lē",
@@ -137,7 +137,7 @@ export const musicTopic: Topic = {
     {
       word: "ORGAN",
       hint: "Keyboard pipe instrument",
-      extraLetters: "XZQPWY",
+      extraLetters: "ORGANXZQPWY",
       meaning:
         "A large musical instrument with pipes that produce sound when air flows through them, controlled by keyboards",
       pronunciation: "ôr′gən",
@@ -145,7 +145,7 @@ export const musicTopic: Topic = {
     {
       word: "VOCALIST",
       hint: "Singer",
-      extraLetters: "YWZXQP",
+      extraLetters: "VOCALISTYWZXQP",
       meaning:
         "A person who sings, especially as a profession or in a performance",
       pronunciation: "vō′kə-lĭst",
@@ -153,7 +153,7 @@ export const musicTopic: Topic = {
     {
       word: "MELODY",
       hint: "Main tune",
-      extraLetters: "ZYXWQP",
+      extraLetters: "MELODYZYXWQP",
       meaning:
         "A sequence of single notes that is musically satisfying and forms the main part of a song or piece",
       pronunciation: "mĕl′ə-dē",
@@ -161,7 +161,7 @@ export const musicTopic: Topic = {
     {
       word: "HARMONY",
       hint: "Complementary notes",
-      extraLetters: "QPWXZY",
+      extraLetters: "HARMONYQPWXZY",
       meaning:
         "The combination of simultaneously sounded musical notes to produce a pleasing effect",
       pronunciation: "här′mə-nē",
@@ -169,7 +169,7 @@ export const musicTopic: Topic = {
     {
       word: "RHYTHM",
       hint: "Musical timing",
-      extraLetters: "XZQPWY",
+      extraLetters: "RHYTHMXZQPWY",
       meaning:
         "The pattern of regular or irregular pulses in music, created by the occurrence of strong and weak beats",
       pronunciation: "rĭth′əm",
@@ -177,7 +177,7 @@ export const musicTopic: Topic = {
     {
       word: "BEAT",
       hint: "Regular pulse",
-      extraLetters: "YWZXQP",
+      extraLetters: "BEATYWZXQP",
       meaning:
         "A regular pulse or throb in music that marks the meter or tempo",
       pronunciation: "bēt",
@@ -185,7 +185,7 @@ export const musicTopic: Topic = {
     {
       word: "TEMPO",
       hint: "Speed of music",
-      extraLetters: "ZYXWQP",
+      extraLetters: "TEMPOZYXWQP",
       meaning:
         "The speed at which a piece of music is played or is intended to be played",
       pronunciation: "tĕm′pō",
@@ -193,7 +193,7 @@ export const musicTopic: Topic = {
     {
       word: "KEY",
       hint: "Tonal center",
-      extraLetters: "QPWXZY",
+      extraLetters: "KEYQPWXZY",
       meaning:
         "The tonal center of a piece of music, or a button on a musical instrument that is pressed to produce a note",
       pronunciation: "kē",
@@ -201,7 +201,7 @@ export const musicTopic: Topic = {
     {
       word: "SCALE",
       hint: "Note sequence",
-      extraLetters: "XZQPWY",
+      extraLetters: "SCALEXZQPWY",
       meaning:
         "A series of musical notes arranged in ascending or descending order of pitch",
       pronunciation: "skāl",
@@ -209,7 +209,7 @@ export const musicTopic: Topic = {
     {
       word: "CHORD",
       hint: "Multiple notes together",
-      extraLetters: "YWZXQP",
+      extraLetters: "CHORDYWZXQP",
       meaning:
         "A group of three or more notes sounded together, as a basis of harmony",
       pronunciation: "kôrd",
@@ -217,7 +217,7 @@ export const musicTopic: Topic = {
     {
       word: "NOTE",
       hint: "Single sound",
-      extraLetters: "ZYXWQP",
+      extraLetters: "NOTEZYXWQP",
       meaning:
         "A single sound of definite pitch made by a musical instrument or the human voice",
       pronunciation: "nōt",
@@ -225,14 +225,14 @@ export const musicTopic: Topic = {
     {
       word: "REST",
       hint: "Musical silence",
-      extraLetters: "QPWXZY",
+      extraLetters: "RESTQPWXZY",
       meaning: "A pause or interval of silence in a musical composition",
       pronunciation: "rĕst",
     },
     {
       word: "STAFF",
       hint: "Musical lines",
-      extraLetters: "XZQPWY",
+      extraLetters: "STAFFXZQPWY",
       meaning:
         "The five horizontal lines and four spaces on which musical notes are written",
       pronunciation: "stăf",
@@ -240,7 +240,7 @@ export const musicTopic: Topic = {
     {
       word: "CLEF",
       hint: "Pitch indicator",
-      extraLetters: "YWZXQP",
+      extraLetters: "CLEFYWZXQP",
       meaning:
         "A symbol at the beginning of a staff indicating the pitch of the notes on the staff",
       pronunciation: "klĕf",
@@ -248,7 +248,7 @@ export const musicTopic: Topic = {
     {
       word: "SHARP",
       hint: "Higher pitch",
-      extraLetters: "ZYXWQP",
+      extraLetters: "SHARPZYXWQP",
       meaning:
         "A musical note raised in pitch by one semitone, or the symbol (♯) indicating this",
       pronunciation: "shärp",
@@ -256,7 +256,7 @@ export const musicTopic: Topic = {
     {
       word: "FLAT",
       hint: "Lower pitch",
-      extraLetters: "QPWXZY",
+      extraLetters: "FLATQPWXZY",
       meaning:
         "A musical note lowered in pitch by one semitone, or the symbol (♭) indicating this",
       pronunciation: "flăt",
@@ -264,7 +264,7 @@ export const musicTopic: Topic = {
     {
       word: "OCTAVE",
       hint: "Eight-note interval",
-      extraLetters: "XZQPWY",
+      extraLetters: "OCTAVEXZQPWY",
       meaning:
         "The interval between two musical notes with the same letter name, one having twice the frequency of the other",
       pronunciation: "ŏk′tĭv",
@@ -272,7 +272,7 @@ export const musicTopic: Topic = {
     {
       word: "CHORUS",
       hint: "Song refrain",
-      extraLetters: "YWZXQP",
+      extraLetters: "CHORUSYWZXQP",
       meaning:
         "A part of a song that is repeated after each verse, typically by more than one singer",
       pronunciation: "kôr′əs",
@@ -280,7 +280,7 @@ export const musicTopic: Topic = {
     {
       word: "VERSE",
       hint: "Song stanza",
-      extraLetters: "ZYXWQP",
+      extraLetters: "VERSEZYXWQP",
       meaning:
         "A section of a song that typically precedes the chorus and has different lyrics in each repetition",
       pronunciation: "vûrs",
@@ -288,7 +288,7 @@ export const musicTopic: Topic = {
     {
       word: "BRIDGE",
       hint: "Song connector",
-      extraLetters: "QPWXZY",
+      extraLetters: "BRIDGEQPWXZY",
       meaning:
         "A contrasting section that connects two parts of a song, often leading to the final chorus",
       pronunciation: "brĭj",
@@ -296,7 +296,7 @@ export const musicTopic: Topic = {
     {
       word: "SOLO",
       hint: "Individual performance",
-      extraLetters: "XZQPWY",
+      extraLetters: "SOLOXZQPWY",
       meaning:
         "A piece or passage performed by one person, or a performance given by one person alone",
       pronunciation: "sō′lō",
@@ -304,7 +304,7 @@ export const musicTopic: Topic = {
     {
       word: "DUET",
       hint: "Two performers",
-      extraLetters: "YWZXQP",
+      extraLetters: "DUETYWZXQP",
       meaning:
         "A performance by two people, or a musical composition for two performers",
       pronunciation: "do͞o-ĕt′",
@@ -312,7 +312,7 @@ export const musicTopic: Topic = {
     {
       word: "TRIO",
       hint: "Three performers",
-      extraLetters: "ZYXWQP",
+      extraLetters: "TRIOZYXWQP",
       meaning:
         "A group of three performers, or a musical composition for three performers",
       pronunciation: "trē′ō",
@@ -320,7 +320,7 @@ export const musicTopic: Topic = {
     {
       word: "QUARTET",
       hint: "Four performers",
-      extraLetters: "QPWXZY",
+      extraLetters: "QUARTETQPWXZY",
       meaning:
         "A group of four performers, or a musical composition for four performers",
       pronunciation: "kwôr-tĕt′",
@@ -328,7 +328,7 @@ export const musicTopic: Topic = {
     {
       word: "BAND",
       hint: "Music group",
-      extraLetters: "XZQPWY",
+      extraLetters: "BANDXZQPWY",
       meaning:
         "A group of musicians who play music together, especially popular music",
       pronunciation: "bănd",
@@ -336,7 +336,7 @@ export const musicTopic: Topic = {
     {
       word: "ORCHESTRA",
       hint: "Large instrumental group",
-      extraLetters: "YWZXQP",
+      extraLetters: "ORCHESTRAYWZXQP",
       meaning:
         "A large ensemble of musicians playing various instruments, typically including strings, woodwinds, brass, and percussion",
       pronunciation: "ôr′kĭ-strə",
@@ -344,14 +344,14 @@ export const musicTopic: Topic = {
     {
       word: "CONDUCTOR",
       hint: "Orchestra leader",
-      extraLetters: "ZYXWQP",
+      extraLetters: "CONDUCTORZYXWQP",
       meaning: "A person who directs the performance of an orchestra or choir",
       pronunciation: "kən-dŭk′tər",
     },
     {
       word: "COMPOSER",
       hint: "Music writer",
-      extraLetters: "QPWXZY",
+      extraLetters: "COMPOSERQPWXZY",
       meaning:
         "A person who writes music, especially as a professional occupation",
       pronunciation: "kəm-pō′zər",
@@ -359,14 +359,14 @@ export const musicTopic: Topic = {
     {
       word: "LYRICS",
       hint: "Song words",
-      extraLetters: "XZQPWY",
+      extraLetters: "LYRICSXZQPWY",
       meaning: "The words of a song, especially a popular song",
       pronunciation: "lĭr′ĭks",
     },
     {
       word: "ALBUM",
       hint: "Music collection",
-      extraLetters: "YWZXQP",
+      extraLetters: "ALBUMYWZXQP",
       meaning:
         "A collection of recordings issued as a single item on CD, vinyl, or another medium",
       pronunciation: "ăl′bəm",
@@ -374,7 +374,7 @@ export const musicTopic: Topic = {
     {
       word: "CONCERT",
       hint: "Live performance",
-      extraLetters: "ZYXWQP",
+      extraLetters: "CONCERTZYXWQP",
       meaning:
         "A musical performance given in public by one or more performers",
       pronunciation: "kŏn′sûrt",
@@ -382,7 +382,7 @@ export const musicTopic: Topic = {
     {
       word: "GENRE",
       hint: "Music category",
-      extraLetters: "QPWXZY",
+      extraLetters: "GENREQPWXZY",
       meaning:
         "A category of artistic composition characterized by similarities in form, style, or subject matter",
       pronunciation: "zhän′rə",
@@ -390,7 +390,7 @@ export const musicTopic: Topic = {
     {
       word: "POP",
       hint: "Popular music style",
-      extraLetters: "XZQPWY",
+      extraLetters: "POPXZQPWY",
       meaning:
         "A genre of popular music that originated in the 1950s, often with a strong rhythm and simple melodies",
       pronunciation: "pŏp",
@@ -398,7 +398,7 @@ export const musicTopic: Topic = {
     {
       word: "ROCK",
       hint: "Guitar-based music",
-      extraLetters: "YWZXQP",
+      extraLetters: "ROCKYWZXQP",
       meaning:
         "A genre of popular music that originated as rock and roll in the United States in the 1950s",
       pronunciation: "rŏk",

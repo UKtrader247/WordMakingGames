@@ -9,7 +9,7 @@ export const literatureTopic: Topic = {
     {
       word: "NOVEL",
       hint: "Long fictional story",
-      extraLetters: "NOVELQWZ",
+      extraLetters: "NOVELQWZXP",
       meaning:
         "A long work of fiction, typically with a complex plot and characters",
       pronunciation: "nŏv′əl",
@@ -17,7 +17,7 @@ export const literatureTopic: Topic = {
     {
       word: "POEM",
       hint: "Rhythmic composition",
-      extraLetters: "POEMXZQ",
+      extraLetters: "POEMXZQWP",
       meaning:
         "A composition in verse, especially one that uses rhythm and often rhyme to express emotions or ideas",
       pronunciation: "pō′əm",
@@ -25,21 +25,21 @@ export const literatureTopic: Topic = {
     {
       word: "AUTHOR",
       hint: "Book writer",
-      extraLetters: "AUTHORQZ",
+      extraLetters: "AUTHORQZXWP",
       meaning: "A writer of books, stories, or other literary works",
       pronunciation: "ô′thər",
     },
     {
       word: "POET",
       hint: "Verse writer",
-      extraLetters: "POETXZQW",
+      extraLetters: "POETXZQWP",
       meaning: "A person who writes poems, especially as a profession",
       pronunciation: "pō′ĭt",
     },
     {
       word: "FICTION",
       hint: "Imaginary stories",
-      extraLetters: "FICTIONZ",
+      extraLetters: "FICTIONZQWXP",
       meaning:
         "Literature that describes imaginary events and people rather than actual ones",
       pronunciation: "fĭk′shən",
@@ -47,7 +47,7 @@ export const literatureTopic: Topic = {
     {
       word: "NONFICTION",
       hint: "Factual writing",
-      extraLetters: "NOFICTWZ",
+      extraLetters: "NOFICTWZQXP",
       meaning:
         "Prose writing that is based on facts, real events, and real people",
       pronunciation: "nŏn-fĭk′shən",
@@ -55,7 +55,7 @@ export const literatureTopic: Topic = {
     {
       word: "GENRE",
       hint: "Literary category",
-      extraLetters: "GENREQZX",
+      extraLetters: "GENREQZXWP",
       meaning:
         "A category of artistic composition characterized by similarities in form, style, or subject matter",
       pronunciation: "zhän′rə",
@@ -63,7 +63,7 @@ export const literatureTopic: Topic = {
     {
       word: "PLOT",
       hint: "Story events",
-      extraLetters: "PLOTWXZQ",
+      extraLetters: "PLOTWXZQP",
       meaning:
         "The main events of a play, novel, movie, or similar work, devised and presented by the writer",
       pronunciation: "plŏt",
@@ -71,7 +71,7 @@ export const literatureTopic: Topic = {
     {
       word: "CHARACTER",
       hint: "Story person",
-      extraLetters: "CHARETPZ",
+      extraLetters: "CHARETPZQWX",
       meaning:
         "A person in a novel, play, or movie portrayed with specific traits and qualities",
       pronunciation: "kăr′ĭk-tər",
@@ -79,7 +79,7 @@ export const literatureTopic: Topic = {
     {
       word: "SETTING",
       hint: "Story location",
-      extraLetters: "SETTINGQ",
+      extraLetters: "SETTINGQZWXP",
       meaning:
         "The place and time at which a play, novel, or film is represented as happening",
       pronunciation: "sĕt′ĭng",
@@ -87,7 +87,7 @@ export const literatureTopic: Topic = {
     {
       word: "THEME",
       hint: "Central idea",
-      extraLetters: "THEMZQXP",
+      extraLetters: "THEMZQXPW",
       meaning:
         "The central topic, subject, or message of a story or literary work",
       pronunciation: "thēm",
@@ -95,7 +95,7 @@ export const literatureTopic: Topic = {
     {
       word: "CONFLICT",
       hint: "Story struggle",
-      extraLetters: "CONFLITP",
+      extraLetters: "CONFLITPZQWX",
       meaning:
         "A serious disagreement or struggle between opposing forces in a story",
       pronunciation: "kŏn′flĭkt′",
@@ -103,14 +103,14 @@ export const literatureTopic: Topic = {
     {
       word: "CLIMAX",
       hint: "Story peak",
-      extraLetters: "CLIMAXQW",
+      extraLetters: "CLIMAXQWZP",
       meaning: "The most intense, exciting, or important point of a story",
       pronunciation: "klī′măks′",
     },
     {
       word: "RESOLUTION",
       hint: "Story conclusion",
-      extraLetters: "RESOLUTNQ",
+      extraLetters: "RESOLUTNQWZXP",
       meaning:
         "The part of a story where the problem is solved or situation is resolved",
       pronunciation: "rĕz′ə-lōō′shən",
@@ -118,14 +118,14 @@ export const literatureTopic: Topic = {
     {
       word: "CHAPTER",
       hint: "Book section",
-      extraLetters: "CHAPTERZ",
+      extraLetters: "CHAPTERZQWXP",
       meaning: "A main division of a book, typically with a number or title",
       pronunciation: "chăp′tər",
     },
     {
       word: "VERSE",
       hint: "Poetic line",
-      extraLetters: "VERSZQPX",
+      extraLetters: "VERSZQPXW",
       meaning:
         "Writing arranged with a metrical rhythm, typically having a rhyme",
       pronunciation: "vûrs",
@@ -133,7 +133,7 @@ export const literatureTopic: Topic = {
     {
       word: "STANZA",
       hint: "Poem section",
-      extraLetters: "XZQPWY",
+      extraLetters: "STANZAXZQPWY",
       meaning:
         "A group of lines forming the basic recurring metrical unit in a poem",
       pronunciation: "stăn′zə",
@@ -141,14 +141,14 @@ export const literatureTopic: Topic = {
     {
       word: "RHYME",
       hint: "Sound similarity",
-      extraLetters: "YWZXQP",
+      extraLetters: "RHYMEYWZXQP",
       meaning: "Correspondence of sound between words or the endings of words",
       pronunciation: "rīm",
     },
     {
       word: "METER",
       hint: "Rhythmic pattern",
-      extraLetters: "ZYXWQP",
+      extraLetters: "METERZYXWQP",
       meaning:
         "The rhythmic arrangement of syllables in poetry, often in stressed and unstressed patterns",
       pronunciation: "mē′tər",
@@ -156,7 +156,7 @@ export const literatureTopic: Topic = {
     {
       word: "SONNET",
       hint: "14-line poem",
-      extraLetters: "QPWXZY",
+      extraLetters: "SONNETQPWXZY",
       meaning:
         "A poem of fourteen lines using any of a number of formal rhyme schemes",
       pronunciation: "sŏn′ĭt",
@@ -164,7 +164,7 @@ export const literatureTopic: Topic = {
     {
       word: "HAIKU",
       hint: "Japanese poem form",
-      extraLetters: "XZQPWY",
+      extraLetters: "HAIKUXZQPWY",
       meaning:
         "A Japanese poem of seventeen syllables, in three lines of five, seven, and five",
       pronunciation: "hī′kōō′",
@@ -172,7 +172,7 @@ export const literatureTopic: Topic = {
     {
       word: "SHAKESPEARE",
       hint: "Famous playwright",
-      extraLetters: "YWZXQP",
+      extraLetters: "SHAKESPEAREYWZXQP",
       meaning:
         "English poet, playwright, and actor, widely regarded as the greatest writer in the English language",
       pronunciation: "shāk′spîr′",
@@ -180,7 +180,7 @@ export const literatureTopic: Topic = {
     {
       word: "DICKENS",
       hint: "Christmas Carol author",
-      extraLetters: "ZYXWQP",
+      extraLetters: "DICKENSZYXWQP",
       meaning:
         "English writer and social critic who created some of the world's best-known fictional characters",
       pronunciation: "dĭk′ĭnz",
@@ -188,7 +188,7 @@ export const literatureTopic: Topic = {
     {
       word: "HEMINGWAY",
       hint: "Old Man and the Sea author",
-      extraLetters: "QPWXZY",
+      extraLetters: "HEMINGWAYQPWXZY",
       meaning:
         "American novelist, short-story writer, and journalist known for his economical and understated style",
       pronunciation: "hĕm′ĭng-wā′",
@@ -196,7 +196,7 @@ export const literatureTopic: Topic = {
     {
       word: "AUSTEN",
       hint: "Pride and Prejudice author",
-      extraLetters: "XZQPWY",
+      extraLetters: "AUSTENXZQPWY",
       meaning:
         "English novelist known primarily for her six major novels, which interpret, critique and comment upon the British landed gentry",
       pronunciation: "ô′stən",
@@ -204,7 +204,7 @@ export const literatureTopic: Topic = {
     {
       word: "TOLKIEN",
       hint: "Lord of the Rings author",
-      extraLetters: "YWZXQP",
+      extraLetters: "TOLKIENYWZXQP",
       meaning:
         "English writer, poet, philologist, and academic, best known as the author of the high fantasy works The Hobbit and The Lord of the Rings",
       pronunciation: "tōl′kēn, tŏl′-",
@@ -212,7 +212,7 @@ export const literatureTopic: Topic = {
     {
       word: "ROWLING",
       hint: "Harry Potter author",
-      extraLetters: "ZYXWQP",
+      extraLetters: "ROWLINGZYXWQP",
       meaning:
         "British author, philanthropist, film producer, and screenwriter best known for writing the Harry Potter fantasy series",
       pronunciation: "rō′lĭng",
@@ -220,7 +220,7 @@ export const literatureTopic: Topic = {
     {
       word: "ODYSSEY",
       hint: "Homer's epic",
-      extraLetters: "QPWXZY",
+      extraLetters: "ODYSSEYQPWXZY",
       meaning:
         "An ancient Greek epic poem attributed to Homer, describing Odysseus's adventures in his ten-year attempt to return home",
       pronunciation: "ŏd′ĭ-sē",
@@ -228,7 +228,7 @@ export const literatureTopic: Topic = {
     {
       word: "HAMLET",
       hint: "Shakespeare tragedy",
-      extraLetters: "XZQPWY",
+      extraLetters: "HAMLETXZQPWY",
       meaning:
         "A tragedy written by William Shakespeare about a Danish prince who seeks revenge upon his uncle for murdering his father",
       pronunciation: "hăm′lĭt",
@@ -236,7 +236,7 @@ export const literatureTopic: Topic = {
     {
       word: "GATSBY",
       hint: "Fitzgerald novel",
-      extraLetters: "YWZXQP",
+      extraLetters: "GATSBYYWZXQP",
       meaning:
         "The titular character of F. Scott Fitzgerald's novel The Great Gatsby, a mysterious millionaire with a dark past",
       pronunciation: "găts′bē",
@@ -244,7 +244,7 @@ export const literatureTopic: Topic = {
     {
       word: "MOCKINGBIRD",
       hint: "Harper Lee novel",
-      extraLetters: "ZYXWQP",
+      extraLetters: "MOCKINGBIRDZYXWQP",
       meaning:
         "Part of the title of Harper Lee's novel about racial injustice in the American South during the 1930s",
       pronunciation: "mŏk′ĭng-bûrd′",
@@ -252,7 +252,7 @@ export const literatureTopic: Topic = {
     {
       word: "DRACULA",
       hint: "Stoker's vampire",
-      extraLetters: "QPWXZY",
+      extraLetters: "DRACULAQPWXZY",
       meaning:
         "A Gothic horror novel by Bram Stoker about the vampire Count Dracula's attempt to move from Transylvania to England",
       pronunciation: "drăk′yə-lə",
@@ -260,7 +260,7 @@ export const literatureTopic: Topic = {
     {
       word: "FRANKENSTEIN",
       hint: "Shelley's monster",
-      extraLetters: "XZQPWY",
+      extraLetters: "FRANKENSTEINXZQPWY",
       meaning:
         "A novel by Mary Shelley about a scientist who creates a sapient creature in an unorthodox scientific experiment",
       pronunciation: "frăng′kən-stīn′",
@@ -268,7 +268,7 @@ export const literatureTopic: Topic = {
     {
       word: "NARRATOR",
       hint: "Story teller",
-      extraLetters: "YWZXQP",
+      extraLetters: "NARRATORYWZXQP",
       meaning:
         "The voice or person who tells a story or gives an account of something",
       pronunciation: "năr′ā-tər, nə-rā′-",
@@ -276,21 +276,21 @@ export const literatureTopic: Topic = {
     {
       word: "BIOGRAPHY",
       hint: "Life story",
-      extraLetters: "ZYXWQP",
+      extraLetters: "BIOGRAPHYZYXWQP",
       meaning: "An account of someone's life written by someone else",
       pronunciation: "bī-ŏg′rə-fē",
     },
     {
       word: "AUTOBIOGRAPHY",
       hint: "Self-written life story",
-      extraLetters: "QPWXZY",
+      extraLetters: "AUTOBIOGRAPHYQPWXZY",
       meaning: "An account of a person's life written by that person",
       pronunciation: "ô′tə-bī-ŏg′rə-fē",
     },
     {
       word: "ESSAY",
       hint: "Short composition",
-      extraLetters: "XZQPWY",
+      extraLetters: "ESSAYXZQPWY",
       meaning:
         "A short piece of writing on a particular subject, often expressing personal views",
       pronunciation: "ĕs′ā′",
@@ -298,7 +298,7 @@ export const literatureTopic: Topic = {
     {
       word: "JOURNAL",
       hint: "Daily writing",
-      extraLetters: "YWZXQP",
+      extraLetters: "JOURNALYWZXQP",
       meaning:
         "A daily record of news and events of a personal nature; a diary",
       pronunciation: "jûr′nəl",
@@ -306,7 +306,7 @@ export const literatureTopic: Topic = {
     {
       word: "MEMOIR",
       hint: "Personal account",
-      extraLetters: "ZYXWQP",
+      extraLetters: "MEMOIRZYXWQP",
       meaning:
         "A historical account or biography written from personal knowledge or special sources",
       pronunciation: "mĕm′wär′, -wôr′",
@@ -314,7 +314,7 @@ export const literatureTopic: Topic = {
     {
       word: "PUBLISHER",
       hint: "Book producer",
-      extraLetters: "QPWXZY",
+      extraLetters: "PUBLISHERQPWXZY",
       meaning:
         "A company or person that prepares and issues books, journals, or music for sale",
       pronunciation: "pŭb′lĭ-shər",
@@ -322,7 +322,7 @@ export const literatureTopic: Topic = {
     {
       word: "EDITOR",
       hint: "Text reviser",
-      extraLetters: "XZQPWY",
+      extraLetters: "EDITORXZQPWY",
       meaning:
         "A person who prepares written material for publication by correcting, condensing, or otherwise modifying it",
       pronunciation: "ĕd′ĭ-tər",
@@ -330,7 +330,7 @@ export const literatureTopic: Topic = {
     {
       word: "LIBRARY",
       hint: "Book collection",
-      extraLetters: "YWZXQP",
+      extraLetters: "LIBRARYYWZXQP",
       meaning:
         "A building or room containing collections of books, periodicals, and sometimes films for use or borrowing",
       pronunciation: "lī′brĕr′ē",
@@ -338,7 +338,7 @@ export const literatureTopic: Topic = {
     {
       word: "BESTSELLER",
       hint: "Popular book",
-      extraLetters: "ZYXWQP",
+      extraLetters: "BESTSELLERZYXWQP",
       meaning:
         "A book that is among those having the largest sales during a given period",
       pronunciation: "bĕst′sĕl′ər",
@@ -346,7 +346,7 @@ export const literatureTopic: Topic = {
     {
       word: "CLASSIC",
       hint: "Timeless literature",
-      extraLetters: "QPWXZY",
+      extraLetters: "CLASSICQPWXZY",
       meaning:
         "A work of art of recognized and established value, especially a literary or musical composition",
       pronunciation: "klăs′ĭk",
@@ -354,7 +354,7 @@ export const literatureTopic: Topic = {
     {
       word: "ROMANCE",
       hint: "Love story",
-      extraLetters: "XZQPWY",
+      extraLetters: "ROMANCEXZQPWY",
       meaning:
         "A novel or other prose narrative depicting heroic or marvelous deeds, pageantry, romantic exploits, etc.",
       pronunciation: "rō-măns′, rō′măns′",
@@ -362,7 +362,7 @@ export const literatureTopic: Topic = {
     {
       word: "MYSTERY",
       hint: "Detective story",
-      extraLetters: "YWZXQP",
+      extraLetters: "MYSTERYYWZXQP",
       meaning:
         "A genre of fiction that deals with the solution of a crime or the unraveling of secrets",
       pronunciation: "mĭs′tə-rē",
@@ -370,7 +370,7 @@ export const literatureTopic: Topic = {
     {
       word: "FANTASY",
       hint: "Magical stories",
-      extraLetters: "ZYXWQP",
+      extraLetters: "FANTASYZYXWQP",
       meaning:
         "A genre of fiction that uses magic and other supernatural phenomena as a primary element of plot or setting",
       pronunciation: "făn′tə-sē",
@@ -378,7 +378,7 @@ export const literatureTopic: Topic = {
     {
       word: "SCIFI",
       hint: "Futuristic stories",
-      extraLetters: "QPWXZY",
+      extraLetters: "SCIFIQPWXZY",
       meaning:
         "A genre of fiction dealing with the impact of imagined innovations in science or technology",
       pronunciation: "sī′fī′",
@@ -386,7 +386,7 @@ export const literatureTopic: Topic = {
     {
       word: "HORROR",
       hint: "Frightening stories",
-      extraLetters: "XZQPWY",
+      extraLetters: "HORRORXZQPWY",
       meaning:
         "A genre of fiction which is intended to frighten, scare, or disgust",
       pronunciation: "hôr′ər",
@@ -394,7 +394,7 @@ export const literatureTopic: Topic = {
     {
       word: "COMEDY",
       hint: "Humorous stories",
-      extraLetters: "YWZXQP",
+      extraLetters: "COMEDYYWZXQP",
       meaning:
         "A genre of fiction that refers to any discourse or work generally intended to be humorous",
       pronunciation: "kŏm′ĭ-dē",

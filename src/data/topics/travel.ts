@@ -9,7 +9,7 @@ export const travelTopic: Topic = {
     {
       word: "PASSPORT",
       hint: "Travel document",
-      extraLetters: "PASORTZXQ",
+      extraLetters: "PASSPORTZXQ",
       meaning:
         "An official document issued by a government, certifying the holder's identity and citizenship",
       pronunciation: "păs′pôrt′",
@@ -25,7 +25,7 @@ export const travelTopic: Topic = {
     {
       word: "LUGGAGE",
       hint: "Travel bags",
-      extraLetters: "LUGAZXQP",
+      extraLetters: "LUGGAGEZXQP",
       meaning:
         "Suitcases or other bags in which to pack personal belongings for traveling",
       pronunciation: "lŭg′ĭj",
@@ -33,7 +33,7 @@ export const travelTopic: Topic = {
     {
       word: "SUITCASE",
       hint: "Travel container",
-      extraLetters: "SUITCAEZX",
+      extraLetters: "SUITCASEZX",
       meaning:
         "A case with a handle and a hinged lid, used for carrying clothes and other personal possessions",
       pronunciation: "so͞ot′kās′",
@@ -41,7 +41,7 @@ export const travelTopic: Topic = {
     {
       word: "BACKPACK",
       hint: "Shoulder bag",
-      extraLetters: "BACKPZXQW",
+      extraLetters: "BACKPACKZXQW",
       meaning:
         "A bag with shoulder straps that allow it to be carried on one's back",
       pronunciation: "băk′păk′",
@@ -73,7 +73,7 @@ export const travelTopic: Topic = {
     {
       word: "ITINERARY",
       hint: "Travel plan",
-      extraLetters: "ITNERAYQP",
+      extraLetters: "ITINERARYZQP",
       meaning:
         "A planned route or journey, often including the times and places you will visit",
       pronunciation: "ī-tĭn′ə-rĕr′ē",
@@ -105,7 +105,7 @@ export const travelTopic: Topic = {
     {
       word: "RESORT",
       hint: "Vacation retreat",
-      extraLetters: "RESOTZXQP",
+      extraLetters: "RESORTZXQP",
       meaning:
         "A place frequented for holidays or recreation, often with accommodations and amenities",
       pronunciation: "rĭ-zôrt′",
@@ -129,7 +129,7 @@ export const travelTopic: Topic = {
     {
       word: "AIRPLANE",
       hint: "Flying vehicle",
-      extraLetters: "AIRPLNEXQ",
+      extraLetters: "AIRPLANEZXQ",
       meaning:
         "A powered flying vehicle with fixed wings and a weight greater than that of the air it displaces",
       pronunciation: "âr′plān′",
@@ -137,7 +137,7 @@ export const travelTopic: Topic = {
     {
       word: "AIRPORT",
       hint: "Flight hub",
-      extraLetters: "AIRPOTZXQ",
+      extraLetters: "AIRPORTZXQ",
       meaning:
         "A complex of runways and buildings for the takeoff, landing, and maintenance of aircraft",
       pronunciation: "âr′pôrt′",
@@ -209,7 +209,7 @@ export const travelTopic: Topic = {
     {
       word: "MOUNTAIN",
       hint: "Elevated landform",
-      extraLetters: "MOUNTAIZXQ",
+      extraLetters: "MOUNTAINZXQ",
       meaning:
         "A large natural elevation of the earth's surface rising abruptly from the surrounding level",
       pronunciation: "moun′tn",
@@ -232,7 +232,7 @@ export const travelTopic: Topic = {
     {
       word: "LANDMARK",
       hint: "Famous location",
-      extraLetters: "LANDMRKZX",
+      extraLetters: "LANDMARKZX",
       meaning:
         "A building or feature that is easily recognized and serves as a guide or point of reference",
       pronunciation: "lănd′märk′",
@@ -303,7 +303,7 @@ export const travelTopic: Topic = {
     {
       word: "ADVENTURE",
       hint: "Exciting experience",
-      extraLetters: "ADVENTURZ",
+      extraLetters: "ADVENTUREZ",
       meaning:
         "An unusual and exciting or daring experience, typically involving travel",
       pronunciation: "əd-vĕn′chər",
@@ -311,7 +311,7 @@ export const travelTopic: Topic = {
     {
       word: "EXCURSION",
       hint: "Short trip",
-      extraLetters: "EXCURSION",
+      extraLetters: "EXCURSIONZ",
       meaning: "A short journey or trip, especially one taken for pleasure",
       pronunciation: "ĭk-skûr′zhən",
     },

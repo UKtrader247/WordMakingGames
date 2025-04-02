@@ -283,7 +283,7 @@ export const colorsTopic: Topic = {
       hint: "Bright green gemstone color",
       extraLetters: "EMRALDPQ",
       meaning:
-        "A bright green color that resembles the precious gemstone, associated with luxury and nature",
+        "A bright green gemstone color that resembles the precious gemstone, associated with luxury and nature",
       pronunciation: "ĕm′ər-əld",
     },
     {
@@ -345,7 +345,7 @@ export const colorsTopic: Topic = {
     {
       word: "CHESTNUT",
       hint: "Reddish-brown nut color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "CHESTNUPQ",
       meaning:
         "A deep reddish-brown color that resembles the nut or the coat of a chestnut horse",
       pronunciation: "chĕs′nŭt′",
@@ -353,7 +353,7 @@ export const colorsTopic: Topic = {
     {
       word: "RUST",
       hint: "Reddish-brown oxidized metal",
-      extraLetters: "PQWXYZ",
+      extraLetters: "RUSTPQXZ",
       meaning:
         "A reddish-brown color that resembles iron oxide, suggesting age and deterioration",
       pronunciation: "rŭst",
@@ -361,7 +361,7 @@ export const colorsTopic: Topic = {
     {
       word: "COPPER",
       hint: "Reddish-brown metal color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "COPPERPQZ",
       meaning:
         "A reddish-brown color that resembles the metal, with warm and earthy undertones",
       pronunciation: "kŏp′ər",
@@ -369,7 +369,7 @@ export const colorsTopic: Topic = {
     {
       word: "BRASS",
       hint: "Yellowish metal alloy color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "BRASSPQZ",
       meaning:
         "A yellowish metallic color that resembles the alloy of copper and zinc, suggesting durability",
       pronunciation: "brăs",
@@ -377,7 +377,7 @@ export const colorsTopic: Topic = {
     {
       word: "STEEL",
       hint: "Silvery-gray metal color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "STEELPQZ",
       meaning:
         "A grayish metallic color that resembles the alloy, suggesting strength and industrial quality",
       pronunciation: "stēl",
@@ -385,7 +385,7 @@ export const colorsTopic: Topic = {
     {
       word: "COBALT",
       hint: "Strong blue metal color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "COBALTPQZ",
       meaning:
         "A deep blue color that resembles compounds of the metal, intense and striking in appearance",
       pronunciation: "kō′bôlt′",
@@ -393,7 +393,7 @@ export const colorsTopic: Topic = {
     {
       word: "SLATE",
       hint: "Gray-blue stone color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "SLATEPQZ",
       meaning:
         "A grayish blue color that resembles the fine-grained rock, suggesting solidity and neutrality",
       pronunciation: "slāt",
@@ -401,7 +401,7 @@ export const colorsTopic: Topic = {
     {
       word: "CHARCOAL",
       hint: "Dark gray burnt wood color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "CHARCOLPQZ",
       meaning:
         "A very dark gray color that resembles burnt wood, often used in art and fashion",
       pronunciation: "chär′kōl′",
@@ -409,7 +409,7 @@ export const colorsTopic: Topic = {
     {
       word: "ASH",
       hint: "Light gray burnt material",
-      extraLetters: "PQWXYZ",
+      extraLetters: "ASHPQWXZ",
       meaning:
         "A pale gray color that resembles the powdery residue after burning, suggesting subtlety",
       pronunciation: "ăsh",
@@ -417,7 +417,7 @@ export const colorsTopic: Topic = {
     {
       word: "SMOKE",
       hint: "Grayish cloud color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "SMOKEPQZ",
       meaning:
         "A translucent gray color that resembles the visible suspension from burning materials",
       pronunciation: "smōk",
@@ -425,7 +425,7 @@ export const colorsTopic: Topic = {
     {
       word: "SNOW",
       hint: "Pure white precipitation",
-      extraLetters: "PQWXYZ",
+      extraLetters: "SNOWPQXZ",
       meaning:
         "A bright, pure white color that resembles freshly fallen precipitation, suggesting purity",
       pronunciation: "snō",
@@ -433,7 +433,7 @@ export const colorsTopic: Topic = {
     {
       word: "EGGSHELL",
       hint: "Off-white shell color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "EGSHLPQZ",
       meaning:
         "A very pale, warm off-white color that resembles the exterior of an egg, slightly textured in appearance",
       pronunciation: "ĕg′shĕl′",
@@ -441,7 +441,7 @@ export const colorsTopic: Topic = {
     {
       word: "BONE",
       hint: "Off-white skeletal color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "BONEPQXZ",
       meaning:
         "A pale, yellowish-white color that resembles skeletal material, suggesting age and naturalness",
       pronunciation: "bōn",
@@ -449,7 +449,7 @@ export const colorsTopic: Topic = {
     {
       word: "VANILLA",
       hint: "Creamy off-white flavor",
-      extraLetters: "PQWXYZ",
+      extraLetters: "VANILPQZ",
       meaning:
         "A creamy, pale yellowish-white color that resembles the flavor extract, suggesting warmth and sweetness",
       pronunciation: "və-nĭl′ə",
@@ -457,7 +457,7 @@ export const colorsTopic: Topic = {
     {
       word: "LEMON",
       hint: "Bright yellow citrus",
-      extraLetters: "PQWXYZ",
+      extraLetters: "LEMONPQZ",
       meaning:
         "A bright, light yellow color that resembles the citrus fruit, suggesting freshness and acidity",
       pronunciation: "lĕm′ən",
@@ -465,7 +465,7 @@ export const colorsTopic: Topic = {
     {
       word: "MUSTARD",
       hint: "Yellow-brown condiment",
-      extraLetters: "PQWXYZ",
+      extraLetters: "MUSTARDPQZ",
       meaning:
         "A yellowish-brown color that resembles the prepared condiment, strong and distinctive",
       pronunciation: "mŭs′tərd",
@@ -473,7 +473,7 @@ export const colorsTopic: Topic = {
     {
       word: "HONEY",
       hint: "Golden sweet syrup",
-      extraLetters: "PQWXYZ",
+      extraLetters: "HONEYPQZ",
       meaning:
         "A warm, golden amber color that resembles the sweet substance produced by bees",
       pronunciation: "hŭn′ē",
@@ -481,7 +481,7 @@ export const colorsTopic: Topic = {
     {
       word: "CARAMEL",
       hint: "Golden-brown sweet",
-      extraLetters: "PQWXYZ",
+      extraLetters: "CARAMLPQZ",
       meaning:
         "A medium to dark, golden-brown color that resembles cooked sugar, suggesting warmth and sweetness",
       pronunciation: "kăr′ə-məl",
@@ -489,7 +489,7 @@ export const colorsTopic: Topic = {
     {
       word: "CHOCOLATE",
       hint: "Dark brown sweet treat",
-      extraLetters: "PQWXYZ",
+      extraLetters: "CHOLTEPQZ",
       meaning:
         "A rich, dark brown color that resembles the sweet food made from cacao beans",
       pronunciation: "chŏk′ə-lĭt",
@@ -497,7 +497,7 @@ export const colorsTopic: Topic = {
     {
       word: "COFFEE",
       hint: "Dark brown beverage",
-      extraLetters: "PQWXYZ",
+      extraLetters: "COFEPQXZ",
       meaning:
         "A dark brown color that resembles the brewed beverage, rich and warm in appearance",
       pronunciation: "kô′fē",
@@ -505,7 +505,7 @@ export const colorsTopic: Topic = {
     {
       word: "MOCHA",
       hint: "Coffee-chocolate brown",
-      extraLetters: "PQWXYZ",
+      extraLetters: "MOCHAPQZ",
       meaning:
         "A warm brown color with reddish undertones that resembles the coffee-chocolate beverage",
       pronunciation: "mō′kə",
@@ -513,7 +513,7 @@ export const colorsTopic: Topic = {
     {
       word: "CINNAMON",
       hint: "Reddish-brown spice",
-      extraLetters: "PQWXYZ",
+      extraLetters: "CINAMONPQZ",
       meaning:
         "A warm, reddish-brown color that resembles the aromatic spice, suggesting warmth and earthiness",
       pronunciation: "sĭn′ə-mən",
@@ -521,7 +521,7 @@ export const colorsTopic: Topic = {
     {
       word: "GINGER",
       hint: "Pale orange-brown root",
-      extraLetters: "PQWXYZ",
+      extraLetters: "GINGERPQZ",
       meaning:
         "A pale, yellowish-brown color that resembles the root spice, warm and earthy in tone",
       pronunciation: "jĭn′jər",
@@ -529,7 +529,7 @@ export const colorsTopic: Topic = {
     {
       word: "PUMPKIN",
       hint: "Orange gourd color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "PUMPKINQZ",
       meaning:
         "A deep orange color that resembles the gourd, associated with autumn and harvest",
       pronunciation: "pŭmp′kĭn",
@@ -537,7 +537,7 @@ export const colorsTopic: Topic = {
     {
       word: "PEACH",
       hint: "Soft orange-pink fruit",
-      extraLetters: "PQWXYZ",
+      extraLetters: "PEACHQXZ",
       meaning:
         "A soft, pale orange-pink color that resembles the fruit, suggesting warmth and softness",
       pronunciation: "pēch",
@@ -545,7 +545,7 @@ export const colorsTopic: Topic = {
     {
       word: "APRICOT",
       hint: "Pale orange fruit color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "APRICOTQZ",
       meaning:
         "A pale, yellowish-orange color that resembles the fruit, warm and delicate in appearance",
       pronunciation: "ăp′rĭ-kŏt′",
@@ -553,7 +553,7 @@ export const colorsTopic: Topic = {
     {
       word: "MELON",
       hint: "Pale green fruit color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "MELONPQZ",
       meaning:
         "A pale, yellowish-green color that resembles the flesh of certain melons, fresh and light",
       pronunciation: "mĕl′ən",
@@ -561,7 +561,7 @@ export const colorsTopic: Topic = {
     {
       word: "AVOCADO",
       hint: "Dark green fruit color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "AVOCADPQZ",
       meaning:
         "A dark yellowish-green color that resembles the fruit, popular in 1970s design",
       pronunciation: "ăv′ə-kä′dō",
@@ -569,7 +569,7 @@ export const colorsTopic: Topic = {
     {
       word: "PINE",
       hint: "Dark green tree color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "PINEPQXZ",
       meaning:
         "A dark green color that resembles the needles of the evergreen tree, suggesting forests",
       pronunciation: "pīn",
@@ -577,7 +577,7 @@ export const colorsTopic: Topic = {
     {
       word: "FOREST",
       hint: "Deep green woodland color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "FORESTPQZ",
       meaning:
         "A deep, dark green color that resembles dense woodland, suggesting depth and mystery",
       pronunciation: "fôr′ĭst",
@@ -585,7 +585,7 @@ export const colorsTopic: Topic = {
     {
       word: "MOSS",
       hint: "Soft green plant color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "MOSSPQXZ",
       meaning:
         "A soft, grayish-green color that resembles the small flowerless plant, suggesting dampness",
       pronunciation: "môs",
@@ -593,7 +593,7 @@ export const colorsTopic: Topic = {
     {
       word: "FERN",
       hint: "Light green plant color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "FERNPQXZ",
       meaning:
         "A light, yellowish-green color that resembles the feathery-leaved plant, fresh and natural",
       pronunciation: "fûrn",
@@ -601,7 +601,7 @@ export const colorsTopic: Topic = {
     {
       word: "SAGE",
       hint: "Grayish-green herb color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "SAGEPQXZ",
       meaning:
         "A grayish-green color that resembles the herb, suggesting wisdom and calmness",
       pronunciation: "sāj",
@@ -609,7 +609,7 @@ export const colorsTopic: Topic = {
     {
       word: "SEAFOAM",
       hint: "Light blue-green ocean color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "SEAFOMPQZ",
       meaning:
         "A pale, blue-green color that resembles the frothy ocean surface, suggesting freshness",
       pronunciation: "sē′fōm′",
@@ -617,7 +617,7 @@ export const colorsTopic: Topic = {
     {
       word: "AQUA",
       hint: "Light blue-green water color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "AQUAPQXZ",
       meaning:
         "A light greenish-blue color that resembles water, bright and refreshing in appearance",
       pronunciation: "ăk′wə",
@@ -625,7 +625,7 @@ export const colorsTopic: Topic = {
     {
       word: "SKY",
       hint: "Light blue daytime color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "SKYPQWXZ",
       meaning:
         "A light blue color that resembles a clear daytime sky, suggesting openness and clarity",
       pronunciation: "skī",
@@ -633,7 +633,7 @@ export const colorsTopic: Topic = {
     {
       word: "AZURE",
       hint: "Bright blue sky color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "AZUREPQZ",
       meaning:
         "A bright, cyan-blue color that resembles a clear sky, suggesting vastness and clarity",
       pronunciation: "ăzh′ər",
@@ -641,7 +641,7 @@ export const colorsTopic: Topic = {
     {
       word: "CERULEAN",
       hint: "Deep sky blue color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "CERULNPQZ",
       meaning:
         "A deep blue color resembling a clear sky, slightly darker than azure with a touch of green",
       pronunciation: "sə-ro͞o′lē-ən",
@@ -649,7 +649,7 @@ export const colorsTopic: Topic = {
     {
       word: "DENIM",
       hint: "Blue jeans color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "DENIMPQZ",
       meaning:
         "A medium blue color that resembles the cotton twill fabric used for jeans, casual and durable",
       pronunciation: "dĕn′ĭm",
@@ -657,7 +657,7 @@ export const colorsTopic: Topic = {
     {
       word: "ROYAL",
       hint: "Deep blue nobility color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "ROYALPQZ",
       meaning:
         "A deep, rich blue color historically associated with nobility and luxury",
       pronunciation: "roi′əl",
@@ -665,7 +665,7 @@ export const colorsTopic: Topic = {
     {
       word: "MIDNIGHT",
       hint: "Very dark blue night color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "MIDNGTPQZ",
       meaning:
         "A very dark blue color that resembles the night sky, suggesting depth and mystery",
       pronunciation: "mĭd′nīt′",
@@ -673,7 +673,7 @@ export const colorsTopic: Topic = {
     {
       word: "PLUM",
       hint: "Dark purple fruit color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "PLUMPQXZ",
       meaning:
         "A dark reddish-purple color that resembles the fruit, rich and deep in appearance",
       pronunciation: "plŭm",
@@ -681,7 +681,7 @@ export const colorsTopic: Topic = {
     {
       word: "EGGPLANT",
       hint: "Dark purple vegetable",
-      extraLetters: "PQWXYZ",
+      extraLetters: "EGPLANTQZ",
       meaning:
         "A dark purple color that resembles the vegetable, deep and rich in appearance",
       pronunciation: "ĕg′plănt′",
@@ -689,7 +689,7 @@ export const colorsTopic: Topic = {
     {
       word: "GRAPE",
       hint: "Purple fruit color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "GRAPEPQZ",
       meaning:
         "A deep purple color that resembles the fruit, associated with wine and richness",
       pronunciation: "grāp",
@@ -697,7 +697,7 @@ export const colorsTopic: Topic = {
     {
       word: "LAVENDER",
       hint: "Light purple flower color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "LAVENDRPQZ",
       meaning:
         "A pale purple color that resembles the flower, suggesting delicacy and fragrance",
       pronunciation: "lăv′ən-dər",
@@ -705,7 +705,7 @@ export const colorsTopic: Topic = {
     {
       word: "LILAC",
       hint: "Pale purple flower color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "LILACPQZ",
       meaning:
         "A pale, pinkish-purple color that resembles the flower, suggesting springtime and softness",
       pronunciation: "lī′lăk",
@@ -713,7 +713,7 @@ export const colorsTopic: Topic = {
     {
       word: "MAUVE",
       hint: "Pale purple-pink color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "MAUVEPQZ",
       meaning:
         "A pale purple color with a bluish tinge, delicate and often associated with Victorian era",
       pronunciation: "môv",
@@ -721,7 +721,7 @@ export const colorsTopic: Topic = {
     {
       word: "ROSE",
       hint: "Deep pink flower color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "ROSEPQXZ",
       meaning:
         "A deep pink color that resembles the flower, suggesting romance and elegance",
       pronunciation: "rōz",
@@ -729,7 +729,7 @@ export const colorsTopic: Topic = {
     {
       word: "FUCHSIA",
       hint: "Bright purple-pink color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "FUCHSIAPQZ",
       meaning:
         "A vivid reddish-purple color that resembles the flower, bright and attention-grabbing",
       pronunciation: "fyo͞o′shə",
@@ -737,7 +737,7 @@ export const colorsTopic: Topic = {
     {
       word: "BLUSH",
       hint: "Soft pink cheek color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "BLUSHPQZ",
       meaning:
         "A soft, pale pink color that resembles flushed cheeks, suggesting youth and delicacy",
       pronunciation: "blŭsh",
@@ -745,7 +745,7 @@ export const colorsTopic: Topic = {
     {
       word: "ROUGE",
       hint: "Red-pink makeup color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "ROUGEPQZ",
       meaning:
         "A reddish-pink color used in cosmetics, suggesting enhancement and vibrancy",
       pronunciation: "ro͞ozh",
@@ -753,7 +753,7 @@ export const colorsTopic: Topic = {
     {
       word: "WINE",
       hint: "Deep red alcoholic drink",
-      extraLetters: "PQWXYZ",
+      extraLetters: "WINEPQXZ",
       meaning:
         "A deep, rich red color that resembles the alcoholic beverage, suggesting depth and richness",
       pronunciation: "wīn",
@@ -761,7 +761,7 @@ export const colorsTopic: Topic = {
     {
       word: "BURGUNDY",
       hint: "Deep red-purple wine color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "BURGNDYPQZ",
       meaning:
         "A dark red-purple color that resembles the wine from the French region, rich and sophisticated",
       pronunciation: "bûr′gən-dē",
@@ -769,7 +769,7 @@ export const colorsTopic: Topic = {
     {
       word: "BRICK",
       hint: "Reddish-brown building material",
-      extraLetters: "PQWXYZ",
+      extraLetters: "BRICKPQZ",
       meaning:
         "A reddish-brown color that resembles the building material, suggesting solidity and warmth",
       pronunciation: "brĭk",
@@ -777,7 +777,7 @@ export const colorsTopic: Topic = {
     {
       word: "CLAY",
       hint: "Reddish-brown earth material",
-      extraLetters: "PQWXYZ",
+      extraLetters: "CLAYPQXZ",
       meaning:
         "A reddish-brown color that resembles the natural earth material, suggesting earthiness",
       pronunciation: "klā",
@@ -785,7 +785,7 @@ export const colorsTopic: Topic = {
     {
       word: "SAND",
       hint: "Light brown beach material",
-      extraLetters: "PQWXYZ",
+      extraLetters: "SANDPQXZ",
       meaning:
         "A light yellowish-brown color that resembles beach material, suggesting warmth and beaches",
       pronunciation: "sănd",
@@ -793,7 +793,7 @@ export const colorsTopic: Topic = {
     {
       word: "DESERT",
       hint: "Light brown arid landscape",
-      extraLetters: "PQWXYZ",
+      extraLetters: "DESERTPQZ",
       meaning:
         "A light, warm brown color that resembles arid landscapes, suggesting heat and dryness",
       pronunciation: "dĕz′ərt",
@@ -801,7 +801,7 @@ export const colorsTopic: Topic = {
     {
       word: "HAZEL",
       hint: "Light brown-green eye color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "HAZELPQZ",
       meaning:
         "A light brown-green color that resembles the eye color or the nut, warm and variable",
       pronunciation: "hā′zəl",
@@ -809,7 +809,7 @@ export const colorsTopic: Topic = {
     {
       word: "TAUPE",
       hint: "Grayish-brown neutral color",
-      extraLetters: "PQWXYZ",
+      extraLetters: "TAUPEPQZ",
       meaning:
         "A grayish-brown color that is widely used as a neutral in interior design and fashion",
       pronunciation: "tōp",

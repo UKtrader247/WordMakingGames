@@ -232,7 +232,7 @@ export const cookingTopic: Topic = {
     {
       word: "GRATE",
       hint: "Reduce to shreds",
-      extraLetters: "QPLTNZ",
+      extraLetters: "GRATEPZ",
       meaning:
         "A technique where food is rubbed against a rough surface to produce small, thin pieces",
       pronunciation: "grāt",
@@ -240,7 +240,7 @@ export const cookingTopic: Topic = {
     {
       word: "CURE",
       hint: "Preserve with salt or smoke",
-      extraLetters: "QPLTNZ",
+      extraLetters: "CUREPTZ",
       meaning:
         "A food preservation method using salt, sugar, nitrates, or smoke to draw out moisture",
       pronunciation: "kyo͝or",
@@ -248,7 +248,7 @@ export const cookingTopic: Topic = {
     {
       word: "BASTE",
       hint: "Moisten while cooking",
-      extraLetters: "QPLTNZ",
+      extraLetters: "BASTEPZ",
       meaning:
         "A technique of moistening food during cooking by spooning, brushing or drizzling liquid over it",
       pronunciation: "bāst",
@@ -256,7 +256,7 @@ export const cookingTopic: Topic = {
     {
       word: "REDUCE",
       hint: "Thicken by evaporation",
-      extraLetters: "QPLTZ",
+      extraLetters: "REDUCPZ",
       meaning:
         "A technique where liquid is simmered to evaporate water, concentrating flavors and thickening consistency",
       pronunciation: "rĭ-do͞os′",
@@ -264,7 +264,7 @@ export const cookingTopic: Topic = {
     {
       word: "INFUSE",
       hint: "Extract flavors in liquid",
-      extraLetters: "QPLTNZ",
+      extraLetters: "INFUSEPZ",
       meaning:
         "A process where flavors are extracted from ingredients by steeping them in liquid",
       pronunciation: "ĭn-fyo͞oz′",
@@ -272,7 +272,7 @@ export const cookingTopic: Topic = {
     {
       word: "TRUSS",
       hint: "Tie poultry before cooking",
-      extraLetters: "QPLTNZ",
+      extraLetters: "TRUSSPZ",
       meaning:
         "A technique of tying poultry or meat with string to maintain shape during cooking",
       pronunciation: "trŭs",
@@ -280,7 +280,7 @@ export const cookingTopic: Topic = {
     {
       word: "WHIP",
       hint: "Beat to incorporate air",
-      extraLetters: "QPLTNZ",
+      extraLetters: "WHIPPTZ",
       meaning:
         "A vigorous mixing technique that incorporates air into ingredients to increase volume",
       pronunciation: "wĭp",
@@ -288,7 +288,7 @@ export const cookingTopic: Topic = {
     {
       word: "FILET",
       hint: "Cut meat or fish into pieces",
-      extraLetters: "QPLTNZ",
+      extraLetters: "FILETPZ",
       meaning:
         "A technique of cutting meat or fish into boneless strips or pieces, or the resulting cut itself",
       pronunciation: "fĭ-lā′",
@@ -296,7 +296,7 @@ export const cookingTopic: Topic = {
     {
       word: "BLEND",
       hint: "Mix thoroughly",
-      extraLetters: "QPLTZM",
+      extraLetters: "BLENDPZ",
       meaning:
         "A technique of combining ingredients completely, often using a blender or food processor",
       pronunciation: "blĕnd",
@@ -304,7 +304,7 @@ export const cookingTopic: Topic = {
     {
       word: "PUREE",
       hint: "Mash to a smooth consistency",
-      extraLetters: "QPLTZ",
+      extraLetters: "PUREEPZ",
       meaning:
         "A technique of mashing or blending food until completely smooth, or the resulting preparation",
       pronunciation: "pə-rā′",
@@ -312,7 +312,7 @@ export const cookingTopic: Topic = {
     {
       word: "CARAMELIZE",
       hint: "Brown sugar by heating",
-      extraLetters: "QPTZ",
+      extraLetters: "CARAMELIZ",
       meaning:
         "A process where sugars in food turn brown when heated, developing complex flavors",
       pronunciation: "kăr′ə-məl-īz′",
@@ -320,7 +320,7 @@ export const cookingTopic: Topic = {
     {
       word: "DEGLAZE",
       hint: "Add liquid to pan to loosen bits",
-      extraLetters: "QPTNM",
+      extraLetters: "DEGLAZPZ",
       meaning:
         "A technique where liquid is added to a hot pan to dissolve cooked food particles for a flavorful sauce",
       pronunciation: "dē-glāz′",
@@ -328,7 +328,7 @@ export const cookingTopic: Topic = {
     {
       word: "FERMENT",
       hint: "Convert sugar to alcohol",
-      extraLetters: "QPLTZ",
+      extraLetters: "FERMENTZ",
       meaning:
         "A process where microorganisms convert carbohydrates to alcohol or acids, creating distinct flavors",
       pronunciation: "fər-mĕnt′",
@@ -336,7 +336,7 @@ export const cookingTopic: Topic = {
     {
       word: "PROOF",
       hint: "Allow dough to rise",
-      extraLetters: "QPLTNZ",
+      extraLetters: "PROOFPZ",
       meaning:
         "The process of allowing yeast dough to rise before baking, developing flavor and texture",
       pronunciation: "pro͞of",
@@ -344,7 +344,7 @@ export const cookingTopic: Topic = {
     {
       word: "SPATCHCOCK",
       hint: "Butterfly a whole bird",
-      extraLetters: "QPTZ",
+      extraLetters: "SPATCHOK",
       meaning:
         "A technique where a bird's backbone is removed so it can be flattened for even, quicker cooking",
       pronunciation: "spăch′kŏk′",
@@ -352,7 +352,7 @@ export const cookingTopic: Topic = {
     {
       word: "SOUS VIDE",
       hint: "Cook in vacuum-sealed bag",
-      extraLetters: "QPLT",
+      extraLetters: "SOUVIDEZ",
       meaning:
         "A cooking method where food is sealed in a vacuum bag and cooked in temperature-controlled water",
       pronunciation: "so͞o vēd′",
@@ -360,7 +360,7 @@ export const cookingTopic: Topic = {
     {
       word: "FLAMBE",
       hint: "Cook with flaming alcohol",
-      extraLetters: "QPLTNZ",
+      extraLetters: "FLAMBEPZ",
       meaning:
         "A technique where alcohol is added to a hot pan and ignited to create a burst of flame and flavor",
       pronunciation: "flŏm-bā′",
@@ -368,7 +368,7 @@ export const cookingTopic: Topic = {
     {
       word: "RENDER",
       hint: "Melt fat from meat",
-      extraLetters: "QPLTNZ",
+      extraLetters: "RENDERPZ",
       meaning:
         "The process of melting fat from meat or other animal tissue by applying low heat",
       pronunciation: "rĕn′dər",
@@ -376,7 +376,7 @@ export const cookingTopic: Topic = {
     {
       word: "SCORE",
       hint: "Make shallow cuts",
-      extraLetters: "QPLTNZ",
+      extraLetters: "SCOREPZ",
       meaning:
         "A technique of making shallow cuts in food to allow marinades to penetrate or for decorative purposes",
       pronunciation: "skôr",
@@ -384,7 +384,7 @@ export const cookingTopic: Topic = {
     {
       word: "PARBOIL",
       hint: "Partially boil food",
-      extraLetters: "QPLTZ",
+      extraLetters: "PARBOILZ",
       meaning:
         "A cooking technique where food is partially cooked in boiling water before finishing by another method",
       pronunciation: "pär′boil′",
@@ -392,7 +392,7 @@ export const cookingTopic: Topic = {
     {
       word: "SCALD",
       hint: "Heat liquid just below boiling",
-      extraLetters: "QPLTNZ",
+      extraLetters: "SCALDPZ",
       meaning:
         "A technique of heating milk or other liquid to just below boiling point, often to kill bacteria",
       pronunciation: "skôld",
@@ -400,7 +400,7 @@ export const cookingTopic: Topic = {
     {
       word: "SEAR",
       hint: "Brown quickly with high heat",
-      extraLetters: "QPLTNZ",
+      extraLetters: "SEARPTZ",
       meaning:
         "A technique of quickly browning the surface of food with intense heat to enhance flavor and texture",
       pronunciation: "sîr",
@@ -408,7 +408,7 @@ export const cookingTopic: Topic = {
     {
       word: "SHRED",
       hint: "Tear into long strips",
-      extraLetters: "QPLTNZ",
+      extraLetters: "SHREDPZ",
       meaning:
         "A technique of cutting or tearing food into long, thin pieces, often used for cheese or meat",
       pronunciation: "shrĕd",
@@ -416,7 +416,7 @@ export const cookingTopic: Topic = {
     {
       word: "TEMPER",
       hint: "Gradually adjust temperature",
-      extraLetters: "QPLTZ",
+      extraLetters: "TEMPERPZ",
       meaning:
         "A technique of gradually warming ingredients to prevent them from seizing or curdling when combined",
       pronunciation: "tĕm′pər",
@@ -424,7 +424,7 @@ export const cookingTopic: Topic = {
     {
       word: "TOAST",
       hint: "Brown by direct heat",
-      extraLetters: "QPLNZM",
+      extraLetters: "TOASTPZ",
       meaning:
         "A cooking method where food is browned by exposure to direct heat, enhancing flavor and texture",
       pronunciation: "tōst",
@@ -432,7 +432,7 @@ export const cookingTopic: Topic = {
     {
       word: "TOSS",
       hint: "Mix lightly",
-      extraLetters: "QPLTNZM",
+      extraLetters: "TOSSPZ",
       meaning:
         "A gentle mixing technique where ingredients are lightly thrown and caught to combine them evenly",
       pronunciation: "tôs",
@@ -440,7 +440,7 @@ export const cookingTopic: Topic = {
     {
       word: "BRINING",
       hint: "Soaking in salt solution",
-      extraLetters: "QPLTZ",
+      extraLetters: "BRININGZ",
       meaning:
         "A food preparation technique where meat is soaked in saltwater to enhance flavor and moisture",
       pronunciation: "brī′nĭng",
@@ -448,7 +448,7 @@ export const cookingTopic: Topic = {
     {
       word: "BUTTERFLY",
       hint: "Split and flatten food",
-      extraLetters: "QPLZ",
+      extraLetters: "BUTERFLYP",
       meaning:
         "A technique where meat or fish is split down the middle and opened flat like a butterfly's wings",
       pronunciation: "bŭt′ər-flī′",
@@ -456,7 +456,7 @@ export const cookingTopic: Topic = {
     {
       word: "CODDLE",
       hint: "Cook gently in water",
-      extraLetters: "QPLTNZ",
+      extraLetters: "CODDLEPZ",
       meaning:
         "A gentle cooking method where food is heated in water kept just below the boiling point",
       pronunciation: "kŏd′l",
@@ -464,7 +464,7 @@ export const cookingTopic: Topic = {
     {
       word: "CRUSH",
       hint: "Break into small pieces",
-      extraLetters: "QPLTNZ",
+      extraLetters: "CRUSHPTZ",
       meaning:
         "A technique of pressing or pounding food to break it into smaller, irregular pieces",
       pronunciation: "krŭsh",

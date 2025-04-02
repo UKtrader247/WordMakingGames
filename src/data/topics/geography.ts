@@ -65,7 +65,7 @@ export const geographyTopic: Topic = {
     {
       word: "BEIJING",
       hint: "Chinese capital",
-      extraLetters: "BEIJNGRQZ",
+      extraLetters: "BEIJINGQZ",
       meaning:
         "The capital of China, known for the Forbidden City, Temple of Heaven, and as the host of the 2008 and 2022 Olympics",
       pronunciation: "bā′jĭng′",
@@ -81,7 +81,7 @@ export const geographyTopic: Topic = {
     {
       word: "SYDNEY",
       hint: "Australian city",
-      extraLetters: "SYDNEWXQ",
+      extraLetters: "SYDNEYXQ",
       meaning:
         "The largest city in Australia, known for its harbor, Opera House, and Harbour Bridge",
       pronunciation: "sĭd′nē",
@@ -89,7 +89,7 @@ export const geographyTopic: Topic = {
     {
       word: "MEXICO",
       hint: "North American country",
-      extraLetters: "ZYXWQP",
+      extraLetters: "MEXICOZYXWQP",
       meaning:
         "A country in the southern portion of North America, known for its beaches, diverse culture, and ancient ruins",
       pronunciation: "mĕk′sĭ-kō′",
@@ -97,7 +97,7 @@ export const geographyTopic: Topic = {
     {
       word: "BRAZIL",
       hint: "South American country",
-      extraLetters: "QPWXZY",
+      extraLetters: "BRAZILQPWXZY",
       meaning:
         "The largest country in South America, known for the Amazon rainforest, Carnival, and soccer",
       pronunciation: "brə-zĭl′",
@@ -105,7 +105,7 @@ export const geographyTopic: Topic = {
     {
       word: "CANADA",
       hint: "Northern country",
-      extraLetters: "XZQPWY",
+      extraLetters: "CANADAXZQPWY",
       meaning:
         "A country in North America, known for its vast wilderness, multicultural cities, and maple syrup",
       pronunciation: "kăn′ə-də",
@@ -113,7 +113,7 @@ export const geographyTopic: Topic = {
     {
       word: "SPAIN",
       hint: "European country",
-      extraLetters: "YWZXQP",
+      extraLetters: "SPAINYWZXQP",
       meaning:
         "A country in southwestern Europe known for flamenco, bullfighting, and diverse landscapes",
       pronunciation: "spān",
@@ -121,7 +121,7 @@ export const geographyTopic: Topic = {
     {
       word: "FRANCE",
       hint: "European country",
-      extraLetters: "ZYXWQP",
+      extraLetters: "FRANCEZYXWQP",
       meaning:
         "A country in Western Europe known for its art, cuisine, fashion, and landmarks like the Eiffel Tower",
       pronunciation: "frăns",
@@ -129,7 +129,7 @@ export const geographyTopic: Topic = {
     {
       word: "ITALY",
       hint: "Boot-shaped country",
-      extraLetters: "QPWXZY",
+      extraLetters: "ITALYQPWXZY",
       meaning:
         "A European country with a distinctive boot-shaped outline, known for its cuisine, art, and ancient ruins",
       pronunciation: "ĭt′ə-lē",
@@ -137,7 +137,7 @@ export const geographyTopic: Topic = {
     {
       word: "CHINA",
       hint: "Asian country",
-      extraLetters: "XZQPWY",
+      extraLetters: "CHINAXZQPWY",
       meaning:
         "The most populous country in the world, known for its ancient civilization, Great Wall, and rapid modernization",
       pronunciation: "chī′nə",
@@ -145,7 +145,7 @@ export const geographyTopic: Topic = {
     {
       word: "JAPAN",
       hint: "Island nation",
-      extraLetters: "YWZXQP",
+      extraLetters: "JAPANYWZXQP",
       meaning:
         "An island country in East Asia known for its traditional culture, advanced technology, and Mount Fuji",
       pronunciation: "jə-păn′",
@@ -153,7 +153,7 @@ export const geographyTopic: Topic = {
     {
       word: "INDIA",
       hint: "South Asian country",
-      extraLetters: "ZYXWQP",
+      extraLetters: "INDIAZYXWQP",
       meaning:
         "A country in South Asia known for its diverse culture, Taj Mahal, and Bollywood film industry",
       pronunciation: "ĭn′dē-ə",
@@ -161,7 +161,7 @@ export const geographyTopic: Topic = {
     {
       word: "EGYPT",
       hint: "Pyramid country",
-      extraLetters: "QPWXZY",
+      extraLetters: "EGYPTQPWXZY",
       meaning:
         "A country in Northeast Africa known for its ancient civilization, pyramids, and the Nile River",
       pronunciation: "ē′jĭpt",
@@ -169,7 +169,7 @@ export const geographyTopic: Topic = {
     {
       word: "KENYA",
       hint: "African country",
-      extraLetters: "XZQPWY",
+      extraLetters: "KENYAXZQPWY",
       meaning:
         "A country in East Africa known for its wildlife safaris, diverse landscapes, and long-distance runners",
       pronunciation: "kĕn′yə, kēn′-",
@@ -177,7 +177,7 @@ export const geographyTopic: Topic = {
     {
       word: "AUSTRALIA",
       hint: "Down under country",
-      extraLetters: "YWZXQP",
+      extraLetters: "AUSTRALIAYWZXQP",
       meaning:
         "A country and continent in the Southern Hemisphere known for its unique wildlife, outback, and Great Barrier Reef",
       pronunciation: "ô-strāl′yə",
@@ -185,7 +185,7 @@ export const geographyTopic: Topic = {
     {
       word: "PACIFIC",
       hint: "Largest ocean",
-      extraLetters: "ZYXWQP",
+      extraLetters: "PACIFICZYXWQP",
       meaning:
         "The largest and deepest ocean on Earth, bordered by Asia, Australia, the Americas, and Antarctica",
       pronunciation: "pə-sĭf′ĭk",
@@ -193,7 +193,7 @@ export const geographyTopic: Topic = {
     {
       word: "ATLANTIC",
       hint: "Ocean between Americas and Europe",
-      extraLetters: "QPWXZY",
+      extraLetters: "ATLANTICQPWXZY",
       meaning:
         "The second-largest ocean on Earth, separating the Americas from Europe and Africa",
       pronunciation: "ət-lăn′tĭk",
@@ -201,7 +201,7 @@ export const geographyTopic: Topic = {
     {
       word: "INDIAN",
       hint: "___ Ocean",
-      extraLetters: "XZQPWY",
+      extraLetters: "INDIANXZQPWY",
       meaning:
         "The third-largest ocean, bounded by Asia, Africa, Australia, and the Southern Ocean",
       pronunciation: "ĭn′dē-ən",
@@ -209,7 +209,7 @@ export const geographyTopic: Topic = {
     {
       word: "ARCTIC",
       hint: "Northern ocean",
-      extraLetters: "YWZXQP",
+      extraLetters: "ARCTICYWZXQP",
       meaning:
         "The smallest and shallowest ocean, located in the Northern Hemisphere and largely covered by sea ice",
       pronunciation: "ärk′tĭk, är′tĭk",
@@ -217,7 +217,7 @@ export const geographyTopic: Topic = {
     {
       word: "AMAZON",
       hint: "South American river",
-      extraLetters: "ZYXWQP",
+      extraLetters: "AMAZONZYXWQP",
       meaning:
         "The largest river by discharge volume of water in the world, flowing through South America",
       pronunciation: "ăm′ə-zŏn′",
@@ -225,7 +225,7 @@ export const geographyTopic: Topic = {
     {
       word: "NILE",
       hint: "African river",
-      extraLetters: "QPWXZY",
+      extraLetters: "NILEQPWXZY",
       meaning:
         "The longest river in Africa, flowing northward through 11 countries to the Mediterranean Sea",
       pronunciation: "nīl",
@@ -233,7 +233,7 @@ export const geographyTopic: Topic = {
     {
       word: "MISSISSIPPI",
       hint: "US river",
-      extraLetters: "XZQPWY",
+      extraLetters: "MISSISSIPPIXZQPWY",
       meaning:
         "The second-longest river in North America, flowing through the central United States",
       pronunciation: "mĭs′ĭ-sĭp′ē",
@@ -241,7 +241,7 @@ export const geographyTopic: Topic = {
     {
       word: "DANUBE",
       hint: "European river",
-      extraLetters: "YWZXQP",
+      extraLetters: "DANUBEYWZXQP",
       meaning:
         "Europe's second-longest river, flowing through ten countries before emptying into the Black Sea",
       pronunciation: "dăn′yōōb",
@@ -249,7 +249,7 @@ export const geographyTopic: Topic = {
     {
       word: "ALPS",
       hint: "European mountains",
-      extraLetters: "ZYXWQP",
+      extraLetters: "ALPSZYXWQP",
       meaning:
         "A mountain range in Europe that stretches across eight countries, known for skiing and climbing",
       pronunciation: "ălps",
@@ -257,7 +257,7 @@ export const geographyTopic: Topic = {
     {
       word: "ANDES",
       hint: "South American mountains",
-      extraLetters: "QPWXZY",
+      extraLetters: "ANDESQPWXZY",
       meaning:
         "The longest continental mountain range in the world, running along the western coast of South America",
       pronunciation: "ăn′dēz",
@@ -265,7 +265,7 @@ export const geographyTopic: Topic = {
     {
       word: "HIMALAYAS",
       hint: "Asian mountains",
-      extraLetters: "XZQPWY",
+      extraLetters: "HIMALAYASXZQPWY",
       meaning:
         "A mountain range in Asia containing the world's highest peaks, including Mount Everest",
       pronunciation: "hĭm-ə-lā′əz, hĭm′ə-lā′-",
@@ -273,7 +273,7 @@ export const geographyTopic: Topic = {
     {
       word: "ROCKIES",
       hint: "North American mountains",
-      extraLetters: "YWZXQP",
+      extraLetters: "ROCKIESYWZXQP",
       meaning:
         "A major mountain range in western North America, stretching from Canada to New Mexico",
       pronunciation: "rŏk′ēz",
@@ -281,7 +281,7 @@ export const geographyTopic: Topic = {
     {
       word: "SAHARA",
       hint: "African desert",
-      extraLetters: "ZYXWQP",
+      extraLetters: "SAHARAZYXWQP",
       meaning:
         "The largest hot desert in the world, covering much of North Africa",
       pronunciation: "sə-hâr′ə, sə-hăr′ə",
@@ -289,7 +289,7 @@ export const geographyTopic: Topic = {
     {
       word: "GOBI",
       hint: "Asian desert",
-      extraLetters: "QPWXZY",
+      extraLetters: "GOBIQPWXZY",
       meaning:
         "A large desert region in East Asia spanning parts of northern China and southern Mongolia",
       pronunciation: "gō′bē",
@@ -297,7 +297,7 @@ export const geographyTopic: Topic = {
     {
       word: "MOJAVE",
       hint: "North American desert",
-      extraLetters: "XZQPWY",
+      extraLetters: "MOJAVEXZQPWY",
       meaning:
         "A desert in the southwestern United States, primarily within southeastern California and southern Nevada",
       pronunciation: "mō-hä′vē",
@@ -305,14 +305,14 @@ export const geographyTopic: Topic = {
     {
       word: "ISLAND",
       hint: "Land surrounded by water",
-      extraLetters: "YWZXQP",
+      extraLetters: "ISLANDYWZXQP",
       meaning: "A piece of land completely surrounded by water",
       pronunciation: "ī′lənd",
     },
     {
       word: "PENINSULA",
       hint: "Land extending into water",
-      extraLetters: "ZYXWQP",
+      extraLetters: "PENINSULAZYXWQP",
       meaning:
         "A piece of land almost surrounded by water or projecting into a body of water",
       pronunciation: "pə-nĭn′sə-lə",
@@ -320,7 +320,7 @@ export const geographyTopic: Topic = {
     {
       word: "GULF",
       hint: "Sea inlet",
-      extraLetters: "QPWXZY",
+      extraLetters: "GULFQPWXZY",
       meaning:
         "A portion of the ocean or sea extending into the land, larger than a bay",
       pronunciation: "gŭlf",
@@ -328,7 +328,7 @@ export const geographyTopic: Topic = {
     {
       word: "BAY",
       hint: "Coastal inlet",
-      extraLetters: "XZQPWY",
+      extraLetters: "BAYXZQPWY",
       meaning:
         "A body of water partially enclosed by land but with a wide outlet to the sea",
       pronunciation: "bā",
@@ -336,14 +336,14 @@ export const geographyTopic: Topic = {
     {
       word: "LAKE",
       hint: "Inland body of water",
-      extraLetters: "YWZXQP",
+      extraLetters: "LAKEYWZXQP",
       meaning: "A large body of water surrounded by land",
       pronunciation: "lāk",
     },
     {
       word: "RIVER",
       hint: "Flowing water body",
-      extraLetters: "ZYXWQP",
+      extraLetters: "RIVERZYXWQP",
       meaning:
         "A natural flowing watercourse, usually freshwater, flowing towards an ocean, sea, lake, or another river",
       pronunciation: "rĭv′ər",
@@ -351,7 +351,7 @@ export const geographyTopic: Topic = {
     {
       word: "MOUNTAIN",
       hint: "Elevated landform",
-      extraLetters: "QPWXZY",
+      extraLetters: "MOUNTAINQPWXZY",
       meaning:
         "A large natural elevation of the earth's surface rising abruptly from the surrounding level",
       pronunciation: "moun′tn",
@@ -359,7 +359,7 @@ export const geographyTopic: Topic = {
     {
       word: "VALLEY",
       hint: "Low area between hills",
-      extraLetters: "XZQPWY",
+      extraLetters: "VALLEYXZQPWY",
       meaning:
         "A low area of land between hills or mountains, typically with a river or stream flowing through it",
       pronunciation: "văl′ē",
@@ -367,7 +367,7 @@ export const geographyTopic: Topic = {
     {
       word: "PLATEAU",
       hint: "Elevated flat area",
-      extraLetters: "YWZXQP",
+      extraLetters: "PLATEAUYWZXQP",
       meaning:
         "An area of relatively level high ground, often with one steep face",
       pronunciation: "plă-tō′",
@@ -375,21 +375,21 @@ export const geographyTopic: Topic = {
     {
       word: "CANYON",
       hint: "Deep gorge",
-      extraLetters: "ZYXWQP",
+      extraLetters: "CANYONZYXWQP",
       meaning: "A deep gorge, typically one with a river flowing through it",
       pronunciation: "kăn′yən",
     },
     {
       word: "FOREST",
       hint: "Wooded area",
-      extraLetters: "QPWXZY",
+      extraLetters: "FORESTQPWXZY",
       meaning: "A large area covered chiefly with trees and undergrowth",
       pronunciation: "fôr′ĭst",
     },
     {
       word: "JUNGLE",
       hint: "Dense tropical forest",
-      extraLetters: "XZQPWY",
+      extraLetters: "JUNGLEXZQPWY",
       meaning:
         "An area of land overgrown with dense forest and tangled vegetation, typically in the tropics",
       pronunciation: "jŭng′gəl",
@@ -397,7 +397,7 @@ export const geographyTopic: Topic = {
     {
       word: "TUNDRA",
       hint: "Cold treeless area",
-      extraLetters: "YWZXQP",
+      extraLetters: "TUNDRAYWZXQP",
       meaning:
         "A vast, flat, treeless Arctic region where the subsoil is permanently frozen",
       pronunciation: "tŭn′drə",

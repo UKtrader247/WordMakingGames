@@ -95,7 +95,7 @@ export const artTopic: Topic = {
     {
       word: "REALISM",
       hint: "True-to-life art",
-      extraLetters: "PQWXYZ",
+      extraLetters: "REALISMZXQ",
       meaning:
         "The artistic movement characterized by the representation of subjects as they appear in everyday life",
       pronunciation: "rē′ə-lĭz′əm",
@@ -103,7 +103,7 @@ export const artTopic: Topic = {
     {
       word: "IMPRESSIONISM",
       hint: "Light-focused art style",
-      extraLetters: "PQWXYZ",
+      extraLetters: "IMPRESIONZXQ",
       meaning:
         "A style of painting characterized by small, visible brushstrokes that offer the impression of form rather than detail",
       pronunciation: "ĭm-prĕsh′ə-nĭz′əm",
@@ -111,7 +111,7 @@ export const artTopic: Topic = {
     {
       word: "SURREALISM",
       hint: "Dream-like art",
-      extraLetters: "PQWXYZ",
+      extraLetters: "SUREALIMZXQ",
       meaning:
         "An artistic movement that seeks to express the subconscious mind by creating fantastic imagery and unexpected juxtapositions",
       pronunciation: "sə-rē′ə-lĭz′əm",
@@ -119,7 +119,7 @@ export const artTopic: Topic = {
     {
       word: "CUBISM",
       hint: "Geometric art style",
-      extraLetters: "PQWXYZ",
+      extraLetters: "CUBISMZXQP",
       meaning:
         "An early 20th-century style of art that depicts objects as geometric forms from multiple viewpoints",
       pronunciation: "kyōō′bĭz′əm",
@@ -127,7 +127,7 @@ export const artTopic: Topic = {
     {
       word: "RENAISSANCE",
       hint: "14-17th century art",
-      extraLetters: "PQWXYZ",
+      extraLetters: "RENAISCZXQP",
       meaning:
         "The revival of European art and literature under the influence of classical models during the 14th-17th centuries",
       pronunciation: "rĕn′ĭ-säns′",
@@ -135,7 +135,7 @@ export const artTopic: Topic = {
     {
       word: "BAROQUE",
       hint: "Ornate art style",
-      extraLetters: "PQWXYZ",
+      extraLetters: "BAROQUEZXP",
       meaning:
         "A highly ornate and extravagant style of art, architecture, and music that flourished in Europe from the early 17th to mid-18th century",
       pronunciation: "bə-rōk′",
@@ -143,7 +143,7 @@ export const artTopic: Topic = {
     {
       word: "MODERN",
       hint: "Contemporary art",
-      extraLetters: "PQWXYZ",
+      extraLetters: "MODERNZXQP",
       meaning:
         "Art characterized by a departure from traditional styles and values and a tendency toward experimentation",
       pronunciation: "mŏd′ərn",
@@ -223,7 +223,7 @@ export const artTopic: Topic = {
     {
       word: "STARRY",
       hint: "___ Night painting",
-      extraLetters: "PQWXYZ",
+      extraLetters: "STARRYZXQP",
       meaning:
         "First word in the title of Vincent van Gogh's famous painting depicting a night sky swirling with stars",
       pronunciation: "stär′ē",
@@ -231,7 +231,7 @@ export const artTopic: Topic = {
     {
       word: "NIGHT",
       hint: "Starry ___ painting",
-      extraLetters: "PQWXYZ",
+      extraLetters: "NIGHTZXQP",
       meaning:
         "Second word in the title of Vincent van Gogh's famous painting depicting a swirling night sky",
       pronunciation: "nīt",
@@ -271,7 +271,7 @@ export const artTopic: Topic = {
     {
       word: "OIL",
       hint: "___ paint",
-      extraLetters: "PQWXYZ",
+      extraLetters: "OILZXQPW",
       meaning:
         "A type of slow-drying paint made with pigment mixed with linseed or other drying oils",
       pronunciation: "oil",
@@ -279,7 +279,7 @@ export const artTopic: Topic = {
     {
       word: "ACRYLIC",
       hint: "Fast-drying paint",
-      extraLetters: "PQWXYZ",
+      extraLetters: "ACRYLIZXQP",
       meaning:
         "A type of fast-drying paint containing pigment suspended in an acrylic polymer emulsion",
       pronunciation: "ə-krĭl′ĭk",
@@ -287,7 +287,7 @@ export const artTopic: Topic = {
     {
       word: "WATERCOLOR",
       hint: "Water-soluble paint",
-      extraLetters: "PQWXYZ",
+      extraLetters: "WATERCOLZXQ",
       meaning:
         "A type of paint made with pigments suspended in a water-based solution",
       pronunciation: "wô′tər-kŭl′ər",
@@ -295,7 +295,7 @@ export const artTopic: Topic = {
     {
       word: "FRESCO",
       hint: "Wall painting",
-      extraLetters: "PQWXYZ",
+      extraLetters: "FRESCOZXQP",
       meaning:
         "A technique of mural painting executed upon freshly laid lime plaster",
       pronunciation: "frĕs′kō",
@@ -303,7 +303,7 @@ export const artTopic: Topic = {
     {
       word: "MURAL",
       hint: "Large wall art",
-      extraLetters: "PQWXYZ",
+      extraLetters: "MURALZXQP",
       meaning: "A painting or other work of art executed directly on a wall",
       pronunciation: "myo͝or′əl",
     },
@@ -325,7 +325,7 @@ export const artTopic: Topic = {
     {
       word: "EXHIBIT",
       hint: "Art display",
-      extraLetters: "PQWXYZ",
+      extraLetters: "EXHIBTZXQP",
       meaning:
         "A collection of objects displayed to the public in a museum or art gallery",
       pronunciation: "ĭg-zĭb′ĭt",
@@ -333,7 +333,7 @@ export const artTopic: Topic = {
     {
       word: "CURATOR",
       hint: "Art collection manager",
-      extraLetters: "PQWXYZ",
+      extraLetters: "CURATORZXQ",
       meaning:
         "A keeper or custodian of a museum or other collection, who selects and organizes exhibitions",
       pronunciation: "kyo͝or-ā′tər",
@@ -341,7 +341,7 @@ export const artTopic: Topic = {
     {
       word: "FRAME",
       hint: "Art border",
-      extraLetters: "PQWXYZ",
+      extraLetters: "FRAMEZXQP",
       meaning:
         "A rigid structure that surrounds and supports a picture, door, or window",
       pronunciation: "frām",
@@ -349,7 +349,7 @@ export const artTopic: Topic = {
     {
       word: "SKETCH",
       hint: "Preliminary drawing",
-      extraLetters: "PQWXYZ",
+      extraLetters: "SKETCHZXQP",
       meaning:
         "A rough or unfinished drawing or painting, often made to assist in making a more finished picture",
       pronunciation: "skĕch",
@@ -357,7 +357,7 @@ export const artTopic: Topic = {
     {
       word: "PORTRAIT",
       hint: "Person depiction",
-      extraLetters: "PQWXYZ",
+      extraLetters: "PORTRAIZXQ",
       meaning:
         "A painting, drawing, photograph, or engraving of a person, especially one depicting only the face or head and shoulders",
       pronunciation: "pôr′trĭt",
@@ -365,7 +365,7 @@ export const artTopic: Topic = {
     {
       word: "LANDSCAPE",
       hint: "Scenery art",
-      extraLetters: "PQWXYZ",
+      extraLetters: "LANDSCPEZXQ",
       meaning:
         "A picture representing a view of natural inland scenery, such as mountains, valleys, trees, rivers, and forests",
       pronunciation: "lănd′skāp′",
@@ -373,7 +373,7 @@ export const artTopic: Topic = {
     {
       word: "STILL",
       hint: "___ life art",
-      extraLetters: "PQWXYZ",
+      extraLetters: "STILLZXQP",
       meaning:
         "First word in a type of painting featuring an arrangement of inanimate objects",
       pronunciation: "stĭl",
@@ -381,7 +381,7 @@ export const artTopic: Topic = {
     {
       word: "LIFE",
       hint: "Still ___ art",
-      extraLetters: "PQWXYZ",
+      extraLetters: "LIFEZXQPW",
       meaning:
         "Second word in a type of painting featuring an arrangement of inanimate objects",
       pronunciation: "līf",
@@ -389,7 +389,7 @@ export const artTopic: Topic = {
     {
       word: "COMPOSITION",
       hint: "Art arrangement",
-      extraLetters: "PQWXYZ",
+      extraLetters: "COMPSITNZXQ",
       meaning:
         "The arrangement of elements in a work of art according to certain principles to achieve a unified whole",
       pronunciation: "kŏm′pə-zĭsh′ən",
@@ -397,7 +397,7 @@ export const artTopic: Topic = {
     {
       word: "PERSPECTIVE",
       hint: "Depth technique",
-      extraLetters: "PQWXYZ",
+      extraLetters: "PERSPCTIVZXQ",
       meaning:
         "The art of drawing solid objects on a two-dimensional surface so as to give the right impression of their height, width, depth, and position",
       pronunciation: "pər-spĕk′tĭv",

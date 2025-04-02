@@ -152,7 +152,7 @@ export const carsTopic: Topic = {
     {
       word: "DASHBOARD",
       hint: "Instrument panel",
-      extraLetters: "PQWXYZ",
+      extraLetters: "DASHBORTQ",
       meaning:
         "The panel facing the driver of a vehicle, containing instrumentation and controls",
       pronunciation: "dăsh′bôrd′",
@@ -160,7 +160,7 @@ export const carsTopic: Topic = {
     {
       word: "ACCELERATOR",
       hint: "Speed control",
-      extraLetters: "PQWXYZ",
+      extraLetters: "ACELRTOQZ",
       meaning:
         "A pedal that controls the flow of fuel to the engine, increasing speed when pressed",
       pronunciation: "ăk-sĕl′ə-rā′tər",
@@ -168,7 +168,7 @@ export const carsTopic: Topic = {
     {
       word: "PEDAL",
       hint: "Foot control",
-      extraLetters: "PQWXYZ",
+      extraLetters: "PEDALQXZ",
       meaning:
         "A lever operated by the foot to control various functions in a vehicle",
       pronunciation: "pĕd′l",
@@ -183,14 +183,14 @@ export const carsTopic: Topic = {
     {
       word: "AUTOMATIC",
       hint: "Self-shifting type",
-      extraLetters: "PQWXYZ",
+      extraLetters: "AUTOMICQZ",
       meaning: "A type of transmission that changes gears without driver input",
       pronunciation: "ô′tə-măt′ĭk",
     },
     {
       word: "MANUAL",
       hint: "Hand-shifting type",
-      extraLetters: "PQWXYZ",
+      extraLetters: "MANULQXZ",
       meaning:
         "A type of transmission where the driver changes gears using a clutch and shifter",
       pronunciation: "măn′yōō-əl",
@@ -214,7 +214,7 @@ export const carsTopic: Topic = {
     {
       word: "GASOLINE",
       hint: "Fuel type",
-      extraLetters: "PQWXYZ",
+      extraLetters: "GASOLNEXZ",
       meaning: "A volatile liquid fuel used in internal combustion engines",
       pronunciation: "găs′ə-lēn′",
     },
@@ -229,7 +229,7 @@ export const carsTopic: Topic = {
     {
       word: "MUFFLER",
       hint: "Noise reducer",
-      extraLetters: "PQWXYZ",
+      extraLetters: "MUFLERZQ",
       meaning:
         "A device that reduces the noise emitted by the exhaust of an engine",
       pronunciation: "mŭf′lər",
@@ -253,7 +253,7 @@ export const carsTopic: Topic = {
     {
       word: "HEADLIGHT",
       hint: "Front illumination",
-      extraLetters: "PQWXYZ",
+      extraLetters: "HEADLIGTQ",
       meaning:
         "A light at the front of a vehicle used to illuminate the road ahead",
       pronunciation: "hĕd′līt′",
@@ -261,7 +261,7 @@ export const carsTopic: Topic = {
     {
       word: "TAILLIGHT",
       hint: "Rear illumination",
-      extraLetters: "PQWXYZ",
+      extraLetters: "TAILGHTQZ",
       meaning:
         "A light at the rear of a vehicle that makes it visible from behind",
       pronunciation: "tāl′līt′",
@@ -269,7 +269,7 @@ export const carsTopic: Topic = {
     {
       word: "WIPER",
       hint: "Rain clearer",
-      extraLetters: "PQWXYZ",
+      extraLetters: "WIPERQXZ",
       meaning:
         "A device with a rubber blade that clears rain or snow from a windshield",
       pronunciation: "wī′pər",
@@ -285,7 +285,7 @@ export const carsTopic: Topic = {
     {
       word: "COUPE",
       hint: "Two-door car",
-      extraLetters: "PQWXYZ",
+      extraLetters: "COUPEQXZ",
       meaning:
         "A two-door automobile with a fixed roof and typically a sporty appearance",
       pronunciation: "kōōp",
@@ -301,7 +301,7 @@ export const carsTopic: Topic = {
     {
       word: "TRUCK",
       hint: "Cargo vehicle",
-      extraLetters: "PQWXYZ",
+      extraLetters: "TRUCKQZX",
       meaning: "A large motor vehicle designed to transport cargo",
       pronunciation: "trŭk",
     },
@@ -324,7 +324,7 @@ export const carsTopic: Topic = {
     {
       word: "FERRARI",
       hint: "Italian sports car",
-      extraLetters: "PQWXYZ",
+      extraLetters: "FERARIQXZ",
       meaning:
         "An Italian luxury sports car manufacturer founded by Enzo Ferrari",
       pronunciation: "fə-rär′ē",
@@ -332,7 +332,7 @@ export const carsTopic: Topic = {
     {
       word: "PORSCHE",
       hint: "German sports car",
-      extraLetters: "PQWXYZ",
+      extraLetters: "PORSCHQZ",
       meaning:
         "A German automobile manufacturer specializing in high-performance sports cars",
       pronunciation: "pôr′shə",
@@ -348,7 +348,7 @@ export const carsTopic: Topic = {
     {
       word: "FORD",
       hint: "American car brand",
-      extraLetters: "PQWXYZ",
+      extraLetters: "FORDQXZP",
       meaning: "An American multinational automaker founded by Henry Ford",
       pronunciation: "fôrd",
     },
@@ -371,7 +371,7 @@ export const carsTopic: Topic = {
     {
       word: "AUDI",
       hint: "German luxury brand",
-      extraLetters: "PQWXYZ",
+      extraLetters: "AUDIQXZP",
       meaning:
         "A German automobile manufacturer that designs, engineers, produces and markets luxury vehicles",
       pronunciation: "ou′dē",
@@ -387,7 +387,7 @@ export const carsTopic: Topic = {
     {
       word: "TESLA",
       hint: "Electric car company",
-      extraLetters: "PQWXYZ",
+      extraLetters: "TESLAQXZ",
       meaning:
         "An American electric vehicle and clean energy company founded by Elon Musk",
       pronunciation: "tĕs′lə",

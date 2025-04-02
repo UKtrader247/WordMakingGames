@@ -25,7 +25,7 @@ export const gamingTopic: Topic = {
     {
       word: "CONTROLLER",
       hint: "Input device",
-      extraLetters: "CONTROLEZQ",
+      extraLetters: "CONTROLLERZ",
       meaning:
         "A handheld device used to interact with and control video games",
       pronunciation: "kən-trō′lər",
@@ -121,7 +121,7 @@ export const gamingTopic: Topic = {
     {
       word: "GAMEPLAY",
       hint: "Player interaction",
-      extraLetters: "GAMEPLYXZ",
+      extraLetters: "GAMEPLAYXZ",
       meaning: "The specific way in which players interact with a game",
       pronunciation: "gām′plā′",
     },
@@ -168,7 +168,7 @@ export const gamingTopic: Topic = {
     {
       word: "MANA",
       hint: "Magic energy",
-      extraLetters: "XZQPWY",
+      extraLetters: "MANAXZQPWY",
       meaning:
         "A resource used to cast spells or use special abilities in games",
       pronunciation: "mä′nə",
@@ -176,7 +176,7 @@ export const gamingTopic: Topic = {
     {
       word: "XP",
       hint: "Experience points",
-      extraLetters: "YWZXQP",
+      extraLetters: "XPYWZXQP",
       meaning:
         "Points gained by a player character that contribute toward character development",
       pronunciation: "ĕks′pē′",
@@ -184,7 +184,7 @@ export const gamingTopic: Topic = {
     {
       word: "LOOT",
       hint: "Collected rewards",
-      extraLetters: "ZYXWQP",
+      extraLetters: "LOOTZYXWQP",
       meaning:
         "Items or rewards that can be collected, typically after defeating enemies",
       pronunciation: "lo͞ot",
@@ -192,7 +192,7 @@ export const gamingTopic: Topic = {
     {
       word: "INVENTORY",
       hint: "Item storage",
-      extraLetters: "QPWXZY",
+      extraLetters: "INVENTORYQPWXZY",
       meaning:
         "A virtual storage space where a player's items are kept in a game",
       pronunciation: "ĭn′vən-tôr′ē",
@@ -200,7 +200,7 @@ export const gamingTopic: Topic = {
     {
       word: "CRAFT",
       hint: "Create items",
-      extraLetters: "XZQPWY",
+      extraLetters: "CRAFTXZQPWY",
       meaning:
         "The process of creating items or objects within a game using collected resources",
       pronunciation: "krăft",
@@ -208,14 +208,14 @@ export const gamingTopic: Topic = {
     {
       word: "MOD",
       hint: "Game modification",
-      extraLetters: "YWZXQP",
+      extraLetters: "MODYWZXQP",
       meaning: "An alteration to a game that changes how it looks or behaves",
       pronunciation: "mŏd",
     },
     {
       word: "DLC",
       hint: "Downloadable content",
-      extraLetters: "ZYXWQP",
+      extraLetters: "DLCZYXWQP",
       meaning:
         "Additional content for a video game distributed through the internet",
       pronunciation: "dē′ĕl′sē′",
@@ -223,7 +223,7 @@ export const gamingTopic: Topic = {
     {
       word: "PATCH",
       hint: "Game update",
-      extraLetters: "QPWXZY",
+      extraLetters: "PATCHQPWXZY",
       meaning:
         "A piece of software designed to update a computer program or its supporting data",
       pronunciation: "păch",
@@ -231,7 +231,7 @@ export const gamingTopic: Topic = {
     {
       word: "LAG",
       hint: "Delayed response",
-      extraLetters: "XZQPWY",
+      extraLetters: "LAGXZQPWY",
       meaning:
         "A noticeable delay between player action and the game's response",
       pronunciation: "lăg",
@@ -239,7 +239,7 @@ export const gamingTopic: Topic = {
     {
       word: "SERVER",
       hint: "Game host system",
-      extraLetters: "YWZXQP",
+      extraLetters: "SERVERYWZXQP",
       meaning:
         "A computer or system that hosts multiplayer games and manages connections",
       pronunciation: "sûr′vər",
@@ -247,7 +247,7 @@ export const gamingTopic: Topic = {
     {
       word: "STEAM",
       hint: "Game platform",
-      extraLetters: "ZYXWQP",
+      extraLetters: "STEAMZYXWQP",
       meaning:
         "A digital distribution platform for purchasing and playing video games",
       pronunciation: "stēm",
@@ -255,7 +255,7 @@ export const gamingTopic: Topic = {
     {
       word: "ESPORTS",
       hint: "Competitive gaming",
-      extraLetters: "QPWXZY",
+      extraLetters: "ESPORTSQPWXZY",
       meaning:
         "Organized, competitive video gaming events often played professionally",
       pronunciation: "ē′spôrts′",
@@ -263,14 +263,14 @@ export const gamingTopic: Topic = {
     {
       word: "STREAM",
       hint: "Live broadcast",
-      extraLetters: "XZQPWY",
+      extraLetters: "STREAMXZQPWY",
       meaning: "A live online broadcast of gameplay, often with commentary",
       pronunciation: "strēm",
     },
     {
       word: "TWITCH",
       hint: "Streaming platform",
-      extraLetters: "YWZXQP",
+      extraLetters: "TWITCHYWZXQP",
       meaning:
         "A popular platform for live streaming video games and esports competitions",
       pronunciation: "twĭch",
@@ -278,7 +278,7 @@ export const gamingTopic: Topic = {
     {
       word: "NINTENDO",
       hint: "Japanese game company",
-      extraLetters: "ZYXWQP",
+      extraLetters: "NINTENDOZYXWQP",
       meaning:
         "A Japanese multinational consumer electronics and video game company",
       pronunciation: "nĭn-tĕn′dō",
@@ -286,21 +286,21 @@ export const gamingTopic: Topic = {
     {
       word: "XBOX",
       hint: "Microsoft console",
-      extraLetters: "QPWXZY",
+      extraLetters: "XBOXQPWXZY",
       meaning: "A video gaming brand created and owned by Microsoft",
       pronunciation: "ĕks′bŏks′",
     },
     {
       word: "PLAYSTATION",
       hint: "Sony console",
-      extraLetters: "XZQPWY",
+      extraLetters: "PLAYSTATIONXZQPWY",
       meaning: "A series of video game consoles created and developed by Sony",
       pronunciation: "plā′stā′shən",
     },
     {
       word: "TETRIS",
       hint: "Block-stacking game",
-      extraLetters: "YWZXQP",
+      extraLetters: "TETRISYWZXQP",
       meaning:
         "A tile-matching puzzle video game where players arrange falling blocks",
       pronunciation: "tĕt′rĭs",
@@ -308,7 +308,7 @@ export const gamingTopic: Topic = {
     {
       word: "MINECRAFT",
       hint: "Block-building game",
-      extraLetters: "ZYXWQP",
+      extraLetters: "MINECRAFTZYXWQP",
       meaning:
         "A sandbox video game focused on building and exploration in a blocky, procedurally-generated world",
       pronunciation: "mīn′krăft′",
@@ -316,7 +316,7 @@ export const gamingTopic: Topic = {
     {
       word: "FORTNITE",
       hint: "Battle royale game",
-      extraLetters: "QPWXZY",
+      extraLetters: "FORTNITEQPWXZY",
       meaning:
         "A popular online video game that combines battle royale gameplay with building mechanics",
       pronunciation: "fôrt′nīt′",
@@ -324,7 +324,7 @@ export const gamingTopic: Topic = {
     {
       word: "POKEMON",
       hint: "Creature catching game",
-      extraLetters: "XZQPWY",
+      extraLetters: "POKEMONXZQPWY",
       meaning:
         "A media franchise centered on fictional creatures that players catch and train for battle",
       pronunciation: "pō′kē-mŏn′",
@@ -332,7 +332,7 @@ export const gamingTopic: Topic = {
     {
       word: "ZELDA",
       hint: "Hyrule adventure",
-      extraLetters: "YWZXQP",
+      extraLetters: "ZELDAYWZXQP",
       meaning:
         "A fantasy action-adventure game series featuring the character Link in the land of Hyrule",
       pronunciation: "zĕl′də",
@@ -340,7 +340,7 @@ export const gamingTopic: Topic = {
     {
       word: "MARIO",
       hint: "Nintendo mascot",
-      extraLetters: "ZYXWQP",
+      extraLetters: "MARIOZYXWQP",
       meaning:
         "A fictional character and Nintendo's primary mascot who appears in many video games",
       pronunciation: "mär′ē-ō′",
@@ -348,7 +348,7 @@ export const gamingTopic: Topic = {
     {
       word: "SONIC",
       hint: "Blue hedgehog",
-      extraLetters: "QPWXZY",
+      extraLetters: "SONICQPWXZY",
       meaning:
         "A blue anthropomorphic hedgehog and the main protagonist of the Sonic the Hedgehog series",
       pronunciation: "sŏn′ĭk",
@@ -356,7 +356,7 @@ export const gamingTopic: Topic = {
     {
       word: "HALO",
       hint: "Master Chief's game",
-      extraLetters: "XZQPWY",
+      extraLetters: "HALOXZQPWY",
       meaning:
         "A military science fiction first-person shooter game series featuring the Master Chief",
       pronunciation: "hā′lō",
@@ -364,7 +364,7 @@ export const gamingTopic: Topic = {
     {
       word: "AVATAR",
       hint: "Player representation",
-      extraLetters: "YWZXQP",
+      extraLetters: "AVATARYWZXQP",
       meaning:
         "A graphical representation of a user or the user's character in a video game",
       pronunciation: "ăv′ə-tär′",
@@ -372,7 +372,7 @@ export const gamingTopic: Topic = {
     {
       word: "RESPAWN",
       hint: "Return after death",
-      extraLetters: "ZYXWQP",
+      extraLetters: "RESPAWNZYXWQP",
       meaning:
         "The action of a player character returning to life after being defeated in a game",
       pronunciation: "rē′spôn′",
@@ -380,7 +380,7 @@ export const gamingTopic: Topic = {
     {
       word: "COMBO",
       hint: "Move sequence",
-      extraLetters: "QPWXZY",
+      extraLetters: "COMBOQPWXZY",
       meaning:
         "A sequence of actions or moves performed in succession in fighting or action games",
       pronunciation: "kŏm′bō",
@@ -388,7 +388,7 @@ export const gamingTopic: Topic = {
     {
       word: "ACHIEVEMENT",
       hint: "Game accomplishment",
-      extraLetters: "XZQPWY",
+      extraLetters: "ACHIEVEMENTXZQPWY",
       meaning:
         "A specific goal or task that players can complete to earn rewards or recognition",
       pronunciation: "ə-chēv′mənt",
@@ -396,7 +396,7 @@ export const gamingTopic: Topic = {
     {
       word: "HIGHSCORE",
       hint: "Top result",
-      extraLetters: "YWZXQP",
+      extraLetters: "HIGHSCOREYWZXQP",
       meaning:
         "The highest score or point value achieved in a game, often recorded for comparison",
       pronunciation: "hī′skôr′",

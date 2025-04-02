@@ -35,7 +35,7 @@ export const animalsTopic: Topic = {
     {
       word: "EAGLE",
       hint: "Bird of prey",
-      extraLetters: "EAGLRXZ",
+      extraLetters: "EAGLEXZ",
       meaning: "A large bird of prey with a hooked beak and exceptional vision",
       pronunciation: "ē′gəl",
       example:

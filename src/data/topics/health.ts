@@ -89,7 +89,7 @@ export const healthTopic: Topic = {
     {
       word: "BACTERIA",
       hint: "Microscopic organism",
-      extraLetters: "ZYXWQP",
+      extraLetters: "BACTERIAZYXWQP",
       meaning:
         "Single-celled microorganisms that can exist as independent organisms or as parasites",
       pronunciation: "băk-tîr′ē-ə",
@@ -97,7 +97,7 @@ export const healthTopic: Topic = {
     {
       word: "VACCINE",
       hint: "Disease prevention",
-      extraLetters: "QPWXZY",
+      extraLetters: "VACCINEQPWXZY",
       meaning:
         "A substance used to stimulate the production of antibodies to provide immunity against disease",
       pronunciation: "văk-sēn′",
@@ -105,7 +105,7 @@ export const healthTopic: Topic = {
     {
       word: "IMMUNITY",
       hint: "Disease resistance",
-      extraLetters: "XZQPWY",
+      extraLetters: "IMMUNITYXZQPWY",
       meaning:
         "The ability of an organism to resist infection or disease through the immune system",
       pronunciation: "ĭ-myōō′nĭ-tē",
@@ -113,7 +113,7 @@ export const healthTopic: Topic = {
     {
       word: "ANTIBIOTIC",
       hint: "Bacterial medication",
-      extraLetters: "YWZXQP",
+      extraLetters: "ANTIBIOTICYWZXQP",
       meaning:
         "A medicine that inhibits the growth of or destroys microorganisms, particularly bacteria",
       pronunciation: "ăn′tē-bī-ŏt′ĭk, ăn′tī-",
@@ -121,7 +121,7 @@ export const healthTopic: Topic = {
     {
       word: "VITAMIN",
       hint: "Essential nutrient",
-      extraLetters: "ZYXWQP",
+      extraLetters: "VITAMINZYXWQP",
       meaning:
         "Any of a group of organic compounds essential for normal growth and nutrition",
       pronunciation: "vī′tə-mĭn",
@@ -129,7 +129,7 @@ export const healthTopic: Topic = {
     {
       word: "MINERAL",
       hint: "Dietary element",
-      extraLetters: "QPWXZY",
+      extraLetters: "MINERALQPWXZY",
       meaning:
         "An inorganic substance needed by the body for good health, such as calcium or iron",
       pronunciation: "mĭn′ər-əl",
@@ -137,7 +137,7 @@ export const healthTopic: Topic = {
     {
       word: "PROTEIN",
       hint: "Body-building nutrient",
-      extraLetters: "XZQPWY",
+      extraLetters: "PROTEINXZQPWY",
       meaning:
         "A complex molecule made up of amino acids that is essential for the structure and function of the body",
       pronunciation: "prō′tēn, -tē-ĭn",
@@ -145,7 +145,7 @@ export const healthTopic: Topic = {
     {
       word: "CARBOHYDRATE",
       hint: "Energy nutrient",
-      extraLetters: "YWZXQP",
+      extraLetters: "CARBOHYDRATEYWZXQP",
       meaning:
         "Any of a group of organic compounds including sugars, starch, and cellulose that provide energy",
       pronunciation: "kär′bō-hī′drāt",
@@ -153,7 +153,7 @@ export const healthTopic: Topic = {
     {
       word: "FAT",
       hint: "Energy storage nutrient",
-      extraLetters: "ZYXWQP",
+      extraLetters: "FATZYXWQP",
       meaning:
         "A natural oily substance occurring in animal bodies that stores energy and insulates",
       pronunciation: "făt",
@@ -161,7 +161,7 @@ export const healthTopic: Topic = {
     {
       word: "CALORIE",
       hint: "Energy unit",
-      extraLetters: "QPWXZY",
+      extraLetters: "CALORIEQPWXZY",
       meaning:
         "A unit of heat energy, used to measure the energy value of foods",
       pronunciation: "kăl′ə-rē",
@@ -169,7 +169,7 @@ export const healthTopic: Topic = {
     {
       word: "DIET",
       hint: "Food regimen",
-      extraLetters: "XZQPWY",
+      extraLetters: "DIETXZQPWY",
       meaning:
         "The kinds of food that a person habitually eats or restricts themselves to",
       pronunciation: "dī′ĭt",
@@ -177,7 +177,7 @@ export const healthTopic: Topic = {
     {
       word: "NUTRITION",
       hint: "Food science",
-      extraLetters: "YWZXQP",
+      extraLetters: "NUTRITIONYWZXQP",
       meaning:
         "The process of providing or obtaining the food necessary for health and growth",
       pronunciation: "nōō-trĭsh′ən",
@@ -185,7 +185,7 @@ export const healthTopic: Topic = {
     {
       word: "EXERCISE",
       hint: "Physical activity",
-      extraLetters: "ZYXWQP",
+      extraLetters: "EXERCISEZYXWQP",
       meaning:
         "Activity requiring physical effort, carried out to sustain or improve health and fitness",
       pronunciation: "ĕk′sər-sīz′",
@@ -193,7 +193,7 @@ export const healthTopic: Topic = {
     {
       word: "FITNESS",
       hint: "Physical condition",
-      extraLetters: "QPWXZY",
+      extraLetters: "FITNESSQPWXZY",
       meaning:
         "The condition of being physically fit and healthy through proper nutrition and exercise",
       pronunciation: "fĭt′nĭs",
@@ -201,7 +201,7 @@ export const healthTopic: Topic = {
     {
       word: "STRENGTH",
       hint: "Muscular power",
-      extraLetters: "XZQPWY",
+      extraLetters: "STRENGTHXZQPWY",
       meaning:
         "The quality or state of being physically strong; the capacity of an object to withstand force",
       pronunciation: "strĕngkth, strĕngth, strĕnth",
@@ -209,7 +209,7 @@ export const healthTopic: Topic = {
     {
       word: "CARDIO",
       hint: "Heart exercise",
-      extraLetters: "YWZXQP",
+      extraLetters: "CARDIOYWZXQP",
       meaning:
         "Exercise that raises your heart rate and improves the function of the cardiovascular system",
       pronunciation: "kär′dē-ō′",
@@ -217,7 +217,7 @@ export const healthTopic: Topic = {
     {
       word: "YOGA",
       hint: "Mindful exercise",
-      extraLetters: "ZYXWQP",
+      extraLetters: "YOGAZYXWQP",
       meaning:
         "A physical, mental, and spiritual practice that originated in ancient India",
       pronunciation: "yō′gə",
@@ -225,7 +225,7 @@ export const healthTopic: Topic = {
     {
       word: "MEDITATION",
       hint: "Mind quieting",
-      extraLetters: "QPWXZY",
+      extraLetters: "MEDITATIONQPWXZY",
       meaning:
         "The practice of focusing one's mind for a period of time for mental clarity and emotional calm",
       pronunciation: "mĕd′ĭ-tā′shən",
@@ -233,7 +233,7 @@ export const healthTopic: Topic = {
     {
       word: "STRESS",
       hint: "Mental pressure",
-      extraLetters: "XZQPWY",
+      extraLetters: "STRESSXZQPWY",
       meaning:
         "A state of mental or emotional strain resulting from adverse or demanding circumstances",
       pronunciation: "strĕs",
@@ -241,7 +241,7 @@ export const healthTopic: Topic = {
     {
       word: "ANXIETY",
       hint: "Worried feeling",
-      extraLetters: "YWZXQP",
+      extraLetters: "ANXIETYYWZXQP",
       meaning:
         "A feeling of worry, nervousness, or unease about something with an uncertain outcome",
       pronunciation: "ăng-zī′ĭ-tē",
@@ -249,7 +249,7 @@ export const healthTopic: Topic = {
     {
       word: "DEPRESSION",
       hint: "Mood disorder",
-      extraLetters: "ZYXWQP",
+      extraLetters: "DEPRESSIONZYXWQP",
       meaning:
         "A mental health disorder characterized by persistently depressed mood and loss of interest",
       pronunciation: "dĭ-prĕsh′ən",
@@ -257,7 +257,7 @@ export const healthTopic: Topic = {
     {
       word: "THERAPY",
       hint: "Healing treatment",
-      extraLetters: "QPWXZY",
+      extraLetters: "THERAPYQPWXZY",
       meaning:
         "Treatment intended to relieve or heal a disorder, whether physical or mental",
       pronunciation: "thĕr′ə-pē",
@@ -265,7 +265,7 @@ export const healthTopic: Topic = {
     {
       word: "DOCTOR",
       hint: "Medical professional",
-      extraLetters: "XZQPWY",
+      extraLetters: "DOCTORXZQPWY",
       meaning:
         "A qualified practitioner of medicine who treats illness and injury",
       pronunciation: "dŏk′tər",
@@ -273,7 +273,7 @@ export const healthTopic: Topic = {
     {
       word: "NURSE",
       hint: "Care provider",
-      extraLetters: "YWZXQP",
+      extraLetters: "NURSEYWZXQP",
       meaning:
         "A healthcare professional trained to provide care for the sick or infirm",
       pronunciation: "nûrs",
@@ -281,7 +281,7 @@ export const healthTopic: Topic = {
     {
       word: "HOSPITAL",
       hint: "Medical facility",
-      extraLetters: "ZYXWQP",
+      extraLetters: "HOSPITALZYXWQP",
       meaning:
         "An institution providing medical treatment and nursing care for sick or injured people",
       pronunciation: "hŏs′pĭ-tl",
@@ -289,14 +289,14 @@ export const healthTopic: Topic = {
     {
       word: "CLINIC",
       hint: "Outpatient facility",
-      extraLetters: "QPWXZY",
+      extraLetters: "CLINICQPWXZY",
       meaning: "A facility for diagnosis and treatment of outpatients",
       pronunciation: "klĭn′ĭk",
     },
     {
       word: "PHARMACY",
       hint: "Medication dispensary",
-      extraLetters: "XZQPWY",
+      extraLetters: "PHARMACYXZQPWY",
       meaning:
         "A place where medicines are prepared and dispensed; a drugstore",
       pronunciation: "fär′mə-sē",
@@ -304,14 +304,14 @@ export const healthTopic: Topic = {
     {
       word: "PRESCRIPTION",
       hint: "Doctor's order",
-      extraLetters: "YWZXQP",
+      extraLetters: "PRESCRIPTIONYWZXQP",
       meaning: "A written direction for the preparation and use of a medicine",
       pronunciation: "prĭ-skrĭp′shən",
     },
     {
       word: "SYMPTOM",
       hint: "Illness indication",
-      extraLetters: "ZYXWQP",
+      extraLetters: "SYMPTOMZYXWQP",
       meaning:
         "A physical or mental feature indicating a condition, typically one that is abnormal",
       pronunciation: "sĭmp′təm",
@@ -319,7 +319,7 @@ export const healthTopic: Topic = {
     {
       word: "DIAGNOSIS",
       hint: "Condition identification",
-      extraLetters: "QPWXZY",
+      extraLetters: "DIAGNOSISQPWXZY",
       meaning:
         "The identification of the nature of an illness or problem by examination of symptoms",
       pronunciation: "dī′əg-nō′sĭs",
@@ -327,14 +327,14 @@ export const healthTopic: Topic = {
     {
       word: "TREATMENT",
       hint: "Medical intervention",
-      extraLetters: "XZQPWY",
+      extraLetters: "TREATMENTXZQPWY",
       meaning: "Medical care given to a patient for an illness or injury",
       pronunciation: "trēt′mənt",
     },
     {
       word: "SURGERY",
       hint: "Medical operation",
-      extraLetters: "YWZXQP",
+      extraLetters: "SURGERYYWZXQP",
       meaning:
         "The treatment of injuries or disorders by incision or manipulation, often with instruments",
       pronunciation: "sûr′jə-rē",
@@ -342,7 +342,7 @@ export const healthTopic: Topic = {
     {
       word: "RECOVERY",
       hint: "Healing process",
-      extraLetters: "ZYXWQP",
+      extraLetters: "RECOVERYZYXWQP",
       meaning:
         "The process of returning to a normal state of health, mind, or strength",
       pronunciation: "rĭ-kŭv′ə-rē",
@@ -350,7 +350,7 @@ export const healthTopic: Topic = {
     {
       word: "WELLNESS",
       hint: "Good health state",
-      extraLetters: "QPWXZY",
+      extraLetters: "WELLNESSQPWXZY",
       meaning:
         "The state of being in good health, especially as an actively pursued goal",
       pronunciation: "wĕl′nĭs",
@@ -358,7 +358,7 @@ export const healthTopic: Topic = {
     {
       word: "PREVENTION",
       hint: "Disease avoidance",
-      extraLetters: "XZQPWY",
+      extraLetters: "PREVENTIONXZQPWY",
       meaning:
         "The action of stopping something from happening or arising, especially disease",
       pronunciation: "prĭ-vĕn′shən",
@@ -366,7 +366,7 @@ export const healthTopic: Topic = {
     {
       word: "HYGIENE",
       hint: "Cleanliness practices",
-      extraLetters: "YWZXQP",
+      extraLetters: "HYGIENEYWZXQP",
       meaning:
         "Conditions or practices conducive to maintaining health and preventing disease",
       pronunciation: "hī′jēn",
@@ -374,21 +374,21 @@ export const healthTopic: Topic = {
     {
       word: "MENTAL",
       hint: "___ health",
-      extraLetters: "ZYXWQP",
+      extraLetters: "MENTALZYXWQP",
       meaning: "Relating to the mind or disorders of the mind",
       pronunciation: "mĕn′tl",
     },
     {
       word: "PHYSICAL",
       hint: "Body-related",
-      extraLetters: "QPWXZY",
+      extraLetters: "PHYSICALQPWXZY",
       meaning: "Relating to the body as opposed to the mind",
       pronunciation: "fĭz′ĭ-kəl",
     },
     {
       word: "SLEEP",
       hint: "Rest period",
-      extraLetters: "XZQPWY",
+      extraLetters: "SLEEPXZQPWY",
       meaning:
         "A condition of body and mind in which consciousness and activity are reduced",
       pronunciation: "slēp",
@@ -396,7 +396,7 @@ export const healthTopic: Topic = {
     {
       word: "WATER",
       hint: "Hydration liquid",
-      extraLetters: "YWZXQP",
+      extraLetters: "WATERYWZXQP",
       meaning:
         "A transparent, odorless, tasteless liquid essential for most plant and animal life",
       pronunciation: "wô′tər, wŏt′ər",

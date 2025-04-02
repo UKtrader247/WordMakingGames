@@ -161,7 +161,7 @@ export const astronomyTopic: Topic = {
     {
       word: "TELESCOPE",
       hint: "Instrument to observe distant objects",
-      extraLetters: "QZVPTELSCOR",
+      extraLetters: "QZVPTELSCOP",
       meaning:
         "An optical instrument designed to make distant objects appear nearer and larger",
       pronunciation: "tĕl′ĭ-skōp′",
@@ -200,7 +200,7 @@ export const astronomyTopic: Topic = {
     {
       word: "SUPERNOVA",
       hint: "Exploding star",
-      extraLetters: "QZTVPSUPERNO",
+      extraLetters: "QZTVPSUPERNOVA",
       meaning:
         "A stellar explosion that briefly outshines an entire galaxy, radiating as much energy as the Sun over its lifetime",
       pronunciation: "sōō′pər-nō′və",
@@ -208,7 +208,7 @@ export const astronomyTopic: Topic = {
     {
       word: "CONSTELLATION",
       hint: "Group of stars forming a pattern",
-      extraLetters: "QZCONSTELAIR",
+      extraLetters: "QZCONSTELLATIONP",
       meaning:
         "A group of stars forming a recognizable pattern that is traditionally named after its apparent form or identified with a mythological figure",
       pronunciation: "kŏn′stə-lā′shən",
@@ -216,14 +216,14 @@ export const astronomyTopic: Topic = {
     {
       word: "ASTRONOMICAL",
       hint: "Relating to astronomy",
-      extraLetters: "QZPASTRNOMIC",
+      extraLetters: "QZPASTRONOMICAL",
       meaning: "Of or relating to astronomy; extremely large in scale",
       pronunciation: "ăs′trə-nŏm′ĭ-kəl",
     },
     {
       word: "LIGHT YEAR",
       hint: "Distance light travels in one year",
-      extraLetters: "QZPLIGHTEAR",
+      extraLetters: "QZPLIGHTYEAR",
       meaning:
         "A unit of astronomical distance equivalent to the distance that light travels in one year, approximately 5.88 trillion miles",
       pronunciation: "līt′ yîr′",
@@ -231,7 +231,7 @@ export const astronomyTopic: Topic = {
     {
       word: "BLACK HOLE",
       hint: "Region where gravity prevents escape",
-      extraLetters: "QZVBLACKHOR",
+      extraLetters: "QZVBLACKHOLE",
       meaning:
         "A region of space having a gravitational field so intense that no matter or radiation can escape",
       pronunciation: "blăk′ hōl′",
@@ -261,7 +261,7 @@ export const astronomyTopic: Topic = {
     {
       word: "CELESTIAL",
       hint: "Positioned in or relating to the sky",
-      extraLetters: "QZTP",
+      extraLetters: "QZTPCELESTIAL",
       meaning: "Positioned in or relating to the sky or outer space; heavenly",
       pronunciation: "sə-lĕs′chəl",
     },
@@ -283,7 +283,7 @@ export const astronomyTopic: Topic = {
     {
       word: "MILKY WAY",
       hint: "Our galaxy",
-      extraLetters: "QZTVPMILKYWA",
+      extraLetters: "QZTVPMILKYWAY",
       meaning:
         "The spiral galaxy containing our solar system, visible as a broad band of light in the night sky",
       pronunciation: "mĭl′kē wā′",
@@ -291,7 +291,7 @@ export const astronomyTopic: Topic = {
     {
       word: "SATELLITE",
       hint: "Object orbiting a planet",
-      extraLetters: "QZTVPSATELIO",
+      extraLetters: "QZTVPSATELLITE",
       meaning:
         "A natural or artificial body that orbits a planet or other celestial object",
       pronunciation: "săt′l-īt′",
@@ -299,7 +299,7 @@ export const astronomyTopic: Topic = {
     {
       word: "BIG BANG",
       hint: "Theory of universe origin",
-      extraLetters: "QZTVPL",
+      extraLetters: "QZTVPLBIGBANG",
       meaning:
         "The theory that the universe originated from an extremely dense and hot state about 13.8 billion years ago",
       pronunciation: "bĭg′ băng′",
@@ -307,7 +307,7 @@ export const astronomyTopic: Topic = {
     {
       word: "WORMHOLE",
       hint: "Theoretical passage through spacetime",
-      extraLetters: "QZPWORMHLE",
+      extraLetters: "QZPWORMHOLE",
       meaning:
         "A hypothetical tunnel connecting disparate points in spacetime, potentially creating shortcuts for long journeys across the universe",
       pronunciation: "wûrm′hōl′",
@@ -315,7 +315,7 @@ export const astronomyTopic: Topic = {
     {
       word: "ATMOSPHERE",
       hint: "Layer of gases surrounding a planet",
-      extraLetters: "QZPATMOSHER",
+      extraLetters: "QZPATMOSPHERE",
       meaning:
         "The envelope of gases surrounding a planet or other celestial body",
       pronunciation: "ăt′mə-sfîr′",
@@ -323,7 +323,7 @@ export const astronomyTopic: Topic = {
     {
       word: "ANDROMEDA",
       hint: "Nearest spiral galaxy to Milky Way",
-      extraLetters: "QZPVANDROME",
+      extraLetters: "QZPVANDROMEDA",
       meaning:
         "The nearest spiral galaxy to the Milky Way, approximately 2.5 million light-years away",
       pronunciation: "ăn-drŏm′ĭ-də",
@@ -331,7 +331,7 @@ export const astronomyTopic: Topic = {
     {
       word: "ASTRONAUT",
       hint: "Person trained to travel in space",
-      extraLetters: "QZPV",
+      extraLetters: "QZPVASTRONAUT",
       meaning:
         "A person trained to pilot, navigate, or serve as a crew member of a spacecraft",
       pronunciation: "ăs′trə-nôt′",
@@ -339,7 +339,7 @@ export const astronomyTopic: Topic = {
     {
       word: "EQUINOX",
       hint: "Time when day and night are equal",
-      extraLetters: "QZPVT",
+      extraLetters: "QZPVTEQUINOX",
       meaning:
         "Either of the two times of the year when the sun crosses the celestial equator and day and night are of equal length",
       pronunciation: "ē′kwə-nŏks′, ĕk′wə-",
@@ -347,7 +347,7 @@ export const astronomyTopic: Topic = {
     {
       word: "HUBBLE",
       hint: "Famous space telescope",
-      extraLetters: "QZPVTM",
+      extraLetters: "QZPVTMHUBBLE",
       meaning:
         "A space telescope named after astronomer Edwin Hubble, launched into orbit in 1990",
       pronunciation: "hŭb′əl",
@@ -355,7 +355,7 @@ export const astronomyTopic: Topic = {
     {
       word: "APOGEE",
       hint: "Point farthest from Earth in orbit",
-      extraLetters: "QZPVTM",
+      extraLetters: "QZPVTMAPOGEE",
       meaning:
         "The point in the orbit of a satellite that is at the greatest distance from the center of the Earth",
       pronunciation: "ăp′ə-jē′",
@@ -363,7 +363,7 @@ export const astronomyTopic: Topic = {
     {
       word: "SOLSTICE",
       hint: "When sun reaches highest/lowest point",
-      extraLetters: "QZPV",
+      extraLetters: "QZPVSOLSTICE",
       meaning:
         "Either of the two times a year when the sun reaches its highest or lowest point in the sky at noon",
       pronunciation: "sŏl′stĭs",
@@ -371,14 +371,14 @@ export const astronomyTopic: Topic = {
     {
       word: "ZENITH",
       hint: "Point directly above observer",
-      extraLetters: "QZPVTM",
+      extraLetters: "QZPVTMZENITH",
       meaning: "The point in the celestial sphere directly above an observer",
       pronunciation: "zē′nĭth",
     },
     {
       word: "TRANSIT",
       hint: "Passing of one object across another",
-      extraLetters: "QZPVM",
+      extraLetters: "QZPVMTRANSIT",
       meaning:
         "The passage of a celestial body across an observer's meridian or across the disk of a larger celestial body",
       pronunciation: "trăn′sĭt, -zĭt",
@@ -386,7 +386,7 @@ export const astronomyTopic: Topic = {
     {
       word: "TIDAL",
       hint: "Relating to gravitational effects",
-      extraLetters: "QZPVMK",
+      extraLetters: "QZPVMKTIDAL",
       meaning:
         "Relating to or affected by tides, which are caused by the gravitational pull of the moon and sun",
       pronunciation: "tīd′l",

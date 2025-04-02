@@ -9,7 +9,7 @@ export const moviesTopic: Topic = {
     {
       word: "ACTOR",
       hint: "Performer in a film",
-      extraLetters: "ACTORZQP",
+      extraLetters: "ACTORZQPWXY",
       meaning:
         "A person who portrays a character in a film or theatrical production",
       pronunciation: "ăk′tər",
@@ -17,7 +17,7 @@ export const moviesTopic: Topic = {
     {
       word: "SCENE",
       hint: "Part of a movie",
-      extraLetters: "SCENQPZX",
+      extraLetters: "SCENQPZXWY",
       meaning:
         "A sequence of continuous action in a film taking place in a single location",
       pronunciation: "sēn",
@@ -25,7 +25,7 @@ export const moviesTopic: Topic = {
     {
       word: "COMEDY",
       hint: "Funny film",
-      extraLetters: "COMEDYXZ",
+      extraLetters: "COMEDYXZQPW",
       meaning:
         "A genre of film intended to entertain and provoke laughter through humor",
       pronunciation: "kŏm′ĭ-dē",
@@ -33,7 +33,7 @@ export const moviesTopic: Topic = {
     {
       word: "DRAMA",
       hint: "Serious film",
-      extraLetters: "DRAMQWXZ",
+      extraLetters: "DRAMQWXZPY",
       meaning:
         "A genre of film focused on realistic characters dealing with emotional themes",
       pronunciation: "drä′mə, drăm′ə",
@@ -41,7 +41,7 @@ export const moviesTopic: Topic = {
     {
       word: "HORROR",
       hint: "Scary film",
-      extraLetters: "HORRZQPX",
+      extraLetters: "HORRZQPXWY",
       meaning:
         "A genre of film designed to frighten and unsettle viewers with disturbing or terrifying content",
       pronunciation: "hôr′ər",
@@ -49,7 +49,7 @@ export const moviesTopic: Topic = {
     {
       word: "ACTION",
       hint: "Exciting film",
-      extraLetters: "ACTIONZQ",
+      extraLetters: "ACTIONZQPWXY",
       meaning:
         "A genre of film characterized by physical feats, chases, fights, and special effects",
       pronunciation: "ăk′shən",
@@ -57,7 +57,7 @@ export const moviesTopic: Topic = {
     {
       word: "SEQUEL",
       hint: "Follow-up film",
-      extraLetters: "SEQULZPX",
+      extraLetters: "SEQULZPXWQY",
       meaning:
         "A film that continues the story or develops the theme of an earlier one",
       pronunciation: "sē′kwəl",
@@ -65,14 +65,14 @@ export const moviesTopic: Topic = {
     {
       word: "REMAKE",
       hint: "Redone film",
-      extraLetters: "REMAKZQX",
+      extraLetters: "REMAKZQXPWY",
       meaning: "A new version of a film that has been made before",
       pronunciation: "rē′māk′",
     },
     {
       word: "SCRIPT",
       hint: "Movie text",
-      extraLetters: "SCRIPTQZ",
+      extraLetters: "SCRIPTQZPWXY",
       meaning:
         "The written text of a film, including dialogue and scene directions",
       pronunciation: "skrĭpt",
@@ -80,7 +80,7 @@ export const moviesTopic: Topic = {
     {
       word: "OSCAR",
       hint: "Academy Award",
-      extraLetters: "OSCARWQP",
+      extraLetters: "OSCARWQPZXY",
       meaning:
         "A prestigious award given annually by the Academy of Motion Picture Arts and Sciences",
       pronunciation: "ŏs′kər",
@@ -88,7 +88,7 @@ export const moviesTopic: Topic = {
     {
       word: "CAMERA",
       hint: "Filming device",
-      extraLetters: "CAMERAQZ",
+      extraLetters: "CAMERAQZPWXY",
       meaning:
         "An apparatus for recording visual images in the form of photographs, film, or video signals",
       pronunciation: "kăm′ər-ə",
@@ -96,14 +96,14 @@ export const moviesTopic: Topic = {
     {
       word: "STUDIO",
       hint: "Film company",
-      extraLetters: "STUDIOPX",
+      extraLetters: "STUDIOPXZQWY",
       meaning: "A company that produces films or a place where films are made",
       pronunciation: "stōō′dē-ō′",
     },
     {
       word: "EDITOR",
       hint: "Film cutter",
-      extraLetters: "EDITORQZ",
+      extraLetters: "EDITORQZPWXY",
       meaning:
         "A person who assembles the separate shots and scenes of a film into a coherent sequence",
       pronunciation: "ĕd′ĭ-tər",
@@ -111,7 +111,7 @@ export const moviesTopic: Topic = {
     {
       word: "AVATAR",
       hint: "Blue aliens film",
-      extraLetters: "AVTRQZPX",
+      extraLetters: "AVTRQZPXWY",
       meaning:
         "A science fiction film directed by James Cameron about humans colonizing a moon called Pandora",
       pronunciation: "ăv′ə-tär′",
@@ -119,7 +119,7 @@ export const moviesTopic: Topic = {
     {
       word: "MATRIX",
       hint: "Reality-bending film",
-      extraLetters: "MATRXIPQ",
+      extraLetters: "MATRXIPQZWY",
       meaning:
         "A science fiction film about a simulated reality created by machines to subdue the human population",
       pronunciation: "mā′trĭks",
@@ -127,7 +127,7 @@ export const moviesTopic: Topic = {
     {
       word: "TITANIC",
       hint: "Ship disaster film",
-      extraLetters: "TITANCPQ",
+      extraLetters: "TITANCPQZWXY",
       meaning:
         "A film directed by James Cameron about the sinking of the RMS Titanic and a fictional romance aboard it",
       pronunciation: "tī-tăn′ĭk",

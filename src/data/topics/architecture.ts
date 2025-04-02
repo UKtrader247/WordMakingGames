@@ -9,7 +9,7 @@ export const architectureTopic: Topic = {
     {
       word: "ARCH",
       hint: "Curved structure spanning an opening",
-      extraLetters: "TPEQZWSV",
+      extraLetters: "ARCHQZWSV",
       meaning:
         "A curved structural element that spans an opening and supports weight above it",
       pronunciation: "ärch",
@@ -17,7 +17,7 @@ export const architectureTopic: Topic = {
     {
       word: "BEAM",
       hint: "Horizontal structural element",
-      extraLetters: "TXNQFPD",
+      extraLetters: "BEAMQFPD",
       meaning:
         "A long, sturdy piece of timber, metal, or concrete used for support in construction",
       pronunciation: "bēm",
@@ -25,7 +25,7 @@ export const architectureTopic: Topic = {
     {
       word: "COLUMN",
       hint: "Vertical support element",
-      extraLetters: "RSTDPQ",
+      extraLetters: "COLUMNPQ",
       meaning:
         "A vertical pillar that typically supports an arch, entablature, or other structure",
       pronunciation: "kŏl′əm",
@@ -33,14 +33,14 @@ export const architectureTopic: Topic = {
     {
       word: "DOME",
       hint: "Hemispherical roof",
-      extraLetters: "APLXZQ",
+      extraLetters: "DOMEXZQ",
       meaning: "A rounded vault forming the roof of a building or structure",
       pronunciation: "dōm",
     },
     {
       word: "FACADE",
       hint: "Front exterior face of a building",
-      extraLetters: "PRMTLCAD",
+      extraLetters: "FACADELTPR",
       meaning:
         "The principal front of a building that faces onto a street or open space",
       pronunciation: "fə-säd′",
@@ -48,7 +48,7 @@ export const architectureTopic: Topic = {
     {
       word: "GALLERY",
       hint: "Long room or corridor",
-      extraLetters: "DQPSWZ",
+      extraLetters: "GALLERYDQPSW",
       meaning:
         "A long room or corridor, often used for displaying art or providing access to other rooms",
       pronunciation: "găl′ə-rē",
@@ -56,7 +56,7 @@ export const architectureTopic: Topic = {
     {
       word: "MANSION",
       hint: "Large impressive residence",
-      extraLetters: "FBTDOP",
+      extraLetters: "MANSIONFBTDOP",
       meaning:
         "A large, impressive house, typically one belonging to a wealthy person",
       pronunciation: "măn′shən",
@@ -64,7 +64,7 @@ export const architectureTopic: Topic = {
     {
       word: "PILLAR",
       hint: "Vertical support element",
-      extraLetters: "EVQTSZ",
+      extraLetters: "PILLAREVQTSZ",
       meaning:
         "A tall vertical structure used as a support for a building or as an ornament",
       pronunciation: "pĭl′ər",
@@ -72,14 +72,14 @@ export const architectureTopic: Topic = {
     {
       word: "VAULT",
       hint: "Arched ceiling or roof",
-      extraLetters: "QPRZMN",
+      extraLetters: "VAULTQPRZMN",
       meaning: "An arched structure of masonry forming a ceiling or roof",
       pronunciation: "vôlt",
     },
     {
       word: "SKYLINE",
       hint: "Outline of buildings against the sky",
-      extraLetters: "QWPRTMZ",
+      extraLetters: "SKYLINEQWPRTMZ",
       meaning:
         "The outline or silhouette of buildings and structures against the sky",
       pronunciation: "skī′līn″",
@@ -87,14 +87,14 @@ export const architectureTopic: Topic = {
     {
       word: "BUTTRESS",
       hint: "Support projecting from a wall",
-      extraLetters: "QAPHNM",
+      extraLetters: "BUTTRESSQAPHNM",
       meaning: "A structure built against a wall to strengthen or support it",
       pronunciation: "bŭt′rĭs",
     },
     {
       word: "COURTYARD",
       hint: "Enclosed area open to the sky",
-      extraLetters: "BNMPQ",
+      extraLetters: "COURTYARDBNMPQ",
       meaning:
         "An unroofed area that is completely or partially enclosed by walls or buildings",
       pronunciation: "kôrt′yärd″",
@@ -102,7 +102,7 @@ export const architectureTopic: Topic = {
     {
       word: "FOYER",
       hint: "Entrance hall of a building",
-      extraLetters: "PQTLSZ",
+      extraLetters: "FOYERPQTLSZ",
       meaning:
         "An entrance hall or lobby of a building, especially a theater or hotel",
       pronunciation: "foi′ər, foi′ā",
@@ -110,7 +110,7 @@ export const architectureTopic: Topic = {
     {
       word: "BALCONY",
       hint: "Platform projecting from a wall",
-      extraLetters: "QPRTMZ",
+      extraLetters: "BALCONYQPRTMZ",
       meaning:
         "A platform enclosed by a wall or balustrade on the outside of a building, with access from an upper-floor window or door",
       pronunciation: "băl′kə-nē",
@@ -118,7 +118,7 @@ export const architectureTopic: Topic = {
     {
       word: "PORTICO",
       hint: "Porch with columns",
-      extraLetters: "QSALZN",
+      extraLetters: "PORTICOQSALZN",
       meaning:
         "A structure consisting of a roof supported by columns at regular intervals, typically attached as a porch to a building",
       pronunciation: "pôr′tĭ-kō″",
@@ -126,7 +126,7 @@ export const architectureTopic: Topic = {
     {
       word: "ALCOVE",
       hint: "Recessed area in a room",
-      extraLetters: "BPNMRZ",
+      extraLetters: "ALCOVEBPNMRZ",
       meaning:
         "A small recessed section of a room or garden, typically formed by an arch or by walls",
       pronunciation: "ăl′kōv″",
@@ -134,7 +134,7 @@ export const architectureTopic: Topic = {
     {
       word: "TURRET",
       hint: "Small tower on a building",
-      extraLetters: "QPSNZM",
+      extraLetters: "TURRETQPSNZM",
       meaning:
         "A small tower that projects vertically from the wall of a building",
       pronunciation: "tûr′ĭt",
@@ -142,7 +142,7 @@ export const architectureTopic: Topic = {
     {
       word: "FRIEZE",
       hint: "Decorated horizontal band",
-      extraLetters: "QPTNML",
+      extraLetters: "FRIEZEQPTNML",
       meaning:
         "A horizontal band of sculpture or decoration, especially on a wall near the ceiling",
       pronunciation: "frēz",
@@ -150,7 +150,7 @@ export const architectureTopic: Topic = {
     {
       word: "PARAPET",
       hint: "Low protective wall",
-      extraLetters: "QVSBNM",
+      extraLetters: "PARAPETQVSBNM",
       meaning:
         "A low wall or railing to protect the edge of a platform, roof, or bridge",
       pronunciation: "păr′ə-pĭt″",
@@ -158,14 +158,14 @@ export const architectureTopic: Topic = {
     {
       word: "ATRIUM",
       hint: "Central open space in a building",
-      extraLetters: "QPLSBN",
+      extraLetters: "ATRIUMQPLSBN",
       meaning: "An open-roofed entrance hall or central court in a building",
       pronunciation: "ā′trē-əm",
     },
     {
       word: "CORNICE",
       hint: "Ornamental molding along the top of a wall",
-      extraLetters: "QPRTBZ",
+      extraLetters: "CORNICEQPRTBZ",
       meaning:
         "A horizontal decorative molding that crowns a building or furniture element",
       pronunciation: "kôr′nĭs",
@@ -173,7 +173,7 @@ export const architectureTopic: Topic = {
     {
       word: "CAPITAL",
       hint: "Top of a column",
-      extraLetters: "QZRTMN",
+      extraLetters: "CAPITALQZRTMN",
       meaning:
         "The distinct, typically decorated part of a column that forms the topmost member",
       pronunciation: "kăp′ĭ-tl",
@@ -181,7 +181,7 @@ export const architectureTopic: Topic = {
     {
       word: "GABLE",
       hint: "Triangular section of wall",
-      extraLetters: "QPKRMN",
+      extraLetters: "GABLEQPKRMN",
       meaning:
         "The triangular portion of a wall between the edges of intersecting roof pitches",
       pronunciation: "gā′bəl",
@@ -189,14 +189,14 @@ export const architectureTopic: Topic = {
     {
       word: "ARCADE",
       hint: "Series of arches with columns",
-      extraLetters: "QPFTMZ",
+      extraLetters: "ARCADEQPFTMZ",
       meaning: "A covered passageway with arches along one or both sides",
       pronunciation: "är-kād′",
     },
     {
       word: "SPANDREL",
       hint: "Space between arches",
-      extraLetters: "QPCMSANDL",
+      extraLetters: "SPANDRELQPCM",
       meaning:
         "The roughly triangular space between the left or right exterior curve of an arch and the rectangular framework surrounding it",
       pronunciation: "spăn′drəl",
@@ -204,7 +204,7 @@ export const architectureTopic: Topic = {
     {
       word: "PEDIMENT",
       hint: "Triangular crowning of a facade",
-      extraLetters: "QSLBZX",
+      extraLetters: "PEDIMENTQSLBZX",
       meaning:
         "A triangular gable found above the entrance or main facade of a classical building",
       pronunciation: "pĕd′ə-mənt",
@@ -212,7 +212,7 @@ export const architectureTopic: Topic = {
     {
       word: "PAVILION",
       hint: "Free-standing structure",
-      extraLetters: "QRZMCS",
+      extraLetters: "PAVILIONQRZMCS",
       meaning:
         "A free-standing structure with a roof, often open on some or all sides",
       pronunciation: "pə-vĭl′yən",
@@ -220,7 +220,7 @@ export const architectureTopic: Topic = {
     {
       word: "SOFFIT",
       hint: "Underside of an architectural feature",
-      extraLetters: "QPAZNM",
+      extraLetters: "SOFFITQPAZNM",
       meaning:
         "The underside of an architectural element such as an arch, beam, or cornice",
       pronunciation: "sŏf′ĭt",
@@ -228,7 +228,7 @@ export const architectureTopic: Topic = {
     {
       word: "ENFILADE",
       hint: "Suite of rooms with aligned doorways",
-      extraLetters: "QPTSMZ",
+      extraLetters: "ENFILADEQPTSMZ",
       meaning:
         "A series of rooms with doorways arranged in a line with each other",
       pronunciation: "ĕn′fə-lād″",
@@ -236,7 +236,7 @@ export const architectureTopic: Topic = {
     {
       word: "COLONNADE",
       hint: "Row of columns supporting a roof",
-      extraLetters: "QPZMROLNAD",
+      extraLetters: "COLONNADEQPZMR",
       meaning:
         "A series of columns set at regular intervals supporting a roof structure",
       pronunciation: "kŏl′ə-nād″",
@@ -244,14 +244,14 @@ export const architectureTopic: Topic = {
     {
       word: "VESTIBULE",
       hint: "Small entrance hall",
-      extraLetters: "QPRTMZ",
+      extraLetters: "VESTIBULEQPRTMZ",
       meaning: "A small entrance hall or room leading into a larger space",
       pronunciation: "vĕs′tə-byo͞ol″",
     },
     {
       word: "GARGOYLE",
       hint: "Decorative water spout",
-      extraLetters: "QPFTNZ",
+      extraLetters: "GARGOYLEQPFTNZ",
       meaning:
         "A carved grotesque figure with a spout designed to convey water from a roof",
       pronunciation: "gär′goil″",
@@ -259,14 +259,14 @@ export const architectureTopic: Topic = {
     {
       word: "MULLION",
       hint: "Vertical divider in a window",
-      extraLetters: "QPATZC",
+      extraLetters: "MULLIONQPATZC",
       meaning: "A vertical bar between the panes of glass in a window",
       pronunciation: "mŭl′yən",
     },
     {
       word: "TRUSS",
       hint: "Framework of beams",
-      extraLetters: "QPFTMZ",
+      extraLetters: "TRUSSQPFTMZ",
       meaning:
         "A framework of beams, typically wood or metal, forming a rigid structure",
       pronunciation: "trŭs",
@@ -274,7 +274,7 @@ export const architectureTopic: Topic = {
     {
       word: "CORBEL",
       hint: "Projecting support structure",
-      extraLetters: "QATMNP",
+      extraLetters: "CORBELQATMNP",
       meaning:
         "A piece of stone, wood, or metal jutting out from a wall to support a structure above it",
       pronunciation: "kôr′bəl",
@@ -282,7 +282,7 @@ export const architectureTopic: Topic = {
     {
       word: "NICHE",
       hint: "Recess in a wall",
-      extraLetters: "QPRTMZ",
+      extraLetters: "NICHEQPRTMZ",
       meaning:
         "A shallow recess in a wall, especially one used to display a statue or ornament",
       pronunciation: "nĭch",
@@ -290,7 +290,7 @@ export const architectureTopic: Topic = {
     {
       word: "LOGGIA",
       hint: "Gallery open on one side",
-      extraLetters: "QPTMNZ",
+      extraLetters: "LOGGIAQPTMNZ",
       meaning:
         "A covered exterior gallery or corridor with an open side facing a courtyard or garden",
       pronunciation: "lō′jə, lŏj′ə",
@@ -298,7 +298,7 @@ export const architectureTopic: Topic = {
     {
       word: "STUCCO",
       hint: "Plaster for coating wall surfaces",
-      extraLetters: "QPRTMZ",
+      extraLetters: "STUCCOQPRTMZ",
       meaning:
         "A fine plaster used for coating wall surfaces or molding into architectural decorations",
       pronunciation: "stŭk′ō",
@@ -306,7 +306,7 @@ export const architectureTopic: Topic = {
     {
       word: "GAZEBO",
       hint: "Pavilion with a view",
-      extraLetters: "QPRTMN",
+      extraLetters: "GAZEBOQPRTMN",
       meaning:
         "A small building, especially one in a garden, that gives a wide view of the surrounding area",
       pronunciation: "gə-zē′bō",
@@ -314,7 +314,7 @@ export const architectureTopic: Topic = {
     {
       word: "PERGOLA",
       hint: "Framework covered with climbing plants",
-      extraLetters: "QBNTMZ",
+      extraLetters: "PERGOLAQBNTMZ",
       meaning:
         "An outdoor structure consisting of columns that support a roof of beams and open latticework",
       pronunciation: "pûr′gə-lə",
@@ -322,14 +322,14 @@ export const architectureTopic: Topic = {
     {
       word: "ROTUNDA",
       hint: "Circular building with a dome",
-      extraLetters: "QPESMZ",
+      extraLetters: "ROTUNDAQPESMZ",
       meaning: "A round building or room, especially one with a dome",
       pronunciation: "rō-tŭn′də",
     },
     {
       word: "PLINTH",
       hint: "Base supporting a column",
-      extraLetters: "QARTMZ",
+      extraLetters: "PLINTHQARTMZ",
       meaning:
         "A square or rectangular base supporting a column, statue, or vase",
       pronunciation: "plĭnth",
@@ -337,14 +337,14 @@ export const architectureTopic: Topic = {
     {
       word: "NEWEL",
       hint: "Center support of a spiral staircase",
-      extraLetters: "QPRTMZ",
+      extraLetters: "NEWELQPRTMZ",
       meaning: "The central supporting pillar of a spiral or winding staircase",
       pronunciation: "no͞o′əl",
     },
     {
       word: "LANTERN",
       hint: "Windowed cupola for light",
-      extraLetters: "QPCZMB",
+      extraLetters: "LANTERNQPCZMB",
       meaning:
         "A small windowed structure on top of a roof or dome to admit light or air",
       pronunciation: "lăn′tərn",
@@ -352,7 +352,7 @@ export const architectureTopic: Topic = {
     {
       word: "ZIGGURAT",
       hint: "Stepped pyramid temple",
-      extraLetters: "QPMCNV",
+      extraLetters: "ZIGGURATQPMCNV",
       meaning:
         "A rectangular stepped tower, sometimes surmounted by a temple, found in ancient Mesopotamia",
       pronunciation: "zĭg′ə-răt″",
@@ -360,7 +360,7 @@ export const architectureTopic: Topic = {
     {
       word: "BUNGALOW",
       hint: "Single-story house with sloping roof",
-      extraLetters: "QPRTMZ",
+      extraLetters: "BUNGALOWQPRTMZ",
       meaning:
         "A low house having only one story or, in some cases, upper rooms set in the roof",
       pronunciation: "bŭng′gə-lō″",
@@ -368,14 +368,14 @@ export const architectureTopic: Topic = {
     {
       word: "CANTILEVER",
       hint: "Projecting beam supported at one end",
-      extraLetters: "QPNZTILER",
+      extraLetters: "CANTILEVERQPNZ",
       meaning: "A long projecting beam or structure supported at only one end",
       pronunciation: "kăn′tl-ē″vər",
     },
     {
       word: "CLERESTORY",
       hint: "Upper level with windows",
-      extraLetters: "QPNMZB",
+      extraLetters: "CLERESTORYQPNMZB",
       meaning:
         "The upper part of a wall containing windows for supplying natural light to a building",
       pronunciation: "klîr′stôr″ē",
@@ -383,7 +383,7 @@ export const architectureTopic: Topic = {
     {
       word: "DORIC",
       hint: "Simple Greek column style",
-      extraLetters: "QPNTMZ",
+      extraLetters: "DORICQPNTMZ",
       meaning:
         "The oldest and simplest of the three orders of classical Greek architecture",
       pronunciation: "dôr′ĭk",
@@ -391,7 +391,7 @@ export const architectureTopic: Topic = {
     {
       word: "IONIC",
       hint: "Greek column style with scrolls",
-      extraLetters: "QPRTMZ",
+      extraLetters: "IONICQPRTMZ",
       meaning:
         "A classical order of architecture characterized by columns with spiral scrolls",
       pronunciation: "ī-ŏn′ĭk",
@@ -399,7 +399,7 @@ export const architectureTopic: Topic = {
     {
       word: "CORINTHIAN",
       hint: "Elaborate Greek column style",
-      extraLetters: "QPAMZTRNH",
+      extraLetters: "CORINTHIANQPAMZ",
       meaning:
         "The most ornate of the three main orders of classical Greek architecture, characterized by columns with elaborate capitals decorated with acanthus leaves",
       pronunciation: "kə-rĭn′thē-ən",
@@ -407,21 +407,21 @@ export const architectureTopic: Topic = {
     {
       word: "CUPOLA",
       hint: "Small dome on a roof",
-      extraLetters: "QPRTMZ",
+      extraLetters: "CUPOLAQPRTMZ",
       meaning: "A small dome-shaped structure on top of a roof or ceiling",
       pronunciation: "kyo͞o′pə-lə",
     },
     {
       word: "FINIAL",
       hint: "Decorative top element",
-      extraLetters: "QPRTMZ",
+      extraLetters: "FINIALQPRTMZ",
       meaning: "An ornament at the top, end, or corner of an object",
       pronunciation: "fĭn′ē-əl, fī′nē-əl",
     },
     {
       word: "BELVEDERE",
       hint: "Structure with a scenic view",
-      extraLetters: "QPMTZLVDR",
+      extraLetters: "BELVEDEREQPMTZ",
       meaning:
         "A building or architectural feature designed to take advantage of a fine view",
       pronunciation: "bĕl′və-dîr″",
@@ -429,7 +429,7 @@ export const architectureTopic: Topic = {
     {
       word: "MEZZANINE",
       hint: "Intermediate floor",
-      extraLetters: "QPRTX",
+      extraLetters: "MEZZANINEQPRTX",
       meaning:
         "A low story between two main stories of a building, typically between the ground and first floors",
       pronunciation: "mĕz′ə-nēn″",
@@ -437,7 +437,7 @@ export const architectureTopic: Topic = {
     {
       word: "ABUTMENT",
       hint: "Structure supporting an arch",
-      extraLetters: "QPLRTZ",
+      extraLetters: "ABUTMENTQPLRTZ",
       meaning:
         "A structure built to support the lateral pressure of an arch or span",
       pronunciation: "ə-bŭt′mənt",
@@ -445,7 +445,7 @@ export const architectureTopic: Topic = {
     {
       word: "KEYSTONE",
       hint: "Central stone of an arch",
-      extraLetters: "QPRTMZ",
+      extraLetters: "KEYSTONEQPRTMZ",
       meaning:
         "The central wedge-shaped stone at the top of an arch that locks the other pieces in place",
       pronunciation: "kē′stōn″",
@@ -453,7 +453,7 @@ export const architectureTopic: Topic = {
     {
       word: "LINTEL",
       hint: "Horizontal support over an opening",
-      extraLetters: "QPRTMZ",
+      extraLetters: "LINTELQPRTMZ",
       meaning:
         "A horizontal beam or stone that spans the space between two vertical supports",
       pronunciation: "lĭn′tl",
@@ -461,7 +461,7 @@ export const architectureTopic: Topic = {
     {
       word: "FRONTAGE",
       hint: "Front part of a building",
-      extraLetters: "RXQBPNTG",
+      extraLetters: "FRONTAGEQBP",
       meaning:
         "The front part of a building, especially as it faces a street or other public area",
       pronunciation: "frŭn′tĭj",
@@ -469,7 +469,7 @@ export const architectureTopic: Topic = {
     {
       word: "ELEVATION",
       hint: "Architectural drawing of a building face",
-      extraLetters: "QPRTMLV",
+      extraLetters: "ELEVATIONQPRTML",
       meaning:
         "A drawing or design that represents an object or structure as a view of its vertical plane",
       pronunciation: "ĕl′ə-vā′shən",

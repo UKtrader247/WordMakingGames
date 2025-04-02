@@ -65,7 +65,7 @@ export const oceanTopic: Topic = {
     {
       word: "OCTOPUS",
       hint: "Eight-armed marine mollusk",
-      extraLetters: "OCTPUSQWZ",
+      extraLetters: "OCTOPUSQWZ",
       meaning:
         "A marine mollusk with eight arms, a soft body, and highly developed eyes",
       pronunciation: "ŏk′tə-pəs",

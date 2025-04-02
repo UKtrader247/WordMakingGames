@@ -9,7 +9,7 @@ export const historyTopic: Topic = {
     {
       word: "CAESAR",
       hint: "Roman emperor",
-      extraLetters: "CAESRLT",
+      extraLetters: "CAESARXZQ",
       meaning:
         "A title used by Roman emperors, derived from Julius Caesar, who was a military general and statesman",
       pronunciation: "sē′zər",
@@ -17,7 +17,7 @@ export const historyTopic: Topic = {
     {
       word: "NAPOLEON",
       hint: "French emperor",
-      extraLetters: "NAPOLENX",
+      extraLetters: "NAPOLEONXZQ",
       meaning:
         "A French military leader who rose to prominence during the French Revolution and led several successful campaigns",
       pronunciation: "nə-pō′lē-ən",
@@ -25,7 +25,7 @@ export const historyTopic: Topic = {
     {
       word: "PYRAMID",
       hint: "Ancient Egyptian structure",
-      extraLetters: "PYRAMIDZ",
+      extraLetters: "PYRAMIDXZQ",
       meaning:
         "A monumental structure with a square base and four triangular sides, built as tombs for pharaohs in ancient Egypt",
       pronunciation: "pĭr′ə-mĭd",
@@ -33,7 +33,7 @@ export const historyTopic: Topic = {
     {
       word: "ROME",
       hint: "Ancient empire",
-      extraLetters: "ROMEWPQ",
+      extraLetters: "ROMEXZQP",
       meaning:
         "An ancient civilization that began as a city-state and grew into an empire dominating the Mediterranean region",
       pronunciation: "rōm",
@@ -41,7 +41,7 @@ export const historyTopic: Topic = {
     {
       word: "ATHENS",
       hint: "Greek city-state",
-      extraLetters: "ATHENSWQ",
+      extraLetters: "ATHENSXZQP",
       meaning:
         "An ancient Greek city-state known for its cultural achievements and as the birthplace of democracy",
       pronunciation: "ăth′ĭnz",
@@ -49,7 +49,7 @@ export const historyTopic: Topic = {
     {
       word: "SPARTA",
       hint: "Military Greek city-state",
-      extraLetters: "SPARTAQZ",
+      extraLetters: "SPARTAXZQP",
       meaning:
         "An ancient Greek city-state known for its military prowess and austere lifestyle",
       pronunciation: "spär′tə",
@@ -57,7 +57,7 @@ export const historyTopic: Topic = {
     {
       word: "MEDIEVAL",
       hint: "Middle Ages period",
-      extraLetters: "MEDIEVALX",
+      extraLetters: "MEDIEVALXZQP",
       meaning:
         "Relating to the period in European history from the fall of the Roman Empire to the Renaissance",
       pronunciation: "mē′dē-ē′vəl, mĕd′ē-ē′vəl",
@@ -65,7 +65,7 @@ export const historyTopic: Topic = {
     {
       word: "CASTLE",
       hint: "Fortified structure",
-      extraLetters: "CASTLEZQ",
+      extraLetters: "CASTLEXZQP",
       meaning:
         "A large building or group of buildings fortified against attack with thick walls and towers",
       pronunciation: "kăs′əl",
@@ -73,7 +73,7 @@ export const historyTopic: Topic = {
     {
       word: "KNIGHT",
       hint: "Medieval warrior",
-      extraLetters: "KNIGHTQW",
+      extraLetters: "KNIGHTXZQP",
       meaning:
         "A mounted soldier serving under a feudal superior in the Middle Ages, often of noble birth",
       pronunciation: "nīt",
@@ -81,7 +81,7 @@ export const historyTopic: Topic = {
     {
       word: "CRUSADE",
       hint: "Medieval military expedition",
-      extraLetters: "CRUSADEP",
+      extraLetters: "CRUSADEXZQP",
       meaning:
         "Any of the military expeditions undertaken by European Christians in the 11th-13th centuries to recover the Holy Land",
       pronunciation: "krōō-sād′",
@@ -89,7 +89,7 @@ export const historyTopic: Topic = {
     {
       word: "COLUMBUS",
       hint: "Explorer of Americas",
-      extraLetters: "COLUMBSQ",
+      extraLetters: "COLUMBUSXZQP",
       meaning:
         "Italian explorer who completed four voyages across the Atlantic Ocean, opening the way for European exploration of the Americas",
       pronunciation: "kə-lŭm′bəs",
@@ -97,7 +97,7 @@ export const historyTopic: Topic = {
     {
       word: "RENAISSANCE",
       hint: "Cultural rebirth period",
-      extraLetters: "RENAISCKX",
+      extraLetters: "RENAISSANCEXZQ",
       meaning:
         "A period of European cultural, artistic, political and scientific 'rebirth' following the Middle Ages",
       pronunciation: "rĕn′ĭ-säns′",
@@ -105,7 +105,7 @@ export const historyTopic: Topic = {
     {
       word: "REVOLUTION",
       hint: "Major social change",
-      extraLetters: "REVOLUTINZ",
+      extraLetters: "REVOLUTIONXZQ",
       meaning:
         "A fundamental change in political organization, particularly the overthrow of one government and its replacement with another",
       pronunciation: "rĕv′ə-lōō′shən",
@@ -113,7 +113,7 @@ export const historyTopic: Topic = {
     {
       word: "INDUSTRIAL",
       hint: "Factory-based era",
-      extraLetters: "INDUSTRALX",
+      extraLetters: "INDUSTRIALXZQ",
       meaning:
         "Relating to the period of social and economic change that transformed predominantly agrarian societies into industrial ones",
       pronunciation: "ĭn-dŭs′trē-əl",
@@ -121,7 +121,7 @@ export const historyTopic: Topic = {
     {
       word: "CHURCHILL",
       hint: "British wartime leader",
-      extraLetters: "CHURCHILP",
+      extraLetters: "CHURCHILLXZQ",
       meaning:
         "British statesman, soldier, and writer who served as Prime Minister during World War II",
       pronunciation: "chûr′chĭl",
@@ -129,7 +129,7 @@ export const historyTopic: Topic = {
     {
       word: "ROOSEVELT",
       hint: "US Depression-era president",
-      extraLetters: "ROSEVELTQ",
+      extraLetters: "ROOSEVELTXZQ",
       meaning:
         "The 32nd president of the United States who led the country through the Great Depression and World War II",
       pronunciation: "rō′zə-vĕlt′",
@@ -137,7 +137,7 @@ export const historyTopic: Topic = {
     {
       word: "WASHINGTON",
       hint: "First US president",
-      extraLetters: "XZQPWY",
+      extraLetters: "WASHINGTONXZQP",
       meaning:
         "The first President of the United States and one of the Founding Fathers of the United States",
       pronunciation: "wŏsh′ĭng-tən, wô′shĭng-",
@@ -145,7 +145,7 @@ export const historyTopic: Topic = {
     {
       word: "LINCOLN",
       hint: "Civil War president",
-      extraLetters: "YWZXQP",
+      extraLetters: "LINCOLNYWZXQP",
       meaning:
         "The 16th president of the United States who led the nation through the Civil War and abolished slavery",
       pronunciation: "lĭng′kən",
@@ -153,7 +153,7 @@ export const historyTopic: Topic = {
     {
       word: "MONARCHY",
       hint: "Royal government",
-      extraLetters: "ZYXWQP",
+      extraLetters: "MONARCHYZYXWQP",
       meaning:
         "A form of government with a monarch at the head, where power is inherited and often absolute or constitutional",
       pronunciation: "mŏn′ər-kē",
@@ -161,7 +161,7 @@ export const historyTopic: Topic = {
     {
       word: "DEMOCRACY",
       hint: "People's government",
-      extraLetters: "QPWXZY",
+      extraLetters: "DEMOCRACYQPWXZY",
       meaning:
         "A system of government by the whole population, typically through elected representatives",
       pronunciation: "dĭ-mŏk′rə-sē",
@@ -169,7 +169,7 @@ export const historyTopic: Topic = {
     {
       word: "EMPIRE",
       hint: "Multi-territory state",
-      extraLetters: "XZQPWY",
+      extraLetters: "EMPIREXZQPWY",
       meaning:
         "A group of states or countries under a single supreme authority, often an emperor or empress",
       pronunciation: "ĕm′pīr′",
@@ -177,7 +177,7 @@ export const historyTopic: Topic = {
     {
       word: "COLONY",
       hint: "Settled territory",
-      extraLetters: "YWZXQP",
+      extraLetters: "COLONYYWZXQP",
       meaning:
         "A territory under the immediate political control of a state, distinct from the home territory of the sovereign",
       pronunciation: "kŏl′ə-nē",
@@ -185,7 +185,7 @@ export const historyTopic: Topic = {
     {
       word: "ARTIFACT",
       hint: "Historical object",
-      extraLetters: "ZYXWQP",
+      extraLetters: "ARTIFACTZYXWQP",
       meaning:
         "An object made by a human being, typically one of cultural or historical interest",
       pronunciation: "är′tə-făkt′",
@@ -193,7 +193,7 @@ export const historyTopic: Topic = {
     {
       word: "ARCHIVE",
       hint: "Historical collection",
-      extraLetters: "QPWXZY",
+      extraLetters: "ARCHIVEQPWXZY",
       meaning:
         "A collection of historical documents or records providing information about a place, institution, or group of people",
       pronunciation: "är′kīv′",
@@ -201,7 +201,7 @@ export const historyTopic: Topic = {
     {
       word: "FOSSIL",
       hint: "Preserved remains",
-      extraLetters: "XZQPWY",
+      extraLetters: "FOSSILXZQPWY",
       meaning:
         "The preserved remains or traces of an ancient organism, often providing evidence about the past",
       pronunciation: "fŏs′əl",
@@ -209,7 +209,7 @@ export const historyTopic: Topic = {
     {
       word: "ARCHAEOLOGY",
       hint: "Study of human history",
-      extraLetters: "YWZXQP",
+      extraLetters: "ARCHAEOLOGYYWZXQP",
       meaning:
         "The study of human history and prehistory through the excavation of sites and analysis of artifacts",
       pronunciation: "är′kē-ŏl′ə-jē",
@@ -217,7 +217,7 @@ export const historyTopic: Topic = {
     {
       word: "MUSEUM",
       hint: "Historical collection place",
-      extraLetters: "ZYXWQP",
+      extraLetters: "MUSEUMZYXWQP",
       meaning:
         "A building where objects of historical, scientific, artistic, or cultural interest are stored and exhibited",
       pronunciation: "myōō-zē′əm",
@@ -225,7 +225,7 @@ export const historyTopic: Topic = {
     {
       word: "WAR",
       hint: "Armed conflict",
-      extraLetters: "QPWXZY",
+      extraLetters: "WARQPWXZY",
       meaning:
         "A state of armed conflict between different nations, states, or armed groups",
       pronunciation: "wôr",
@@ -233,7 +233,7 @@ export const historyTopic: Topic = {
     {
       word: "PEACE",
       hint: "Absence of conflict",
-      extraLetters: "XZQPWY",
+      extraLetters: "PEACEXZQPWY",
       meaning:
         "A state of harmony between people or groups, or freedom from civil disturbance or war",
       pronunciation: "pēs",
@@ -241,7 +241,7 @@ export const historyTopic: Topic = {
     {
       word: "TREATY",
       hint: "Formal agreement",
-      extraLetters: "YWZXQP",
+      extraLetters: "TREATYYWZXQP",
       meaning:
         "A formally concluded and ratified agreement between countries, often following negotiations to end a conflict",
       pronunciation: "trē′tē",
@@ -249,7 +249,7 @@ export const historyTopic: Topic = {
     {
       word: "DYNASTY",
       hint: "Ruling family line",
-      extraLetters: "ZYXWQP",
+      extraLetters: "DYNASTYZYXWQP",
       meaning:
         "A line of hereditary rulers of a country or succession of people from the same family who play a prominent role",
       pronunciation: "dī′nə-stē",
@@ -257,7 +257,7 @@ export const historyTopic: Topic = {
     {
       word: "KING",
       hint: "Male monarch",
-      extraLetters: "QPWXZY",
+      extraLetters: "KINGQPWXZY",
       meaning:
         "The male ruler of an independent state, especially one who inherits the position by right of birth",
       pronunciation: "kĭng",
@@ -265,7 +265,7 @@ export const historyTopic: Topic = {
     {
       word: "QUEEN",
       hint: "Female monarch",
-      extraLetters: "XZQPWY",
+      extraLetters: "QUEENXZQPWY",
       meaning:
         "The female ruler of an independent state, especially one who inherits the position by right of birth",
       pronunciation: "kwēn",
@@ -273,7 +273,7 @@ export const historyTopic: Topic = {
     {
       word: "PHARAOH",
       hint: "Egyptian ruler",
-      extraLetters: "YWZXQP",
+      extraLetters: "PHARAOHYWZXQP",
       meaning:
         "A ruler in ancient Egypt, considered to be a god-king and the intermediary between the gods and people",
       pronunciation: "fâr′ō, fā′rō",
@@ -281,7 +281,7 @@ export const historyTopic: Topic = {
     {
       word: "SAMURAI",
       hint: "Japanese warrior",
-      extraLetters: "ZYXWQP",
+      extraLetters: "SAMURAIZYXWQP",
       meaning:
         "A member of a powerful military caste in feudal Japan, serving a lord as a military officer and following a strict code of conduct",
       pronunciation: "săm′ə-rī′",
@@ -289,7 +289,7 @@ export const historyTopic: Topic = {
     {
       word: "VIKING",
       hint: "Norse explorer",
-      extraLetters: "QPWXZY",
+      extraLetters: "VIKINGQPWXZY",
       meaning:
         "A Scandinavian seafarer who raided, traded, and settled throughout Europe from the 8th to 11th centuries",
       pronunciation: "vī′kĭng",
@@ -297,7 +297,7 @@ export const historyTopic: Topic = {
     {
       word: "MAYFLOWER",
       hint: "Pilgrim ship",
-      extraLetters: "XZQPWY",
+      extraLetters: "MAYFLOWERXZQPWY",
       meaning:
         "The ship that transported the first English Pilgrims from Plymouth to the New World in 1620",
       pronunciation: "mā′flou′ər",
@@ -305,7 +305,7 @@ export const historyTopic: Topic = {
     {
       word: "DECLARATION",
       hint: "Independence document",
-      extraLetters: "YWZXQP",
+      extraLetters: "DECLARATIONYWZXQP",
       meaning:
         "A formal or explicit statement or announcement, often of political significance like the Declaration of Independence",
       pronunciation: "dĕk′lə-rā′shən",
@@ -313,7 +313,7 @@ export const historyTopic: Topic = {
     {
       word: "CONSTITUTION",
       hint: "Governing document",
-      extraLetters: "ZYXWQP",
+      extraLetters: "CONSTITUTIONZYXWQP",
       meaning:
         "A body of fundamental principles according to which a state or organization is governed",
       pronunciation: "kŏn′stĭ-tōō′shən, -tyōō′-",
@@ -321,7 +321,7 @@ export const historyTopic: Topic = {
     {
       word: "AMENDMENT",
       hint: "Constitutional change",
-      extraLetters: "QPWXZY",
+      extraLetters: "AMENDMENTQPWXZY",
       meaning:
         "A change or addition to a legal or statutory document, particularly to a constitution",
       pronunciation: "ə-mĕnd′mənt",
@@ -329,7 +329,7 @@ export const historyTopic: Topic = {
     {
       word: "CONQUEST",
       hint: "Military takeover",
-      extraLetters: "XZQPWY",
+      extraLetters: "CONQUESTXZQPWY",
       meaning:
         "The act of conquering and taking control of a territory by military force",
       pronunciation: "kŏn′kwĕst′, kŏng′-",
@@ -337,7 +337,7 @@ export const historyTopic: Topic = {
     {
       word: "INDEPENDENCE",
       hint: "Self-governance",
-      extraLetters: "YWZXQP",
+      extraLetters: "INDEPENDENCEYWZXQP",
       meaning:
         "Freedom from the control, influence, support, or help of others, particularly in a political context",
       pronunciation: "ĭn′dĭ-pĕn′dəns",
@@ -345,7 +345,7 @@ export const historyTopic: Topic = {
     {
       word: "CIVIL",
       hint: "___ War or ___ Rights",
-      extraLetters: "ZYXWQP",
+      extraLetters: "CIVILZYXWQP",
       meaning:
         "Relating to ordinary citizens and their concerns, as distinct from military or ecclesiastical matters",
       pronunciation: "sĭv′əl",
@@ -353,7 +353,7 @@ export const historyTopic: Topic = {
     {
       word: "REFORM",
       hint: "System improvement",
-      extraLetters: "QPWXZY",
+      extraLetters: "REFORMQPWXZY",
       meaning:
         "The action or process of making changes to something in order to improve it",
       pronunciation: "rĭ-fôrm′",
@@ -361,7 +361,7 @@ export const historyTopic: Topic = {
     {
       word: "CIVILIZATION",
       hint: "Advanced society",
-      extraLetters: "XZQPWY",
+      extraLetters: "CIVILIZATIONXZQPWY",
       meaning:
         "The stage of human social and cultural development considered advanced or complex",
       pronunciation: "sĭv′ə-lĭ-zā′shən",
@@ -369,7 +369,7 @@ export const historyTopic: Topic = {
     {
       word: "SLAVERY",
       hint: "Forced servitude",
-      extraLetters: "YWZXQP",
+      extraLetters: "SLAVERYYWZXQP",
       meaning:
         "The practice of owning slaves as property who are forced to obey their owners",
       pronunciation: "slā′və-rē",
@@ -377,7 +377,7 @@ export const historyTopic: Topic = {
     {
       word: "MIGRATION",
       hint: "Human movement",
-      extraLetters: "ZYXWQP",
+      extraLetters: "MIGRATIONZYXWQP",
       meaning:
         "The movement of people from one place to another with the intention of settling temporarily or permanently",
       pronunciation: "mī-grā′shən",
@@ -385,7 +385,7 @@ export const historyTopic: Topic = {
     {
       word: "SETTLEMENT",
       hint: "Colonized area",
-      extraLetters: "QPWXZY",
+      extraLetters: "SETTLEMENTQPWXZY",
       meaning:
         "A place where people establish a community, especially in a previously uninhabited or sparsely populated area",
       pronunciation: "sĕt′l-mənt",
@@ -393,7 +393,7 @@ export const historyTopic: Topic = {
     {
       word: "DISCOVERY",
       hint: "New finding",
-      extraLetters: "XZQPWY",
+      extraLetters: "DISCOVERYXZQPWY",
       meaning:
         "The act or process of finding or learning something for the first time, often of historical significance",
       pronunciation: "dĭ-skŭv′ə-rē",
@@ -401,7 +401,7 @@ export const historyTopic: Topic = {
     {
       word: "INVENTION",
       hint: "New creation",
-      extraLetters: "YWZXQP",
+      extraLetters: "INVENTIONYWZXQP",
       meaning:
         "The creation of a new device, method, or process that did not exist before, often changing the course of history",
       pronunciation: "ĭn-vĕn′shən",

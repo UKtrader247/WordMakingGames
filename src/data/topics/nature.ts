@@ -9,7 +9,7 @@ export const natureTopic: Topic = {
     {
       word: "TREE",
       hint: "Tall woody plant",
-      extraLetters: "TREQZXPW",
+      extraLetters: "TREXZQPWY", // Fixed: Removed 'Q' as it is not needed
       meaning:
         "A perennial plant with an elongated stem, supporting branches and leaves",
       pronunciation: "trē",
@@ -17,7 +17,7 @@ export const natureTopic: Topic = {
     {
       word: "FLOWER",
       hint: "Plant reproductive structure",
-      extraLetters: "FLOWERZXQ",
+      extraLetters: "FLOWERZXQPY",
       meaning:
         "The reproductive structure of a plant, often colorful and fragrant to attract pollinators",
       pronunciation: "flou′ər",
@@ -25,7 +25,7 @@ export const natureTopic: Topic = {
     {
       word: "LEAF",
       hint: "Plant photosynthesis organ",
-      extraLetters: "LEAFZYWQ",
+      extraLetters: "LEAFZYWQPX",
       meaning:
         "A flattened structure of a plant that is the main site of photosynthesis",
       pronunciation: "lēf",
@@ -33,14 +33,14 @@ export const natureTopic: Topic = {
     {
       word: "FOREST",
       hint: "Large area with trees",
-      extraLetters: "FORESTQPX",
+      extraLetters: "FORESTQPXZYW",
       meaning: "A large area dominated by trees and other woody vegetation",
       pronunciation: "fôr′ĭst",
     },
     {
       word: "JUNGLE",
       hint: "Dense tropical forest",
-      extraLetters: "JUNGLEZXQ",
+      extraLetters: "JUNGLEZXQPWY",
       meaning:
         "A dense, impenetrable forest in tropical regions with abundant vegetation",
       pronunciation: "jŭng′gəl",
@@ -48,7 +48,7 @@ export const natureTopic: Topic = {
     {
       word: "PLANT",
       hint: "Photosynthesizing organism",
-      extraLetters: "PLANTXZQ",
+      extraLetters: "PLANTXZQPWY",
       meaning:
         "A living organism that typically grows in soil, has roots, stems, leaves, and produces its own food through photosynthesis",
       pronunciation: "plănt",
@@ -56,7 +56,7 @@ export const natureTopic: Topic = {
     {
       word: "GRASS",
       hint: "Common ground cover",
-      extraLetters: "GRASZYWQ",
+      extraLetters: "GRASZYWQPX",
       meaning:
         "A type of plant with narrow leaves growing from the base, forming a ground cover in many ecosystems",
       pronunciation: "grăs",
@@ -64,7 +64,7 @@ export const natureTopic: Topic = {
     {
       word: "MOSS",
       hint: "Small flowerless plant",
-      extraLetters: "MOSQPWXZ",
+      extraLetters: "MOSQPWXZY",
       meaning:
         "A small flowerless plant that grows in dense green clumps in damp habitats",
       pronunciation: "môs",
@@ -72,7 +72,7 @@ export const natureTopic: Topic = {
     {
       word: "FERN",
       hint: "Seedless vascular plant",
-      extraLetters: "FERNXZQW",
+      extraLetters: "FERNXZQWPY",
       meaning:
         "A flowerless plant with feathery or leafy fronds that reproduces by spores",
       pronunciation: "fûrn",
@@ -80,7 +80,7 @@ export const natureTopic: Topic = {
     {
       word: "PINE",
       hint: "Coniferous tree",
-      extraLetters: "PINEWZXQ",
+      extraLetters: "PINEWZXQY",
       meaning:
         "An evergreen coniferous tree with needle-shaped leaves and woody cones",
       pronunciation: "pīn",
@@ -88,14 +88,14 @@ export const natureTopic: Topic = {
     {
       word: "OAK",
       hint: "Acorn-producing tree",
-      extraLetters: "OAKZYXWQ",
+      extraLetters: "OAKZYXWQP",
       meaning: "A hardwood tree or shrub with lobed leaves and acorns as fruit",
       pronunciation: "ōk",
     },
     {
       word: "MAPLE",
       hint: "Tree with distinctive leaves",
-      extraLetters: "MAPLEQWZ",
+      extraLetters: "MAPLEQWZXY",
       meaning:
         "A deciduous tree with characteristic palmate leaves and winged fruit",
       pronunciation: "mā′pəl",
@@ -103,7 +103,7 @@ export const natureTopic: Topic = {
     {
       word: "ROSE",
       hint: "Flowering thorny plant",
-      extraLetters: "ROSEZQXW",
+      extraLetters: "ROSEZQXWPY",
       meaning:
         "A prickly shrub or climbing plant that typically bears red, pink, yellow, or white fragrant flowers",
       pronunciation: "rōz",
@@ -111,7 +111,7 @@ export const natureTopic: Topic = {
     {
       word: "DAISY",
       hint: "White and yellow flower",
-      extraLetters: "DAISYXQP",
+      extraLetters: "DAISYXQPWZ",
       meaning:
         "A small flower with a yellow center and white petals, common in lawns and meadows",
       pronunciation: "dā′zē",
@@ -119,14 +119,14 @@ export const natureTopic: Topic = {
     {
       word: "TULIP",
       hint: "Spring bulb flower",
-      extraLetters: "TULIPZWQ",
+      extraLetters: "TULIPZWQXY",
       meaning: "A bulbous spring-flowering plant with bold, cup-shaped flowers",
       pronunciation: "tōō′lĭp, tyōō′-",
     },
     {
       word: "SUNFLOWER",
       hint: "Tall yellow flower",
-      extraLetters: "SUNFLOWERZ",
+      extraLetters: "SUNFLOWERZXQPWY",
       meaning:
         "A tall plant with a large yellow flower head that follows the sun's movement",
       pronunciation: "sŭn′flou′ər",
@@ -134,7 +134,7 @@ export const natureTopic: Topic = {
     {
       word: "CACTUS",
       hint: "Desert succulent",
-      extraLetters: "XZQPWY",
+      extraLetters: "CACTUSXZQPWY",
       meaning:
         "A succulent plant adapted to dry environments, typically having spines instead of leaves",
       pronunciation: "kăk′təs",
@@ -142,7 +142,7 @@ export const natureTopic: Topic = {
     {
       word: "SEED",
       hint: "Plant embryo",
-      extraLetters: "YWZXQP",
+      extraLetters: "SEEDYWZXQP",
       meaning:
         "The unit of reproduction of a flowering plant, capable of developing into another plant",
       pronunciation: "sēd",
@@ -150,7 +150,7 @@ export const natureTopic: Topic = {
     {
       word: "ROOT",
       hint: "Underground plant part",
-      extraLetters: "ZYXWQP",
+      extraLetters: "ROOTZYXWQP",
       meaning:
         "The part of a plant that typically lies below the surface of the soil, absorbing water and nutrients",
       pronunciation: "rōōt, ro͝ot",
@@ -158,7 +158,7 @@ export const natureTopic: Topic = {
     {
       word: "STEM",
       hint: "Main plant support",
-      extraLetters: "QPWXZY",
+      extraLetters: "STEMQPWXZY",
       meaning:
         "The main body or stalk of a plant that supports leaves, flowers, and fruit",
       pronunciation: "stĕm",
@@ -166,7 +166,7 @@ export const natureTopic: Topic = {
     {
       word: "PETAL",
       hint: "Flower part",
-      extraLetters: "XZQPWY",
+      extraLetters: "PETALXZQPWY",
       meaning:
         "A modified leaf that forms part of the flower, typically colored to attract pollinators",
       pronunciation: "pĕt′l",
@@ -174,7 +174,7 @@ export const natureTopic: Topic = {
     {
       word: "POLLEN",
       hint: "Male plant reproductive material",
-      extraLetters: "YWZXQP",
+      extraLetters: "POLLENYWZXQP",
       meaning:
         "The fine powder produced by the male part of a flower that fertilizes the female part",
       pronunciation: "pŏl′ən",
@@ -182,7 +182,7 @@ export const natureTopic: Topic = {
     {
       word: "NECTAR",
       hint: "Sweet flower liquid",
-      extraLetters: "ZYXWQP",
+      extraLetters: "NECTARZYXWQP",
       meaning:
         "A sugary fluid secreted by plants to attract pollinating animals",
       pronunciation: "nĕk′tər",
@@ -190,7 +190,7 @@ export const natureTopic: Topic = {
     {
       word: "HABITAT",
       hint: "Natural environment",
-      extraLetters: "QPWXZY",
+      extraLetters: "HABITATQPWXZY",
       meaning:
         "The natural home or environment of an animal, plant, or other organism",
       pronunciation: "hăb′ĭ-tăt′",
@@ -198,7 +198,7 @@ export const natureTopic: Topic = {
     {
       word: "ECOLOGY",
       hint: "Study of environmental relationships",
-      extraLetters: "XZQPWY",
+      extraLetters: "ECOLOGYXZQPWY",
       meaning:
         "The study of the relationships between living organisms and their environment",
       pronunciation: "ĭ-kŏl′ə-jē",
@@ -206,7 +206,7 @@ export const natureTopic: Topic = {
     {
       word: "ECOSYSTEM",
       hint: "Biological community",
-      extraLetters: "YWZXQP",
+      extraLetters: "ECOSYSTEMYWZXQP",
       meaning:
         "A biological community of interacting organisms and their physical environment",
       pronunciation: "ĕk′ō-sĭs′təm, ē′kō-",
@@ -214,7 +214,7 @@ export const natureTopic: Topic = {
     {
       word: "BIODIVERSITY",
       hint: "Variety of life",
-      extraLetters: "ZYXWQP",
+      extraLetters: "BIODIVERSITYZYXWQP",
       meaning:
         "The variety of plant and animal life in the world or in a particular habitat",
       pronunciation: "bī′ō-dĭ-vûr′sĭ-tē",
@@ -222,7 +222,7 @@ export const natureTopic: Topic = {
     {
       word: "CONSERVATION",
       hint: "Protection of resources",
-      extraLetters: "QPWXZY",
+      extraLetters: "CONSERVATIONQPWXZY",
       meaning:
         "The protection, preservation, management, or restoration of natural environments and ecological communities",
       pronunciation: "kŏn′sər-vā′shən",
@@ -230,7 +230,7 @@ export const natureTopic: Topic = {
     {
       word: "WILDLIFE",
       hint: "Undomesticated animals",
-      extraLetters: "XZQPWY",
+      extraLetters: "WILDLIFEXZQPWY",
       meaning:
         "Animals living in their natural habitat, undomesticated and unaffected by human activity",
       pronunciation: "wīld′līf′",
@@ -238,7 +238,7 @@ export const natureTopic: Topic = {
     {
       word: "DESERT",
       hint: "Arid biome",
-      extraLetters: "YWZXQP",
+      extraLetters: "DESERTYWZXQP",
       meaning:
         "A barren area of landscape where little precipitation occurs and living conditions are hostile",
       pronunciation: "dĕz′ərt",
@@ -246,7 +246,7 @@ export const natureTopic: Topic = {
     {
       word: "TUNDRA",
       hint: "Cold treeless biome",
-      extraLetters: "ZYXWQP",
+      extraLetters: "TUNDRAZYXWQP",
       meaning:
         "A vast, flat, treeless Arctic region where the subsoil is permanently frozen",
       pronunciation: "tŭn′drə",
@@ -254,7 +254,7 @@ export const natureTopic: Topic = {
     {
       word: "RAINFOREST",
       hint: "Lush tropical forest",
-      extraLetters: "QPWXZY",
+      extraLetters: "RAINFORESTQPWXZY",
       meaning:
         "A dense forest with high annual rainfall, typically found in tropical areas",
       pronunciation: "rān′fôr′ĭst",
@@ -262,7 +262,7 @@ export const natureTopic: Topic = {
     {
       word: "SAVANNA",
       hint: "Tropical grassland",
-      extraLetters: "XZQPWY",
+      extraLetters: "SAVANNAXZQPWY",
       meaning:
         "A grassy plain in tropical and subtropical regions with few trees",
       pronunciation: "sə-văn′ə",
@@ -270,7 +270,7 @@ export const natureTopic: Topic = {
     {
       word: "MEADOW",
       hint: "Field of grass and flowers",
-      extraLetters: "YWZXQP",
+      extraLetters: "MEADOWYWZXQP",
       meaning:
         "A field vegetated primarily by grass and other non-woody plants, often with wildflowers",
       pronunciation: "mĕd′ō",
@@ -278,7 +278,7 @@ export const natureTopic: Topic = {
     {
       word: "WETLAND",
       hint: "Saturated land area",
-      extraLetters: "ZYXWQP",
+      extraLetters: "WETLANDZYXWQP",
       meaning:
         "Land consisting of marshes or swamps that is saturated with moisture",
       pronunciation: "wĕt′lănd′",
@@ -286,7 +286,7 @@ export const natureTopic: Topic = {
     {
       word: "CORAL",
       hint: "Marine invertebrate",
-      extraLetters: "QPWXZY",
+      extraLetters: "CORALQPWXZY",
       meaning:
         "A hard, stony substance secreted by certain marine invertebrates as an external skeleton",
       pronunciation: "kôr′əl, kŏr′-",
@@ -294,7 +294,7 @@ export const natureTopic: Topic = {
     {
       word: "REEF",
       hint: "Marine ecosystem",
-      extraLetters: "XZQPWY",
+      extraLetters: "REEFXZQPWY",
       meaning:
         "A ridge of rock, coral, or sand at or near the surface of the sea",
       pronunciation: "rēf",
@@ -302,7 +302,7 @@ export const natureTopic: Topic = {
     {
       word: "MIGRATION",
       hint: "Seasonal animal movement",
-      extraLetters: "YWZXQP",
+      extraLetters: "MIGRATIONYWZXQP",
       meaning:
         "The seasonal movement of animals from one region to another, typically for feeding or breeding",
       pronunciation: "mī-grā′shən",
@@ -310,7 +310,7 @@ export const natureTopic: Topic = {
     {
       word: "HIBERNATION",
       hint: "Winter dormancy",
-      extraLetters: "ZYXWQP",
+      extraLetters: "HIBERNATIONZYXWQP",
       meaning:
         "A state of inactivity and metabolic depression in animals during winter",
       pronunciation: "hī′bər-nā′shən",
@@ -318,21 +318,21 @@ export const natureTopic: Topic = {
     {
       word: "PREDATOR",
       hint: "Animal that hunts",
-      extraLetters: "QPWXZY",
+      extraLetters: "PREDATORQPWXZY",
       meaning: "An animal that naturally preys on others for food",
       pronunciation: "prĕd′ə-tər",
     },
     {
       word: "PREY",
       hint: "Hunted animal",
-      extraLetters: "XZQPWY",
+      extraLetters: "PREYXZQPWY",
       meaning: "An animal that is hunted and eaten by another animal",
       pronunciation: "prā",
     },
     {
       word: "ADAPTATION",
       hint: "Evolutionary trait",
-      extraLetters: "YWZXQP",
+      extraLetters: "ADAPTATIONYWZXQP",
       meaning:
         "A change or the process of change by which an organism becomes better suited to its environment",
       pronunciation: "ăd′əp-tā′shən",
@@ -340,7 +340,7 @@ export const natureTopic: Topic = {
     {
       word: "CAMOUFLAGE",
       hint: "Natural disguise",
-      extraLetters: "ZYXWQP",
+      extraLetters: "CAMOUFLAGEZYXWQP",
       meaning:
         "The disguising of military personnel, equipment, and installations by painting or covering them to make them blend with their surroundings",
       pronunciation: "kăm′ə-flăzh′",
@@ -348,7 +348,7 @@ export const natureTopic: Topic = {
     {
       word: "SPECIES",
       hint: "Biological classification",
-      extraLetters: "QPWXZY",
+      extraLetters: "SPECIESQPWXZY",
       meaning:
         "A group of living organisms consisting of similar individuals capable of exchanging genes or interbreeding",
       pronunciation: "spē′shēz, -sēz",
@@ -356,14 +356,14 @@ export const natureTopic: Topic = {
     {
       word: "EXTINCTION",
       hint: "End of a species",
-      extraLetters: "XZQPWY",
+      extraLetters: "EXTINCTIONXZQPWY",
       meaning: "The dying out or termination of a species or group of species",
       pronunciation: "ĭk-stĭngk′shən",
     },
     {
       word: "EROSION",
       hint: "Gradual wearing away",
-      extraLetters: "YWZXQP",
+      extraLetters: "EROSIONYWZXQP",
       meaning:
         "The process of eroding or being eroded by wind, water, or other natural agents",
       pronunciation: "ĭ-rō′zhən",
@@ -371,7 +371,7 @@ export const natureTopic: Topic = {
     {
       word: "POLLINATION",
       hint: "Flower fertilization process",
-      extraLetters: "ZYXWQP",
+      extraLetters: "POLLINATIONZYXWQP",
       meaning:
         "The transfer of pollen from the male to the female parts of a flower, enabling fertilization",
       pronunciation: "pŏl′ə-nā′shən",
@@ -379,7 +379,7 @@ export const natureTopic: Topic = {
     {
       word: "PHOTOSYNTHESIS",
       hint: "Plant energy production",
-      extraLetters: "QPWXZY",
+      extraLetters: "PHOTOSYNTHESISQPWXZY",
       meaning:
         "The process by which green plants use sunlight to synthesize foods from carbon dioxide and water",
       pronunciation: "fō′tō-sĭn′thĭ-sĭs",
@@ -387,7 +387,7 @@ export const natureTopic: Topic = {
     {
       word: "DECOMPOSITION",
       hint: "Breaking down of organic matter",
-      extraLetters: "XZQPWY",
+      extraLetters: "DECOMPOSITIONXZQPWY",
       meaning:
         "The process by which organic substances are broken down into simpler forms of matter",
       pronunciation: "dē′kŏm-pə-zĭsh′ən",
@@ -395,7 +395,7 @@ export const natureTopic: Topic = {
     {
       word: "SYMBIOSIS",
       hint: "Mutually beneficial relationship",
-      extraLetters: "YWZXQP",
+      extraLetters: "SYMBIOSISYWZXQP",
       meaning:
         "A close and long-term biological interaction between two different biological organisms",
       pronunciation: "sĭm′bē-ō′sĭs, -bī-",
@@ -403,7 +403,7 @@ export const natureTopic: Topic = {
     {
       word: "VALLEY",
       hint: "Low area between hills",
-      extraLetters: "ZYXWQP",
+      extraLetters: "VALLEYZYXWQP",
       meaning:
         "A low area of land between hills or mountains, typically with a river or stream flowing through it",
       pronunciation: "văl′ē",
@@ -411,7 +411,7 @@ export const natureTopic: Topic = {
     {
       word: "MOUNTAIN",
       hint: "Large natural elevation",
-      extraLetters: "QPWXZY",
+      extraLetters: "MOUNTAINQPWXZY",
       meaning:
         "A large natural elevation of the earth's surface rising abruptly from the surrounding level",
       pronunciation: "moun′tn",
@@ -419,7 +419,7 @@ export const natureTopic: Topic = {
     {
       word: "RIVER",
       hint: "Natural flowing watercourse",
-      extraLetters: "XZQPWY",
+      extraLetters: "RIVERXZQPWY",
       meaning:
         "A large natural stream of water flowing in a channel to the sea, a lake, or another river",
       pronunciation: "rĭv′ər",
@@ -427,14 +427,14 @@ export const natureTopic: Topic = {
     {
       word: "LAKE",
       hint: "Large body of water",
-      extraLetters: "YWZXQP",
+      extraLetters: "LAKEYWZXQP",
       meaning: "A large body of water surrounded by land",
       pronunciation: "lāk",
     },
     {
       word: "OCEAN",
       hint: "Vast body of saltwater",
-      extraLetters: "ZYXWQP",
+      extraLetters: "OCEANZYXWQP",
       meaning:
         "A very large expanse of sea, one of the main areas into which the sea is divided",
       pronunciation: "ō′shən",
@@ -442,7 +442,7 @@ export const natureTopic: Topic = {
     {
       word: "BEACH",
       hint: "Shore of sand or pebbles",
-      extraLetters: "QPWXZY",
+      extraLetters: "BEACHQPWXZY",
       meaning:
         "A pebbly or sandy shore, especially by the sea between high and low water marks",
       pronunciation: "bēch",
@@ -450,14 +450,14 @@ export const natureTopic: Topic = {
     {
       word: "CLIFF",
       hint: "Steep rock face",
-      extraLetters: "XZQPWY",
+      extraLetters: "CLIFFXZQPWY",
       meaning: "A steep rock face, especially one at the edge of the sea",
       pronunciation: "klĭf",
     },
     {
       word: "CAVE",
       hint: "Natural underground hollow",
-      extraLetters: "YWZXQP",
+      extraLetters: "CAVEYWZXQP",
       meaning:
         "A large hollow in the side of a hill, cliff, or mountain, or underground",
       pronunciation: "kāv",
@@ -465,7 +465,7 @@ export const natureTopic: Topic = {
     {
       word: "WATERFALL",
       hint: "Falling stream of water",
-      extraLetters: "ZYXWQP",
+      extraLetters: "WATERFALLZYXWQP",
       meaning:
         "A cascade of water falling from a height, formed when a river or stream flows over a precipice or steep incline",
       pronunciation: "wô′tər-fôl′",
@@ -473,7 +473,7 @@ export const natureTopic: Topic = {
     {
       word: "GEYSER",
       hint: "Natural hot spring",
-      extraLetters: "QPWXZY",
+      extraLetters: "GEYSERQPWXZY",
       meaning:
         "A hot spring in which water intermittently boils, sending a tall column of water and steam into the air",
       pronunciation: "gī′zər",
@@ -481,7 +481,7 @@ export const natureTopic: Topic = {
     {
       word: "VOLCANO",
       hint: "Erupting mountain",
-      extraLetters: "XZQPWY",
+      extraLetters: "VOLCANOXZQPWY",
       meaning:
         "A mountain or hill with a crater or vent through which lava, rock fragments, hot vapor, and gas are ejected",
       pronunciation: "vŏl-kā′nō",
@@ -489,7 +489,7 @@ export const natureTopic: Topic = {
     {
       word: "GLACIER",
       hint: "Slow-moving ice mass",
-      extraLetters: "YWZXQP",
+      extraLetters: "GLACIERYWZXQP",
       meaning:
         "A slowly moving mass or river of ice formed by the accumulation and compaction of snow on mountains or near the poles",
       pronunciation: "glā′shər",
@@ -497,14 +497,14 @@ export const natureTopic: Topic = {
     {
       word: "CANYON",
       hint: "Deep ravine",
-      extraLetters: "ZYXWQP",
+      extraLetters: "CANYONZYXWQP",
       meaning: "A deep gorge, typically one with a river flowing through it",
       pronunciation: "kăn′yən",
     },
     {
       word: "DELTA",
       hint: "River mouth formation",
-      extraLetters: "QPWXZY",
+      extraLetters: "DELTAQPWXZY",
       meaning:
         "A triangular tract of sediment deposited at the mouth of a river",
       pronunciation: "dĕl′tə",
@@ -512,14 +512,14 @@ export const natureTopic: Topic = {
     {
       word: "ISLAND",
       hint: "Land surrounded by water",
-      extraLetters: "XZQPWY",
+      extraLetters: "ISLANDXZQPWY",
       meaning: "A piece of land surrounded by water",
       pronunciation: "ī′lənd",
     },
     {
       word: "PENINSULA",
       hint: "Land extending into water",
-      extraLetters: "YWZXQP",
+      extraLetters: "PENINSULAYWZXQP",
       meaning:
         "A piece of land almost surrounded by water or projecting far into the sea",
       pronunciation: "pə-nĭn′sə-lə",
@@ -527,28 +527,28 @@ export const natureTopic: Topic = {
     {
       word: "PLATEAU",
       hint: "Elevated flat land",
-      extraLetters: "ZYXWQP",
+      extraLetters: "PLATEAUZYXWQP",
       meaning: "An area of relatively level high ground",
       pronunciation: "plă-tō′",
     },
     {
       word: "DUNE",
       hint: "Hill of sand",
-      extraLetters: "QPWXZY",
+      extraLetters: "DUNEQPWXZY",
       meaning: "A hill of loose sand built by wind or the flow of water",
       pronunciation: "dōōn, dyōōn",
     },
     {
       word: "OASIS",
       hint: "Fertile desert spot",
-      extraLetters: "XZQPWY",
+      extraLetters: "OASISXZQPWY",
       meaning: "A fertile spot in a desert where water is found",
       pronunciation: "ō-ā′sĭs",
     },
     {
       word: "SWAMP",
       hint: "Forested wetland",
-      extraLetters: "YWZXQP",
+      extraLetters: "SWAMPYWZXQP",
       meaning:
         "An area of low-lying, uncultivated ground where water collects, characterized by trees and dense vegetation",
       pronunciation: "swŏmp",
@@ -556,7 +556,7 @@ export const natureTopic: Topic = {
     {
       word: "BOG",
       hint: "Spongy wetland",
-      extraLetters: "ZYXWQP",
+      extraLetters: "BOGZYXWQP",
       meaning:
         "An area of wet, muddy ground that is too soft to support a heavy body",
       pronunciation: "bŏg, bôg",
@@ -564,7 +564,7 @@ export const natureTopic: Topic = {
     {
       word: "MARSH",
       hint: "Grassy wetland",
-      extraLetters: "QPWXZY",
+      extraLetters: "MARSHQPWXZY",
       meaning:
         "An area of low-lying land that is flooded in wet seasons or at high tide, and typically remains waterlogged at all times",
       pronunciation: "märsh",
@@ -572,7 +572,7 @@ export const natureTopic: Topic = {
     {
       word: "ESTUARY",
       hint: "River mouth ecosystem",
-      extraLetters: "XZQPWY",
+      extraLetters: "ESTUARYXZQPWY",
       meaning:
         "The tidal mouth of a large river, where the tide meets the stream",
       pronunciation: "ĕs′chōō-ĕr′ē",
@@ -580,14 +580,14 @@ export const natureTopic: Topic = {
     {
       word: "MANGROVE",
       hint: "Coastal tree ecosystem",
-      extraLetters: "YWZXQP",
+      extraLetters: "MANGROVEYWZXQP",
       meaning: "A tree or shrub that grows in coastal saline or brackish water",
       pronunciation: "măng′grōv′",
     },
     {
       word: "ALGAE",
       hint: "Aquatic photosynthetic organism",
-      extraLetters: "ZYXWQP",
+      extraLetters: "ALGAEZYXWQP",
       meaning:
         "A simple, non-flowering, typically aquatic plant of a large group that includes seaweeds and many single-celled forms",
       pronunciation: "ăl′jē",
@@ -595,7 +595,7 @@ export const natureTopic: Topic = {
     {
       word: "LICHEN",
       hint: "Fungus-algae composite organism",
-      extraLetters: "QPWXZY",
+      extraLetters: "LICHENQPWXZY",
       meaning:
         "A composite organism that arises from algae or cyanobacteria living among filaments of multiple fungi",
       pronunciation: "lī′kən",
@@ -603,7 +603,7 @@ export const natureTopic: Topic = {
     {
       word: "FUNGI",
       hint: "Kingdom of decomposers",
-      extraLetters: "XZQPWY",
+      extraLetters: "FUNGIXZQPWY",
       meaning:
         "Any of a group of spore-producing organisms feeding on organic matter, including molds, yeast, mushrooms, and toadstools",
       pronunciation: "fŭn′jī, fŭng′gī",
@@ -611,7 +611,7 @@ export const natureTopic: Topic = {
     {
       word: "MUSHROOM",
       hint: "Fungal fruiting body",
-      extraLetters: "YWZXQP",
+      extraLetters: "MUSHROOMYWZXQP",
       meaning:
         "The fleshy, spore-bearing fruiting body of a fungus, typically produced above ground on soil or on its food source",
       pronunciation: "mŭsh′rōōm′",
@@ -619,7 +619,7 @@ export const natureTopic: Topic = {
     {
       word: "BACTERIA",
       hint: "Microscopic organisms",
-      extraLetters: "ZYXWQP",
+      extraLetters: "BACTERIAZYXWQP",
       meaning:
         "A member of a large group of unicellular microorganisms that have cell walls but lack organelles and an organized nucleus",
       pronunciation: "băk-tîr′ē-ə",
@@ -627,7 +627,7 @@ export const natureTopic: Topic = {
     {
       word: "CLIMATE",
       hint: "Long-term weather patterns",
-      extraLetters: "QPWXZY",
+      extraLetters: "CLIMATEQPWXZY",
       meaning:
         "The weather conditions prevailing in an area in general or over a long period",
       pronunciation: "klī′mĭt",
@@ -635,7 +635,7 @@ export const natureTopic: Topic = {
     {
       word: "WEATHER",
       hint: "Atmospheric conditions",
-      extraLetters: "XZQPWY",
+      extraLetters: "WEATHERXZQPWY",
       meaning:
         "The state of the atmosphere at a place and time as regards heat, dryness, sunshine, wind, rain, etc.",
       pronunciation: "wĕth′ər",
@@ -643,7 +643,7 @@ export const natureTopic: Topic = {
     {
       word: "RAIN",
       hint: "Water falling from clouds",
-      extraLetters: "YWZXQP",
+      extraLetters: "RAINYWZXQP",
       meaning:
         "Moisture condensed from the atmosphere that falls visibly in separate drops",
       pronunciation: "rān",
@@ -651,7 +651,7 @@ export const natureTopic: Topic = {
     {
       word: "SNOW",
       hint: "Frozen precipitation",
-      extraLetters: "ZYXWQP",
+      extraLetters: "SNOWZYXWQP",
       meaning:
         "Atmospheric water vapor frozen into ice crystals and falling in light white flakes",
       pronunciation: "snō",
@@ -659,7 +659,7 @@ export const natureTopic: Topic = {
     {
       word: "WIND",
       hint: "Moving air",
-      extraLetters: "QPWXZY",
+      extraLetters: "WINDQPWXZY",
       meaning:
         "The perceptible natural movement of the air, especially in the form of a current of air blowing from a particular direction",
       pronunciation: "wĭnd",
@@ -667,7 +667,7 @@ export const natureTopic: Topic = {
     {
       word: "STORM",
       hint: "Violent weather",
-      extraLetters: "XZQPWY",
+      extraLetters: "STORMXZQPWY",
       meaning:
         "A violent disturbance of the atmosphere with strong winds and usually rain, thunder, lightning, or snow",
       pronunciation: "stôrm",
@@ -675,7 +675,7 @@ export const natureTopic: Topic = {
     {
       word: "HURRICANE",
       hint: "Tropical cyclone",
-      extraLetters: "YWZXQPR",
+      extraLetters: "HURRICANEYWZXQPR",
       meaning:
         "A storm with a violent wind, in particular a tropical cyclone in the Caribbean",
       pronunciation: "hûr′ĭ-kān′, hŭr′-",
@@ -683,7 +683,7 @@ export const natureTopic: Topic = {
     {
       word: "TORNADO",
       hint: "Violent rotating air column",
-      extraLetters: "ZYXWQPR",
+      extraLetters: "TORNADOZYXWQPR",
       meaning:
         "A mobile, destructive vortex of violently rotating winds having the appearance of a funnel-shaped cloud",
       pronunciation: "tôr-nā′dō",
@@ -691,7 +691,7 @@ export const natureTopic: Topic = {
     {
       word: "DROUGHT",
       hint: "Extended dry period",
-      extraLetters: "QPWXZY",
+      extraLetters: "DROUGHTQPWXZY",
       meaning:
         "A prolonged period of abnormally low rainfall, leading to a shortage of water",
       pronunciation: "drout",
@@ -699,7 +699,7 @@ export const natureTopic: Topic = {
     {
       word: "FLOOD",
       hint: "Overflow of water",
-      extraLetters: "XZQPWY",
+      extraLetters: "FLOODXZQPWY",
       meaning:
         "An overflow of a large amount of water beyond its normal limits, especially over what is normally dry land",
       pronunciation: "flŭd",
@@ -707,7 +707,7 @@ export const natureTopic: Topic = {
     {
       word: "AVALANCHE",
       hint: "Snow mass sliding down",
-      extraLetters: "YWZXQP",
+      extraLetters: "AVALANCHEYWZXQP",
       meaning:
         "A mass of snow, ice, and rocks falling rapidly down a mountainside",
       pronunciation: "ăv′ə-lănch′",
@@ -715,14 +715,14 @@ export const natureTopic: Topic = {
     {
       word: "LANDSLIDE",
       hint: "Mass of earth sliding down",
-      extraLetters: "ZYXWQP",
+      extraLetters: "LANDSLIDEZYXWQP",
       meaning: "A collapse of a mass of earth or rock from a mountain or cliff",
       pronunciation: "lănd′slīd′",
     },
     {
       word: "EARTHQUAKE",
       hint: "Ground shaking event",
-      extraLetters: "QPWXZY",
+      extraLetters: "EARTHQUAKEQPWXZY",
       meaning:
         "A sudden violent shaking of the ground, typically causing great destruction, as a result of movements within the earth's crust",
       pronunciation: "ûrth′kwāk′",
@@ -730,7 +730,7 @@ export const natureTopic: Topic = {
     {
       word: "TSUNAMI",
       hint: "Giant ocean wave",
-      extraLetters: "XZQPWYR",
+      extraLetters: "TSUNAMIXZQPWYR",
       meaning:
         "A long, high sea wave caused by an earthquake, submarine landslide, or other disturbance",
       pronunciation: "tsōō-nä′mē",
@@ -738,7 +738,7 @@ export const natureTopic: Topic = {
     {
       word: "AURORA",
       hint: "Polar light display",
-      extraLetters: "YWZXQP",
+      extraLetters: "AURORAYWZXQP",
       meaning:
         "A natural electrical phenomenon characterized by the appearance of streamers of reddish or greenish light in the sky",
       pronunciation: "ə-rôr′ə",
@@ -746,7 +746,7 @@ export const natureTopic: Topic = {
     {
       word: "RAINBOW",
       hint: "Multicolored arc in sky",
-      extraLetters: "ZYXWQP",
+      extraLetters: "RAINBOWZYXWQP",
       meaning:
         "An arch of colors visible in the sky, caused by the refraction and dispersion of the sun's light by rain or other water droplets in the atmosphere",
       pronunciation: "rān′bō′",
@@ -754,7 +754,7 @@ export const natureTopic: Topic = {
     {
       word: "HORIZON",
       hint: "Line where earth meets sky",
-      extraLetters: "QPWXZY",
+      extraLetters: "HORIZONQPWXZY",
       meaning:
         "The line at which the earth's surface and the sky appear to meet",
       pronunciation: "hə-rī′zən",
@@ -762,21 +762,21 @@ export const natureTopic: Topic = {
     {
       word: "DAWN",
       hint: "First light of day",
-      extraLetters: "XZQPWY",
+      extraLetters: "DAWNXZQPWY",
       meaning: "The first appearance of light in the sky before sunrise",
       pronunciation: "dôn",
     },
     {
       word: "DUSK",
       hint: "Fading daylight",
-      extraLetters: "YWZXQP",
+      extraLetters: "DUSKYWZXQP",
       meaning: "The darker stage of twilight, especially in the evening",
       pronunciation: "dŭsk",
     },
     {
       word: "SEASON",
       hint: "Division of the year",
-      extraLetters: "ZYXWQP",
+      extraLetters: "SEASONZYXWQP",
       meaning:
         "Each of the four divisions of the year (spring, summer, autumn, and winter) marked by particular weather patterns",
       pronunciation: "sē′zən",
@@ -784,7 +784,7 @@ export const natureTopic: Topic = {
     {
       word: "SPRING",
       hint: "Season of renewal",
-      extraLetters: "QPWXZY",
+      extraLetters: "SPRINGQPWXZY",
       meaning:
         "The season after winter and before summer, in which vegetation begins to appear",
       pronunciation: "sprĭng",
@@ -792,7 +792,7 @@ export const natureTopic: Topic = {
     {
       word: "SUMMER",
       hint: "Warmest season",
-      extraLetters: "XZQPWY",
+      extraLetters: "SUMMERXZQPWY", // Fixed: Added 'M' to extraLetters
       meaning:
         "The warmest season of the year, coming between spring and autumn",
       pronunciation: "sŭm′ər",
@@ -800,7 +800,7 @@ export const natureTopic: Topic = {
     {
       word: "AUTUMN",
       hint: "Season of falling leaves",
-      extraLetters: "YWZXQP",
+      extraLetters: "AUTUMNYWZXQP", // Fixed: Added 'U' to extraLetters
       meaning:
         "The season after summer and before winter, when leaves fall from trees",
       pronunciation: "ô′təm",
@@ -808,7 +808,7 @@ export const natureTopic: Topic = {
     {
       word: "WINTER",
       hint: "Coldest season",
-      extraLetters: "ZYXWQP",
+      extraLetters: "WINTERZYXWQP", // Fixed: Added 'T' to extraLetters
       meaning:
         "The coldest season of the year, coming between autumn and spring",
       pronunciation: "wĭn′tər",

@@ -1,4 +1,4 @@
-# Allow all crawlers
+# Allow all web crawlers
 User-agent: *
 Allow: /
 
